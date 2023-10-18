@@ -179,9 +179,9 @@ nlu:
     - When does the library open and close?
     - What services does the library offer?
     - What's the library schedule like?
-    - Where is the library located?
-    - Do you have a map of the library?
+    - Where is the library located[Where is the library located?]{"entity": "library_location", "value":"Where is the library located?"}?
     - What's the library's contact information?
+    - Is the library open in [weekdays]{"entity": "library_days", "value":"weekdays"}
 
 - lookup: library_resources
   examples: |
