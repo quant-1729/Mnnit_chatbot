@@ -1,0 +1,62 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy name path
+  steps:
+  - intent: my_name
+    entities:
+    - name: "rahul"
+  - action: utter_mobile_number
+  - intent: mobile_number
+    entities:
+    - number: "9876987699"
+  - action: utter_thanks
+
+- story: mnnit website path
+  steps:
+  - intent: mnnit_website
+  - action: utter_website
+
+- story: courses information
+  steps:
+  - intent: courses
+  - action: utter_courses
+
+- story: placement information
+  steps:
+  - intent: ask_placements
+  - action: utter_ask_placements
+
+- story: admission process
+  steps:
+  - intent: ask_admission_process
+  - action: utter_ask_admission_process
+

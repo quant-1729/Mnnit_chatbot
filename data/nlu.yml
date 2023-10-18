@@ -1,0 +1,222 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: my_name
+  examples: |
+    - my name is [amandeep]{"entity":"name", "value":"amandeep"}
+    - my name is [sarthak]{"entity":"name", "value":"sarthak"}
+    - my name is [bhanu]{"entity":"name", "value":"bhanu"}
+    - my name is [piyush]{"entity":"name", "value":"piyush"}
+    - [amandeep]{"entity":"name", "value":"amandeep"} is my name
+    - [amandeep]{"entity":"name", "value":"amandeep"} this side.
+    - people call me [amandeep]{"entity":"name", "value":"amandeep"}
+    - you can call me [amandeep]{"entity":"name", "value":"amandeep"}
+
+- intent: mobile_number
+  examples: |
+    - my number is [9876987699]{"entity":"number"}
+    - [9876987699]{"entity":"number"}
+    - [9876987699]{"entity":"number"} is my number
+    - my mobile number is [9876987699]{"entity":"number"}
+    - phone number: [9876987699]{"entity":"number"}
+    - contact me at [9876987699]{"entity":"number"}
+    - [9876987699]{"entity":"number"} is my mobile contact
+    - my number: [9876987699]{"entity":"number"}
+
+- intent: mnnit_website
+  examples: |
+    - take me to mnnit's website
+    - can you provide the link for mnnit official website
+    - where can I find latest announcements for college
+    - where can I get more information about college
+    - Is there any official website of mnnit
+    - website of mnnit
+    - Can you help me with course registration?
+    - Where can I find information about majors?
+
+- intent: courses
+  examples: |
+    - what different courses are offered
+    - different courses provided by the college
+    - list of different courses
+    - list of different programs
+    - can you help me with the programs mnnit allahabad offers
+    - different programs offered by the college
+    - different training programs offered
+    - branches in mnnit allahabad
+    - branches under b.tech in our college
+    - What are the available courses in the college?
+    - Can you provide information about the course curriculum?
+    - Which courses are popular among students?
+
+- intent: ask_placements
+  examples: |
+    - placement offers
+    - what are the previous placement offers?
+    - different placement offers offered to students
+    - different companies offers
+    - different placement offered
+    - previous placement offers
+    - what are the different placement offers offered to students
+    - student's placement offers
+    - what are the placement stats of our college
+    - which companies come to college
+    - who is in charge of our placements
+    - where can i get information about placements
+    - Does the college have a placement cell?
+    - How does the college support students with job placements?
+    - What companies visit the campus for placements?
+
+- intent: ask_admission_process
+  examples: |
+    - Can you guide me through the admission procedure?
+    - Are there any specific requirements for admission?
+    - How can I submit my admission documents?
+    - Is there an online application portal for admissions?
+    - What documents do I need for the admission application?
+    - Are there any interviews as part of the admission process?
+    - Can you explain the selection criteria for admissions?
+    - When will the admission results be announced?
+    - Is there an application fee for admissions?
+    - What are the important dates for admission?
+
+- intent: ask_about_library
+  examples: |
+    - Tell me about the college Library [books]{"entity": "library_resources", "value":"books"} ?.
+    - What [resources]{"entity": "library_resources", "value":"resources"} are available in the library?
+    - What are the library hours?
+    - Can you give me information about the library?
+    - What can I find in the library?
+    - When does the library open and close?
+    - What services does the library offer?
+    - What's the library schedule like?
+    - Where is the library located?
+    - Do you have a map of the library?
+    - What's the library's contact information?
+
+- lookup: library_resources
+  examples: |
+    - books
+    - journals
+    - online databases
+    - study spaces
+    - computers
+    - multimedia resources
+    - research materials
+
+- lookup: library_days
+  examples: |
+    - weekdays
+    - weekends
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+
+- lookup: library_services
+  examples: |
+    - borrowing books
+    - research assistance
+    - workshops
+    - printing and copying
+    - online catalog access
+    - interlibrary loan
+
+- lookup: library_location
+  examples: |
+    - Where is the library located?
+    - Give me directions to the library.
+    - What's the address of the library?
+    - Can you tell me the library's location?

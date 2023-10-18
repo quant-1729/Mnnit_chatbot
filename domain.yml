@@ -1,0 +1,79 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - my_name
+  - mobile_number
+  - mnnit_website
+  - courses
+  - ask_placements
+  - ask_admission_process
+
+entities:
+  - name
+  - number
+
+slots:
+  name:
+    type: text
+    mappings:
+        - type: from_text
+          intent: inform
+          role: target
+
+  mobile_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: number
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot."
+
+  utter_my_name:
+    - text: "What is your name?"
+
+  utter_mobile_number:
+    - text: "What is your mobile number?"
+
+  utter_thanks:
+    - text: "Thanks"
+
+  utter_website:
+    - text: "Here's the link for mnnit's official website,  http://www.mnnit.ac.in/  here you can find all the information about latest announcements, about our college and information regarding registration, result, academic schedule and curriculum"
+
+  utter_course:
+    - text: "Here's the link to check details about courses offered in Mnnit Allahbad   http://www.mnnit.ac.in/index.php/department/engineering/me/mecourses  "
+
+  utter_ask_placements:
+    - text: "You can find the placement stats on the Mnnit website and its Linkdin Page"
+
+  utter_ask_admission_process:
+    - text: "For Admission in Undergraduate course one can give the Joint Entrance Examination and based on the perforamance of that exam the candidate can choose the stream he want to apply for. For Foreign Candidates they can apply through DASA portal.  To apply for PG in MNNIT Allahabad, you can visit the official website and follow the admission process."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
