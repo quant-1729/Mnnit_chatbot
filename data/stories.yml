@@ -29,16 +29,16 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: happy name path
-  steps:
-  - intent: my_name
-    entities:
-    - name: "rahul"
-  - action: utter_mobile_number
-  - intent: mobile_number
-    entities:
-    - number: "9876987699"
-  - action: utter_thanks
+#- story: happy name path
+#  steps:
+#  - intent: my_name
+#    entities:
+#    - name: "rahul"
+#  - action: utter_mobile_number
+#  - intent: mobile_number
+#    entities:
+#    - number: "9876987699"
+#  - action: utter_thanks
 
 - story: mnnit website path
   steps:
@@ -105,6 +105,26 @@ stories:
   - intent: ask_about_fees
   - action: utter_ask_about_fees
 
+- story: Ask About introduction
+  steps:
+  - intent: ask_intro_format
+  - action: utter_ask_intro_format
 
+- story: Ask for directions
+  steps:
+  - intent: ask_for_directions
+  - action: utter_ask_for_directions
 
-
+- story: interactive_story_1
+  steps:
+  - intent: my_name
+    entities:
+    - name: Priyanshu
+  - slot_was_set:
+      - name: Priyanshu
+  - action: utter_mobile_number
+  - intent: mobile_number
+    entities:
+    - number: '8755799544'
+  - slot_was_set:
+    - mobile_number: '8755799544'

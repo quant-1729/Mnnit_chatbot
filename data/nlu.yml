@@ -1,5 +1,4 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hii
 - intent: goodbye
   examples: |
     - cu
@@ -29,7 +28,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -38,7 +36,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -48,7 +45,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -65,7 +61,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -82,36 +77,35 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: my_name
   examples: |
-    - my name is [amandeep]{"entity":"name", "value":"amandeep"}
-    - my name is [sarthak]{"entity":"name", "value":"sarthak"}
-    - my name is [bhanu]{"entity":"name", "value":"bhanu"}
-    - my name is [piyush]{"entity":"name", "value":"piyush"}
-    - [amandeep]{"entity":"name", "value":"amandeep"} is my name
-    - [amandeep]{"entity":"name", "value":"amandeep"} this side.
-    - people call me [amandeep]{"entity":"name", "value":"amandeep"}
-    - you can call me [amandeep]{"entity":"name", "value":"amandeep"}
-
+    - my name is [amandeep](name)
+    - my name is [sarthak](name)
+    - my name is [bhanu](name)
+    - my name is [piyush](name)
+    - [amandeep](name) is my name
+    - [amandeep](name) this side.
+    - people call me [amandeep](name)
+    - you can call me [amandeep](name)
+    - My name is Priyanshu
+    - My name is [Priyanshu](name)
 - intent: mobile_number
   examples: |
-    - my number is [9876987699]{"entity":"number"}
-    - [9876987699]{"entity":"number"}
-    - [9876987699]{"entity":"number"} is my number
-    - my mobile number is [9876987699]{"entity":"number"}
-    - phone number: [9876987699]{"entity":"number"}
-    - contact me at [9876987699]{"entity":"number"}
-    - [9876987699]{"entity":"number"} is my mobile contact
-    - my number: [9876987699]{"entity":"number"}
-
+    - my number is [9876987699](number)
+    - [9876987699](number)
+    - [9876987699](number) is my number
+    - my mobile number is [9876987699](number)
+    - phone number: [9876987699](number)
+    - contact me at [9876987699](number)
+    - [9876987699](number) is my mobile contact
+    - my number: [9876987699](number)
+    - [8755799544](number)
 - intent: mnnit_website
   examples: |
     - take me to mnnit's website
@@ -122,7 +116,6 @@ nlu:
     - website of mnnit
     - Can you help me with course registration?
     - Where can I find information about majors?
-
 - intent: courses
   examples: |
     - what different courses are offered
@@ -137,7 +130,6 @@ nlu:
     - What are the available courses in the college?
     - Can you provide information about the course curriculum?
     - Which courses are popular among students?
-
 - intent: ask_placements
   examples: |
     - placement offers
@@ -155,7 +147,6 @@ nlu:
     - Does the college have a placement cell?
     - How does the college support students with job placements?
     - What companies visit the campus for placements?
-
 - intent: ask_admission_process
   examples: |
     - Can you guide me through the admission procedure?
@@ -168,61 +159,21 @@ nlu:
     - When will the admission results be announced?
     - Is there an application fee for admissions?
     - What are the important dates for admission?
-
 - intent: ask_about_library
   examples: |
-    - Tell me about the college Library [books]{"entity": "library_resources", "value":"books"} ?.
-    - What [resources]{"entity": "library_resources", "value":"resources"} are available in the library?
+    - Tell me about the college Library [books](library_resources) ?.
+    - What [resources](library_resources) are available in the library?
     - What are the library hours?
     - Can you give me information about the library?
     - What can I find in the library?
     - When does the library open and close?
     - What services does the library offer?
     - What's the library schedule like?
-    - Where is the library located[Where is the library located?]{"entity": "library_location", "value":"Where is the library located?"}?
-    - What is the location of the library [Where is the library located?]{"entity": "library_location", "value":"Where is the library located?"}?
+    - Where is the library located[Where is the library located?](library_location)?
+    - What is the location of the library [Where is the library located?](library_location)?
     - What's the library's contact information?
-    - Is the library open in [weekdays]{"entity": "library_days", "value":"weekdays"}
-    - will the library be available in  [weekdays]{"entity": "library_days", "value":"weekdays"}
-
-- lookup: library_resources
-  examples: |
-    - books
-    - journals
-    - online databases
-    - study spaces
-    - computers
-    - multimedia resources
-    - research materials
-
-- lookup: library_days
-  examples: |
-    - weekdays
-    - weekends
-    - Monday
-    - Tuesday
-    - Wednesday
-    - Thursday
-    - Friday
-    - Saturday
-    - Sunday
-#
-#- lookup: library_services
-#  examples: |
-#    - borrowing books
-#    - research assistance
-#    - workshops
-#    - printing and copying
-#    - online catalog access
-#    - interlibrary loan
-#
-#- lookup: library_location
-#  examples: |
-#    - Where is the library located?
-#    - Give me directions to the library.
-#    - What's the address of the library?
-#    - Can you tell me the library's location?
-
+    - Is the library open in [weekdays](library_days)
+    - will the library be available in  [weekdays](library_days)
 - intent: ask_about_internship_opportunities
   examples: |
     - Are there internship opportunities for students?
@@ -237,56 +188,407 @@ nlu:
     - Are there networking opportunities for students seeking internships?
     - Can international students pursue internships during their studies?
     - Are there virtual internship options for remote work experience?
-
-#- intent: ask_about_healthcare_facilities
-#  examples: |
-#    - What healthcare facilities are available on campus?
-#    - Is there a [facility_type](medical clinic) for medical assistance?
-#    - How can I access healthcare services?
-#    - Tell me about the [facility_type](campus nurse).
-#    - Where is the nearest [facility_type](hospital) on campus?
-#    - Are there any doctors available in the [facility_type](campus area)?
-#    - Can you provide information on the [facility_type](dental clinic)?
-#    - I need to find the [facility_type](pharmacy) on campus.
-#    - How do I contact the [facility_type](campus nurse)?
-#    - Where can I get first aid on campus?
-#    - Are there any [facility_type](mental health services) available?
-#    - Tell me more about the [facility_type](health and wellness center).
-#    - What services does the [facility_type](student health center) offer?
-#    - Do we have an on-campus [facility_type](optometrist)?
-#    - Is there a [facility_type](gym with medical facilities)?
-#    - I'm looking for the [facility_type](physical therapy center).
-#    - How do I schedule an appointment at the [facility_type](campus clinic)?
-#    - What are the hours of operation for the [facility_type](health center)?
-#    - Can you recommend a good [facility_type](dermatologist) on campus?
-#    - Where can I get information about [facility_type](COVID-19 testing)?
-    
 - intent: ask_about_exam_preparation_tips
   examples: |
-    - Can you provide tips for [final exam]{"entity":"exam_preparation_tips", "value":"final exam"} preparation?
-    - How should I manage my study time effectively for [viva]{"entity":"exam_preparation_tips", "value":"viva"}?
-    - What are some effective study techniques for [midsem]{"entity":"exam_preparation_tips", "value":"midsem"}?
-    - How can I improve my [midsem]{"entity":"exam_preparation_tips", "value":"midsem"} scores?
-    - Tell me about strategies for [midsem]{"entity":"exam_preparation_tips", "value":"midsem"}.
-    - Are there any recommended textbooks for [viva]{"entity":"exam_preparation_tips", "value":"viva"}?
-    - I need advice on preparing for [viva]{"entity":"exam_preparation_tips", "value":"viva"}.
-    - Can you suggest ways to stay focused during [viva]{"entity":"exam_preparation_tips", "value":"viva"}?
-    - What's the best approach to [viva]{"entity":"exam_preparation_tips", "value":"viva"}?
-    - How can I manage stress during [viva]{"entity":"exam_preparation_tips", "value":"viva"}?
-    - What are the key topics to cover for [practical exam]{"entity":"exam_preparation_tips", "value":"practical exam"}?
-    - What's the recommended study schedule for [practical exam]{"entity":"exam_preparation_tips", "value":"practical exam"}?
-    - Can you share tips for [practical exam]{"entity":"exam_preparation_tips", "value":"practical exam"}?
-    - How do I review my notes effectively for [practical exam]{"entity":"exam_preparation_tips", "value":"practical exam"}?
-    - What's the strategy for [practical exam]{"entity":"exam_preparation_tips", "value":"practical exam"}?
-    - How can I access [study_resource]{"entity":"exam_preparation_tips", "value":"study_resource"} for [practical exam]{"entity":"exam_preparation_tips", "value":"practical exam"}?
-    - Tell me about time management for [practical exam]{"entity":"exam_preparation_tips", "value":"practical exam"}.
-
+    - Can you provide tips for [final exam](exam_preparation_tips) preparation?
+    - How should I manage my study time effectively for [viva](exam_preparation_tips)?
+    - What are some effective study techniques for [midsem](exam_preparation_tips)?
+    - How can I improve my [midsem](exam_preparation_tips) scores?
+    - Tell me about strategies for [midsem](exam_preparation_tips).
+    - Are there any recommended textbooks for [viva](exam_preparation_tips)?
+    - I need advice on preparing for [viva](exam_preparation_tips).
+    - Can you suggest ways to stay focused during [viva](exam_preparation_tips)?
+    - What's the best approach to [viva](exam_preparation_tips)?
+    - How can I manage stress during [viva](exam_preparation_tips)?
+    - What are the key topics to cover for [practical exam](exam_preparation_tips)?
+    - What's the recommended study schedule for [practical exam](exam_preparation_tips)?
+    - Can you share tips for [practical exam](exam_preparation_tips)?
+    - How do I review my notes effectively for [practical exam](exam_preparation_tips)?
+    - What's the strategy for [practical exam](exam_preparation_tips)?
+    - How can I access [study_resource](exam_preparation_tips) for [practical exam](exam_preparation_tips)?
+    - Tell me about time management for [practical exam](exam_preparation_tips).
+- intent: ask_about_mentorship_program
+  examples: |
+    - Does the college have a mentorship program?
+    - How does [mentorship]{"entity": "entity", "value": "mentorship_program, value:mentorship"} benefit students?
+    - Can I get academic guidance from a [mentor]{"entity": "entity", "value": "mentorship_program, value:mentor"}?
+    - Are [mentors]{"entity": "entity", "value": "mentorship_program, value:mentors"} assigned based on academic interests?
+    - How often do students interact with their [mentors]{"entity": "entity", "value": "mentorship_program, value:mentors"}?
+    - Can [mentors]{"entity": "entity", "value": "mentorship_program, value:mentors"} help with career development too?
+    - Are there [mentorship opportunities]{"entity": "entity", "value": "mentorship_program, value:mentorship opportunities"} for specific majors?
+    - Tell me about success stories from the [mentorship program]{"entity": "entity", "value": "mentorship_program, value:mentorship program"}.
+    - How can I request a [mentor]{"entity": "entity", "value": "mentorship_program, value:mentor"} within a particular field?
+    - Is [mentorship]{"entity": "entity", "value": "mentorship_program, value:mentorship"} available for both undergraduate and postgraduate students?
+- intent: ask_about_grading_system
+  examples: |
+    - How is the [grading system]{"entity": "entity", "value": "grading_system, value:grading system"} in the college?
+    - Can you explain the [evaluation process]{"entity": "entity", "value": "grading_system, value:evaluation process"}?
+    - What is the [passing criteria]{"entity": "entity", "value": "grading_system, value:passing criteria"} for exams?
+    - Tell me about the [grading scale]{"entity": "entity", "value": "grading_system, value:grading scale"} used at the college.
+    - Are there [grade points]{"entity": "entity", "value": "grading_system, value:grade points"} associated with each grade?
+    - How are [GPA calculations]{"entity": "entity", "value": "grading_system, value:GPA calculations"} done here?
+    - Is there a [grade conversion]{"entity": "entity", "value": "grading_system, value:grade conversion"} system for international students?
+    - Can I request a [transcript]{"entity": "entity", "value": "grading_system, value:transcript"} of my grades?
+    - What's the [grading policy]{"entity": "entity", "value": "grading_system, value:grading policy"} for late submissions?
+    - Are there any [grading updates]{"entity": "entity", "value": "grading_system, value:grading updates"} or changes this year?
+- intent: ask_about_faculty
+  examples: |
+    - Can you provide information about the [faculty]{"entity": "faculty_information", "value": ""} at the college?
+    - Are the [professors]{"entity": "faculty_information", "value": ""} experienced and qualified?
+    - How accessible are the [professors]{"entity": "faculty_information", "value": ""} for student queries?
+    - Are there any renowned [professors]{"entity": "faculty_information", "value": ""} in a specific department?
+    - Can you share [faculty awards and recognitions]{"entity": "faculty_information", "value": ""} with me?
+    - Tell me about the [faculty-to-student ratio]{"entity": "faculty_information", "value": ""} at the college.
+    - Are there opportunities for [research collaboration]{"entity": "faculty_information", "value": ""} with faculty?
+    - Do [professors]{"entity": "faculty_information", "value": ""} have office hours for individual consultations?
+    - Are there [faculty members]{"entity": "faculty_information", "value": ""} from diverse academic backgrounds?
+    - Share [faculty success stories]{"entity": "faculty_information", "value": ""} and their contributions.
+    - Explain the [faculty development]{"entity": "faculty_information", "value": ""} programs at the college.
+    - How are [faculty teaching styles]{"entity": "faculty_information", "value": ""} described by students?
+    - Is there a [faculty recruitment]{"entity": "faculty_information", "value": ""} process in place?
+    - Can you provide details on [faculty qualifications]{"entity": "faculty_information", "value": ""}?
+    - What is the [faculty expertise]{"entity": "faculty_information", "value": ""} in various fields?
+    - How do students [rate the faculty]{"entity": "faculty_information", "value": ""} at the college?
+    - Tell me about [faculty publications]{"entity": "faculty_information", "value": ""} and research work.
+    - Are there [faculty resources]{"entity": "faculty_information", "value": ""} available for students?
+    - Explain the role of [faculty committees]{"entity": "faculty_information", "value": ""} in the college.
+    - Tell me about [faculty involvement]{"entity": "faculty_information", "value": ""} in student organizations.
+- intent: ask_about_lab_facilities
+  examples: |
+    - What [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"} are available in the college?
+    - Can I access the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} outside of class hours?
+    - How do I [book lab equipment]{"entity": "entity", "value": "lab_facilities, value:book lab equipment"}?
+    - Are there specific [safety guidelines]{"entity": "entity", "value": "lab_facilities, value:safety guidelines"} for using [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"}?
+    - Can I bring my own [equipment]{"entity": "entity", "value": "lab_facilities, value:equipment"} to the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"}?
+    - Are the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} equipped with the latest [technology and tools]{"entity": "entity", "value": "lab_facilities, value:technology and tools"}?
+    - How often are the [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"} updated or improved?
+    - Can students [propose new lab equipment]{"entity": "entity", "value": "lab_facilities, value:propose new lab equipment"} or improvements?
+    - Are there [lab assistants]{"entity": "entity", "value": "lab_facilities, value:lab assistants"} available to provide guidance?
+    - Are the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} suitable for specific [academic programs or majors]{"entity": "entity", "value": "lab_facilities, value:academic programs or majors"}?
+    - Tell me about the [research opportunities]{"entity": "entity", "value": "lab_facilities, value:research opportunities"} in the labs.
+    - Is there [accessibility]{"entity": "entity", "value": "lab_facilities, value:accessibility"} for students with disabilities in the labs?
+    - How are [lab schedules]{"entity": "entity", "value": "lab_facilities, value:lab schedules"} organized?
+    - Can you provide information on [lab funding]{"entity": "entity", "value": "lab_facilities, value:lab funding"} sources?
+- intent: ask_about_hostel_facilities
+  examples: |
+    - How are the [hostel facilities]{"entity": "entity", "value": "hostel_facilities, value:hostel facilities"} in the college?
+    - Can you provide details about the [accommodation options]{"entity": "entity", "value": "hostel_facilities, value:accommodation options"}?
+    - Is there a separate [hostel]{"entity": "entity", "value": "hostel_facilities, value:hostel"} for [boys]{"entity": "entity", "value": "hostel_facilities, value:boys"} and [girls]{"entity": "entity", "value": "hostel_facilities, value:girls"}?
+    - What are the [hostel facilities]{"entity": "entity", "value": "hostel_facilities, value:hostel facilities"} available?
+    - Tell me about the [amenities]{"entity": "entity", "value": "hostel_facilities, value:amenities"} in the [hostels]{"entity": "entity", "value": "hostel_facilities, value:hostels"}.
+    - Can you describe the [accommodations]{"entity": "entity", "value": "hostel_facilities, value:accommodations"} in the [hostels]{"entity": "entity", "value": "hostel_facilities, value:hostels"}?
+    - Explain the [features]{"entity": "entity", "value": "hostel_facilities, value:features"} of the [hostel rooms]{"entity": "entity", "value": "hostel_facilities, value:hostel rooms"}.
+    - I'd like to know more about the [hostel options]{"entity": "entity", "value": "hostel_facilities, value:hostel options"}.
+    - What is the condition of the [hostel rooms]{"entity": "entity", "value": "hostel_facilities, value:hostel rooms"}?
+    - Share information about the [hostel services]{"entity": "entity", "value": "hostel_facilities, value:hostel services"}.
+    - Are there [single]{"entity": "entity", "value": "hostel_facilities, value:single"} or [shared rooms]{"entity": "entity", "value": "hostel_facilities, value:shared rooms"} in the [hostels]{"entity": "entity", "value": "hostel_facilities, value:hostels"}?
+    - How many students can a [hostel room]{"entity": "entity", "value": "hostel_facilities, value:hostel room"} accommodate?
+    - What are the [rules and regulations]{"entity": "entity", "value": "hostel_facilities, value:rules and regulations"} in the [hostels]{"entity": "entity", "value": "hostel_facilities, value:hostels"}?
+    - Tell me about the [dining facilities]{"entity": "entity", "value": "hostel_facilities, value:dining facilities"} in the [hostels]{"entity": "entity", "value": "hostel_facilities, value:hostels"}.
+    - Do the [hostels]{"entity": "entity", "value": "hostel_facilities, value:hostels"} have [Wi-Fi]{"entity": "entity", "value": "hostel_facilities, value:Wi-Fi"} and [laundry services]{"entity": "entity", "value": "hostel_facilities, value:laundry services"}?
+    - Is there a common room in the [hostels]{"entity": "entity", "value": "hostel_facilities, value:hostels"} for students to gather?
+    - How do I [apply for hostel accommodation]{"entity": "entity", "value": "hostel_facilities, value:apply for hostel accommodation"}?
+    - Tell me about SVBH
+    - Tell me about SVBH [Hostel]{"entity": "entity", "value": "requested_hostel"}
+- intent: ask_hostel_choice
+  examples: |
+    - [hostel]{"entity": "entity", "value": "requested_hostel"}
+    - Which [hostel]{"entity": "entity", "value": "requested_hostel"} would you like to know about?
+    - Can you provide details about a specific [hostel]{"entity": "entity", "value": "requested_hostel"}?
+    - I'm interested in learning more about the [hostels]{"entity": "entity", "value": "requested_hostel"}. Which one do you have in mind?
+    - Please tell me about a particular [hostel]{"entity": "entity", "value": "requested_hostel"}.
+    - I need information about the [accommodation options]{"entity": "entity", "value": "requested_hostel"}. Could you specify a [hostel]{"entity": "entity", "value": "requested_hostel"}?
+    - SBVH
+    - I want to know about SVBH
+- intent: ask_about_fees
+  examples: |
+    - How much are the [tuition fees]{"entity": "entity", "value": "fees_type"} for the courses?
+    - Can you provide details about the [fee structure]{"entity": "entity", "value": "fees_type"}?
+    - Are there any additional fees apart from [tuition]{"entity": "entity", "value": "fees_type"}?
+    - What are the [tuition fees]{"entity": "entity", "value": "fees_type"} for this semester?
+    - Can you provide details on the fees for the [academic year]{"entity": "entity", "value": "fees_type"}?
+    - I'm interested in the cost of [tuition]{"entity": "entity", "value": "fees_type"}. How much is it?
+    - How do I pay my [tuition fees]{"entity": "entity", "value": "fees_type"}?
+    - What is the fee structure for [undergraduate programs]{"entity": "entity", "value": "fees_type"}?
+    - Tell me about the fees for the [Btech program]{"entity": "entity", "value": "fees_type"} in MNNIT.
+    - Are there any [scholarships]{"entity": "entity", "value": "fees_type"} available to offset [tuition costs]{"entity": "entity", "value": "fees_type"}?
+    - Can you explain the payment schedule for [fees]{"entity": "entity", "value": "fees_type"}?
+    - What additional expenses should I budget for besides [tuition]{"entity": "entity", "value": "fees_type"}?
+    - How can I check my account balance for [fees]{"entity": "entity", "value": "fees_type"}?
+    - Are there any discounts on [tuition]{"entity": "entity", "value": "fees_type"} for high-achieving students?
+    - Do you offer [financial aid]{"entity": "entity", "value": "fees_type"} for [tuition]{"entity": "entity", "value": "fees_type"}?
+    - What is the cost of [room and board]{"entity": "entity", "value": "fees_type"} if I live on campus?
+    - Can you break down the [fees]{"entity": "entity", "value": "fees_type"} for [international students]{"entity": "entity", "value": "fees_type"}?
+    - Is there an installment plan for paying [tuition]{"entity": "entity", "value": "fees_type"}?
+    - What is the deadline for paying this semester's [fees]{"entity": "entity", "value": "fees_type"}?
+- intent: ask_intro_format
+  examples: |
+    - What is the [format]{"entity": "entity", "value": "intro_format"} for introducing oneself in [college]{"entity": "entity", "value": "intro_type"}?
+    - How should I structure my self-introduction to [seniors]{"entity": "entity", "value": "intro_type"}?
+    - Are there specific guidelines for introducing myself in the [community]{"entity": "entity", "value": "intro_type"}?
+    - What are the key elements to include in a [junior's]{"entity": "entity", "value": "intro_type"} self-introduction?
+    - Can you provide a [template]{"entity": "entity", "value": "intro_format"} for a [college]{"entity": "entity", "value": "intro_type"} self-introduction?
+    - How can I create a memorable [introduction]{"entity": "entity", "value": "intro_format"} in [college]{"entity": "entity", "value": "intro_type"}?
+    - Share [tips]{"entity": "entity", "value": "intro_format"} on delivering an engaging self-introduction.
+- intent: ask_for_directions
+  examples: |
+    - Can you help me with directions to [destination]?
+    - I need directions to [destination].
+    - How can I reach [destination] from [current_location]?
+    - Guide me to [destination] please.
+    - What's the way to get to [destination] from here?
+    - How do I go to [destination] from my location?
+    - How can I get to [destination]?
+    - Give me directions to [destination].
+    - Can you show me the way to [destination]?
+    - I'm looking for directions to [destination] from [current_location].
+    - Tell me the route to [destination].
+    - I'm at [current_location].
+    - My current location is [current_location].
+    - I'm starting from [current_location].
+    - I need directions from [current_location].
+    - Can you guide me from [current_location] to [destination].
+    - Are there any landmarks near [destination]?
+    - What landmarks are near [destination]?
+    - Tell me about prominent landmarks near [destination].
+    - How far is [destination] from here?
+    - What's the distance to [destination]?
+    - Can you provide the distance between [current_location] and [destination]?
+    - Is [destination] nearby?
+    - What are the travel options to get to [destination]?
+    - Are there public transportation options to reach [destination]?
+    - Can you suggest different modes of travel to [destination]?
+    - How can I travel to [destination] using [mode_of_transport]?
+    - Thanks for the directions.
+    - Your guidance was helpful.
+    - I found the place thanks to you.
+    - Your directions were accurate.
+    - I appreciate your help.
+    - Are there alternative routes to [destination]?
+    - Can you suggest a different way to reach [destination]?
+    - What other routes can I take to [destination]?
+    - Are there shortcuts to [destination]?
+    - Is there parking available at [destination]?
+    - Can I find parking near [destination]?
+    - Tell me about the parking options at [destination].
+    - Where can I park when I reach [destination]?
+    - How's the traffic to [destination]?
+    - Is there heavy traffic on the way to [destination]?
+    - Can you update me on the current traffic conditions to [destination]?
+    - What are the opening hours of [destination]?
+    - When does [destination] open and close?
+    - Can you provide the operating hours for [destination]?
+- synonym: mentorship_program, value:mentorship
+  examples: |
+    - mentorship
+- synonym: mentorship_program, value:mentor
+  examples: |
+    - mentor
+- synonym: mentorship_program, value:mentors
+  examples: |
+    - mentors
+- synonym: mentorship_program, value:mentorship opportunities
+  examples: |
+    - mentorship opportunities
+- synonym: mentorship_program, value:mentorship program
+  examples: |
+    - mentorship program
+- synonym: grading_system, value:grading system
+  examples: |
+    - grading system
+- synonym: grading_system, value:evaluation process
+  examples: |
+    - evaluation process
+- synonym: grading_system, value:passing criteria
+  examples: |
+    - passing criteria
+- synonym: grading_system, value:grading scale
+  examples: |
+    - grading scale
+- synonym: grading_system, value:grade points
+  examples: |
+    - grade points
+- synonym: grading_system, value:GPA calculations
+  examples: |
+    - GPA calculations
+- synonym: grading_system, value:grade conversion
+  examples: |
+    - grade conversion
+- synonym: grading_system, value:transcript
+  examples: |
+    - transcript
+- synonym: grading_system, value:grading policy
+  examples: |
+    - grading policy
+- synonym: grading_system, value:grading updates
+  examples: |
+    - grading updates
+- synonym: ''
+  examples: |
+    - faculty
+    - professors
+    - faculty awards and recognitions
+    - faculty-to-student ratio
+    - research collaboration
+    - faculty members
+    - faculty success stories
+    - faculty development
+    - faculty teaching styles
+    - faculty recruitment
+    - faculty qualifications
+    - faculty expertise
+    - rate the faculty
+    - faculty publications
+    - faculty resources
+    - faculty committees
+    - faculty involvement
+- synonym: lab_facilities, value:lab facilities
+  examples: |
+    - lab facilities
+- synonym: lab_facilities, value:labs
+  examples: |
+    - labs
+- synonym: lab_facilities, value:book lab equipment
+  examples: |
+    - book lab equipment
+- synonym: lab_facilities, value:safety guidelines
+  examples: |
+    - safety guidelines
+- synonym: lab_facilities, value:equipment
+  examples: |
+    - equipment
+- synonym: lab_facilities, value:technology and tools
+  examples: |
+    - technology and tools
+- synonym: lab_facilities, value:propose new lab equipment
+  examples: |
+    - propose new lab equipment
+- synonym: lab_facilities, value:lab assistants
+  examples: |
+    - lab assistants
+- synonym: lab_facilities, value:academic programs or majors
+  examples: |
+    - academic programs or majors
+- synonym: lab_facilities, value:research opportunities
+  examples: |
+    - research opportunities
+- synonym: lab_facilities, value:accessibility
+  examples: |
+    - accessibility
+- synonym: lab_facilities, value:lab schedules
+  examples: |
+    - lab schedules
+- synonym: lab_facilities, value:lab funding
+  examples: |
+    - lab funding
+- synonym: hostel_facilities, value:hostel facilities
+  examples: |
+    - hostel facilities
+- synonym: requested_hostel
+  examples: |
+    - accommodation options
+    - hostel
+    - hostels
+- synonym: hostel_facilities, value:boys
+  examples: |
+    - boys
+- synonym: hostel_facilities, value:girls
+  examples: |
+    - girls
+- synonym: hostel_facilities, value:amenities
+  examples: |
+    - amenities
+- synonym: hostel_facilities, value:accommodations
+  examples: |
+    - accommodations
+- synonym: hostel_facilities, value:features
+  examples: |
+    - features
+- synonym: hostel_facilities, value:hostel rooms
+  examples: |
+    - hostel rooms
+- synonym: hostel_facilities, value:hostel options
+  examples: |
+    - hostel options
+- synonym: hostel_facilities, value:hostel services
+  examples: |
+    - hostel services
+- synonym: hostel_facilities, value:single
+  examples: |
+    - single
+- synonym: hostel_facilities, value:shared rooms
+  examples: |
+    - shared rooms
+- synonym: hostel_facilities, value:hostel room
+  examples: |
+    - hostel room
+- synonym: hostel_facilities, value:rules and regulations
+  examples: |
+    - rules and regulations
+- synonym: hostel_facilities, value:dining facilities
+  examples: |
+    - dining facilities
+- synonym: hostel_facilities, value:Wi-Fi
+  examples: |
+    - Wi-Fi
+- synonym: hostel_facilities, value:laundry services
+  examples: |
+    - laundry services
+- synonym: hostel_facilities, value:apply for hostel accommodation
+  examples: |
+    - apply for hostel accommodation
+- synonym: fees_type
+  examples: |
+    - tuition fees
+    - fee structure
+    - tuition
+    - academic year
+    - undergraduate programs
+    - Btech program
+    - scholarships
+    - tuition costs
+    - fees
+    - financial aid
+    - room and board
+    - international students
+- synonym: intro_format
+  examples: |
+    - format
+    - template
+    - introduction
+    - tips
+- synonym: intro_type
+  examples: |
+    - college
+    - seniors
+    - community
+    - junior's
+- lookup: library_resources
+  examples: |
+    - books
+    - journals
+    - online databases
+    - study spaces
+    - computers
+    - multimedia resources
+    - research materials
+- lookup: library_days
+  examples: |
+    - weekdays
+    - weekends
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
 - lookup: exam_preparation_tips
   examples: |
     - final exams
     - midsem
     - viva
-    - practical exam 
+    - practical exam
     - study resources
     - effective study techniques
     - improve test scores
@@ -305,20 +607,6 @@ nlu:
     - take-home exams strategy
     - online tutorials for tests
     - time management for viva exams
-    
-- intent: ask_about_mentorship_program
-  examples: |
-    - Does the college have a mentorship program?
-    - How does [mentorship](entity:mentorship_program, value:mentorship) benefit students?
-    - Can I get academic guidance from a [mentor](entity:mentorship_program, value:mentor)?
-    - Are [mentors](entity:mentorship_program, value:mentors) assigned based on academic interests?
-    - How often do students interact with their [mentors](entity:mentorship_program, value:mentors)?
-    - Can [mentors](entity:mentorship_program, value:mentors) help with career development too?
-    - Are there [mentorship opportunities](entity:mentorship_program, value:mentorship opportunities) for specific majors?
-    - Tell me about success stories from the [mentorship program](entity:mentorship_program, value:mentorship program).
-    - How can I request a [mentor](entity:mentorship_program, value:mentor) within a particular field?
-    - Is [mentorship](entity:mentorship_program, value:mentorship) available for both undergraduate and postgraduate students?
-
 - lookup: mentorship_program
   examples: |
     - mentorship
@@ -326,20 +614,6 @@ nlu:
     - mentors
     - mentorship opportunities
     - mentorship program
-
-- intent: ask_about_grading_system
-  examples: |
-    - How is the [grading system](entity:grading_system, value:grading system) in the college?
-    - Can you explain the [evaluation process](entity:grading_system, value:evaluation process)?
-    - What is the [passing criteria](entity:grading_system, value:passing criteria) for exams?
-    - Tell me about the [grading scale](entity:grading_system, value:grading scale) used at the college.
-    - Are there [grade points](entity:grading_system, value:grade points) associated with each grade?
-    - How are [GPA calculations](entity:grading_system, value:GPA calculations) done here?
-    - Is there a [grade conversion](entity:grading_system, value:grade conversion) system for international students?
-    - Can I request a [transcript](entity:grading_system, value:transcript) of my grades?
-    - What's the [grading policy](entity:grading_system, value:grading policy) for late submissions?
-    - Are there any [grading updates](entity:grading_system, value:grading updates) or changes this year?
-
 - lookup: grading_system
   examples: |
     - grading system
@@ -352,30 +626,6 @@ nlu:
     - transcript
     - grading policy
     - grading updates
-
-- intent: ask_about_faculty
-  examples: |
-    - Can you provide information about the [faculty]{"entity":"faculty_information", "value":""} at the college?
-    - Are the [professors]{"entity":"faculty_information", "value":""} experienced and qualified?
-    - How accessible are the [professors]{"entity":"faculty_information", "value":""} for student queries?
-    - Are there any renowned [professors]{"entity":"faculty_information", "value":""} in a specific department?
-    - Can you share [faculty awards and recognitions]{"entity":"faculty_information", "value":""} with me?
-    - Tell me about the [faculty-to-student ratio]{"entity":"faculty_information", "value":""} at the college.
-    - Are there opportunities for [research collaboration]{"entity":"faculty_information", "value":""} with faculty?
-    - Do [professors]{"entity":"faculty_information", "value":""} have office hours for individual consultations?
-    - Are there [faculty members]{"entity":"faculty_information", "value":""} from diverse academic backgrounds?
-    - Share [faculty success stories]{"entity":"faculty_information", "value":""} and their contributions.
-    - Explain the [faculty development]{"entity":"faculty_information", "value":""} programs at the college.
-    - How are [faculty teaching styles]{"entity":"faculty_information", "value":""} described by students?
-    - Is there a [faculty recruitment]{"entity":"faculty_information", "value":""} process in place?
-    - Can you provide details on [faculty qualifications]{"entity":"faculty_information", "value":""}?
-    - What is the [faculty expertise]{"entity":"faculty_information", "value":""} in various fields?
-    - How do students [rate the faculty]{"entity":"faculty_information", "value":""} at the college?
-    - Tell me about [faculty publications]{"entity":"faculty_information", "value":""} and research work.
-    - Are there [faculty resources]{"entity":"faculty_information", "value":""} available for students?
-    - Explain the role of [faculty committees]{"entity":"faculty_information", "value":""} in the college.
-    - Tell me about [faculty involvement]{"entity":"faculty_information", "value":""} in student organizations.
-
 - lookup: faculty_information
   examples: |
     - faculty
@@ -395,26 +645,6 @@ nlu:
     - faculty resources available for students
     - faculty committees in the college
     - faculty involvement in student organizations
-
-
-
-- intent: ask_about_lab_facilities
-  examples: |
-    - What [lab facilities](entity:lab_facilities, value:lab facilities) are available in the college?
-    - Can I access the [labs](entity:lab_facilities, value:labs) outside of class hours?
-    - How do I [book lab equipment](entity:lab_facilities, value:book lab equipment)?
-    - Are there specific [safety guidelines](entity:lab_facilities, value:safety guidelines) for using [lab facilities](entity:lab_facilities, value:lab facilities)?
-    - Can I bring my own [equipment](entity:lab_facilities, value:equipment) to the [labs](entity:lab_facilities, value:labs)?
-    - Are the [labs](entity:lab_facilities, value:labs) equipped with the latest [technology and tools](entity:lab_facilities, value:technology and tools)?
-    - How often are the [lab facilities](entity:lab_facilities, value:lab facilities) updated or improved?
-    - Can students [propose new lab equipment](entity:lab_facilities, value:propose new lab equipment) or improvements?
-    - Are there [lab assistants](entity:lab_facilities, value:lab assistants) available to provide guidance?
-    - Are the [labs](entity:lab_facilities, value:labs) suitable for specific [academic programs or majors](entity:lab_facilities, value:academic programs or majors)?
-    - Tell me about the [research opportunities](entity:lab_facilities, value:research opportunities) in the labs.
-    - Is there [accessibility](entity:lab_facilities, value:accessibility) for students with disabilities in the labs?
-    - How are [lab schedules](entity:lab_facilities, value:lab schedules) organized?
-    - Can you provide information on [lab funding](entity:lab_facilities, value:lab funding) sources?
-
 - lookup: lab_facilities
   examples: |
     - lab facilities
@@ -430,27 +660,6 @@ nlu:
     - accessibility
     - lab schedules
     - lab funding
-
-- intent: ask_about_hostel_facilities
-  examples: |
-    - How are the [hostel facilities](entity:hostel_facilities, value:hostel facilities) in the college?
-    - Can you provide details about the [accommodation options](entity:hostel_facilities, value:accommodation options)?
-    - Is there a separate [hostel](entity:hostel_facilities, value:hostel) for [boys](entity:hostel_facilities, value:boys) and [girls](entity:hostel_facilities, value:girls)?
-    - What are the [hostel facilities](entity:hostel_facilities, value:hostel facilities) available?
-    - Tell me about the [amenities](entity:hostel_facilities, value:amenities) in the [hostels](entity:hostel_facilities, value:hostels).
-    - Can you describe the [accommodations](entity:hostel_facilities, value:accommodations) in the [hostels](entity:hostel_facilities, value:hostels)?
-    - Explain the [features](entity:hostel_facilities, value:features) of the [hostel rooms](entity:hostel_facilities, value:hostel rooms).
-    - I'd like to know more about the [hostel options](entity:hostel_facilities, value:hostel options).
-    - What is the condition of the [hostel rooms](entity:hostel_facilities, value:hostel rooms)?
-    - Share information about the [hostel services](entity:hostel_facilities, value:hostel services).
-    - Are there [single](entity:hostel_facilities, value:single) or [shared rooms](entity:hostel_facilities, value:shared rooms) in the [hostels](entity:hostel_facilities, value:hostels)?
-    - How many students can a [hostel room](entity:hostel_facilities, value:hostel room) accommodate?
-    - What are the [rules and regulations](entity:hostel_facilities, value:rules and regulations) in the [hostels](entity:hostel_facilities, value:hostels)?
-    - Tell me about the [dining facilities](entity:hostel_facilities, value:dining facilities) in the [hostels](entity:hostel_facilities, value:hostels).
-    - Do the [hostels](entity:hostel_facilities, value:hostels) have [Wi-Fi](entity:hostel_facilities, value:Wi-Fi) and [laundry services](entity:hostel_facilities, value:laundry services)?
-    - Is there a common room in the [hostels](entity:hostel_facilities, value:hostels) for students to gather?
-    - How do I [apply for hostel accommodation](entity:hostel_facilities, value:apply for hostel accommodation)?
-
 - lookup: hostel_facilities
   examples: |
     - hostel facilities
@@ -470,37 +679,6 @@ nlu:
     - Wi-Fi
     - laundry services
     - apply for hostel accommodation
-
-- intent: ask_hostel_choice
-  examples: |
-    - Which [hostel](entity:requested_hostel) would you like to know about?
-    - Can you provide details about a specific [hostel](entity:requested_hostel)?
-    - I'm interested in learning more about the [hostels](entity:requested_hostel). Which one do you have in mind?
-    - Please tell me about a particular [hostel](entity:requested_hostel).
-    - I need information about the [accommodation options](entity:requested_hostel). Could you specify a [hostel](entity:requested_hostel)?
-
-- intent: ask_about_fees
-  examples: |
-    - How much are the [tuition fees](entity:fees_type) for the courses?
-    - Can you provide details about the [fee structure](entity:fees_type)?
-    - Are there any additional fees apart from [tuition](entity:fees_type)?
-    - What are the [tuition fees](entity:fees_type) for this semester?
-    - Can you provide details on the fees for the [academic year](entity:fees_type)?
-    - I'm interested in the cost of [tuition](entity:fees_type). How much is it?
-    - How do I pay my [tuition fees](entity:fees_type)?
-    - What is the fee structure for [undergraduate programs](entity:fees_type)?
-    - Tell me about the fees for the [Btech program](entity:fees_type) in MNNIT.
-    - Are there any [scholarships](entity:fees_type) available to offset [tuition costs](entity:fees_type)?
-    - Can you explain the payment schedule for [fees](entity:fees_type)?
-    - What additional expenses should I budget for besides [tuition](entity:fees_type)?
-    - How can I check my account balance for [fees](entity:fees_type)?
-    - Are there any discounts on [tuition](entity:fees_type) for high-achieving students?
-    - Do you offer [financial aid](entity:fees_type) for [tuition](entity:fees_type)?
-    - What is the cost of [room and board](entity:fees_type) if I live on campus?
-    - Can you break down the [fees](entity:fees_type) for [international students](entity:fees_type)?
-    - Is there an installment plan for paying [tuition](entity:fees_type)?
-    - What is the deadline for paying this semester's [fees](entity:fees_type)?
-
 - lookup: fees_type
   examples: |
     - tuition fees
@@ -517,3 +695,36 @@ nlu:
     - international student fees
     - installment plan
     - payment deadline
+- lookup: intro_type
+  examples: |
+    - format
+    - structure
+    - specific guidelines
+    - key elements
+    - template
+    - memorable introduction
+    - tips
+- lookup: current_location
+  examples: |
+    - my current location
+    - my location
+    - where I am
+    - my present location
+- lookup: destination
+  examples: |
+    - Central Park
+    - Times Square
+    - Eiffel Tower
+    - Grand Central Station
+    - Empire State Building
+    - Golden Gate Bridge
+    - Louvre Museum
+- lookup: mode_of_transport
+  examples: |
+    - car
+    - bike
+    - subway
+    - bus
+    - taxi
+    - walking
+    - tram
