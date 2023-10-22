@@ -8,17 +8,45 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - my_name
-  - mobile_number
+  - my_name:
+      use_entities:
+        name
+  - mobile_number:
+      use_entities:
+        number
   - mnnit_website
   - courses
   - ask_placements
   - ask_admission_process
-
+  - ask_about_mentorship_program
+  - ask_about_library:
+      use_entities:
+        library_resources
+  - ask_about_internship_opportunities
+#  - ask_about_healthcare_facilities:
+#        use_entities:
+#          facility_type
+  - ask_about_exam_preparation_tips
+  - ask_about_grading_system
+  - ask_about_hostel_facilities
+  - ask_about_lab_facilities
+  - ask_hostel_choice
+  - ask_about_faculty
+  - ask_about_fees
 entities:
   - name
   - number
-
+  - facility_type
+  - hostel_facilities
+  - requested_hostel
+  - lab_facilities
+  - faculty_information
+  - grading_system
+  - mentorship_program
+  - exam_preparation_tips
+  - library_resources
+  - library_days
+  - fees_type
 slots:
   name:
     type: text
@@ -32,6 +60,14 @@ slots:
     mappings:
       - type: from_entity
         entity: number
+  hostel:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: hostel
+
+actions:
+  - action_Set_Hostel_slot
 
 responses:
   utter_greet:
@@ -65,7 +101,7 @@ responses:
   utter_website:
     - text: "Here's the link for mnnit's official website,  http://www.mnnit.ac.in/  here you can find all the information about latest announcements, about our college and information regarding registration, result, academic schedule and curriculum"
 
-  utter_course:
+  utter_courses:
     - text: "Here's the link to check details about courses offered in Mnnit Allahbad   http://www.mnnit.ac.in/index.php/department/engineering/me/mecourses  "
 
   utter_ask_placements:
@@ -73,6 +109,48 @@ responses:
 
   utter_ask_admission_process:
     - text: "For Admission in Undergraduate course one can give the Joint Entrance Examination and based on the perforamance of that exam the candidate can choose the stream he want to apply for. For Foreign Candidates they can apply through DASA portal.  To apply for PG in MNNIT Allahabad, you can visit the official website and follow the admission process."
+
+  utter_ask_about_internship_opportunities:
+    - text: "MNNIT encourages students to explore internships to gain practical experience.\n
+     The college's career services department assists with placements.
+     The internships opportunity starts from the junior year of the college.\n
+     The companies allows the students to participate in the internships training after some exams and Online Assignment. \n 
+     For enrolling in the internships training you must have a good CPI and Communication skills"
+
+  utter_ask_about_healthcare_facilities:
+    - text: "MNNIT provides healthcare facilities on campus, including a college health center for medical assistance\n
+     It is located after the underpass and has emergency ambulance Service , Also It has Apollo Pharmacy Store which have \n
+     Every Basic medicine."
+
+  utter_ask_about_exam_preparation_tips:
+    - text: "१.Start atleast one week prior for mid semester exams and atleast 10 days prior for end semester exams \n
+      २.Next step is to know the syllabus and collect the required material like class notes, assignments, tutorials, previous year papers. \n
+      ३.Watch the video lectures on YouTube channels suggested by the seniors. \n
+      ४.After that go through the class notes properly and see topics which professor has focused in class. \n
+      ५.Do the assignment questions properly same type of questions come in exams. \n
+      ६.﻿Go through the previous years properly as exam pattern remains same for most of the subjects. \n
+      ७.﻿The subjects which have labs perform good in main viva exam and the regular practice vivas as well this will give you better marks in internal. \n
+      ८.﻿For viva study the theory of the practicals properly and also try to study more about the topics if possible. "
+
+  utter_ask_about_mentorship_program:
+    - text: "Yes, MNNIT Allahabad has a mentorship program called SMP where students can receive academic guidance and support from their Seniors of their \n
+    respective branch."
+
+  utter_ask_about_grading_system:
+    - text: "The grading system at MNNIT Allahabad follows the NEP 2022 grading system, where grades are awarded based on your performance in exams, assignments, and practicals \n
+    The grades are marked according to your relative performance in the subject ."
+
+  utter_ask_about_faculty:
+    - text: "The faculty members at MNNIT Allahabad are highly qualified and experienced, You can contact the faculty here, http://www.mnnit.ac.in/index.php/department/engineering/cm/cmfp ."
+
+  utter_ask_about_lab_facilities:
+    - text: "You can find the availaible lab facilities on your department section on MNNIT website."
+
+  utter_ask_hostel:
+    - text : "Which hostel information do you want?"
+
+  utter_ask_about_fees:
+    - text: "The tuition fees for courses at MNNIT Allahabad may vary depending on the program. You can find details about the fee structure on the official website."
 
 session_config:
   session_expiration_time: 60

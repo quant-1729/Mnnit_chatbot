@@ -60,3 +60,51 @@ stories:
   - intent: ask_admission_process
   - action: utter_ask_admission_process
 
+- story: Ask About Internship Opportunities
+  steps:
+  - intent: ask_about_internship_opportunities
+  - action: utter_ask_about_internship_opportunities
+
+#- story: Ask About Healthcare Facilities
+#  steps:
+#  - intent: ask_about_healthcare_facilities
+#  - action: utter_ask_about_healthcare_facilities
+
+- story: Ask About Exam Preparation Tips
+  steps:
+  - intent: ask_about_exam_preparation_tips
+  - action: utter_ask_about_exam_preparation_tips
+
+- story: Ask About Mentorship Program
+  steps:
+  - intent: ask_about_mentorship_program
+  - action: utter_ask_about_mentorship_program
+
+- story: Ask About Grading System
+  steps:
+  - intent: ask_about_grading_system
+  - action: utter_ask_about_grading_system
+
+- story: Ask About Faculty
+  steps:
+  - intent: ask_about_faculty
+  - action: utter_ask_about_faculty
+
+- story: Ask About Lab Facilities
+  steps:
+  - intent: ask_about_lab_facilities
+  - action: utter_ask_about_lab_facilities
+
+- story: Ask About Hostel Facility
+  steps:
+  - intent: ask_about_hostel_facilities
+  - action: utter_ask_hostel
+
+- story: Ask About Fees
+  steps:
+  - intent: ask_about_fees
+  - action: utter_ask_about_fees
+
+
+
+

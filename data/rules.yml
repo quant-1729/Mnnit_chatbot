@@ -11,3 +11,10 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+#
+#- rule: Giving Hostel information
+#  steps:
+#  - intent: ask_hostel_choice
+#  - action: action_Set_Hostel_slot
+
+
