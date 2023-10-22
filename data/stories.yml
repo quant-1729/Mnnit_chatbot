@@ -65,10 +65,10 @@ stories:
   - intent: ask_about_internship_opportunities
   - action: utter_ask_about_internship_opportunities
 
-#- story: Ask About Healthcare Facilities
-#  steps:
-#  - intent: ask_about_healthcare_facilities
-#  - action: utter_ask_about_healthcare_facilities
+- story: Ask About Healthcare Facilities
+  steps:
+  - intent: ask_about_healthcare_facilities
+  - action: utter_ask_about_healthcare_facilities
 
 - story: Ask About Exam Preparation Tips
   steps:
@@ -128,3 +128,41 @@ stories:
     - number: '8755799544'
   - slot_was_set:
     - mobile_number: '8755799544'
+
+
+- story: interactive_story_2
+  steps:
+  - intent: my_name
+    entities:
+    - name: Priyanshu
+  - action: utter_mobile_number
+  - intent: mobile_number
+    entities:
+    - number: '8755799544'
+  - slot_was_set:
+    - mobile_number: '8755799544'
+  - intent: my_name
+    entities:
+    - name: Priyanshu
+  - action: utter_my_name
+  - action: action_default_fallback
+  - intent: my_name
+  - intent: my_name
+    entities:
+    - name: Priyanshu Agrawal
+  - action: utter_mobile_number
+  - intent: mobile_number
+    entities:
+    - number: '8755799544'
+  - slot_was_set:
+    - mobile_number: '8755799544'
+
+#- story: Ask about Library
+#  steps:
+#  - intent: ask_about_library
+#  - action: utter_ask_about_library
+#
+#- story: Ask hostel choice
+#  steps:
+#  - intent: ask_for_directions
+#  - action: utter_ask_for_directions

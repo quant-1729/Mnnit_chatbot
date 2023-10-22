@@ -1,156 +1,182 @@
-version: '3.1'
-intents:
-- affirm
-- ask_about_exam_preparation_tips
-- ask_about_faculty
-- ask_about_fees
-- ask_about_grading_system
-- ask_about_hostel_facilities
-- ask_about_internship_opportunities
-- ask_about_lab_facilities
-- ask_about_library:
-    use_entities: library_resources
-- ask_about_mentorship_program
-- ask_admission_process
-- ask_for_directions
-- ask_hostel_choice
-- ask_intro_format
-- ask_placements
-- bot_challenge
-- courses
-- deny
-- goodbye
-- greet
-- mnnit_website
-- mobile_number:
-    use_entities: number
-- mood_great
-- mood_unhappy
-- my_name:
-    use_entities: name
+version: "3.1"
 
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - my_name:
+      use_entities:
+        name
+  - mobile_number:
+      use_entities:
+        number
+  - mnnit_website
+  - courses
+  - ask_placements
+  - ask_admission_process
+  - ask_about_mentorship_program
+  - ask_about_library:
+      use_entities:
+        library_resources
+  - ask_about_internship_opportunities
+#  - ask_about_healthcare_facilities:
+#        use_entities:
+#          facility_type
+  - ask_about_exam_preparation_tips
+  - ask_about_grading_system
+  - ask_about_hostel_facilities
+  - ask_about_lab_facilities
+  - ask_hostel_choice
+  - ask_about_faculty
+  - ask_about_fees
+  - ask_intro_format
+  - ask_for_directions
+  - ask_about_healthcare_facilities
 entities:
-- name
-- entity
-- number
-- facility_type
-- hostel_facilities
-- requested_hostel
-- lab_facilities
-- faculty_information
-- grading_system
-- mentorship_program
-- exam_preparation_tips
-- library_resources
-- library_days
-- fees_type
-- hostel
-- current_location
-- destination
-- mode_of_transport
+  - name
+  - number
+  - facility_type
+  - hostel_facilities
+  - requested_hostel
+  - lab_facilities
+  - faculty_information
+  - grading_system
+  - mentorship_program
+  - exam_preparation_tips
+  - library_resources
+  - library_days
+  - fees_type
+  - hostel
+  - current_location
+  - destination
+  - mode_of_transport
 
 slots:
   name:
     type: text
     mappings:
-    - type: from_text
-      intent: inform
-      role: target
+        - type: from_text
+          intent: inform
+          role: target
+
   mobile_number:
     type: text
     mappings:
-    - type: from_entity
-      entity: number
+      - type: from_entity
+        entity: number
   hostel:
     type: text
     mappings:
-    - type: from_entity
-      entity: hostel
+      - type: from_entity
+        entity: hostel
   Destination:
     type: text
     mappings:
-    - type: from_entity
-      entity: destination
+      - type: from_entity
+        entity: destination
   Current_location:
     type: text
     mappings:
-    - type: from_entity
-      entity: current_location
-
+      - type: from_entity
+        entity: current_location
 actions:
-- action_Set_Hostel_slot
+  - action_Set_Hostel_slot
 
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: "Hey! How are you?"
+
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
   utter_did_that_help:
-  - text: Did that help you?
+  - text: "Did that help you?"
+
   utter_happy:
-  - text: Great, carry on!
+  - text: "Great, carry on!"
+
   utter_goodbye:
-  - text: Bye
+  - text: "Bye"
+
   utter_iamabot:
-  - text: I am a bot.
+  - text: "I am a bot."
+
   utter_my_name:
-  - text: What is your name?
+    - text: "What is your name?"
+
   utter_mobile_number:
-  - text: What is your mobile number?
+    - text: "What is your mobile number?"
+
   utter_thanks:
-  - text: Thanks
+    - text: "Thanks"
+
   utter_website:
-  - text: Here's the link for mnnit's official website,  http://www.mnnit.ac.in/  here you can find all the information about latest announcements, about our college and information regarding registration, result, academic schedule and curriculum
+    - text: "Here's the link for mnnit's official website,  http://www.mnnit.ac.in/  here you can find all the information about latest announcements, about our college and information regarding registration, result, academic schedule and curriculum"
+
   utter_courses:
-  - text: "Here's the link to check details about courses offered in Mnnit Allahbad   http://www.mnnit.ac.in/index.php/department/engineering/me/mecourses  "
+    - text: "Here's the link to check details about courses offered in Mnnit Allahbad   http://www.mnnit.ac.in/index.php/department/engineering/me/mecourses  "
+
   utter_ask_placements:
-  - text: You can find the placement stats on the Mnnit website and its Linkdin Page
+    - text: "You can find the placement stats on the Mnnit website and its Linkdin Page"
+
   utter_ask_admission_process:
-  - text: For Admission in Undergraduate course one can give the Joint Entrance Examination and based on the perforamance of that exam the candidate can choose the stream he want to apply for. For Foreign Candidates they can apply through DASA portal.  To apply for PG in MNNIT Allahabad, you can visit the official website and follow the admission process.
+    - text: "For Admission in Undergraduate course one can give the Joint Entrance Examination and based on the perforamance of that exam the candidate can choose the stream he want to apply for. For Foreign Candidates they can apply through DASA portal.  To apply for PG in MNNIT Allahabad, you can visit the official website and follow the admission process."
+
   utter_ask_about_internship_opportunities:
-  - text: |-
-      MNNIT encourages students to explore internships to gain practical experience.
-       The college's career services department assists with placements. The internships opportunity starts from the junior year of the college.
-       The companies allows the students to participate in the internships training after some exams and Online Assignment. 
-       For enrolling in the internships training you must have a good CPI and Communication skills
+    - text: "MNNIT encourages students to explore internships to gain practical experience.\n
+     The college's career services department assists with placements.
+     The internships opportunity starts from the junior year of the college.\n
+     The companies allows the students to participate in the internships training after some exams and Online Assignment. \n 
+     For enrolling in the internships training you must have a good CPI and Communication skills"
+
   utter_ask_about_healthcare_facilities:
-  - text: |-
-      MNNIT provides healthcare facilities on campus, including a college health center for medical assistance
-       It is located after the underpass and has emergency ambulance Service , Also It has Apollo Pharmacy Store which have 
-       Every Basic medicine.
+    - text: "MNNIT provides healthcare facilities on campus, including a college health center for medical assistance\n
+     It is located after the underpass and has emergency ambulance Service , Also It has Apollo Pharmacy Store which have \n
+     Every Basic medicine."
+
   utter_ask_about_exam_preparation_tips:
-  - text: |-
-      १.Start atleast one week prior for mid semester exams and atleast 10 days prior for end semester exams 
-       २.Next step is to know the syllabus and collect the required material like class notes, assignments, tutorials, previous year papers. 
-       ३.Watch the video lectures on YouTube channels suggested by the seniors. 
-       ४.After that go through the class notes properly and see topics which professor has focused in class. 
-       ५.Do the assignment questions properly same type of questions come in exams. 
-       ६.﻿Go through the previous years properly as exam pattern remains same for most of the subjects. 
-       ७.﻿The subjects which have labs perform good in main viva exam and the regular practice vivas as well this will give you better marks in internal. 
-       ८.﻿For viva study the theory of the practicals properly and also try to study more about the topics if possible. 
+    - text: "१.Start atleast one week prior for mid semester exams and atleast 10 days prior for end semester exams \n
+      २.Next step is to know the syllabus and collect the required material like class notes, assignments, tutorials, previous year papers. \n
+      ३.Watch the video lectures on YouTube channels suggested by the seniors. \n
+      ४.After that go through the class notes properly and see topics which professor has focused in class. \n
+      ५.Do the assignment questions properly same type of questions come in exams. \n
+      ६.﻿Go through the previous years properly as exam pattern remains same for most of the subjects. \n
+      ७.﻿The subjects which have labs perform good in main viva exam and the regular practice vivas as well this will give you better marks in internal. \n
+      ८.﻿For viva study the theory of the practicals properly and also try to study more about the topics if possible. "
+
   utter_ask_about_mentorship_program:
-  - text: |-
-      Yes, MNNIT Allahabad has a mentorship program called SMP where students can receive academic guidance and support from their Seniors of their 
-       respective branch.
+    - text: "Yes, MNNIT Allahabad has a mentorship program called SMP where students can receive academic guidance and support from their Seniors of their \n
+    respective branch."
+
   utter_ask_about_grading_system:
-  - text: |-
-      The grading system at MNNIT Allahabad follows the NEP 2022 grading system, where grades are awarded based on your performance in exams, assignments, and practicals 
-       The grades are marked according to your relative performance in the subject .
+    - text: "The grading system at MNNIT Allahabad follows the NEP 2022 grading system, where grades are awarded based on your performance in exams, assignments, and practicals \n
+    The grades are marked according to your relative performance in the subject ."
+
   utter_ask_about_faculty:
-  - text: The faculty members at MNNIT Allahabad are highly qualified and experienced, You can contact the faculty here, http://www.mnnit.ac.in/index.php/department/engineering/cm/cmfp .
+    - text: "The faculty members at MNNIT Allahabad are highly qualified and experienced, You can contact the faculty here, http://www.mnnit.ac.in/index.php/department/engineering/cm/cmfp ."
+
   utter_ask_about_lab_facilities:
-  - text: You can find the availaible lab facilities on your department section on MNNIT website.
+    - text: "You can find the availaible lab facilities on your department section on MNNIT website."
+
   utter_ask_hostel:
-  - text: Which hostel information do you want?
+    - text : "Which hostel information do you want?"
+
   utter_ask_about_fees:
-  - text: The tuition fees for courses at MNNIT Allahabad may vary depending on the program. You can find details about the fee structure on the official website.
+    - text: "The tuition fees for courses at MNNIT Allahabad may vary depending on the program. You can find details about the fee structure on the official website."
+
   utter_ask_intro_format:
-  - text: 'The basic format for junios to introduce themself to seniors is: '
+    - text: "The basic format for junios to introduce themself to seniors is: "
+
   utter_ask_for_directions:
-  - text: Where you want to go?
+    - text: "Where you want to go?"
+
   utter_ask_for_current_location:
-  - text: Where  are you now ?
+    - text: "Where  are you now ?"
 
 session_config:
   session_expiration_time: 60

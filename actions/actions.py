@@ -29,7 +29,7 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
-#
+
 #
 class ActionSetHostelSlot(Action):
 
@@ -40,7 +40,7 @@ class ActionSetHostelSlot(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         hostel_entry = next(tracker.get_latest_entity_values("requested_hostel"), None)
-        hostel_informations = next(tacker.get_latest_response)
+        hostel_informations = next(tracker.get_latest_response)
         utc = arrow.utcnow()
         file_path_DJ= f"Responses/DJ.txt"
         response_DJ = file_path_DJ.read()
@@ -58,8 +58,8 @@ class ActionProvideDirections(Action):
         return "action_provide_directions"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        location_name = tracker.get_slot("location")
-        destination_name = tracker.get_slot("destination")
+        location_name = tracker.get_slot("Current_location")
+        destination_name = tracker.get_slot("Destination")
 
         location_coordinates = {
             "Central Library": "25.49260751334134,81.86402110821898",
