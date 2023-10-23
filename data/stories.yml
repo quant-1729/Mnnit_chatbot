@@ -100,6 +100,16 @@ stories:
   - intent: ask_about_hostel_facilities
   - action: utter_ask_hostel
 
+- story: Ask About Hostel Choice
+  steps:
+    - intent: ask_about_hostel_facilities
+      entities:
+      - hostel_choice: SVBH
+      - hostel_facility: SVBH
+    - slot_was_set:
+        - hostel: SVBH
+    - action: utter_thanks_for_hostel
+
 - story: Ask About Fees
   steps:
   - intent: ask_about_fees
@@ -113,7 +123,14 @@ stories:
 - story: Ask for directions
   steps:
   - intent: ask_for_directions
-  - action: utter_ask_for_directions
+    entities:
+    - destination_given: destination_given
+    - user_location: user_location
+  - slot_was_set:
+      - destination: 'SVBH'
+  - slot_was_set:
+      - Current_location: 'Athletic Ground'
+  - action: action_provide_directions
 
 - story: interactive_story_1
   steps:
@@ -166,3 +183,24 @@ stories:
 #  steps:
 #  - intent: ask_for_directions
 #  - action: utter_ask_for_directions
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_about_hostel_facilities
+    entities:
+    - entity: hostel_facilities, value:hostel facilities
+  - action: utter_ask_hostel
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_about_hostel_facilities
+    entities:
+    - requested_hostel: SVBH
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_about_hostel_facilities
+    entities:
+    - requested_hostel: SVBH
