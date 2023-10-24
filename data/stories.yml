@@ -123,9 +123,6 @@ stories:
 - story: Ask for directions
   steps:
   - intent: ask_for_directions
-    entities:
-    - destination_given: destination_given
-    - user_location: user_location
   - slot_was_set:
       - destination: 'SVBH'
   - slot_was_set:
@@ -179,10 +176,7 @@ stories:
 #  - intent: ask_about_library
 #  - action: utter_ask_about_library
 #
-#- story: Ask hostel choice
-#  steps:
-#  - intent: ask_for_directions
-#  - action: utter_ask_for_directions
+
 
 - story: interactive_story_1
   steps:
@@ -199,8 +193,52 @@ stories:
     entities:
     - requested_hostel: SVBH
 
+#- story: interactive_story_1
+#  steps:
+#  - intent: ask_for_directions
+#    entities:
+#    - user_location: 'SVBH'
+#    - destination_given: 'Athletic Ground'
+#  - slot_was_set:
+#    - destination: 'Athletic Ground'
+#  - slot_was_set:
+#    - Current_location: 'SVBH'
+
+
+
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: ask_for_directions
+#    entities:
+#    - user_location: SVBH
+#    - destination_given: Athletic Ground
+#  - slot_was_set:
+#    - destination: Athletic Ground
+#  - slot_was_set:
+#    - Current_location: SVBH
+#  - action: action_provide_directions
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: ask_for_directions
+#    entities:
+#    - user_location: SVBH
+#    - destination_given: Athletic Ground
+#  - slot_was_set:
+#    - destination: Athletic Ground
+#  - slot_was_set:
+#    - Current_location: SVBH
+#  - action: action_provide_directions
+
 - story: interactive_story_1
   steps:
-  - intent: ask_about_hostel_facilities
+  - intent: ask_for_directions
     entities:
-    - requested_hostel: SVBH
+    - user_location: SVBH
+    - destination_given: Athletic Ground
+  - slot_was_set:
+    - destination: Athletic Ground
+  - slot_was_set:
+    - Current_location: SVBH
+  - action: action_provide_directions

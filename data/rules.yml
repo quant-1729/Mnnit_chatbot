@@ -17,4 +17,8 @@ rules:
   - intent: ask_hostel_choice
   - action: action_Set_Hostel_slot
 
+- rule: Giving the directions
+  steps:
+  - intent: ask_for_direction
+  - action: action_provide_directions
 

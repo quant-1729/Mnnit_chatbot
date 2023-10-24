@@ -392,6 +392,8 @@ nlu:
     - What are the opening hours of [destination](destination_given) from [user_location](user_location)?
     - When does [destination](destination_given) open and close from [user_location](user_location)?
     - Can you provide the operating hours for [destination](destination_given) from [user_location](user_location)?
+    - Tell me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
+    - Tell me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
 - synonym: mentorship_program, value:mentorship
   examples: |
     - mentorship

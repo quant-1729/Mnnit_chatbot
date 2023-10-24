@@ -13,6 +13,7 @@ intents:
     use_entities: library_resources
 - ask_about_mentorship_program
 - ask_admission_process
+- ask_for_direction
 - ask_for_directions
 - ask_hostel_choice:
     use_entities: hostel
@@ -31,6 +32,8 @@ intents:
 - my_name:
     use_entities: name
 entities:
+- destination_given
+- user_location
 - requested_hostel
 - number
 - name
@@ -45,8 +48,6 @@ entities:
 - library_days
 - fees_type
 - hostel_choice
-- user_location
-- destination_given
 - mode_of_transport
 - hostel
 slots:
@@ -77,11 +78,11 @@ slots:
     - type: from_entity
       entity: user_location
 actions:
+- action_provide_directions
 - utter_greet
 - utter_ask_hostel
 - utter_mobile_number
 - action_Set_Hostel_slot
-- action_provide_directions
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -105,7 +106,7 @@ responses:
   utter_website:
   - text: Here's the link for mnnit's official website,  http://www.mnnit.ac.in/  here you can find all the information about latest announcements, about our college and information regarding registration, result, academic schedule and curriculum
   utter_courses:
-  - text: "Here's the link to check details about courses offered in Mnnit Allahbad   http://www.mnnit.ac.in/index.php/department/engineering/me/mecourses  "
+  - text: Here's the link to check details about courses offered in Mnnit Allahbad   http://www.mnnit.ac.in/index.php/department/engineering/me/mecourses
   utter_ask_placements:
   - text: You can find the placement stats on the Mnnit website and its Linkdin Page
   utter_ask_admission_process:
@@ -148,13 +149,15 @@ responses:
   utter_ask_about_fees:
   - text: The tuition fees for courses at MNNIT Allahabad may vary depending on the program. You can find details about the fee structure on the official website.
   utter_ask_intro_format:
-  - text: 'The basic format for junios to introduce themself to seniors is: '
+  - text: The basic format for junios to introduce themself to seniors is
   utter_ask_for_directions:
   - text: Where you want to go?
   utter_ask_for_current_location:
   - text: Where  are you now ?
   utter_thanks_for_hostel:
   - text: Your hostel is saved
+  utter_provide_direction:
+  - text: This is the link to the path
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
