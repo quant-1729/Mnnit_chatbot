@@ -393,7 +393,10 @@ nlu:
     - When does [destination](destination_given) open and close from [user_location](user_location)?
     - Can you provide the operating hours for [destination](destination_given) from [user_location](user_location)?
     - Tell me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
-    - Tell me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
+    - Give me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
+    - Give me the directions from [SVBH](user_location) to [Admin Building](destination_given)
+    - Tell me the directions from [SVBH](user_location) to [athletic ground]{"entity": "destination_given", "value": "Athletic Ground"}
+    - Tell me the directions from [SVBH](user_location) to [Admin Building](destination_given)
 - synonym: mentorship_program, value:mentorship
   examples: |
     - mentorship
@@ -745,3 +748,588 @@ nlu:
     - taxi
     - walking
     - tram
+
+#ujjawal Code
+
+- intent: more_about_college
+  examples: |
+    - MNNIT 
+    - mnnit college
+    - Inform about MNNIT college
+    - inform about mnnit college
+    - tell me something more about MNNIT Allahabad
+    - Is MNNIT Allahabad a good college?
+    - Is MNNIT a good college for engineering?
+    - When MNNIT college is established?
+    - How old is the MNNIT Allahabad?
+    - Is MNNIT a Regional Engineering Colleges of India?
+    - Is MNNIT a Government or Private college?
+    - What are the college's core values and mission?
+    - Can you tell me about the MNNIT's history and founding?
+    - Can you tell me about the mnnit's history and founding?
+    - Share some facts and statistics about the college
+    - Share some facts and statistics about the MNNIT
+    - Share some statistics about the mnnit
+
+- intent: club
+  examples: |
+    - What are clubs present in MNNIT?
+    - Which type of clubs are present in college?
+    - What are different activities happen in MNNIT?
+    - Mention the name of clubs of MNNIT.
+    - Tell the name of clubs of MNNIT.
+    - clubs of mnnit college
+    - Which type of clubs are present in MNNIT college?
+    - Tell me about the clubs in the college
+    - Tell me about the clubs in the mnnit
+    - Tell me extra co-curricular activity of the college
+    - Tell me extra co-curricular activity of the MNNIT
+
+- intent: benfit_of_the_club
+  examples: |
+    - What are the facility of exploring different fields in MNNIT?
+    - What are the benefits of joining club ?
+    - What are advantages of joining different club?
+    - Is there any benefit of joining different club?
+    - Is there any advantage of participating different club?
+    - Is it worth to work in different clubs of MNNIT? 
+    - What are the reasons for joining a club?
+    - Why is it important to join clubs in college?
+    - Should you join clubs in college?
+    - What are the benefits of joining clubs at your college?
+    - Can you tell me why I should join a club on campus?
+    - What advantages do college clubs offer to students?
+    - How can joining a club enhance my corasllege experience?
+    - Share some reasons why I should consider joining a student organization.
+    - What opportunities do clubs provide for personal development?
+    - Tell me more about the positive impacts of participating in clubs.
+    - How can joining a club help me make friends and connections?
+    - Explain the social and networking benefits of college clubs.
+    - What are the advantages of being part of a club in terms of career development?
+
+- intent: explore_campus
+  examples: |
+    - Tell me someting about campus of MNNIT college
+    - How the campus of MNNIT looks like?
+    - Is campus life of mnnit college good?
+    - How was your life at MNNIT?
+    - Is campus of MNNIT colloge beautiful?
+    - What is the campus area of MNNIT college?
+    - How can I explore your college campus?
+    - Tell me about campus tours at your college.
+    - What are the options for visiting your college?
+    - Can I schedule a campus visit?
+    - Share information about open house events at your college.
+    - How can I get a feel for the college before applying?
+    - What resources are available for prospective students to explore your college?
+    - Is there a virtual tour of your college available?
+    - Are there any upcoming college events for visitors?
+    - Tell me about the admissions office and how to contact them for a visit.
+
+- intent: cafetarea
+  examples: |
+    - Is there any good canteen present in campus area?
+    - Can you tell me about cafe.
+    - Which cafe are present near MNNIT Allahabad?
+    - Is food cafe shop are present in campus area?
+    - Can we order food from near by cafe in mnnit college ?
+    - Tell me about the college cafe.
+    - What cafeteria options are available on campus?
+    - Can you provide information about meal plans at the college?
+    - How does the cafeteria accommodate dietary restrictions?
+    - Are there vegetarian or vegan options in the cafe?
+    - What are the opening hours of the college cafeteria?
+    - Is there a food court on campus?
+    - Are there any special events or promotions in the cafeteria?
+    - Can you share the menu options and prices in the cafeteria?
+    - Tell me about the quality of food in the college cafeteria.
+    - Where can I grab a meal on campus?
+    - where are the canteen in campus
+    - what are the canteen in campus
+    - where are the cafe in campus
+    - what are the cafe in campus
+    - eating spot in the campus
+- intent: dwesis_canteen
+  examples: |
+    - Tell me more about Dwesis .
+    - What's on the menu at Dwesis ?
+    - Can you share the operating hours of Dwesis ?
+    - Are there any special dishes at dwesis ?
+    - What's the pricing like at dwesis ?
+    - Tell me about the ambiance and seating at Dwesis .
+    - Is there a student discount available at Dwesis ?
+    - What are the popular food items at Dwesis ?
+    - Share some reviews or recommendations for Dwesis .
+    - How can I provide feedback about my experience at Dwesis ?
+    - What's the specialty of Dwesis ?
+    - What type of cuisine does dwesis  primarily serve?
+    - Can you share the price range of dishes at Dwesis ?
+    - Are there any cultural or themed nights at dwesis , like "Mexican Mondays" or "Asian Fusion Fridays"?
+    - Tell me about the dessert options at Dwesis .
+    - Is there outdoor seating available at dwesis ?
+    - Are there any loyalty programs or rewards for frequent visitors to Dwesis ?
+    - How do I place an order or reserve a table at Dwesis ?
+    - Can you provide information about the staff and chefs at Dwesis ?
+    - Are there any special considerations for allergen information at Dwesis ?
+- intent: dwesis_location
+  examples: |
+    - Where is the college dwesis located?
+    - Can you tell me the address of the dwesis on campus?
+    - How do I find the Mr. Dwesis's location?
+    - Give me directions to the college Dwesis.
+    - Is there a map to the dwesis?
+    - What building or area is the dwesis situated in?
+    - I'm new here, where can I find the dwesis?
+    - Tell me how to get to the nearest dwesis.
+    - Can you guide me to the dwesis's location on campus?
+- intent: cafe_96
+  examples: |
+    - Tell me more about cafe 96 .
+    - What's on the menu at cafe 96 ?
+    - Can you share the operating hours of Cafe 96 ?
+    - Are there any special dishes at Cafe 96 ?
+    - What's the pricing like at cafe 96 ?
+    - Tell me about the ambiance and seating at Cafe 96 .
+    - Is there a student discount available at Cafe 96 ?
+    - What are the popular food items at Cafe 96 ?
+    - Share some reviews or recommendations for Cafe 96 .
+    - How can I provide feedback about my experience at Cafe 96 ?
+    - What's the specialty of cafe 96 ?
+    - What type of cuisine does Cafe 96  primarily serve?
+    - Can you share the price range of dishes at cafe 96 ?
+    - Are there any cultural or themed nights at Cafe 96 , like "Mexican Mondays" or "Asian Fusion Fridays"?
+    - Tell me about the dessert options at Cafe 96 .
+    - Is there outdoor seating available at cafe 96 ?
+    - Are there any loyalty programs or rewards for frequent visitors to Cafe 96 ?
+    - How do I place an order or reserve a table at Cafe 96 ?
+    - Can you provide information about the staff and chefs at Cafe 96 ?
+    - Are there any special considerations for allergen information at Cafe 96 ?
+- intent: cafe_96_location
+  examples: |
+    - Where is the college cafe 96 located?
+    - Can you tell me the address of the Cafe 96 on campus?
+    - How do I find the Mr. Cafe 96's location?
+    - Give me directions to the college Cafe 96.
+    - Is there a map to the cafe 96?
+    - What building or area is the Cafe 96 situated in?
+    - I'm new here, where can I find the Cafe 96?
+    - Tell me how to get to the nearest Cafe 96.
+    - Can you guide me to the cafe 96's location on campus?
+- intent: yamuna_canteen
+  examples: |
+    - Tell me more about yamuna canteen .
+    - Tell me more about yamuna  .
+    - What's on the menu at yamuna  ?
+    - Can you share the operating hours of yamuna canteen ?
+    - Are there any special dishes at yamuna canteen ?
+    - What's the pricing like at yamuna canteen ?
+    - Tell me about the ambiance and seating at Yamuna canteen .
+    - Is there a student discount available at yamuna canteen ?
+    - What are the popular food items at yamuna canteen ?
+    - Share some reviews or recommendations for yamuna canteen .
+    - How can I provide feedback about my experience at yamuna canteen ?
+    - What's the specialty of yamuna  ?
+    - What type of cuisine does yamuna canteen  primarily serve?
+    - Can you share the price range of dishes at yamuna canteen ?
+    - Are there any cultural or themed nights at yamuna canteen , like "Mexican Mondays" or "Asian Fusion Fridays"?
+    - Tell me about the dessert options at yamuna canteen .
+    - Is there outdoor seating available at yamuna canteen ?
+    - Are there any loyalty programs or rewards for frequent visitors to yamuna canteen ?
+    - How do I place an order or reserve a table at yamuna canteen ?
+    - Can you provide information about the staff and chefs at yamuna canteen ?
+    - Are there any special considerations for allergen information at yamuna canteen ?
+- intent: yamuna_location
+  examples: |
+    - Where is the college yamuna canteen located?
+    - Can you tell me the address of the yamuna canteen on campus?
+    - How do I find the Mr. yamuna canteen's location?
+    - Give me directions to the college yamuna canteen.
+    - Give me directions to the college yamuna.
+    - Is there a map to the yamuna?
+    - What building or area is the yamuna canteen situated in?
+    - I'm new here, where can I find the yamuna canteen?
+    - Tell me how to get to the nearest yamuna canteen.
+    - Can you guide me to the yamuna canteen's location on campus?
+
+- intent: lit_club
+  examples: |
+    - What is Literary Cub?
+    - Is there any literary club of MNNIT college ?
+    - Tell me something about literary club
+    - Is literary club of mnnit college good?
+    - What are the benefits of joining Literary club ?
+    - What does we do in Literary club ?
+- intent: robotics_club
+  examples: |
+    - Tell me more about the college's robotics club.
+    - Can you provide information about the robotics club on campus?
+    - What are the activities and projects of the robotics club?
+    - How can I join the robotics club?
+    - When and where does the robotics club meet?
+    - Do I need any prior experience to be part of the robotics club?
+    - Can you share details about the leadership and mentors in the robotics club?
+    - Are there any upcoming robotics events or competitions?
+    - Tell me about the achievements and awards of the robotics club.
+    - Do you have a robotics lab or workspace for club members?
+# ######### hostels
+- intent: boys_hostel
+  examples: |
+    - How many boys hostels are there in Mnnit Allahabad?
+    - What facilities are provide in boys hostel of mnnit allahabad?
+    - Tell me something about boys hostel
+    - How rooms are alloted in mnnit college?
+    - What are the condition of boys hostel in mnnit college?
+    - Is the condition of boys hostel good?
+    - Can you provide information about the boys' hostel at the college?
+    - Tell me about the accommodation options for male students.
+    - What are the facilities available in the boys' hostel?
+    - How do I apply for a room in the boys' hostel?
+    - Are there any rules or regulations for residents in the boys' hostel?
+    - Can you share the contact details for the boys' hostel office?
+    - What's the cost of staying in the boys' hostel, and are there any payment options?
+    - Are there any security measures in place at the boys' hostel?
+    - Can you provide details about the dining options in the boys' hostel?
+    - Tell me about any common areas and recreational facilities in the boys' hostel.
+
+- intent: girls_hostel
+  examples: |
+    - How many girls hostels are there in Mnnit Allahabad?
+    - What facilities are provide in girls hostel of mnnit allahabad?
+    - Tell me something about girls hostel
+    - How rooms are alloted for girls in mnnit college?
+    - What are the condition of girls hostel in mnnit college?
+    - Is the condition of girls hostel good?
+    - intent: girls_hostel_info
+    - Can you provide information about the girls' hostel at the college?
+    - Tell me about the accommodation options for female students.
+    - What are the facilities available in the girls' hostel?
+    - How do I apply for a room in the girls' hostel?
+    - Are there any rules or regulations for residents in the girls' hostel?
+    - Can you share the contact details for the girls' hostel office?
+    - What's the cost of staying in the girls' hostel, and are there any payment options?
+    - Are there any security measures in place at the girls' hostel?
+    - Can you provide details about the dining options in the girls' hostel?
+    - Tell me about any common areas and recreational facilities in the girls' hostel.
+
+#  department
+
+- intent: Department
+  examples: |
+    - department name
+    - how many Deaprtment in the college
+    - How many Accademic department is present in the college
+    - How many Degree courses are available in the mnnit
+    - How many Degree courses are available in the college
+    - How many Degree courses are available in the campus
+    - Degree courses
+    - how many branches are present
+    - What are the branches present ?
+    - What academic departments are available in the college?
+    - Can you provide a list of departments in the college?
+    - Tell me about the various academic departments on campus.
+    - I'd like to know which departments the college offers.
+    - Is there a specific department for computer science?
+    - What fields of study are represented in the college's departments?
+    - How many departments are there at the college?
+    - Give me an overview of the academic departments at the college.
+    - What are the main areas of study offered by the college's departments?
+    - Can you list the department names and their locations in the college?
+
+- intent: Director
+  examples: |
+    - Director of MNNIT
+    - director
+    - person name who is govern rule in the campus
+    - Director Names
+    - Whos is the director of MNNIT
+    - Who is the director of college
+    - Who is the Director of MNNIT Campus
+    - Who is the current Director of the college?
+    - Can you provide information about the college's director?
+    - Tell me about the person in charge of the college.
+    - Who is leading the college as the director?
+    - How can I contact the Director of the college?
+    - Can you share the background and qualifications of the college's director?
+    - Is there an email address or phone number for the college Director?
+    - What is the director's vision for the college?
+    - Are there any upcoming events or meetings with the college Director?
+    - Give me details about the director's office and hours of availability.
+- intent: dean
+  examples: |
+    - dean of MNNIT
+    - Dean
+    - Dean Names
+    - Whos is the dean of MNNIT
+    - Who is the dean of college
+    - Who is the dean of MNNIT Campus
+    - Who is the current dean of the college?
+    - Can you provide information about the college's dean?
+    - Who is leading the college as the Dean?
+    - How can I contact the Dean of the college?
+    - Can you share the background and qualifications of the college's dean?
+    - Is there an email address or phone number for the college dean?
+    - What is the dean's vision for the college?
+    - Are there any upcoming events or meetings with the college Dean?
+    - Give me details about the dean's office and hours of availability.
+
+  #About departments and their HODs
+
+- intent: CSE_dept
+  examples: |
+    - Computer Science and Engineering Department .
+    - CSE Department .
+    - What kind of facilities does the CSE or Computer Science and Engineering Department have?
+    - Are there any research labs in the CSE or Computer Science and Engineering Department?
+    - Resources are available to students in the CSE or Computer Science and Engineering Department
+    - Professors in the CSE or Computer Science Department
+    - How experienced are the faculty members in the CSE or Computer Science and Engineering Department?
+    - The CSE or Computer Science and Engineering Department offers .
+    - Scope of the CSE or Computer Science and Engineering Department .
+    - Undergraduate programs offered by the CSE or Computer Science and Engineering Department.
+    - Tell me about the graduate programs in CSE or Computer Science and Engineering .
+    - Does the CSE or Computer Science and Engineering Department offer any research-based programs?
+    - How is Computer Science and Engineering Department at MNNIT ?
+    - About faculty of CSE or Computer Science and Engineering depatment .
+    - About faculty of Computer Science and Engineering Department .
+    - How is Computer Science and Engineering Department at Motilal Nehru National Institute of Technology ?
+    - CS at Motilal Nehru National Institute of Technology or MNNIT .
+    - Computer Science at MNNIT or Motilal Nehru National Institute of Technology .
+
+- intent: CSE_dept_HOD
+  examples: |
+    - Who is the head of department of Computer Science and Engineering Department ?
+    - HOD of Computer Science and Engineering Department .
+    - Head of department of CS or CSE .
+    - Faculty who is HOD of CSE Or Computer Science and Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+    - What is the name of the head of the CSE department?
+    - Head of Department of CSE or Computer Science and Engineering depatment
+
+- intent: ECE_dept
+  examples: |
+    - Facilities does the ECE or Electronics and Communication Engineering Department have?
+    - Electronics and Communication Engineering .
+    - Research labs in the ECE or Electronics and Communication Engineering Department
+    - Resources are available to students in the ECE Department
+    - Professors in the ECE Department?
+    - Faculty members in the ECE Department
+    - The ECE or Department offers
+    - Tell me about the ECE Department at Motilal Nehru National Institute of Technology or MNNIT .
+    - Scope of the ECE or Electronics and Communication Engineering Department?
+    - Undergraduate programs offered by the ECE Department .
+    - Tell me about the graduate programs in ECE or Electronics and Communication Engineering .
+    - Does the ECE or Electronics and Communication Engineering Department offer any research-based programs?
+    - How is Electronics and Communication Engineering Department at MNNIT ?
+    - About faculty of ECE or Electronics and Communication Engineering depatment .
+    - About faculty of Electronics and Communication Engineering Department .
+    - Electronics and Communication Engineering at Motilal Nehru National Institute of Technology 
+    - EC at Motilal Nehru National Institute of Technology or MNNIT .
+    - Electronics at MNNIT or Motilal Nehru National Institute of Technology .
+
+- intent: ECE_dept_HOD
+  examples: |
+    - Who is the head of department of Electronics and Communication Engineering Department ?
+    - HOD of Electronics and Communication Engineering Department .
+    - Head of department of Electronics and Communication Engineering Department .
+    - Faculty who is HOD of Electronics and Communication Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+    - What is the name of the head of the ECE department?
+    - Head of Department of ECE or Electronics and Communication Engineering Department .
+
+- intent: EE_dept
+  examples: |
+    - Facilities does the EE or Electrical Engineering Department have?
+    - Electrical Engineering .
+    - Research labs in the ECE or EE or Electrical Engineering Department
+    - Resources are available to students in the EE or Electrical Engineering Department
+    - Professors in the EE or Electrical Engineering Department?
+    - Faculty members in the EE or Electrical Engineering Department
+    - The EE or Electrical Engineering Department offers
+    - Tell me about the EE or Electrical Engineering Department at Motilal Nehru National Institute of Technology or MNNIT .
+    - Scope of the EE or Electrical Engineering?
+    - Undergraduate programs offered by the EE or Electrical Department?
+    - Tell me about the graduate programs in EE or Electrical Engineering?
+    - Does the EE or Electrical Engineering Department offer any research-base programs?
+    - How is EE or Electrical Engineering Department at MNNIT ?
+    - About faculty of EE or Electrical Engineering depatment .
+    - How is EE or Electrical Engineering at Motilal Nehru National Institute of Technology ?
+    - EE at Motilal Nehru National Institute of Technology or MNNIT .
+    - Electrical at MNNIT or Motilal Nehru National Institute of Technology .
+
+- intent: EE_dept_HOD
+  examples: |
+    - Who is the head of department of EE or Electrical Engineering Department ?
+    - HOD of Electrical Engineering Department .
+    - Head of department of EE or Electrical Engineering Department .
+    - Faculty who is HOD of EE Electrical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+    - What is the name of the head of the EE or Electrical Engineering Department department?
+    - Head of Department of EE or Electrical Engineering Department .
+
+- intent: ME_dept
+  examples: |
+    - Facilities does the ME or Mechanical Engineering Department have.
+    - Mechanical Engineering .
+    - Research labs in the ME or Mechanical Engineering Department
+    - Resources are available to students in the ME or Mechanical Engineering Department
+    - Professors in the ME or Mechanical Engineering Department .
+    - Faculty members in the ME or Mechanical Engineering Department .
+    - The ME or Mechanical Engineering Department offers .
+    - Tell me about the ME or Mechanical Engineering Department Department at Motilal Nehru National Institute of Technology or MNNIT .
+    - Scope of the ME or Mechanical Engineering Department
+    - Undergraduate programs offered by the ME or Mechanical Engineering Department
+    - Tell me about the graduate programs in ME or Mechanical Engineering Department
+    - Does the ME or Mechanical Engineering Department offer any research-base programs?
+    - How is ME or Mechanical Engineering Department at MNNIT ?
+    - About faculty of ME or Mechanical Engineering Department depatment .
+    - How is ME or Mechanical Engineering Department at Motilal Nehru National Institute of Technology ?
+    - ME at Motilal Nehru National Institute of Technology or MNNIT .
+    - Mechanical at MNNIT or Motilal Nehru National Institute of Technology .
+
+- intent: ME_dept_HOD
+  examples: |
+    - Who is the head of department of ME or Mechanical Engineering Department ?
+    - HOD of Mechanical Engineering Department .
+    - Head of department of ME or Mechanical Engineering Department .
+    - Faculty who is HOD of ME or Mechanical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+    - What is the name of the head of the ME or Mechanical Engineering Department department?
+    - Head of Department of ME or Mechanical Engineering Department .
+
+- intent: ChE_Dept
+  examples: |
+    - Facilities does the ChE or Chemical Engineering Department have.
+    - Chemical Engineering .
+    - Research labs in the ChE or Chemical Engineering Department
+    - Resources are available to students in the ChE or Chemical Engineering Department
+    - Professors in the ChE or Chemical Engineering Department .
+    - Faculty members in the ChE or Chemical Engineering Department .
+    - The ChE or Chemical Engineering Department offers .
+    - Tell me about the ChE or Chemical Engineering Department Department at Motilal Nehru National Institute of Technology or MNNIT .
+    - Scope of the ChE or Chemical Engineering Department
+    - Undergraduate programs offered by the ChE or Chemical Engineering Department
+    - Tell me about the graduate programs in ChE or Chemical Engineering Department
+    - Does the ChE or Chemical Engineering Department offer any research-base programs?
+    - How is ChE or Chemical Engineering Department at MNNIT ?
+    - About faculty of ChE or Chemical Engineering Department depatment .
+    - How is ChE or Chemical Engineering Department at Motilal Nehru National Institute of Technology ?
+    - Chemical at MNNIT or Motilal Nehru National Institute of Technology .
+
+- intent: ChE_Dept_HOD
+  examples: |
+    - Who is the head of department of ChE or Chemical Engineering Department ?
+    - HOD of Chemical Engineering Department .
+    - Head of department of ChE or Chemical Engineering Department .
+    - Faculty who is HOD of ChE or Chemical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+    - What is the name of the head of the ChE or Chemical Engineering Department department?
+    - Head of Department of ChE or Chemical Engineering Department .
+
+- intent: CE_dept
+  examples: |
+    - Facilities does the CE or Civil Engineering Department have.
+    - Civil Engineering .
+    - Research labs in the CE or Civil Engineering Department
+    - Resources are available to students in the CE or Civil Engineering Department
+    - Professors in the CE or Civil Engineering Department .
+    - Faculty members in the CE or Civil Engineering Department .
+    - CE or Civil Engineering offers .
+    - Tell me about the CE or Civil Engineering Department Department at Motilal Nehru National Institute of Technology or MNNIT .
+    - Scope of the CE or Civil Engineering Department
+    - Undergraduate programs offered by the CE or Civil Engineering Department
+    - Tell me about the graduate programs in CE or Civil Engineering Department
+    - Does the CE or Civil Engineering Department offer any research-base programs?
+    - How is CE or Civil Engineering Department at MNNIT ?
+    - About faculty of CE or Civil Engineering depatment .
+    - How is CE or Civil Engineering Department at Motilal Nehru National Institute of Technology ?
+    - Civil at MNNIT or Motilal Nehru National Institute of Technology .
+
+- intent: CE_dept_HOD
+  examples: |
+    - Who is the head of department of CE or Civil Engineering Department ?
+    - HOD of Civil Engineering Department .
+    - Head of department of CE or Civil Engineering Department .
+    - Faculty who is HOD of CE or Civil Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+    - What is the name of the head of the CE or Civil Engineering Department department?
+    - Head of Department of CE or Civil Engineering Department .
+
+- intent: BE_dept
+  examples: |
+    - Facilities does the Biotechnology Engineering Department have.
+    - Biotech .
+    - Biotechnology Engineering .
+    - Research labs in the Biotechnology Engineering Department
+    - Resources are available to students in the Biotechnology Engineering Department
+    - Professors in the Biotechnology Engineering Department .
+    - Faculty members in the Biotechnology Engineering Department .
+    - Biotechnology Engineering offers .
+    - Tell me about the Biotechnology Engineering Department Department at Motilal Nehru National Institute of Technology or MNNIT .
+    - Scope of the Biotechnology Engineering Department
+    - Undergraduate programs offered by the Biotechnology Engineering Department
+    - Tell me about the graduate programs in Biotechnology Engineering Department
+    - Does the Biotechnology Engineering Department offer any research-base programs?
+    - How is Biotechnology Engineering Department at MNNIT ?
+    - About faculty of Biotechnology Engineering depatment .
+    - How is Biotechnology Engineering Department at Motilal Nehru National Institute of Technology ?
+    - Biotech at MNNIT or Motilal Nehru National Institute of Technology .
+
+- intent: BE_dept_HOD
+  examples: |
+    - Who is the head of department of Biotechnology Engineering Department ?
+    - HOD of Biotechnology Engineering Department .
+    - Head of department of Biotechnology Engineering Department .
+    - Faculty who is HOD of Biotechnology Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+    - What is the name of the head of the Biotechnology Engineering Department department?
+    - Head of Department of Biotechnology Engineering Department .
+
+- intent: PIE_dept
+  examples: |
+    - Facilities does the Production and Industrial Engineering Department have.
+    - PIE or Production and Industrial Engineering Department
+    - Production Engineering.
+    - Production and Industrial Engineering.
+    - Research labs in the Production and Industrial Engineering Department
+    - Resources are available to students in the Production and Industrial Engineering or production Department
+    - Professors in the Production and Industrial Engineering Department .
+    - Faculty members in the Production and Industrial Engineering Department .
+    - Production and Industrial Engineering Engineering offers .
+    - Tell me about the Production and Industrial Engineering Department at Motilal Nehru National Institute of Technology or MNNIT .
+    - Scope of the Production and Industrial Engineering Department
+    - Undergraduate programs offered by the Production and Industrial Engineering Department
+    - Tell me about the graduate programs in Production or Production and Industrial Engineering Department
+    - Does the Production and Industrial Engineering Department offer any research-base programs?
+    - How is Production and Industrial Engineering Department at MNNIT ?
+    - About faculty of Production and Industrial Engineering depatment .
+    - How is Production and Industrial Engineering Department at Motilal Nehru National Institute of Technology ?
+    - Production at MNNIT or Motilal Nehru National Institute of Technology .
+
+- intent: PIE_dept_HOD
+  examples: |
+    - Who is the head of department of PIE or Production and Industrial Engineering Department Department ?
+    - HOD of Production and Industrial Engineering Department .
+    - Head of department of PIE or Production and Industrial Engineering Department Department .
+    - Faculty who is HOD of PIE or Production and Industrial Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+    - What is the name of the head of the PIE or Production and Industrial Engineering Department department?
+    - Head of Department of PIE or Production and Industrial Engineering Department .
+
+- intent: AM_dept
+  examples: |
+    - Can you tell me more about the Applied Mathematics department at the college?
+    - What programs and courses are offered by the Applied Mathematics department?
+    - Who are the faculty members in the Applied Mathematics department?
+    - How can I apply for a program within the Applied Mathematics department?
+    - What research areas are covered by the Applied Mathematics department?
+    - Is there an Applied Mathematics club or student organization?
+    - Are there any scholarships or opportunities specific to Applied Mathematics students?
+    - Can you provide information about the location of the Applied Mathematics department's office?
+    - What are the department's office hours and contact information?
+    - Tell me about any upcoming events or seminars hosted by the Applied Mathematics department.
+
+# sport area
+- intent: college_playground
+  examples: |
+    - Tell me about the college's playground and sports facilities.
+    - What sports facilities are available on campus?
+    - Can you provide information about the location of the college playground?
+    - Are there any sports teams at the college?
+    - How can I access the college's sports facilities?
+    - Is there a track or field for athletics on campus?
+    - What types of sports and activities can I participate in at the college?
+    - Are there any upcoming sports events or tournaments?
+    - Tell me about the fitness and recreational options at the college.
+    - Can you provide details about the gym or fitness center on campus?

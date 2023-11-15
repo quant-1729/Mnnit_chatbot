@@ -46,9 +46,10 @@ class ActionProvideDirections(Action):
         return "action_provide_directions"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        location_name = tracker.get_slot("Current_location")
-        destination_name = tracker.get_slot("destination")
-
+        location_name = tracker.get_slot("user_location")
+        destination_name = tracker.get_slot("destination_given")
+        # location_name = tracker.get_latest_entity_values(user_location)
+        # destination_name = tracker.get_latest_entity_values(destination_given)
         location_coordinates = {
             "Central Library": "25.49260751334134,81.86402110821898",
             "Admin Building": "25.493425551166336,81.86273379235345",

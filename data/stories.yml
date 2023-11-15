@@ -124,9 +124,9 @@ stories:
   steps:
   - intent: ask_for_directions
   - slot_was_set:
-      - destination: 'SVBH'
+      - destination_given: destination_given
   - slot_was_set:
-      - Current_location: 'Athletic Ground'
+      - user_location: user_location
   - action: action_provide_directions
 
 - story: interactive_story_1
@@ -178,7 +178,7 @@ stories:
 #
 
 
-- story: interactive_story_1
+- story: interactive_story_5
   steps:
   - intent: greet
   - action: utter_greet
@@ -218,9 +218,6 @@ stories:
 #  - slot_was_set:
 #    - Current_location: SVBH
 #  - action: action_provide_directions
-
-#- story: interactive_story_1
-#  steps:
 #  - intent: ask_for_directions
 #    entities:
 #    - user_location: SVBH
@@ -230,15 +227,227 @@ stories:
 #  - slot_was_set:
 #    - Current_location: SVBH
 #  - action: action_provide_directions
+#  - intent: ask_for_directions
+#    entities:
+#    - user_location: SVBH
+#  - slot_was_set:
+#    - Current_location: SVBH
+#  - intent: ask_for_directions
+#    entities:
+#    - user_location: SVBH
+#    - destination_given: Admin Building
+#  - action: action_provide_directions
 
-- story: interactive_story_1
+#- story: interactive_story_1
+#  steps:
+#  - intent: ask_for_directions
+#    entities:
+#    - user_location: SVBH
+#    - destination_given: Athletic Ground
+#  - slot_was_set:
+#    - destination_given: Athletic Ground
+#  - slot_was_set:
+#    - user_location: SVBH
+#  - action: action_provide_directions
+#
+#- story: interactive_story_2
+#  steps:
+#  - intent: ask_for_directions
+#    entities:
+#    - user_location: SVBH
+#    - destination_given: Admin Building
+#  - slot_was_set:
+#    - destination_given: Admin Building
+#  - slot_was_set:
+#    - user_location: SVBH
+#  - action: action_provide_directions
+#
+#- story: interactive_story_3
+#  steps:
+#  - intent: ask_for_directions
+#    entities:
+#    - user_location: SVBH
+#    - destination_given: Admin Building
+#  - slot_was_set:
+#    - destination_given: Admin Building
+#  - slot_was_set:
+#    - user_location: SVBH
+#  - action: action_provide_directions
+
+#ujjawal stories
+
+- story: askingcollege
   steps:
-  - intent: ask_for_directions
-    entities:
-    - user_location: SVBH
-    - destination_given: Athletic Ground
-  - slot_was_set:
-    - destination: Athletic Ground
-  - slot_was_set:
-    - Current_location: SVBH
-  - action: action_provide_directions
+    - intent: common_question
+    - action: utter_anscommon
+- story: asking_more_about_college
+  steps:
+    - intent: more_about_college
+    - action: utter_about_college
+- story: asking_about_club
+  steps:
+    - intent: club
+    - action: utter_club
+- story: asking_benefit_of_the_club
+  steps:
+    - intent: benfit_of_the_club
+    - action: utter_benfit_club
+- story: campus_life
+  steps:
+    - intent: explore_campus
+    - action: utter_explore_campus
+
+- story: cafetarea
+  steps:
+    - intent: cafetarea
+    - action: utter_cafetarea
+- story: about_dwesis
+  steps:
+    - intent: dwesis_canteen
+    - action: utter_about_dwesis
+
+- story: location_of_dwesis
+  steps:
+    - intent: dwesis_location
+    - action: utter_location_dwesis
+- story: about_cafe96
+  steps:
+    - intent: cafe_96
+    - action: utter_about_cafe96
+
+- story: location_of_cafe96
+  steps:
+    - intent: cafe_96_location
+    - action: utter_location_cafe96
+- story: about_yamuna_canteen
+  steps:
+    - intent: yamuna_canteen
+    - action: utter_about_yamuna_canteen
+
+- story: location_of_yamuna
+  steps:
+    - intent: yamuna_location
+    - action: utter_yamuna_location
+
+    # ############################# CLUBS
+- story: lit_club
+  steps:
+    - intent: lit_club
+    - action: utter_lit_club
+- story: robotics
+  steps:
+    - intent: robotics_club
+    - action: utter_robotics
+  # ##### boys/girls hostel
+- story: boys_hostel
+  steps:
+    - intent: boys_hostel
+    - action: utter_boys_hostel
+
+- story: girls_hostel
+  steps:
+    - intent: girls_hostel
+    - action: utter_girls_hostel
+  #  ###### department
+- story: department
+  steps:
+    - intent: Department
+    - action: utter_department
+- story: director
+  steps:
+    - intent: Director
+    - action: utter_director
+- story: dean
+  steps:
+    - intent: dean
+    - action: utter_dean
+
+- story: CSED
+  steps:
+    - intent: CSE_dept
+    - action: utter_CSE_dept
+
+- story: CSEDH
+  steps:
+    - intent: CSE_dept_HOD
+    - action: utter_CSE_dept_HOD
+
+- story: ECED
+  steps:
+    - intent: ECE_dept
+    - action: utter_ECE_dept
+
+- story: ECEDH
+  steps:
+    - intent: ECE_dept_HOD
+    - action: utter_ECE_dept_HOD
+
+- story: EED
+  steps:
+    - intent: EE_dept
+    - action: utter_EE_dept
+
+- story: EEDH
+  steps:
+    - intent: EE_dept_HOD
+    - action: utter_EE_dept_HOD
+
+- story: MED
+  steps:
+    - intent: ME_dept
+    - action: utter_ME_dept
+
+- story: MEDH
+  steps:
+    - intent: ME_dept_HOD
+    - action: utter_ME_dept_HOD
+- story: ChED
+  steps:
+    - intent: ChE_Dept
+    - action: utter_ChE_Dept
+
+- story: ChEDH
+  steps:
+    - intent: ChE_Dept_HOD
+    - action: utter_ChE_Dept_HOD
+
+- story: CED
+  steps:
+    - intent: CE_dept
+    - action: utter_CE_dept
+
+- story: CEDH
+  steps:
+    - intent: CE_dept_HOD
+    - action: utter_CE_dept_HOD
+
+- story: BED
+  steps:
+    - intent: BE_dept
+    - action: utter_BE_dept
+
+- story: BEDH
+  steps:
+    - intent: BE_dept_HOD
+    - action: utter_BE_dept_HOD
+
+- story: PIED
+  steps:
+    - intent: PIE_dept
+    - action: utter_PIE_dept
+
+- story: PIEDH
+  steps:
+    - intent: PIE_dept_HOD
+    - action: utter_PIE_dept_HOD
+
+- story: AM_dept
+  steps:
+    - intent: AM_dept
+    - action: utter_AM_dept
+
+  # ####### sports
+- story: playground
+  steps:
+    - intent: college_playground
+    - action: utter_playground
