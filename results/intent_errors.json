@@ -1,0 +1,1026 @@
+[
+  {
+    "text": "take me to mnnit's website",
+    "intent": "mnnit_website",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.41532137989997864
+    }
+  },
+  {
+    "text": "can you provide the link for mnnit official website",
+    "intent": "mnnit_website",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8077484965324402
+    }
+  },
+  {
+    "text": "where can I find latest announcements for college",
+    "intent": "mnnit_website",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.37416765093803406
+    }
+  },
+  {
+    "text": "where can I get more information about college",
+    "intent": "mnnit_website",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7973462343215942
+    }
+  },
+  {
+    "text": "Is there any official website of mnnit",
+    "intent": "mnnit_website",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.44906991720199585
+    }
+  },
+  {
+    "text": "website of mnnit",
+    "intent": "mnnit_website",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8423690795898438
+    }
+  },
+  {
+    "text": "Can you help me with course registration?",
+    "intent": "mnnit_website",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6046809554100037
+    }
+  },
+  {
+    "text": "Where can I find information about majors?",
+    "intent": "mnnit_website",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5334957838058472
+    }
+  },
+  {
+    "text": "what different courses are offered",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9293419122695923
+    }
+  },
+  {
+    "text": "different courses provided by the college",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8847259879112244
+    }
+  },
+  {
+    "text": "list of different courses",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9964308738708496
+    }
+  },
+  {
+    "text": "list of different programs",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8715326189994812
+    }
+  },
+  {
+    "text": "can you help me with the programs mnnit allahabad offers",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.7150828242301941
+    }
+  },
+  {
+    "text": "different programs offered by the college",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5171727538108826
+    }
+  },
+  {
+    "text": "different training programs offered",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8030919432640076
+    }
+  },
+  {
+    "text": "branches in mnnit allahabad",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.4972462058067322
+    }
+  },
+  {
+    "text": "branches under b.tech in our college",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6709702014923096
+    }
+  },
+  {
+    "text": "What are the available courses in the college?",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6718242764472961
+    }
+  },
+  {
+    "text": "Can you provide information about the course curriculum?",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6924700736999512
+    }
+  },
+  {
+    "text": "Which courses are popular among students?",
+    "intent": "courses",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6688441634178162
+    }
+  },
+  {
+    "text": "placement offers",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6960720419883728
+    }
+  },
+  {
+    "text": "what are the previous placement offers?",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5064769983291626
+    }
+  },
+  {
+    "text": "different placement offers offered to students",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5715423822402954
+    }
+  },
+  {
+    "text": "different companies offers",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6693771481513977
+    }
+  },
+  {
+    "text": "different placement offered",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4973239004611969
+    }
+  },
+  {
+    "text": "previous placement offers",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6181467771530151
+    }
+  },
+  {
+    "text": "what are the different placement offers offered to students",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.49223950505256653
+    }
+  },
+  {
+    "text": "student's placement offers",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9313937425613403
+    }
+  },
+  {
+    "text": "what are the placement stats of our college",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.4704565405845642
+    }
+  },
+  {
+    "text": "which companies come to college",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8018516302108765
+    }
+  },
+  {
+    "text": "who is in charge of our placements",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.47223687171936035
+    }
+  },
+  {
+    "text": "where can i get information about placements",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5993028879165649
+    }
+  },
+  {
+    "text": "Does the college have a placement cell?",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5826798677444458
+    }
+  },
+  {
+    "text": "How does the college support students with job placements?",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5720462203025818
+    }
+  },
+  {
+    "text": "What companies visit the campus for placements?",
+    "intent": "ask_placements",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.817019522190094
+    }
+  },
+  {
+    "text": "Can you guide me through the admission procedure?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.8834400773048401
+    }
+  },
+  {
+    "text": "Are there any specific requirements for admission?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.3786257803440094
+    }
+  },
+  {
+    "text": "How can I submit my admission documents?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.5700464844703674
+    }
+  },
+  {
+    "text": "Is there an online application portal for admissions?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.4431297779083252
+    }
+  },
+  {
+    "text": "What documents do I need for the admission application?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8927977681159973
+    }
+  },
+  {
+    "text": "Are there any interviews as part of the admission process?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.2961016893386841
+    }
+  },
+  {
+    "text": "Can you explain the selection criteria for admissions?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.3894977569580078
+    }
+  },
+  {
+    "text": "When will the admission results be announced?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5803666710853577
+    }
+  },
+  {
+    "text": "Is there an application fee for admissions?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.726326048374176
+    }
+  },
+  {
+    "text": "What are the important dates for admission?",
+    "intent": "ask_admission_process",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.678652822971344
+    }
+  },
+  {
+    "text": "Tell me about the college Library books ?.",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.19767220318317413
+    }
+  },
+  {
+    "text": "What resources are available in the library?",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.7253574728965759
+    }
+  },
+  {
+    "text": "What are the library hours?",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.7760633230209351
+    }
+  },
+  {
+    "text": "Can you give me information about the library?",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.2575196921825409
+    }
+  },
+  {
+    "text": "What can I find in the library?",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8547021150588989
+    }
+  },
+  {
+    "text": "When does the library open and close?",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6257463097572327
+    }
+  },
+  {
+    "text": "What services does the library offer?",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.35717642307281494
+    }
+  },
+  {
+    "text": "What's the library schedule like?",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6637790203094482
+    }
+  },
+  {
+    "text": "Where is the library locatedWhere is the library located??",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6813976764678955
+    }
+  },
+  {
+    "text": "What's the library's contact information?",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "mobile_number",
+      "confidence": 0.849542498588562
+    }
+  },
+  {
+    "text": "Is the library open in weekdays",
+    "intent": "ask_about_library",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6665844917297363
+    }
+  },
+  {
+    "text": "Are there internship opportunities for students?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9008655548095703
+    }
+  },
+  {
+    "text": "How can I apply for internships through the college?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.42073991894721985
+    }
+  },
+  {
+    "text": "Can the college help me find internships?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.5156856179237366
+    }
+  },
+  {
+    "text": "Tell me about the process of securing an internship.",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.5230882167816162
+    }
+  },
+  {
+    "text": "Are internships available for specific majors or disciplines?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7084395289421082
+    }
+  },
+  {
+    "text": "How are internship opportunities communicated to students?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.44463294744491577
+    }
+  },
+  {
+    "text": "Are there on-campus recruitment events for internships?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9139982461929321
+    }
+  },
+  {
+    "text": "Can I get academic credit for internships?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.7021283507347107
+    }
+  },
+  {
+    "text": "What support does the college provide during internships?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.39101386070251465
+    }
+  },
+  {
+    "text": "Are there networking opportunities for students seeking internships?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8431567549705505
+    }
+  },
+  {
+    "text": "Can international students pursue internships during their studies?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6417446136474609
+    }
+  },
+  {
+    "text": "Are there virtual internship options for remote work experience?",
+    "intent": "ask_about_internship_opportunities",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.627872109413147
+    }
+  },
+  {
+    "text": "What healthcare facilities are available on campus?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.8984745740890503
+    }
+  },
+  {
+    "text": "Is there a facility_type for medical assistance?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.7776316404342651
+    }
+  },
+  {
+    "text": "How can I access healthcare services?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.43270406126976013
+    }
+  },
+  {
+    "text": "Tell me about the facility_type.",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.3587733805179596
+    }
+  },
+  {
+    "text": "Where is the nearest facility_type on campus?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.38914021849632263
+    }
+  },
+  {
+    "text": "Are there any doctors available in the facility_type?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.40668782591819763
+    }
+  },
+  {
+    "text": "Can you provide information on the facility_type?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6675064563751221
+    }
+  },
+  {
+    "text": "I need to find the facility_type on campus.",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6795910596847534
+    }
+  },
+  {
+    "text": "How do I contact the facility_type?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "mobile_number",
+      "confidence": 0.9265503883361816
+    }
+  },
+  {
+    "text": "Where can I get first aid on campus?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.428087055683136
+    }
+  },
+  {
+    "text": "Are there any facility_type available?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.561080276966095
+    }
+  },
+  {
+    "text": "Tell me more about the facility_type.",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6057772040367126
+    }
+  },
+  {
+    "text": "What services does the facility_type offer?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6195794939994812
+    }
+  },
+  {
+    "text": "Do we have an on-campus facility_type?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.752195417881012
+    }
+  },
+  {
+    "text": "Is there a facility_type?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8865067362785339
+    }
+  },
+  {
+    "text": "I'm looking for the facility_type.",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9751095175743103
+    }
+  },
+  {
+    "text": "How do I schedule an appointment at the facility_type?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.6827605962753296
+    }
+  },
+  {
+    "text": "What are the hours of operation for the facility_type?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6416859030723572
+    }
+  },
+  {
+    "text": "Can you recommend a good facility_type on campus?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.31680411100387573
+    }
+  },
+  {
+    "text": "Where can I get information about facility_type?",
+    "intent": "ask_about_healthcare_facilities",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.2980616092681885
+    }
+  },
+  {
+    "text": "Can you provide tips for final exam preparation?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.728506863117218
+    }
+  },
+  {
+    "text": "How should I manage my study time effectively for viva?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8526397347450256
+    }
+  },
+  {
+    "text": "Are there any study_resource available for midsem?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.7460715174674988
+    }
+  },
+  {
+    "text": "What are some effective study techniques for midsem?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9564775824546814
+    }
+  },
+  {
+    "text": "How can I improve my midsem scores?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.8907542824745178
+    }
+  },
+  {
+    "text": "Tell me about strategies for midsem.",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.4502929449081421
+    }
+  },
+  {
+    "text": "Are there any recommended textbooks for viva?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6352618932723999
+    }
+  },
+  {
+    "text": "I need advice on preparing for viva.",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.30094853043556213
+    }
+  },
+  {
+    "text": "Can you suggest ways to stay focused during viva?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.7283646464347839
+    }
+  },
+  {
+    "text": "Where can I find study_resource for viva?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2949241101741791
+    }
+  },
+  {
+    "text": "What's the best approach to viva?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6502799987792969
+    }
+  },
+  {
+    "text": "How can I manage stress during viva?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.500657856464386
+    }
+  },
+  {
+    "text": "What are the key topics to cover for practical exam?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7605360746383667
+    }
+  },
+  {
+    "text": "Are there any study_resource for practical exam?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6490663290023804
+    }
+  },
+  {
+    "text": "What's the recommended study schedule for practical exam?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.723739504814148
+    }
+  },
+  {
+    "text": "Can you share tips for practical exam?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.40670859813690186
+    }
+  },
+  {
+    "text": "How do I review my notes effectively for practical exam?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8284472227096558
+    }
+  },
+  {
+    "text": "What's the strategy for practical exam?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9750797152519226
+    }
+  },
+  {
+    "text": "How can I access study_resource for practical exam?",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.35695338249206543
+    }
+  },
+  {
+    "text": "Tell me about time management for practical exam.",
+    "intent": "ask_about_exam_preparation_tips",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.8948072791099548
+    }
+  },
+  {
+    "text": "Does the college have a mentorship program?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.3549460768699646
+    }
+  },
+  {
+    "text": "How does mentorship benefit students?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5951395630836487
+    }
+  },
+  {
+    "text": "Can I get academic guidance from a mentor?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.710745096206665
+    }
+  },
+  {
+    "text": "Are mentors assigned based on academic interests?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.588300347328186
+    }
+  },
+  {
+    "text": "How often do students interact with their mentors?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8246720433235168
+    }
+  },
+  {
+    "text": "Can mentors help with career development too?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4936944246292114
+    }
+  },
+  {
+    "text": "Are there mentorship opportunities for specific majors?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6512553691864014
+    }
+  },
+  {
+    "text": "Tell me about success stories from the mentorship program.",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5862406492233276
+    }
+  },
+  {
+    "text": "How can I request a mentor within a particular field?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.4261782169342041
+    }
+  },
+  {
+    "text": "Is mentorship available for both undergraduate and postgraduate students?",
+    "intent": "ask_about_mentorship_program",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.4093693196773529
+    }
+  },
+  {
+    "text": "How is the grading system in the college?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7857937216758728
+    }
+  },
+  {
+    "text": "Can you explain the evaluation process?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "my_name",
+      "confidence": 0.46641474962234497
+    }
+  },
+  {
+    "text": "What is the passing criteria for exams?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8468143343925476
+    }
+  },
+  {
+    "text": "Tell me about the grading scale used at the college.",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5101804137229919
+    }
+  },
+  {
+    "text": "Are there grade points associated with each grade?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.466224730014801
+    }
+  },
+  {
+    "text": "How are GPA calculations done here?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6551011800765991
+    }
+  },
+  {
+    "text": "Is there a grade conversion system for international students?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6968778371810913
+    }
+  },
+  {
+    "text": "Can I request a transcript of my grades?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.33864089846611023
+    }
+  },
+  {
+    "text": "What's the grading policy for late submissions?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5084980726242065
+    }
+  },
+  {
+    "text": "Are there any grading updates or changes this year?",
+    "intent": "ask_about_grading_system",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2865923047065735
+    }
+  }
+]

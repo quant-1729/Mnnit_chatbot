@@ -1333,3 +1333,978 @@ nlu:
     - Are there any upcoming sports events or tournaments?
     - Tell me about the fitness and recreational options at the college.
     - Can you provide details about the gym or fitness center on campus?
+
+
+#Hrithiman's code starting
+- intent: gac_event_info
+  examples: |
+    - [What is the GAC 2023 event](general_info:DESC) all about?
+    - [GAC 2023](general_info:DESC)?
+    - Give me an [overview of the GAC](general_info:DESC) event
+    - Give me an [overview of the GAC 2023](general_info:DESC)
+    - [What is GAC](general_info:DESC)?
+    - [what is GAC 2023](general_info:DESC)?
+    - [GAC 2023 2023](general_info:DESC)
+    - [Explain the GAC 2023 event](general_info:DESC) to me in detail.
+    - [Can you tell me about GAC 2023](general_info:DESC)?
+    - [What is the Global Alumni Convention event](general_info:DESC)?
+    - [Tell me about the GAC 2023 event](general_info:DESC).
+    - Briefly [describe the GAC 2023 event](general_info:DESC).
+    - Share [information about the Global Alumni Convention](general_info:DESC).
+    - [Describe the Global Alumni Convention](general_info:DESC) for me.
+    - [Explain the GAC 2023 event](general_info:DESC) to me in detail.
+    - Share [some insights about the Global Alumni Convention](general_info:DESC).
+    - Provide a comprehensive [overview of the GAC 2023 event](general_info:DESC).
+    - Tell me [all about the Global Alumni Convention]{"entity":"general_info","value":"DESC"}.
+    - [What is the GAC event](general_info:DESC) all about?
+    - [GAC](general_info:DESC)?
+    - [GAC 2023](general_info:DESC)
+    - [Explain the GAC event](general_info:DESC) to me in detail.
+    - [Can you tell me about GAC](general_info:DESC)?
+    - [What is the Global Alumni Convention event](general_info:DESC)?
+    - [Tell me about the GAC event](general_info:DESC).
+    - Briefly [describe the GAC event](general_info:DESC).
+    - Share [information about the Global Alumni Convention](general_info:DESC).
+    - [Describe the Global Alumni Convention 2023] for me.
+    - [Share some information about Global Alumni Convention](general_info:DESC)
+    - [Explain the GAC event](general_info:DESC) to me in detail.
+    - Share [some insights about the Global Alumni Convention](general_info:DESC).
+    - Provide a comprehensive [overview of the GAC event](general_info:DESC).
+    - Tell me [all about the Global Alumni Convention]{"entity":"general_info","value":"DESC"}.
+    - [G A C](general_info:DESC) 
+    - [G.A.C](general_info:DESC)
+    - [G.A.C 2023](general_info:DESC)
+    - [Global Alumni Convention 2023](general_info:DESC)
+- intent: ask_event_info_2023
+  examples: |
+    - [What's the date and location]{"entity":"general_info", "value":"DL"} of the event?
+    - [Where is GAC 2023](general_info:L) going to be held?
+    - What is the [venue](general_info:L) of GAC 2023?
+    - [Where is GAC](general_info:L) going to be held?
+    - [Where is GAC](general_info:L) going to be conducted?
+    - Can you let me know the [venue](general_info:L) of GAC 2023?
+    - [When and where]{"entity":"general_info", "value":"DL"} is the event happening?
+    - [Describe the event's date and location]{"entity":"general_info", "value":"DL"}.
+    - Give me the [date and location]{"entity":"general_info", "value":"DL"} of the event.
+    - Share the event [schedule]{"entity":"general_info", "value":"S"} with me.
+    - Can you tell me the [schedule]{"entity":"general_info", "value":"S"} for the convention?
+    - Where will the convention take [place]{"entity":"general_info", "value":"L"}? 
+    - [When and where]{"entity":"general_info","value":"DL"} can I attend the event?
+    - Tell me the [date and location]{"entity":"general_info","value":"DL"} for the convention.
+    - What's the [schedule]{"entity":"general_info", "value":"S"} for the event?
+    - Provide details about the event [location]{"entity":"general_info", "value":"L"}.    -
+    - [When and where]{"entity":"general_info", "value":"DL"} is the event scheduled for?
+    - Share information about the [date and location]{"entity":"general_info", "value":"DL"}.
+    - What is the event's [date and location]{"entity":"general_info", "value":"DL"}?
+    - Can you provide details on the convention's [schedule]{"entity":"general_info", "value":"S"}?
+    - Where is the event's [venue]{"entity":"general_info", "value":"L"}?
+    - What's the [date and location]{"entity":"general_info", "value":"DL"} of the convention?
+    - What's on the [schedule]{"entity":"general_info", "value":"S"} for the event?
+    - [When is the event, and where will it be?]{"entity":"general_info","value":"DL"}
+    - Provide the [date and location]{"entity":"general_info", "value":"DL"} details.
+    - What can you tell me about the convention's [schedule]{"entity":"general_info", "value":"S"}?
+    - [Where]{"entity":"general_info","value":"L"} can I find the event?
+    - What's the [date and location]{"entity":"general_info", "value":"DL"} information for the event?
+    - Can you outline the [schedule]{"entity":"general_info", "value":"S"} for the convention?
+    - [Where]{"entity":"general_info","value":"L"} should I go for the event?
+    - Can you tell me [when is GAC](general_info:DL) event?
+    - [When is the GAC](general_info:DL) 2023 event?
+    - Can you tell me [when is GAC](general_info:DL?
+    - [When is GAC](general_info:DL) 2023 going to be held?
+    - What is the [date and location](general_info:DL) for GAC 2023?
+- lookup: general_info
+  examples: |
+    - sehcudle
+    - Scheldue
+    - schedle
+- intent: gac_2023_donations
+  examples: |
+    - Who gave the donations from 1998 batch?
+    - List of those who gave the donations) from 1998 batch?
+    - List of all the Alumni who gave donationsfor 1998 batch?
+    - Names of those who gave donations to college from 1998 batch?
+    - Names of those who provided donations to college from 1998 batch?
+    - Who from the 1998 batch made a donations?
+    - Can you tell me the names of 1998 batch alumni who contributed to donations?
+    - Provide a list of donors from the 1998 batch.
+    - I'm interested in knowing which 1998 batch alumni donated.
+    - Tell me about the 1998 batch alumni who made contributions.
+    - Give me the names of those who gave donations from the 1998 batch.
+    - I want to find out who donated from the 1998 batch.
+    - Who are the 1998 batch alumni donors?
+    - Provide information about 1998 batch donations and donors.
+    - List the names of 1998 batch alumni who participated in donations.
+    - Can you provide the names of donors from the 1998 batch?
+    - I'm interested in learning about 1998 batch alumni who contributed to donations.
+    - Tell me about the 1998 batch alumni who made donations.
+    - Give me a list of donors from the 1998 batch.
+    - Who from the 1998 batch donated to the cause?
+    - I'd like to know which 1998 batch alumni gave donations.
+    - Share information about the 1998 batch alumni donors.
+    - Provide a list of names from the 1998 batch who participated in donations.
+    - Tell me who the donors are from the 1998 batch.
+    - List the 1998 batch alumni who donated to the organization.
+    - Who are the 1998 batch alumni donors?
+    - I'm curious about the 1998 batch donors. Can you help?
+    - Who contributed to donations from the 1998 batch?
+    - Give me information about the 1998 batch donors and their names.
+    - Share details about the 1998 batch alumni who supported the cause.
+    - Tell me about the 1998 batch alumni who generously donated.
+    - I'd like to learn about the 1998 batch and their donations.
+    - Can you provide the names of donors specifically from the 1998 batch?
+    - List the 1998 batch alumni who participated in [fundraising efforts](gacdon).
+    - Who in the 1998 batch made contributions to the organization?
+
+- intent: gac_2023_organizing
+  examples: |
+    - Who are the part of [organizing committee](gacorg) of GAC 2023?
+    - List all the members of [organizing team](gacorg) of GAC 2023?
+    - Provide me the names of [organizers](gacorg) of GAC 2023?
+    - Who is on the [organizing team](gacorg) for GAC 2023?
+    - Can you provide a list of members in the GAC 2023 [organizing team](gacorg)?
+    - Tell me about the team responsible for [organizing](gacorg) GAC 2023.
+    - I'd like to know the names of the [organizers](gacorg) for the GAC 2023 event.
+    - Share information about the GAC 2023 [organizing committee](gacorg).
+    - Give me details about the [people behind the scenes](gacorg) of GAC 2023.
+    - Who are the key [members](gacorg) of the GAC 2023 [organization](gacorg)?
+    - Provide a list of [individuals](gacorg) involved in planning GAC 2023.
+    - Tell me about the [team members](gacorg) responsible for GAC 2023.
+    - List the names of the [organizers](gacorg) for the GAC 2023 conference.
+    - Who are the [event planners](gacorg) for GAC 2023?
+    - I'm interested in learning about the [team behind GAC 2023](gacorg). Can you help?
+    - Share details about the [organizing team](gacorg) of GAC 2023.
+    - Who is responsible for [coordinating](gacorg) GAC 2023?
+    - Give me information about the GAC 2023 [organizing team](gacorg) and their roles.
+    - Tell me about the individuals who are [organizing](gacorg) GAC 2023.
+    - I'd like to learn about the GAC 2023 [organizing committee](gacorg) members.
+    - Can you provide the names of the [team members](gacorg) working on GAC 2023?
+    - List the key [people](gacorg) involved in planning GAC 2023.
+    - Who is part of the [organizing team](gacorg) for the GAC 2023 conference?
+    - Tell me about the team leading the [organization](gacorg) of GAC 2023.
+    - Provide information about the [individuals](gacorg) in charge of GAC 2023.
+    - Who is overseeing the [planning](gacorg) and execution of GAC 2023?
+    - I'd like to get to know the [people](gacorg) responsible for GAC 2023. Can you share their names?
+    - List the event [organizers](gacorg) for GAC 2023.
+    - Can you give me an overview of the [team](gacorg) behind GAC 2023?
+    - Share details about the roles and responsibilities of the GAC 2023 [organizing team](gacorg).
+    - Who are the key [players](gacorg) in the GAC 2023 [organization](gacorg)?
+    - Tell me about the committee [members](gacorg) of GAC 2023.
+    - Provide an introduction to the [organizing team](gacorg) of GAC 2023.
+    - Who is the [Patron](gacorg:Pat) of the event?
+    - Who serves as the [Advisor](gacorg:Ad) for the event?
+    - Who holds the position of [Chairman](gacorg:chair) in the event?
+    - Who is the [Co-Chairman](gacorg:CoChair) of the event?
+    - Who is the [Organizing Secretary](gacorg:oSec) for the event?
+    - Who is responsible for the treasury as the [Treasurer](gacorg:Tres)?
+    - Who are the [Joint Organizing Secretaries](gacorg:Jsec) for the event
+- intent: gac_2023_registration
+  examples: |
+    - What are the [registration details](gacreg:FR) for GAC 2023?
+    - What is the [registration process](gacreg:FR) for GAC 2023?
+    - Can you give me the [Registration link](gacreg:RL) for GAC?
+    - How much is the registration [fee for others](gacreg:FO) ?
+    - What is the registration [fee for felicitation](gacreg:FF) batch for GAC 2023?
+    - What is the registration [fee for others](gacreg:FO) for GAC 2023?
+    - What is the [link for registering](gacreg:RL) for GAC 2023?
+    - What is the [last date to register](gacreg:RD) for GAC 2023?
+    - [Can alumni register for GAC 2023?](gacreg:FR)
+    - How much is the [registration fee](gacreg:F) for GAC 2023?
+    - What are the [fees](gacreg:FR) associated with GAC 2023 registration?
+    - Tell me about the pricing structure for GAC 2023 registration.
+    - I'd like to know the registration [fee](gacreg:F) for students attending GAC 2023.
+    - [How can I register for GAC 2023](gacreg:FR)?
+    - What is the [process for GAC 2023 registration](gacreg:FR)?
+    - Can you guide me through the [GAC 2023 registration](gacreg:FR)?
+    - I'd like to [sign up for GAC 2023](gacreg:FR). What are the steps?
+    - Tell me about the [registration options](gacreg:FR) for GAC 2023.
+    - What is the cost of [registration](gacreg:FR) for GAC 2023?
+    - How can I register for the [event](gacreg:FR)?
+    - What is the registration [fee](gacreg:F)?
+    - Can you guide me through the [registration process](gacreg:FR)?
+    - Where do I [sign up for the event](gacreg:FR)?
+    - Tell me about the [registration procedure](gacreg:FR).
+    - Is there a [fee](gacreg:F) to attend the event?
+    - How do I get [registered](gacreg:FR) for 2023?
+    - What are the [steps](gacreg:FR) to complete the [registration](gacreg:FR)?
+    - [When does the registration](gacreg:RD) for start?
+    - What is the [deadline](gacreg:RD) for [event registration](gacreg:FR)?
+    - How can I pay for the [registration fee](gacreg:F)?
+    - Do I need to create an [account](gacreg:FR) to [register](gacreg:FR)?
+    - Can I [register](gacreg:FR) multiple [attendees](gacreg:FR) at once?
+    - What [payment methods](gacreg:FR) are accepted for [registration](gacreg:FR)?
+    - How do I confirm my [registration status](gacreg:FR)?
+    - What information is required for the [registration form](gacreg:FR)?
+    - Is there a group registration(gacreg:FR) option?
+    - Can I [register](gacreg:FR) on the [day](gacreg:FR) of the [event](gacreg:FR)?
+    - Are there any [prerequisites](gacreg:FR) for [registration](gacreg:FR)?
+    - Can I [cancel](gacreg:FR) or [modify](gacreg:FR) my [registration](gacreg:FR)?
+    - Tell me about the [registration schedule](gacreg:FR).
+    - What is the [registration process](gacreg:FR) like?
+    - Are there any [documents](gacreg:FR) needed for [registration](gacreg:FR)?
+    - How can I get a [copy](gacreg:FR) of my [registration receipt](gacreg:FR)?
+    - Can you provide details on [early bird registration](gacreg:FR)?
+    - What is [included](gacreg:FR) in the [registration package](gacreg:FR)?
+    - Tell me about the [registration support contact](gacreg:FR).
+    - Where can I find the [online registration portal](gacreg:FR)?
+    - How do I [register](gacreg:FR) as a [speaker](gacreg:FR) for the [event](gacreg:FR)?
+#HRITHIMAN GUHA
+#ISME DAAL DE gacpay krke
+- intent: gac_2023_payment
+  examples: |
+    - What are the [payment](gacpay) details for registering for GAC 2023?
+    - What are the different ways to [pay](gacpay) for GAC 2023?
+    - What are the different ways to make a donation as [payment](gacpay) for GAC 2023?
+    - How can I [pay](gacpay) for GAC 2023?
+    - Could you please share the bank details for [making a payment](gacpay) for GAC 2023?
+    - Provide me with the bank details for [making a payment](gacpay) for GAC 2023.
+    - How can I make a [payment](gacpay) for GAC 2023?
+    - Tell me about the various [payment](gacpay) options for GAC 2023 registration.
+    - What are the accepted methods of [payment](gacpay) for GAC 2023 registration?
+    - Provide information regarding the [payment](gacpay) process for GAC 2023.
+    - I'd like to know how to [make a payment](gacpay) for GAC 2023. Can you guide me?
+    - Could you explain the [details](gacpay) of payment for GAC 2023?
+    - Please give me an overview of the [payment](gacpay) procedures for GAC 2023.
+    - How much do I need to [pay](gacpay) for attending GAC 2023?
+    - Share information regarding the [payment](gacpay) deadlines for GAC 2023.
+    - Tell me about any discounts or promo codes available for [registration](gacpay) for GAC 2023.
+    - What is the [refund](gacpay) policy for [payments](gacpay) made for GAC 2023?
+    - Could you explain the steps required to complete the [payment](gacpay) for GAC 2023?
+    - How do I [make a payment](gacpay) for additional services or workshops at GAC 2023?
+    - What is the currency used for [payments](gacpay) related to GAC 2023?
+    - I'd like to know if [installment options](gacpay) are available for GAC 2023.
+    - Tell me about the [payment](gacpay) portal or platform for GAC 2023.
+    - Are there any group discounts for those [registering](gacpay) multiple attendees for GAC 2023?
+    - Can you provide information about scholarship opportunities or financial aid for [payment](gacpay) at GAC 2023?
+    - What is the [registration](gacpay) fee for students attending GAC 2023?
+    - Please explain the process for confirming my [payment](gacpay) for GAC 2023.
+    - Tell me about any additional costs associated with [payment](gacpay) for attending GAC 2023.
+    - I'd like to learn more about [payment](gacpay) confirmation and receipts for GAC 2023.
+    - What is the policy for late or on-site [payments](gacpay) for GAC 2023?
+    - Can you provide details for the [payment](gacpay) support contact for GAC 2023?
+    - Please explain the process for canceling or modifying my [payment](gacpay) for GAC 2023.
+
+
+#isme gacspon krke daal de
+- intent: gac_2023_sponsorship
+  examples: |
+   - What is the different [sponsorship amounts](gacspan) provided?
+   - Is there any detail of [sponsorship amount](gacspan)?
+   - Give me the detail of [sponsorship amount](gacspan)?
+   - What is the minimum [sponsorship amount](gacspan) available?
+   - What are the details of the less than [sponsorship amount](gacspan)?
+   - How can I become a [sponsor for GAC 2023](gacspan)?
+   - Tell me about the [sponsorship opportunities](gacspan) available for GAC 2023.
+   - What are the different [sponsorship packages](gacspan) for GAC 2023?
+   - Provide information on [sponsorship levels](gacspan) and benefits for GAC 2023.
+   - I'm interested in [sponsoring GAC 2023](gacspan). Can you guide me through the process?
+   - Explain the [sponsorship details](gacspan) and requirements for GAC 2023.
+   - Give me an overview of the [sponsorship packages](gacspan) and their costs for GAC 2023.
+   - What promotional opportunities are available for [sponsors](gacspan) at GAC 2023?
+   - How can I inquire about [custom sponsorship options](gacspan) for GAC 2023?
+   - Share information on the [sponsorship application](gacspan) deadline for GAC 2023.
+   - Can you provide a list of previous [sponsors](gacspan) for GAC  events?
+   - What is the process for submitting a [sponsorship proposal](gacspan) for GAC 2023?
+   - Explain the [benefits](gacspan) and [perks](gacspan) of being a [sponsor](gacspan) at GAC 2023.
+   - Are there specific industries or sectors that GAC  is looking for [sponsors](gacspan) from?
+   - I'd like to know if there are [exclusive sponsorship opportunities](gacspan) for certain events at GAC 2023.
+   - What are the [sponsorship payment](gacspan) and [invoicing procedures](gacspan) for GAC 2023?
+   - Can you provide information on [sponsorship contacts](gacspan) or representatives for GAC 2023?
+   - What is the [timeline](gacspan) for [sponsorship confirmation](gacspan) for GAC 2023?
+   - Are there any [partnership](gacspan) or [co-sponsorship opportunities](gacspan) for GAC 2023?
+   - Tell me about any [special perks](gacspan) or [recognition](gacspan) for [long-term sponsors](gacspan) of GAC .
+   - What is the process for signing a [sponsorship agreement](gacspan) for GAC 2023?
+   - How can I request a [sponsorship prospectus](gacspan) for GAC 2023?
+   - Explain the policy for [sponsorship exclusivity](gacspan) in specific categories at GAC 2023.
+   - Tell me about the [opportunities for sponsors](gacspan) to host workshops or sessions at GAC 2023.
+   - Can you provide examples of [successful sponsorships](gacspan) from past [GAC conferences](gacspan)?
+   - I'd like to learn more about [sponsorship marketing](gacspan) and promotion at GAC 2023.
+   - What is the procedure for [sponsor acknowledgment](gacspan) and [recognition](gacspan) at GAC 2023.
+   - Provide details on the [sponsorship support](gacspan) and [assistance](gacspan) available for [sponsors](gacspan) at GAC 2023.
+   - Explain the process for canceling or modifying a [sponsorship commitment](gacspan) for GAC 2023.
+
+#isme gaccorcom
+#ye waala dekhte h
+- intent: maa
+  examples: |
+   - Give me the details of MNNIT alumni association?
+   - What are the contact details for MNNIT alumni association?
+   - How to contact MNNIT alumni association?
+   - Is there any way to reach MNNIT alumni association?
+   - How can I get in touch with the MNNIT alumni association?
+   - Tell me the contact information for the MNNIT alumni association.
+   - What is the email address for the MNNIT alumni association?
+   - Provide details on how to reach out to the MNNIT alumni network.
+   - I'd like to contact the MNNIT alumni association. Can you assist me?
+   - Share the phone number for the MNNIT alumni association.
+   - Give me an overview of the MNNIT alumni association's contact details.
+   - What are the social media profiles for the MNNIT alumni association?
+   - How can I inquire about membership with the MNNIT alumni network?
+   - Can you provide the mailing address for the MNNIT alumni association?
+   - Tell me about the official website of the MNNIT alumni network.
+   - What is the process for joining the MNNIT alumni association?
+   - Explain the benefits of becoming a member of the MNNIT alumni network.
+   - I'd like to know if there are local chapters of the MNNIT alumni association.
+   - Share information on the alumni association's LinkedIn page.
+   - How can I access the MNNIT alumni association's newsletter or updates?
+   - What is the alumni association's support email for inquiries?
+   - Tell me about any alumni networking platforms used by the MNNIT alumni association.
+   - Can you provide information on the annual alumni meet organized by MNNIT?
+   - How can I contact the MNNIT alumni association's administrative office?
+   - I'd like to learn about the alumni association's alumni mentoring program.
+   - Share details on alumni success stories featured by MNNIT alumni association.
+   - What is the process for donating to the MNNIT alumni association?
+   - Tell me about the process for updating my contact information with MNNIT alumni.
+   - Provide information on alumni scholarships offered by the association.
+   - How can I reach out to the local alumni chapter in my city?
+   - Tell me about the history and mission of the MNNIT alumni association.
+   - What is the alumni association's social media hashtag for updates?
+   - Explain the process for alumni volunteering opportunities with MNNIT.
+
+- intent: give_feedback
+  examples: |
+    - I have some feedback about the event.
+    - Can I provide suggestions to improve the convention?
+    - How do I share my thoughts about the event?
+    - I'd like to give some feedback.
+    - Is there a way to submit feedback on the event?
+    - I want to provide my thoughts on the convention.
+    - Where can I share my feedback about the event?
+    - How can I offer suggestions for the event?
+    - I'd like to give my opinion on the event.
+    - What's the process for sharing feedback?
+    - I have some ideas to improve the event.
+    - Can I give my feedback on the convention?
+    - How can I share my suggestions for the event?
+    - Is there a way to express my thoughts on the event?
+    - I'd like to share my feedback on the event.
+    - What's the feedback submission procedure?
+    - I want to offer suggestions for the convention.
+    - How do I provide my feedback on the event?
+    - I'd like to make some recommendations for improvement.
+    - Can I provide input to enhance the event?
+    - How can I give my feedback on the convention?
+    - I have some constructive feedback about the event.
+    - Is there a feedback channel for the event?
+    - Where can I provide my suggestions for improvement?
+    - I'd like to submit my thoughts on the event.
+    - How do I communicate my feedback about the convention?
+    - I want to offer my input to make the event better.
+    - What's the best way to share my feedback on the event?
+    - Can I give my recommendations for enhancing the convention?
+    - How can I give my feedback about the event's organization?
+- intent: mnnit_location
+  examples: |
+    - Where is MNNIT located?
+    - Can you tell me the address of MNNIT?
+    - What is the location of Motilal Nehru National Institute of Technology?
+    - Where can I find MNNIT?
+    - Please provide the campus address for MNNIT.
+    - What's the physical address of MNNIT?
+    - Tell me the geographical location of MNNIT.
+    - Where exactly is Motilal Nehru National Institute of Technology situated?
+    - I'm looking for information about MNNIT's location.
+    - Can you give me directions to MNNIT?
+    - What's the street address for MNNIT?
+    - Where is the MNNIT campus situated?
+    - Tell me about MNNIT's whereabouts.
+    - How do I get to MNNIT?
+    - Can you guide me to the MNNIT campus?
+    - What's the physical location of MNNIT?
+    - Where in India is MNNIT located?
+    - What's the full address of MNNIT?
+    - I need to know MNNIT's geographic coordinates.
+    - Tell me the precise location of MNNIT in Allahabad.
+    - Where can I visit MNNIT?
+    - What is the street name for MNNIT?
+    - Give me directions to MNNIT in Allahabad.
+    - What's the official address for MNNIT?
+    - Where can I physically go to MNNIT?
+    - Can you provide me with the location of MNNIT in Uttar Pradesh?
+    - I'm searching for the campus location of MNNIT.
+    - Tell me the specific address of MNNIT in Allahabad.
+    - How can I reach MNNIT in Allahabad?
+    - Please share the geographical details of MNNIT's campus.
+    - Where is the institute Motilal Nehru National Institute of Technology?
+    - I want to know the physical site of MNNIT in Allahabad.
+
+- intent: mnnit_full_form
+  examples: |
+    - What does MNNIT stand for?
+    - Can you tell me the full form of MNNIT?
+    - What is the meaning of MNNIT?
+    - Please explain the acronym MNNIT.
+    - What does the abbreviation MNNIT represent?
+    - I want to know the full name of MNNIT.
+    - What is the expanded form of MNNIT?
+    - Can you provide the complete name of MNNIT?
+    - Tell me the full form of MNNIT.
+    - What does MNNIT's initials mean?
+    - Give me the full name of MNNIT.
+    - Explain the full form of MNNIT.
+    - Tell me the complete expansion of MNNIT.
+    - What is the full name of MNNIT?
+    - I'm curious about the meaning of MNNIT.
+    - Share the extended form of MNNIT.
+    - Can you provide the full title of MNNIT?
+    - What does the acronym MNNIT denote?
+    - Please elaborate on MNNIT's full form.
+    - I'd like to know the complete name of MNNIT.
+    - What's the full name of MNNIT?
+    - Share the expanded form of MNNIT's initials.
+    - Can you explain MNNIT's abbreviation in full?
+    - I'm looking for the expanded form of MNNIT.
+    - What is the full name of the institute with the acronym MNNIT?
+
+- intent: girls_hostel_count
+  examples: |
+    - How many girls' hostels are there at MNNIT?
+    - Can you tell me the count of girls' hostels in MNNIT?
+    - How many accommodations are available for female students in MNNIT?
+    - Please provide information about the girls' hostels at MNNIT.
+    - Tell me the number of girls' hostels on the campus.
+    - What's the quantity of girls' hostels in MNNIT?
+    - I'd like to know the total count of girls' hostels at MNNIT.
+    - Are there multiple hostels for female students in MNNIT?
+    - How many dormitories are there for girls in MNNIT?
+    - Give me details about the girls' hostels in MNNIT.
+    - Can you provide me with the number of accommodations for female students in MNNIT?
+    - What's the girls' hostel count at MNNIT?
+    - I'm interested in knowing the total girls' hostels in MNNIT.
+    - Share information about the housing options for female students at MNNIT.
+    - How many places for girls to stay are there in MNNIT?
+    - What is the total count of girls' hostels in MNNIT?
+    - Can you provide the girls' hostel quantity at MNNIT?
+    - What is the number of housing facilities for female students in MNNIT?
+    - Please share details about the girls' hostels at MNNIT.
+    - Tell me the total girls' hostel count in MNNIT.
+    - How many accommodations for female students can be found in MNNIT?
+
+- intent: girls_hostel_names
+  examples: |
+    - What are the names of the girls' hostels at MNNIT?
+    - Can you provide me with the names of the girls' hostels in MNNIT?
+    - Tell me the names of the accommodations for female students in MNNIT.
+    - Please share the names of the girls' hostels at MNNIT.
+    - What are the specific names of the girls' hostels on the campus?
+    - Can you list the names of girls' hostels in MNNIT?
+    - I'd like to know the names of the girls' hostels at MNNIT.
+    - Are there multiple hostels for female students, and can you share their names in MNNIT?
+    - Tell me the names of the dormitories for girls in MNNIT.
+    - Give me the names of the girls' hostels in MNNIT.
+    - Can you provide me with the specific names of accommodations for female students in MNNIT?
+    - What are the names of the girls' hostels in MNNIT?
+    - I'm interested in knowing the names of the girls' hostels at MNNIT.
+    - Share information about the housing options for female students, including their names at MNNIT.
+    - What are the names of the places for girls to stay in MNNIT?
+    - Tell me the specific names of the girls' hostels in MNNIT.
+    - Can you list the names of accommodations for female students at MNNIT?
+    - What are the names of the girls' hostels in MNNIT?
+    - I'd like to know the names of the girls' hostels at MNNIT.
+    - Share information about the housing options for female students, including their names at MNNIT.
+    - What are the names of the places for girls to stay in MNNIT?
+
+- intent: mnnit_clubs
+  examples: |
+    - Tell me about the clubs at MNNIT.
+    - Can you list the clubs available at MNNIT?
+    - What are the clubs in MNNIT?
+    - Please provide information about the clubs at MNNIT.
+    - List the student clubs in MNNIT.
+    - I'd like to know about the extracurricular clubs at MNNIT.
+    - Are there any clubs or societies at MNNIT?
+    - Tell me about the student organizations and clubs in MNNIT.
+    - Can you share information on the clubs and societies in MNNIT?
+    - What are the various clubs that students can join at MNNIT?
+    - I'm interested in learning about the clubs at MNNIT.
+    - Give me details about the student clubs and organizations in MNNIT.
+    - Can you tell me which clubs exist at MNNIT?
+    - What extracurricular clubs are available for students at MNNIT?
+    - Share information about the student clubs and societies in MNNIT.
+    - List the names of clubs in MNNIT.
+    - Tell me about the student organizations and clubs available for students at MNNIT.
+    - Can you provide a list of clubs and societies in MNNIT?
+    - I want to know about the clubs that students can participate in at MNNIT.
+    - Tell me the names of clubs and organizations in MNNIT.
+
+- intent: what_is_academic_building
+  examples: |
+    - What is the Academic Building?
+    - Tell me about the Academic Building.
+    - Explain the purpose of the Academic Building.
+    - What happens in the Academic Building at MNNIT?
+    - Can you provide information about the Academic Building?
+    - Describe the Academic Building to me.
+    - I want to learn more about the Academic Building.
+    - Give me details on the Academic Building.
+    - Please tell me what the Academic Building is.
+    - What's the significance of the Academic Building?
+    - Academic Building at MNNIT, what's that?
+    - I'm curious about the Academic Building.
+    - Share some insights on the Academic Building.
+    - What goes on inside the Academic Building?
+    - Could you brief me on the Academic Building?
+    - I need information on the Academic Building.
+    - Tell me everything you know about the Academic Building.
+    - Let's talk about the Academic Building.
+    - Give me an overview of the Academic Building.
+    - What's special about the Academic Building?
+    - I'm interested in the Academic Building, tell me more.
+    - Academic Building - tell me its purpose.
+    - What's the Academic Building used for?
+    - Academic Building: details, please.
+    - I'd like to know about the Academic Building at MNNIT.
+    - Share some insights on MNNIT's Academic Building.
+
+- intent: what_is_administrative_building
+  examples: |
+    - What is the Administrative Building at MNNIT?
+    - Tell me about the Administrative Building.
+    - Explain the purpose of the Administrative Building.
+    - Where is the Administrative Building located?
+    - Can you provide information about the Administrative Building?
+    - Describe the Administrative Building to me.
+    - I want to learn more about the Administrative Building.
+    - Give me details on the Administrative Building.
+    - Please tell me what the Administrative Building is.
+    - What's the significance of the Administrative Building?
+    - Administrative Building at MNNIT, what's that?
+    - I'm curious about the Administrative Building.
+    - Share some insights on the Administrative Building.
+    - What goes on inside the Administrative Building?
+    - Could you brief me on the Administrative Building?
+    - I need information on the Administrative Building.
+    - Tell me everything you know about the Administrative Building.
+    - Let's talk about the Administrative Building.
+    - Give me an overview of the Administrative Building.
+    - What's special about the Administrative Building?
+    - I'm interested in the Administrative Building, tell me more.
+    - Administrative Building - tell me its purpose.
+    - What's the Administrative Building used for?
+    - Administrative Building: details, please.
+    - I'd like to know about the Administrative Building at MNNIT.
+    - Share some insights on MNNIT's Administrative Building.
+
+
+- intent: girls_gym_mnnit
+  examples: |
+    - Where is the girls' gym at MNNIT located?
+    - Tell me about the girls' gym in MNNIT.
+    - Can you provide information about the gym for girls at MNNIT?
+    - Describe the facilities at the girls' gym.
+    - What are the operating hours of the girls' gym in MNNIT?
+    - I want to learn more about the girls' gym at MNNIT.
+    - Give me details on the girls' gym at MNNIT.
+    - What are the special features of the girls' gym?
+    - Girls' gym at MNNIT, tell me more.
+    - What's available for female students at the gym?
+    - Share some insights on the girls' gym.
+    - Can you explain the services offered at the girls' gym?
+    - Is there a specific girls' gym at MNNIT?
+    - I'm curious about the girls' gym. Tell me more.
+    - Girls' gym - what's it like?
+    - Tell me about the facilities at the girls' gym.
+    - Girls' gym in MNNIT: details, please.
+    - I'd like to know about the girls' gym at MNNIT.
+    - Share some insights on MNNIT's girls' gym.
+    - How can female students access the gym facilities?
+    - Is the girls' gym well-equipped for workouts?
+    - Tell me about the amenities in the girls' gym.
+    - What are the rules for using the girls' gym?
+    - Are there any restrictions to enter the girls' gym?
+    - What are the membership requirements for the girls' gym?
+
+
+- intent: canteens_girls_hostel_mnnit
+  examples: |
+    - Are there any canteens for the girls' hostel at MNNIT?
+    - Tell me about the dining options near the girls' hostel in MNNIT.
+    - Can you provide information about the canteens for female students in MNNIT?
+    - Where can girls from the hostel grab a meal?
+    - I want to learn more about the dining facilities for girls in MNNIT.
+    - Give me details on the canteens near the girls' hostel.
+    - What are the dining choices for female students in MNNIT?
+    - Girls' hostel canteens at MNNIT, tell me more.
+    - What's available for female students in terms of dining options?
+    - Share some insights on the canteens for girls in MNNIT.
+    - Can you explain the dining services offered to female students?
+    - Is there a specific canteen for girls near the hostel at MNNIT?
+    - I'm curious about the dining options for girls. Tell me more.
+    - Dining options  what's available for female students?
+    - Tell me about the meal facilities near the girls' hostel.
+    - Canteens in MNNIT for female students: details, please.
+    - I'd like to know about the dining options for girls in MNNIT.
+    - Share some insights on MNNIT's canteens for female students.
+    - How can female students access the dining facilities near the girls' hostel?
+    - Are there any restrictions to access the canteens for girls?
+    - What are the menu options at the girls' hostel canteens?
+    - What are the operating hours for the canteens near the girls' hostel?
+    - Are there any specific dietary considerations for female students in the canteens?
+    - Can you provide information about the quality of food in the canteens for girls?
+    - What's the pricing for the meals in the girls' hostel canteens?
+- intent: boys_hostel_canteens
+  examples: |
+    - Are there any canteens for the boys' hostel at MNNIT?
+    - Tell me about the dining options near the boys' hostel in MNNIT.
+    - Can you provide information about the canteens for male students in MNNIT?
+    - Where can boys from the hostel grab a meal?
+    - I want to learn more about the dining facilities for boys in MNNIT.
+    - Give me details on the canteens near the boys' hostel.
+    - What are the dining choices for male students in MNNIT?
+    - Boys' hostel canteens at MNNIT, tell me more.
+    - What's available for male students in terms of dining options?
+    - Share some insights on the canteens for boys in MNNIT.
+    - Can you explain the dining services offered to male students?
+    - Is there a specific canteen for boys near the hostel at MNNIT?
+    - I'm curious about the dining options for boys. Tell me more.
+    - Dining options, what's available for male students?
+    - Tell me about the meal facilities near the boys' hostel.
+    - Canteens in MNNIT for male students: details, please.
+    - I'd like to know about the dining options for boys in MNNIT.
+    - Share some insights on MNNIT's canteens for male students.
+    - How can male students access the dining facilities near the boys' hostel?
+    - Are there any restrictions to access the canteens for boys?
+    - What are the menu options at the boys' hostel canteens?
+    - What are the operating hours for the canteens near the boys' hostel?
+    - Are there any specific dietary considerations for male students in the canteens?
+    - Can you provide information about the quality of food in the canteens for boys?
+    - What's the pricing for the meals in the boys' hostel canteens?
+
+
+
+- intent: seminar_hall_mnnit
+  examples: |
+    - Tell me about the Seminar Hall in MNNIT.
+    - Can you provide information about the seminar hall at MNNIT?
+    - What's the purpose of the Seminar Hall?
+    - Where is the Seminar Hall located at MNNIT?
+    - Give me details on the seminar facilities in MNNIT.
+    - Explain the features of the Seminar Hall at MNNIT.
+    - What events take place in the Seminar Hall?
+    - I want to learn more about the Seminar Hall.
+    - Share insights on the Seminar Hall.
+    - Is there a specific seminar hall at MNNIT?
+    - Tell me everything you know about the Seminar Hall.
+    - Let's talk about the Seminar Hall.
+    - Can you describe the amenities in the Seminar Hall?
+    - How can I access the Seminar Hall?
+    - Are there any restrictions to enter the Seminar Hall?
+    - What are the special features of the Seminar Hall?
+    - Seminar Hall at MNNIT, what's that?
+    - I'm curious about the Seminar Hall.
+    - Share some insights on MNNIT's Seminar Hall.
+    - What goes on inside the Seminar Hall at MNNIT?
+    - Could you brief me on the Seminar Hall?
+    - I need information on the Seminar Hall.
+    - Where can I find the Seminar Hall at MNNIT?
+    - What are the events or functions organized in the Seminar Hall?
+    - What is the seating capacity of the Seminar Hall at MNNIT?
+    - Is the Seminar Hall available for student events?
+
+
+- intent: mp_hall_mnnit
+  examples: |
+    - Tell me about MP Hall at MNNIT.
+    - Can you provide information about the MP Hall in MNNIT?
+    - What's the purpose of MP Hall?
+    - Where is MP Hall located at MNNIT?
+    - Give me details on the facilities in MP Hall.
+    - Explain the features of MP Hall at MNNIT.
+    - What events take place in MP Hall?
+    - I want to learn more about MP Hall.
+    - Share insights on MP Hall.
+    - Is there a specific MP Hall at MNNIT?
+    - Tell me everything you know about MP Hall.
+    - Let's talk about MP Hall.
+    - Can you describe the amenities in MP Hall?
+    - How can I access MP Hall?
+    - Are there any restrictions to enter MP Hall?
+    - What are the special features of MP Hall?
+    - MP Hall at MNNIT, what's that?
+    - I'm curious about MP Hall.
+    - Share some insights on MNNIT's MP Hall.
+    - What goes on inside MP Hall at MNNIT?
+    - Could you brief me on MP Hall?
+    - I need information on MP Hall.
+    - Where can I find MP Hall at MNNIT?
+    - What are the events or functions organized in MP Hall?
+    - Is MP Hall available for student events?
+    - Tell me about the history of MP Hall at MNNIT.
+
+
+- intent: dean_office_mnnit
+  examples: |
+    - Tell me about the Dean's Office at MNNIT.
+    - Can you provide information about the Dean's Office in MNNIT?
+    - Where is the Dean's Office located at MNNIT?
+    - Give me details on the functions of the Dean's Office.
+    - Explain the roles of the Dean's Office at MNNIT.
+    - What services are provided by the Dean's Office?
+    - I want to learn more about the Dean's Office.
+    - Share insights on the Dean's Office.
+    - Is there a specific Dean's Office building at MNNIT?
+    - Tell me everything you know about the Dean's Office.
+    - Let's talk about the Dean's Office.
+    - Can you describe the organizational structure of the Dean's Office?
+    - How can I contact the Dean's Office?
+    - Are there any specific rules or procedures for the Dean's Office?
+    - What are the special features of the Dean's Office?
+    - Dean's Office at MNNIT, what's its role?
+    - I'm curious about the Dean's Office.
+    - Share some insights on MNNIT's Dean's Office.
+    - What goes on inside the Dean's Office at MNNIT?
+    - Could you brief me on the Dean's Office?
+    - I need information on the Dean's Office.
+    - Where can I find the Dean's Office at MNNIT?
+    - What is the Dean's Office responsible for at MNNIT?
+
+- intent: Boys_hostel
+  examples: |
+    - How many boys' hostels are there at MNNIT?
+    - Can you tell me the count of boys' hostels in MNNIT?
+    - How many accommodations are available for male students in MNNIT?
+    - Please provide information about the boys' hostels at MNNIT.
+    - Tell me the number of boys' hostels on the campus.
+    - What's the quantity of boys' hostels in MNNIT?
+    - I'd like to know the total count of boys' hostels at MNNIT.
+    - Are there multiple hostels for male students in MNNIT?
+    - How many dormitories are there for boys in MNNIT?
+    - Give me details about the boys' hostels in MNNIT.
+    - Can you provide me with the number of accommodations for male students in MNNIT?
+    - What's the boys' hostel count at MNNIT?
+    - I'm interested in knowing the total boys' hostels in MNNIT.
+    - Share information about the housing options for male students at MNNIT.
+    - How many places for boys to stay are there in MNNIT?
+    - What is the total count of boys' hostels in MNNIT?
+    - Can you provide the boys' hostel quantity at MNNIT?
+    - What is the number of housing facilities for male students in MNNIT?
+    - Please share details about the boys' hostels at MNNIT.
+    - Tell me the total boys' hostel count in MNNIT.
+    - How many accommodations for male students can be found in MNNIT?
+    - What are the names of the boys' hostels at MNNIT?
+    - Can you provide me with the names of the boys' hostels in MNNIT?
+    - Tell me the names of the accommodations for male students in MNNIT.
+    - Please share the names of the boys' hostels at MNNIT.
+    - What are the specific names of the boys' hostels on the campus?
+    - Can you list the names of boys' hostels in MNNIT?
+    - I'd like to know the names of the boys' hostels at MNNIT.
+    - Are there multiple hostels for male students, and can you share their names in MNNIT?
+    - Tell me the names of the dormitories for boys in MNNIT.
+    - Give me the names of the boys' hostels in MNNIT.
+    - Can you provide me with the specific names of accommodations for male students in MNNIT?
+    - What are the names of the boys' hostels in MNNIT?
+    - I'm interested in knowing the names of the boys' hostels at MNNIT.
+    - Share information about the housing options for male students, including their names at MNNIT.
+    - What are the names of the places for boys to stay in MNNIT?
+    - Tell me the specific names of the boys' hostels in MNNIT.
+    - Can you list the names of accommodations for male students at MNNIT?
+    - What are the names of the boys' hostels in MNNIT?
+    - I'd like to know the names of the boys' hostels at MNNIT.
+    - Share information about the housing options for male students, including their names at MNNIT.
+    - What are the names of the places for boys to stay in MNNIT?
+- intent: library_mnnit
+  examples: |
+    - Tell me about the library at MNNIT.
+    - Can you provide information about the MNNIT library?
+    - Where is the library located at MNNIT?
+    - Give me details on the services offered by the library.
+    - Explain the resources available at the library.
+    - What's the operating hours of the library?
+    - I want to learn more about the library at MNNIT.
+    - Share insights on the library.
+    - Is there a specific building for the library at MNNIT?
+    - Tell me everything you know about the library.
+    - Let's talk about the library.
+    - Can you describe the amenities in the library?
+    - How can I access the library?
+    - Are there any specific rules or procedures for using the library?
+    - What are the special features of the library?
+    - MNNIT library, what's it like?
+    - I'm curious about the library.
+    - Share some insights on MNNIT's library.
+    - What goes on inside the library at MNNIT?
+    - Could you brief me on the library's services?
+    - I need information on the library.
+    - Where can I find the library at MNNIT?
+    - What resources are available for research in the library?
+    - Is the library open to the public?
+
+
+- intent: warden_office_mnnit
+  examples: |
+    - Tell me about the Warden's Office at MNNIT.
+    - Can you provide information about the Warden's Office in MNNIT?
+    - Where is the Warden's Office located at MNNIT?
+    - Give me details on the functions of the Warden's Office.
+    - Explain the roles of the Warden's Office at MNNIT.
+    - What services are provided by the Warden's Office?
+    - I want to learn more about the Warden's Office.
+    - Share insights on the Warden's Office.
+    - Is there a specific building for the Warden's Office at MNNIT?
+    - Tell me everything you know about the Warden's Office.
+    - Let's talk about the Warden's Office.
+    - Can you describe the organizational structure of the Warden's Office?
+    - How can I contact the Warden's Office?
+    - Are there any specific rules or procedures for the Warden's Office?
+    - What are the special features of the Warden's Office?
+    - Warden's Office at MNNIT, what's its role?
+    - I'm curious about the Warden's Office.
+    - Share some insights on MNNIT's Warden's Office.
+    - What goes on inside the Warden's Office at MNNIT?
+    - Could you brief me on the Warden's Office?
+    - I need information on the Warden's Office.
+    - Where can I find the Warden's Office at MNNIT?
+    - What responsibilities do the Wardens have at MNNIT?
+- intent: projects
+  examples: |
+    - What are the current projects of Robotics Club?
+    - What are some featured project of Robotics Club?
+    - Projects of Robotics Club
+    - outstanding projects of Robotics Club
+    - best project of Robotics Club
+    - excellent project of Robotics Club MNNIT
+    - Robotics Club Project MNNIT
+    - Name some projects of Robotics Club 
+    - Tell me something about projects of Robotics Club
+
+- intent: ask_self_balancing_bot
+  examples: |
+    - Self Balancing Bot
+    - selfbalancingbot
+    - tell me about self balancing bot
+    - Tell me about Self Balancing Bot
+    - Brief introduction about self balancing bot
+    - Can you give me a brief overview of  the self balancing bot project?
+    - I'm new to self balancing bot. Can you explain what they are?
+    - Tell me the basics of self balancing bot
+    - tell me something about self balancing bot
+    - self balancing bot project
+    - I'm interested in learning about the fundamentals of self balancing bot.
+    - tell me something about self balancing bot project
+    - What do I need to know about self-balancing bots as a beginner?
+    - an introduction to self-balancing robot
+    - Explain the concept of self-balancing bots in simple terms
+    - I want to understand the fundamental principles of self-balancing bots.
+    - What are the key concepts behind self-balancing bots?
+    - Tell me the basics of how self-balancing bots work
+    - foundational aspects of self-balancing bots.
+    - give me an overview of self-balancing bot technology?
+    - What are the fundamental principles of balance in self-balancing bots?
+    - How do self-balancing bots maintain stability while moving?
+    - Can you explain the basic mechanics of self-balancing robots?
+    - I'm looking for a beginner-friendly introduction to self-balancing bots.
+    - What are the main components of a self balancing bot?
+    - Can you list the key parts of a self balancing bot project?
+    - Tell me about the main elements that make up a self balancing bot.
+
+- intent: humanoid_info
+  examples: |
+    - Tell me about the humanoid robot project .
+    - Purpose of the humanoid robot project?
+    - Features of the humanoid robot project?|
+    - What components are used in the humanoid robot project?
+    - Give me the details about the components of the humanoid robot project ?
+    - Tell me something about humanoid robot project
+    - About humanoid robot project .
+    - How is the humanoid robot project view .
+    - What are the dimensions of the humanoid robot project?
+    - What is the humanoid robot project?
+    - Please tell me more about the humanoid robot project .
+- intent: SpiderBot_info
+  examples: |
+    - Spider bot project
+    - Project about for the spider bot project?
+    - Information about the project related to the spider bot project .
+    - More about the project involving the spider bot project.
+    - About the project that focuses on the spider bot project.
+    - Details about the project related to the spider bot project?
+    - What do the spider bot project do ?
+    - Please , Share information about the spider bot project.
+    - About the project that utilizes the spider bot project .
+    - Project details for spider bot project.
+    - Project information for the spider bot project?
+     - Spider bot project
+    - Project about for the spider bot project?
+    - Information about the project related to the spider bot project .
+    - More about the project involving the spider bot project.
+    - About the project that focuses on the spider bot project.
+    - Details about the project related to the spider bot project?
+    - What do the spider bot project do ?
+    - Please , Share information about the spider bot project.
+    - About the project that utilizes the spider bot project .
+    - Project details for spider bot project.
+    - Project information for the spider bot project?
+- intent: humanoid_info
+  examples: |
+    - Tell me about the humanoid robot project .
+    - Purpose of the humanoid robot project?
+    - Features of the humanoid robot project?|
+    - What components are used in the humanoid robot project?
+    - Give me the details about the components of the humanoid robot project ?
+    - Tell me something about humanoid robot project
+    - About humanoid robot project .
+    - How is the humanoid robot project view .
+    - What are the dimensions of the humanoid robot project?
+    - What is the humanoid robot project?
+    - Please tell me more about the humanoid robot project .
+- intent: rlsupermario_info
+  examples: |
+    - tell me about rl super mario project project?
+    - rl super mario project?
+    - what are the features of rl super mario project?
+    - what is the use of rl super mario project?
+    - tell me something about rl super mario project?
+    - what is the purpose of this rl super mario project?
+    - About the project that focuses on the rl super mario project.
+    - Details about the project related to the rl super mario project?
+    - What do the rl super mario project do ?
+    - What is the rl super mario robot project?
+    - Please tell me more about the rl super mario robot project .
+
+- intent: chatbot_info
+  examples: |
+    - tell me about chatbot project project?
+    - chatbot project?
+    - what are the features of chatbot project?
+    - what is the use of chatbot project?
+    - tell me something about chatbot project?
+    - what is the purpose of this chatbot project?
+    - About the project that focuses on the chatbot project.
+    - Details about the project related to the chatbot project?
+    - What do the chatbot project do ?
+    - What is the chatbot robot project?
+    - Please tell me more about the chatbot robot project .
+- intent: linefollower_info
+  examples: |
+    - what is line follower bot
+    - tell me about line follower bot
+    - Purpose of the  line follower project?
+    - Features of the line follower project?
+    - about line follower bot?
+    - What is the main objective of the line follower bot project?
+    - Could you describe the technology or components used in your line follower bot?
+    - How does the line follower bot detect and follow lines or paths?
+    - What inspired you to work on a line follower robot project?
+    - What challenges did you encounter while building the line follower bot?
+    - What programming languages or software did you use for the project?
+    - How do you control or interface with the line follower bot?
+    - Are there specific applications or industries where this project could be useful?
+    - What kind of sensors or detectors are employed to make the bot follow lines accurately?
+    - Can you share some details about the design and physical structure of the bot?
+    - What are the potential future improvements or enhancements you plan for the project?
+    - Were there any unique features or innovations you introduced in your line follower bot?
+    - How does the bot handle intersections or complex line patterns?
+    - What was the most rewarding aspect of completing this line follower bot project?
+    - Can you share any tips or advice for others interested in building their own line follower robots?
+- intent: selfdrivingcart_info
+  examples: |
+    - what is self driving cart
+    - tell me about self driving cart
+    - Purpose of the  self driving cart project?
+    - Features of the self driving cart project?
+    - about self driving cart?
+    - What is the main objective of the self driving cart project?
+    - What inspired you to work on a self driving cart robot project?
+    - What challenges did you encounter while building the self driving cart?
+    - Are there specific applications or industries where this project could be useful?
+    - What was the most rewarding aspect of completing this self driving cart project?
+    - Can you share any tips or advice for others interested in building their own self driving cart robots?
