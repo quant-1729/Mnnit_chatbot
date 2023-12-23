@@ -7,8 +7,7 @@
 #
 # from anaconda_navigator.api.external_apps.config_utils import Action
 # from anaconda_navigator.external.UniversalAnalytics.Tracker import Tracker
-
-
+import time
 # This is a simple example for a custom action which utters "Hello World!"
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
@@ -20,16 +19,15 @@ def open_google_maps_link(link):
     # Create a new instance of the Chrome driver
     driver = webdriver.Chrome()
 
-    try:
-        # Open the Google Maps link in the browser
-        driver.get(link)
 
+        # Open the Google Maps link in the browser
+    driver.get(link)
+    # driver.implicitly_wait(20)
+    # time.sleep(20)
+    input("Press any key to close the browser...")
         # Optional: You can perform additional actions on the opened page if needed
         # For example, you can wait for some elements to load or interact with the page
-
-    finally:
-        # Close the browser when done
-        driver.quit()
+    driver.quit()
 
 class ActionHelloWorld(Action):
     def name(self) -> Text:

@@ -464,6 +464,8 @@ responses:
         "
   utter_AM_dept:
     - text: "The Department of Mathematics at Motilal Nehru National Institute of Technology (MNNIT) offers undergraduate, postgraduate, and doctoral programs in Mathematics and Scientific Computing . The department has a team of highly qualified faculty members who are actively involved in research and teaching. The research areas of the department include Algebra, Analysis, Differential Equations, Fluid Dynamics, Graph Theory, Numerical Analysis, Optimization, and Probability Theory"
+  utter_default:
+    - text: "fall_back happer"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
