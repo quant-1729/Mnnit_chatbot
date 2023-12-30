@@ -7,28 +7,17 @@
 #
 # from anaconda_navigator.api.external_apps.config_utils import Action
 # from anaconda_navigator.external.UniversalAnalytics.Tracker import Tracker
-import time
 # This is a simple example for a custom action which utters "Hello World!"
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from selenium import webdriver
-
 def open_google_maps_link(link):
-    # Create a new instance of the Chrome driver
     driver = webdriver.Chrome()
-
-
-        # Open the Google Maps link in the browser
     driver.get(link)
-    # driver.implicitly_wait(20)
-    # time.sleep(20)
     input("Press any key to close the browser...")
-        # Optional: You can perform additional actions on the opened page if needed
-        # For example, you can wait for some elements to load or interact with the page
     driver.quit()
-
 class ActionHelloWorld(Action):
     def name(self) -> Text:
         return "action_hello_world"
@@ -92,5 +81,23 @@ class ActionProvideDirections(Action):
             open_google_maps_link(map_url)
         else:
             dispatcher.utter_message("I couldn't find directions for the specified locations.")
+
+        return []
+
+##### download the calender
+## this action is currently not working
+class ActionProvideDownloadLink(Action):
+    def name(self) -> Text:
+        return "action_academic_calendar"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Assuming your calendar file is in the project directory
+        file_path = 'calendar.ics'  # Replace with the actual name of your calendar file
+        download_link = f"file://{file_path}"
+
+        response_message = f"You can download the academic calendar [here]({download_link})."
+
+        # Send the response to the user
+        dispatcher.utter_message(response_message)
 
         return []
