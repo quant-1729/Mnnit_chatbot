@@ -187,14 +187,8 @@ responses:
   - text: The tuition fees for courses at MNNIT Allahabad may vary depending on the program. You can find details about the fee structure on the official website.
   utter_ask_intro_format:
   - text: The basic format for junios to introduce themself to seniors is
-  utter_ask_for_directions:
-  - text: Where you want to go?
-  utter_ask_for_current_location:
-  - text: Where  are you now ?
   utter_thanks_for_hostel:
   - text: Your hostel is saved
-  utter_provide_direction:
-  - text: This is the link to the path
   utter_anscommon:
     - text: "MNNIT 🏛️ is a technical college whose full form is
           Motilal Nehru National Institute of Technology which is present in Allahabad , Uttar Pradesh 🎓"
