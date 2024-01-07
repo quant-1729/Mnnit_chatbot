@@ -442,25 +442,7 @@ nlu:
 - synonym: grading_system, value:grading updates
   examples: |
     - grading updates
-- synonym: ''
-  examples: |
-    - faculty
-    - professors
-    - faculty awards and recognitions
-    - faculty-to-student ratio
-    - research collaboration
-    - faculty members
-    - faculty success stories
-    - faculty development
-    - faculty teaching styles
-    - faculty recruitment
-    - faculty qualifications
-    - faculty expertise
-    - rate the faculty
-    - faculty publications
-    - faculty resources
-    - faculty committees
-    - faculty involvement
+
 - synonym: lab_facilities, value:lab facilities
   examples: |
     - lab facilities
