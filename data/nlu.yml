@@ -398,7 +398,13 @@ nlu:
     - Tell me the directions from [SVBH](user_location) to [athletic ground]{"entity": "destination_given", "value": "Athletic Ground"}
     - Tell me the directions from [SVBH](user_location) to [Admin Building](destination_given)
 
-
+- lookup: directions_look
+  examples: |
+    - Central Library
+    - Admin Building
+    - Dean Academics
+    - SVBH
+    - Patel Hostel
  
 - lookup: library_resources
   examples: |

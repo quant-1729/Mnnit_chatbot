@@ -13,6 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from selenium import webdriver
+
 def open_google_maps_link(link):
     driver = webdriver.Chrome()
     driver.get(link)
