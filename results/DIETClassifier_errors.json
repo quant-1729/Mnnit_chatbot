@@ -24,78 +24,6 @@
     "predicted_entities": []
   },
   {
-    "text": "Is there a facility_type for medical assistance?",
-    "entities": [
-      {
-        "start": 11,
-        "end": 24,
-        "value": "facility_type",
-        "entity": "medical clinic"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "campus nurse",
-        "start": 11,
-        "end": 24,
-        "confidence_entity": 0.1123519092798233,
-        "value": "facility_type",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Where is the nearest facility_type on campus?",
-    "entities": [
-      {
-        "start": 21,
-        "end": 34,
-        "value": "facility_type",
-        "entity": "hospital"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "campus nurse",
-        "start": 21,
-        "end": 34,
-        "confidence_entity": 0.12093610316514969,
-        "value": "facility_type",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Are there any doctors available in the facility_type?",
-    "entities": [
-      {
-        "start": 39,
-        "end": 52,
-        "value": "facility_type",
-        "entity": "campus area"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "campus nurse",
-        "start": 39,
-        "end": 52,
-        "confidence_entity": 0.1215742975473404,
-        "value": "facility_type",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
     "text": "Can you provide information on the facility_type?",
     "entities": [
       {
@@ -110,55 +38,7 @@
         "entity": "campus nurse",
         "start": 35,
         "end": 48,
-        "confidence_entity": 0.13142623007297516,
-        "value": "facility_type",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "I need to find the facility_type on campus.",
-    "entities": [
-      {
-        "start": 19,
-        "end": 32,
-        "value": "facility_type",
-        "entity": "pharmacy"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "campus nurse",
-        "start": 19,
-        "end": 32,
-        "confidence_entity": 0.11875136941671371,
-        "value": "facility_type",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Are there any facility_type available?",
-    "entities": [
-      {
-        "start": 14,
-        "end": 27,
-        "value": "facility_type",
-        "entity": "mental health services"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "campus nurse",
-        "start": 14,
-        "end": 27,
-        "confidence_entity": 0.11628298461437225,
+        "confidence_entity": 0.1266266256570816,
         "value": "facility_type",
         "extractor": "DIETClassifier",
         "processors": [
@@ -182,31 +62,7 @@
         "entity": "campus nurse",
         "start": 23,
         "end": 36,
-        "confidence_entity": 0.140177920460701,
-        "value": "facility_type",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "What services does the facility_type offer?",
-    "entities": [
-      {
-        "start": 23,
-        "end": 36,
-        "value": "facility_type",
-        "entity": "student health center"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "campus nurse",
-        "start": 23,
-        "end": 36,
-        "confidence_entity": 0.11153964698314667,
+        "confidence_entity": 0.2392720729112625,
         "value": "facility_type",
         "extractor": "DIETClassifier",
         "processors": [
@@ -230,7 +86,7 @@
         "entity": "campus nurse",
         "start": 24,
         "end": 37,
-        "confidence_entity": 0.13646364212036133,
+        "confidence_entity": 0.20448020100593567,
         "value": "facility_type",
         "extractor": "DIETClassifier",
         "processors": [
@@ -254,7 +110,7 @@
         "entity": "campus nurse",
         "start": 11,
         "end": 24,
-        "confidence_entity": 0.1398685723543167,
+        "confidence_entity": 0.1721368283033371,
         "value": "facility_type",
         "extractor": "DIETClassifier",
         "processors": [
@@ -278,31 +134,7 @@
         "entity": "campus nurse",
         "start": 20,
         "end": 33,
-        "confidence_entity": 0.14101378619670868,
-        "value": "facility_type",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "How do I schedule an appointment at the facility_type?",
-    "entities": [
-      {
-        "start": 40,
-        "end": 53,
-        "value": "facility_type",
-        "entity": "campus clinic"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "campus nurse",
-        "start": 40,
-        "end": 53,
-        "confidence_entity": 0.12008903175592422,
+        "confidence_entity": 0.20750264823436737,
         "value": "facility_type",
         "extractor": "DIETClassifier",
         "processors": [
@@ -323,34 +155,10 @@
     ],
     "predicted_entities": [
       {
-        "entity": "campus nurse",
+        "entity": "campus clinic",
         "start": 40,
         "end": 53,
-        "confidence_entity": 0.11926237493753433,
-        "value": "facility_type",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Can you recommend a good facility_type on campus?",
-    "entities": [
-      {
-        "start": 25,
-        "end": 38,
-        "value": "facility_type",
-        "entity": "dermatologist"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "campus nurse",
-        "start": 25,
-        "end": 38,
-        "confidence_entity": 0.1176983192563057,
+        "confidence_entity": 0.17636920511722565,
         "value": "facility_type",
         "extractor": "DIETClassifier",
         "processors": [
@@ -374,7 +182,7 @@
         "entity": "campus nurse",
         "start": 34,
         "end": 47,
-        "confidence_entity": 0.13054032623767853,
+        "confidence_entity": 0.1766679286956787,
         "value": "facility_type",
         "extractor": "DIETClassifier",
         "processors": [
@@ -382,5 +190,29 @@
         ]
       }
     ]
+  },
+  {
+    "text": "When is the event, and where will it be?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 40,
+        "value": "DL",
+        "entity": "general_info"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can alumni register for GAC 2023?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 33,
+        "value": "FR",
+        "entity": "gacreg"
+      }
+    ],
+    "predicted_entities": []
   }
 ]

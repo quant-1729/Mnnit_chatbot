@@ -1,9 +1,9 @@
 {
-  "utter_goodbye": {
+  "utter_iamabot": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4
+    "support": 1
   },
   "mood_great": {
     "precision": 1.0,
@@ -17,7 +17,19 @@
     "f1-score": 1.0,
     "support": 1
   },
-  "utter_cheer_up": {
+  "utter_goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "utter_did_that_help": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -35,35 +47,23 @@
     "f1-score": 1.0,
     "support": 3
   },
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
   "action_listen": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 16
   },
-  "utter_did_that_help": {
+  "utter_cheer_up": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 3
-  },
-  "utter_iamabot": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "affirm": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "deny": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
   },
   "greet": {
     "precision": 1.0,
