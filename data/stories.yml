@@ -647,7 +647,7 @@ stories:
 - story: fallback
   steps:
   - intent: nlu_fallback
-  - action: action_fallback
+  - action: say_fallback
 - story: self
   steps:
   - intent: selfdrivingcart_info
