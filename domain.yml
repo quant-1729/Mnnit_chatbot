@@ -164,6 +164,7 @@ actions:
 - gac2023_orgcom
 - gac_reg
 - say_fallback
+- action_open_link
 responses:
   utter_greet:
   - text: Hey! How are you?

@@ -13,7 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from selenium import webdriver
-
+import webbrowser
 def open_google_maps_link(link):
     driver = webdriver.Chrome()
     driver.get(link)
@@ -85,20 +85,18 @@ class ActionProvideDirections(Action):
 
         return []
 
-##### download the calender
-## this action is currently not working
-class ActionProvideDownloadLink(Action):
+
+class ActionOpenLink(Action):
     def name(self) -> Text:
-        return "action_academic_calendar"
+        return "action_open_link"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Assuming your calendar file is in the project directory
-        file_path = 'calendar.ics'  # Replace with the actual name of your calendar file
-        download_link = f"file://{file_path}"
+        # Replace the URL with the link you want to open
+        url_to_open = "http://www.mnnit.ac.in/"
 
-        response_message = f"You can download the academic calendar [here]({download_link})."
+        webbrowser.open(url_to_open)
 
-        # Send the response to the user
-        dispatcher.utter_message(response_message)
+        # You can customize the response sent back to the user
+        dispatcher.utter_message(f"Opening the link: {url_to_open}")
 
         return []
