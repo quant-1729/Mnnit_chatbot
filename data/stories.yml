@@ -647,9 +647,20 @@ stories:
 - story: fallback
   steps:
   - intent: nlu_fallback
-  - action: say_fallback
+  - action: action_fallback
 - story: self
   steps:
   - intent: selfdrivingcart_info
   - action: utter_self
   - action: restart_convo
+- story: interactive_story_1
+  steps:
+  - intent: ask_for_directions
+    entities:
+    - user_location: SVBH
+    - destination_given: Athletic Ground
+  - slot_was_set:
+    - destination_given: Athletic Ground
+  - slot_was_set:
+    - user_location: SVBH
+  - action: action_provide_directions
