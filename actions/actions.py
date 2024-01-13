@@ -36,10 +36,14 @@ class ActionTextToSpeech(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         # Retrieve the text from the latest user message
+        # Retrieve the text from the last utterance
         last_user_message = tracker.latest_message.get('text', '')
-        
-        # Generate TTS audio from the user's text
+
+
+        # Generate TTS audio from the response text
         tts = gTTS(text=last_user_message, lang='en')
+        # Generate TTS audio from the user's text
+
 
         # Save the generated audio file
         audio_path = "Audio_response/output.mp3"

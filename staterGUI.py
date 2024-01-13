@@ -4,7 +4,7 @@ import tkinter
 import requests
 from termcolor import colored
 import sys
-import time , pymongo
+import time, pymongo
 
 client = pymongo.MongoClient("mongodb+srv://Derik714:Hrithiman1856@cluster0.c5z73yl.mongodb.net/")
 database = client['Chat_history']
