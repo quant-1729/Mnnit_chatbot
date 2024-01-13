@@ -8,6 +8,7 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+  - action: action_text_to_speech
 
 - story: sad path 1
   steps:
@@ -29,17 +30,6 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-#- story: happy name path
-#  steps:
-#  - intent: my_name
-#    entities:
-#    - name: "rahul"
-#  - action: utter_mobile_number
-#  - intent: mobile_number
-#    entities:
-#    - number: "9876987699"
-#  - action: utter_thanks
-
 - story: mnnit website path
   steps:
   - intent: mnnit_website
@@ -51,22 +41,25 @@ stories:
   steps:
   - intent: courses
   - action: utter_courses
+  - action: action_text_to_speech
 
 - story: placement information
   steps:
   - intent: ask_placements
   - action: utter_ask_placements
+  - action: action_text_to_speech
 
 - story: admission process
   steps:
   - intent: ask_admission_process
   - action: utter_ask_admission_process
+  - action: action_text_to_speech
 
 - story: Ask About Internship Opportunities
   steps:
   - intent: ask_about_internship_opportunities
   - action: utter_ask_about_internship_opportunities
-
+  - action: action_text_to_speech
 - story: Ask About Healthcare Facilities
   steps:
   - intent: ask_about_healthcare_facilities

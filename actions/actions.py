@@ -8,10 +8,7 @@
 # from anaconda_navigator.api.external_apps.config_utils import Action
 # from anaconda_navigator.external.UniversalAnalytics.Tracker import Tracker
 # This is a simple example for a custom action which utters "Hello World!"
-from typing import Any, Text, Dict, List
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
+
 from selenium import webdriver
 import webbrowser
 from typing import Any, Text, Dict, List
@@ -25,6 +22,33 @@ import sys
 import random
 from bson import ObjectId
 import openai
+from gtts import gTTS
+from playsound import playsound
+
+#Action for text to voice comversion
+
+class ActionTextToSpeech(Action):
+    def name(self) -> Text:
+        return "action_text_to_speech"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # Retrieve the text from the latest user message
+        last_user_message = tracker.latest_message.get('text', '')
+        
+        # Generate TTS audio from the user's text
+        tts = gTTS(text=last_user_message, lang='en')
+
+        # Save the generated audio file
+        audio_path = "Audio_response/output.mp3"
+        tts.save(audio_path)
+
+        # Play the generated audio
+        playsound(audio_path)
+
+        return []
 
 client = pymongo.MongoClient("mongodb+srv://Derik714:Hrithiman1856@cluster0.c5z73yl.mongodb.net/")
 DataBase = client['GACData']

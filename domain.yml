@@ -165,6 +165,7 @@ actions:
 - gac_reg
 - say_fallback
 - action_open_link
+- action_text_to_speech
 responses:
   utter_greet:
   - text: Hey! How are you?
