@@ -1,5 +1,26 @@
 version: '3.1'
 intents:
+- AM_dept
+- BE_dept
+- BE_dept_HOD
+- Boys_hostel
+- CE_dept
+- CE_dept_HOD
+- CSE_dept
+- CSE_dept_HOD
+- ChE_Dept
+- ChE_Dept_HOD
+- Department
+- Director
+- ECE_dept
+- ECE_dept_HOD
+- EE_dept
+- EE_dept_HOD
+- ME_dept
+- ME_dept_HOD
+- PIE_dept
+- PIE_dept_HOD
+- SpiderBot_info
 - affirm
 - ask_about_exam_preparation_tips
 - ask_about_faculty
@@ -13,96 +34,76 @@ intents:
     use_entities: library_resources
 - ask_about_mentorship_program
 - ask_admission_process
+- ask_event_info_2023
 - ask_for_direction
 - ask_for_directions
 - ask_hostel_choice:
     use_entities: hostel
 - ask_intro_format
 - ask_placements
+- ask_self_balancing_bot
+- benfit_of_the_club
 - bot_challenge
+- boys_hostel
+- boys_hostel_canteens
+- cafe_96
+- cafe_96_location
+- cafetarea
+- canteens_girls_hostel_mnnit
+- chatbot_info
+- club
+- college_playground
+- common_question
 - courses
+- dean
+- dean_office_mnnit
 - deny
+- dwesis_canteen
+- dwesis_location
+- explore_campus
+- gac_2023_donations
+- gac_2023_organizing
+- gac_2023_payment
+- gac_2023_registration
+- gac_2023_sponsorship
+- gac_event_info
+- girls_gym_mnnit
+- girls_hostel
+- girls_hostel_count
+- girls_hostel_names
 - goodbye
 - greet
+- humanoid_info
+- library_mnnit
+- linefollower_info
+- lit_club
+- mnnit_clubs
+- mnnit_full_form
+- mnnit_location
 - mnnit_website
 - mobile_number:
     use_entities: number
 - mood_great
 - mood_unhappy
+- more_about_college
+- mp_hall_mnnit
 - my_name:
     use_entities: name
-- common_question
-- more_about_college
-- club
-- benfit_of_the_club
-- explore_campus
-- cafetarea
-- dwesis_canteen
-- dwesis_location
-- cafe_96
-- cafe_96_location
-- yamuna_canteen
-- yamuna_location
-- lit_club
+- out_of_scope
+- projects
+- rlsupermario_info
 - robotics_club
-- boys_hostel
-- girls_hostel
-- Department
-- college_playground
-- Director
-- dean
-- CSE_dept
-- CSE_dept_HOD
-- ECE_dept
-- ECE_dept_HOD
-- EE_dept
-- EE_dept_HOD
-- ME_dept
-- ME_dept_HOD
-- ChE_Dept
-- ChE_Dept_HOD
-- CE_dept
-- CE_dept_HOD
-- BE_dept
-- BE_dept_HOD
-- PIE_dept
-- PIE_dept_HOD
-- AM_dept
-- ask_event_info_2023
-- gac_2023_donations
-- gac_2023_organizing
-- gac_2023_registration
-- gac_2023_payment
-- gac_2023_sponsorship
-- gac_event_info
-- mnnit_location
-- mnnit_full_form
-- girls_hostel_count
-- girls_hostel_names
-- mnnit_clubs
+- selfdrivingcart_info
+- seminar_hall_mnnit
+- warden_office_mnnit
 - what_is_academic_building
 - what_is_administrative_building
-- girls_gym_mnnit
-- canteens_girls_hostel_mnnit
-- seminar_hall_mnnit
-- mp_hall_mnnit
-- dean_office_mnnit
-- library_mnnit
-- warden_office_mnnit
-- boys_hostel_canteens
-- Boys_hostel
-- projects
-- ask_self_balancing_bot
-- humanoid_info
-- SpiderBot_info
-- rlsupermario_info
-- chatbot_info
-- linefollower_info
-- selfdrivingcart_info
-- out_of_scope
+- yamuna_canteen
+- yamuna_location
+- ask_for_image
 entities:
-- user_location
 - destination_given
+- user_location
 - requested_hostel
 - number
 - name
@@ -126,6 +127,7 @@ entities:
 - gacspan
 - gacpay
 - maa
+- image_requested
 slots:
   name:
     type: text
@@ -163,8 +165,9 @@ actions:
 - gac2023_basic_info
 - gac2023_orgcom
 - gac_reg
-- say_fallback
 - action_open_link
+- action_custom_fallback
+- action_get_image
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -241,357 +244,223 @@ responses:
   utter_provide_direction:
   - text: This is the link to the path
   utter_anscommon:
-    - text: "MNNIT 🏛️ is a technical college whose full form is
-          Motilal Nehru National Institute of Technology which is present in Allahabad , Uttar Pradesh 🎓"
+  - text: MNNIT 🏛️ is a technical college whose full form is Motilal Nehru National Institute of Technology which is present in Allahabad , Uttar Pradesh 🎓
   utter_about_college:
-    - text:
-        "Motilal Nehru National Institute of Technology Allahabad, Prayagraj (MNNIT)🏛️ is an Institute
-        with total commitment to quality and excellence in academic pursuits 🎓. It was established as one of the
-        seventeen Regional Engineering Colleges of India in the year 1960 as a joint enterprise of Government of
-        India and Government of Uttar Pradesh, and was an associated college of University of Allahabad, which is the
-        third oldest university in India 👩‍🏫. On June 26, 2002 MNREC was transformed into National Institute of Technology
-        and Deemed University fully funded by Government of India.  The institute is formerly known as Motilal Nehru Regional Engineering College (MNREC). The MNNIT Allahabad is among the top 49 colleges by NIRF ranking 2023 in the Engineering category The institute is accredited by AICTE. It offers many UG and PG courses along with MNNIT PhD programs"
+  - text: Motilal Nehru National Institute of Technology Allahabad, Prayagraj (MNNIT)🏛️ is an Institute with total commitment to quality and excellence in academic pursuits 🎓. It was established as one of the seventeen Regional Engineering Colleges of India in the year 1960 as a joint enterprise of Government of India and Government of Uttar Pradesh, and was an associated college of University of Allahabad, which is the third oldest university in India 👩‍🏫. On June 26, 2002 MNREC was transformed into National Institute of Technology and Deemed University fully funded by Government of India.  The institute is formerly known as Motilal Nehru Regional Engineering College (MNREC). The MNNIT Allahabad is among the top 49 colleges by NIRF ranking 2023 in the Engineering category The institute is accredited by AICTE. It offers many UG and PG courses along with MNNIT PhD programs
   utter_club:
-    - text:
-        "In MNNIT college , We support extra - curricular activity with academics ,some important clubs present are \n
-        Literary club \n
-        GREEN Club \n
-        Athletics Club (Sports) 🤼 \n
-        Arts society 🖼️ \n
-        Media House of MNNIT ( MHM ) 📱 \n
-        Music Club(Nishad) 🎵 \n
-        Dance Club 💃🏻 \n
-        Robotics Club \n
-        SAE (Society of Automobile Engineers) \n
-        Gnosis (Quizzing club) \n
-        E-Cell, MNNIT (Entrepreneurship cell) \n
-        Rotaract Club \n
-        Arts society  🖼️"
+  - text: |-
+      In MNNIT college , We support extra - curricular activity with academics ,some important clubs present are 
+       Literary club 
+       GREEN Club 
+       Athletics Club (Sports) 🤼 
+       Arts society 🖼️ 
+       Media House of MNNIT ( MHM ) 📱 
+       Music Club(Nishad) 🎵 
+       Dance Club 💃🏻 
+       Robotics Club 
+       SAE (Society of Automobile Engineers) 
+       Gnosis (Quizzing club) 
+       E-Cell, MNNIT (Entrepreneurship cell) 
+       Rotaract Club 
+       Arts society  🖼️
   utter_benfit_club:
-    - text:
-        "Joining tech and cultural clubs at college can be an incredibly rewarding experience. These clubs offer numerous benefits, both in terms of personal growth and future opportunities. Here are some of the advantages of getting involved: \n
-        1. Skill Development: Tech clubs can help you enhance your technical skills, whether it's coding, software development, or hardware projects. Cultural clubs often teach you about different traditions, languages, and customs. \n
-        2. Networking: Joining these clubs provides a fantastic opportunity to meet like-minded students who share your interests. You can make valuable connections that can last a lifetime.\n
-        3. Hands-On Experience: Tech clubs often engage in real-world projects, which can be a great way to gain practical experience. In cultural clubs, you can participate in events, performances, or exhibits to showcase your talents and creativity.\n
-        4. Leadership and Teamwork: Many clubs offer leadership positions, which help you develop leadership and teamwork skills. It's a great way to build your resume.\n
-        5. Personal Growth: Being part of a club can boost your confidence and communication skills. It helps you step out of your comfort zone and try new things.\n
-        6. Community Involvement: Cultural clubs, in particular, often engage with the broader community and may participate in community service or cultural exchange programs, giving you a chance to make a positive impact. \n
-        7. Friendships and Social Life: Joining clubs is a great way to meet people and make friends who share your interests. It can enhance your college social life. \n
-        8. Friendships and Social Life: Joining clubs is a great way to meet people and make friends who share your interests. It can enhance your college social life. \n
-        9. Career Opportunities: For tech clubs, it's an excellent way to build your portfolio and network with potential employers. For cultural clubs, it can enhance your resume by demonstrating your cultural awareness and adaptability.\n
-        10. Fun and Enjoyment: Above all, it's a fun and enjoyable way to spend your time in college. You'll have the chance to pursue your passions and hobbies outside of academics.\n\n
-        Remember, the specific benefits can vary depending on the clubs you choose, so we would recommend exploring the various tech and cultural clubs at our college to find the ones that align with your interests and goals. It's a fantastic way to make the most of your college experience."
+  - text: |-
+      Joining tech and cultural clubs at college can be an incredibly rewarding experience. These clubs offer numerous benefits, both in terms of personal growth and future opportunities. Here are some of the advantages of getting involved: 
+       1. Skill Development: Tech clubs can help you enhance your technical skills, whether it's coding, software development, or hardware projects. Cultural clubs often teach you about different traditions, languages, and customs. 
+       2. Networking: Joining these clubs provides a fantastic opportunity to meet like-minded students who share your interests. You can make valuable connections that can last a lifetime.
+       3. Hands-On Experience: Tech clubs often engage in real-world projects, which can be a great way to gain practical experience. In cultural clubs, you can participate in events, performances, or exhibits to showcase your talents and creativity.
+       4. Leadership and Teamwork: Many clubs offer leadership positions, which help you develop leadership and teamwork skills. It's a great way to build your resume.
+       5. Personal Growth: Being part of a club can boost your confidence and communication skills. It helps you step out of your comfort zone and try new things.
+       6. Community Involvement: Cultural clubs, in particular, often engage with the broader community and may participate in community service or cultural exchange programs, giving you a chance to make a positive impact. 
+       7. Friendships and Social Life: Joining clubs is a great way to meet people and make friends who share your interests. It can enhance your college social life. 
+       8. Friendships and Social Life: Joining clubs is a great way to meet people and make friends who share your interests. It can enhance your college social life. 
+       9. Career Opportunities: For tech clubs, it's an excellent way to build your portfolio and network with potential employers. For cultural clubs, it can enhance your resume by demonstrating your cultural awareness and adaptability.
+       10. Fun and Enjoyment: Above all, it's a fun and enjoyable way to spend your time in college. You'll have the chance to pursue your passions and hobbies outside of academics.
+
+       Remember, the specific benefits can vary depending on the clubs you choose, so we would recommend exploring the various tech and cultural clubs at our college to find the ones that align with your interests and goals. It's a fantastic way to make the most of your college experience.
   utter_explore_campus:
-    - text:
-        "Campus Area is not so big but not small also, contains all the requisite facilities.
-        The campus area is 222 acres. Seniors are very supportive towards their juniors.The campus is clean and neat.
-        The atmosphere is great to make the students concentrate in study.
-        It is one of the highly recommended college in India for engineering studies.
-        The medical facilities provided by the college is great and the library is amazing. .
-        College fest are good.
-        You can go to this link for getting images of campus life - https://www.facebook.com/MNNITALLD/photos/
-        MNNIT Allahabad has the facilities required for an institute of national importance. Some of the facilities include library, hostels, canteen, laboratories, research and computer centres. In addition to this, it will require essential services just banking and transport facilities which will provide a very hassle-free life and environment on campus 1.
-        The MNNIT campus is well-equipped with all the facilities and state-of-the-art infrastructure. The campus has all the facilities such as a hostel, medical centre, library, canteen, computer labs, and digital classrooms ."
-
+  - text: Campus Area is not so big but not small also, contains all the requisite facilities. The campus area is 222 acres. Seniors are very supportive towards their juniors.The campus is clean and neat. The atmosphere is great to make the students concentrate in study. It is one of the highly recommended college in India for engineering studies. The medical facilities provided by the college is great and the library is amazing. . College fest are good. You can go to this link for getting images of campus life - https://www.facebook.com/MNNITALLD/photos/ MNNIT Allahabad has the facilities required for an institute of national importance. Some of the facilities include library, hostels, canteen, laboratories, research and computer centres. In addition to this, it will require essential services just banking and transport facilities which will provide a very hassle-free life and environment on campus 1. The MNNIT campus is well-equipped with all the facilities and state-of-the-art infrastructure. The campus has all the facilities such as a hostel, medical centre, library, canteen, computer labs, and digital classrooms .
   utter_cafetarea:
-    - text:
-        "In MNNIT we have \n Mr. Dwesis \n Cafe 96  Yamuna canteen \n S.Nath canteen \n In boys hostel their are 5 Canteen namely \n
-        1.) Pillai\n
-        2.) OJHA\n
-        3.) RAJ\n
-        4.) Chai Wallah\n
-        5.) Tirath\n
-        In Girls hostel there is two canteen
-        1.) Amul canteen\n
-        2.) Night Canteen\n "
+  - text: |-
+      In MNNIT we have 
+       Mr. Dwesis 
+       Cafe 96  Yamuna canteen 
+       S.Nath canteen 
+       In boys hostel their are 5 Canteen namely 
+       1.) Pillai
+       2.) OJHA
+       3.) RAJ
+       4.) Chai Wallah
+       5.) Tirath
+       In Girls hostel there is two canteen 1.) Amul canteen
+       2.) Night Canteen
+       
   utter_about_dwesis:
-    - text: "Dwesis Café is a vibrant and popular spot on campus, where students gather for a delightful culinary experience. With a diverse menu featuring everything from comforting classics to innovative dishes, it's a hub for food enthusiasts. Whether you're looking for a quick snack or a full meal, Dwesis Café has something to satisfy every craving."
+  - text: Dwesis Café is a vibrant and popular spot on campus, where students gather for a delightful culinary experience. With a diverse menu featuring everything from comforting classics to innovative dishes, it's a hub for food enthusiasts. Whether you're looking for a quick snack or a full meal, Dwesis Café has something to satisfy every craving.
   utter_location_dwesis:
-    - text: "You can find Dwesis near MP hall or Saraswati Gate"
+  - text: You can find Dwesis near MP hall or Saraswati Gate
   utter_about_cafe96:
-    - text: "Café 96 is the go-to destination for students seeking a cozy and relaxed atmosphere. Here, you can enjoy a range of food including noodles,various types of rice , coffee ,tea etc... It's the perfect place to unwind, study, or have a friendly chat with colleagues. Café 96 is where you'll find your daily dose of caffeine and comfort"
+  - text: Café 96 is the go-to destination for students seeking a cozy and relaxed atmosphere. Here, you can enjoy a range of food including noodles,various types of rice , coffee ,tea etc... It's the perfect place to unwind, study, or have a friendly chat with colleagues. Café 96 is where you'll find your daily dose of caffeine and comfort
   utter_location_cafe96:
-    - text: "You can find the cafe 96 near the BANK OF BARODA campus office or in front of CAD department"
+  - text: You can find the cafe 96 near the BANK OF BARODA campus office or in front of CAD department
   utter_lit_club:
-    - text:
-        "The Literary Club of MNNIT works to allow you to freely express your ideas through various literary
-        forms to enhance your creative faculties, which are responsible for developing skills that will keep you
-        ahead in life and dispel the most common apprehension of the general public."
+  - text: The Literary Club of MNNIT works to allow you to freely express your ideas through various literary forms to enhance your creative faculties, which are responsible for developing skills that will keep you ahead in life and dispel the most common apprehension of the general public.
   utter_robotics:
-    - text: "Our robotics club is a vibrant and dynamic community of students who share a passion for technology, engineering, and innovation. We are a diverse group of individuals with various levels of experience, from beginners to seasoned enthusiasts. Our club serves as a platform for students to explore, learn, and create in the field of robotics."
+  - text: Our robotics club is a vibrant and dynamic community of students who share a passion for technology, engineering, and innovation. We are a diverse group of individuals with various levels of experience, from beginners to seasoned enthusiasts. Our club serves as a platform for students to explore, learn, and create in the field of robotics.
   utter_about_yamuna_canteen:
-    - text: " Yamuna canteen is one of the oldest cantenn in the whole campus . At Yamuna Canteen, you'll discover a delightful fusion of flavors. This canteen is known for its diverse menu, offering a mix of local and international cuisines. From mouthwatering street food to wholesome meals, Yamuna Canteen has it all. It's the ideal spot for culinary exploration and cultural diversity"
+  - text: " Yamuna canteen is one of the oldest cantenn in the whole campus . At Yamuna Canteen, you'll discover a delightful fusion of flavors. This canteen is known for its diverse menu, offering a mix of local and international cuisines. From mouthwatering street food to wholesome meals, Yamuna Canteen has it all. It's the ideal spot for culinary exploration and cultural diversity"
   utter_yamuna_location:
-    - text: "You can find the yamuna canteen near the Yamuna gate of the college"
+  - text: You can find the yamuna canteen near the Yamuna gate of the college
   utter_boys_hostel:
-    - text:
-        "There are seven Boys hostel in the campus . The capacity of boys hostel is 1800 (1044 single seated rooms and 252 triple seated rooms ) .Room allotment is done in such a way that students from different parts of country freely intermingle with each other depicting national integration.\n
+  - text: |
+      There are seven Boys hostel in the campus . The capacity of boys hostel is 1800 (1044 single seated rooms and 252 triple seated rooms ) .Room allotment is done in such a way that students from different parts of country freely intermingle with each other depicting national integration.
 
-        Hostel messes are run no profit no loss basis. The messes are managed by nominated representatives of students under the overall supervisions of wardens. The foreign students run their separate mess named as international mess. In this mess non vegetarian food is also served.\n
+      Hostel messes are run no profit no loss basis. The messes are managed by nominated representatives of students under the overall supervisions of wardens. The foreign students run their separate mess named as international mess. In this mess non vegetarian food is also served.
 
-        The newly admitted boys students are kept in separate hostels away from senior students to avoid ragging. The hostel administration grants financial assistance to meet the mess bills to many needy students. One new hostel has also been constructed to accommodate additional number of students.\n
+      The newly admitted boys students are kept in separate hostels away from senior students to avoid ragging. The hostel administration grants financial assistance to meet the mess bills to many needy students. One new hostel has also been constructed to accommodate additional number of students.
 
-        In Boys Hostel :\n
-        > Geysers and Water coolers with aquaguard on every floor.\n
-        > PCO for STD/Local calls.\n
-        > Books and Stationary shop.\n
-        > 24 hours internet connectivity with 100 Mbps LAN.\n
-        > Guest room.\n
-        > Generator, which in case of power failure provides electricity to the hostels.\n
-        > All night canteen.\n
-        > Magazine and Newspapers are provided.\n
-        > Students club.\n"
+      In Boys Hostel :
+       > Geysers and Water coolers with aquaguard on every floor.
+       > PCO for STD/Local calls.
+       > Books and Stationary shop.
+       > 24 hours internet connectivity with 100 Mbps LAN.
+       > Guest room.
+       > Generator, which in case of power failure provides electricity to the hostels.
+       > All night canteen.
+       > Magazine and Newspapers are provided.
+       > Students club.
   utter_girls_hostel:
-    - text:
-        "There are two Girls hostels at present in the Institute. The capacity of girls hostel is 145. Room allotment is done in such a way that students from different parts of country freely intermingle with each other depicting national integration.
+  - text: |-
+      There are two Girls hostels at present in the Institute. The capacity of girls hostel is 145. Room allotment is done in such a way that students from different parts of country freely intermingle with each other depicting national integration.
+      Hostel messes are run no profit no loss basis. The messes are managed by nominated representatives of students under the overall supervisions of wardens. The foreign students run their separate mess named as international mess. In this mess non vegetarian food is also served.
 
-        Hostel messes are run no profit no loss basis. The messes are managed by nominated representatives of students under the overall supervisions of wardens. The foreign students run their separate mess named as international mess. In this mess non vegetarian food is also served.\n
-
-        The newly admitted boys students are kept in separate hostels away from senior students to avoid ragging. The hostel administration grants financial assistance to meet the mess bills to many needy students. One new hostel has also been constructed to accommodate additional number of students.\n
-        Several new facilities are being provided in girls hostel viz. washing machines, refrigerators, computers, internet connectivity. One PCO booth is also working in the girls hostel campus.\n
-        There is a team of a warden in charge and warden for each of the hostel. They look after the affairs of the room allocation to the individual students and issuing the 'Concession Forms' for the students going home during the Institute vacations. All the student complaints regarding the room maintainence are routed through the warden of the hostel to the concerned authorities.\n
-        In Girl's hostel
-        Games facilities including Table Tennis boards etc.
-
-        > Washing machine.\n
-        > PCO inside the hostel.\n
-        > Generator, which in case of power failures provides electricity to the mess and the common room.\n
-        > Provisional goods store in the hostel premises.\n
-        > Four Computers.\n
-        > Intercom line.\n
-        > 24 hours internet connectivity with 100 Mbps LAN.\n
-        > Water cooler and Geysers.\n
-        > Magazine and Newspapers are provided.\n
-        > Two motor pumps installed.\n
-        > Air cooler and Refrigerator.\n
-        > Stereo system.\n
-        "
+      The newly admitted boys students are kept in separate hostels away from senior students to avoid ragging. The hostel administration grants financial assistance to meet the mess bills to many needy students. One new hostel has also been constructed to accommodate additional number of students.
+       Several new facilities are being provided in girls hostel viz. washing machines, refrigerators, computers, internet connectivity. One PCO booth is also working in the girls hostel campus.
+       There is a team of a warden in charge and warden for each of the hostel. They look after the affairs of the room allocation to the individual students and issuing the 'Concession Forms' for the students going home during the Institute vacations. All the student complaints regarding the room maintainence are routed through the warden of the hostel to the concerned authorities.
+       In Girl's hostel Games facilities including Table Tennis boards etc.
+      > Washing machine.
+       > PCO inside the hostel.
+       > Generator, which in case of power failures provides electricity to the mess and the common room.
+       > Provisional goods store in the hostel premises.
+       > Four Computers.
+       > Intercom line.
+       > 24 hours internet connectivity with 100 Mbps LAN.
+       > Water cooler and Geysers.
+       > Magazine and Newspapers are provided.
+       > Two motor pumps installed.
+       > Air cooler and Refrigerator.
+       > Stereo system.
+       
   utter_department:
-    - text: "The departments in the institute are:\n
-        > Engineering
-        - Biotechnology
-        - Applied Mechanics
-        - Chemical Engineering
-        - Computer Science and Engineering
-        - Civil Engineering
-        - Electrical Engineering
-        - Electronics and Communication Engineering
-        - Information Technology
-        - Production and Industrial Engineering
-        - Mechanical Engineering
-        - Product Design & Development
-        > Science
-        - Chemistry
-        - Mathematics
-        - Physics
-        > Humanities and Social Science
-        > School of Management Studies
-        "
+  - text: |-
+      The departments in the institute are:
+       > Engineering - Biotechnology - Applied Mechanics - Chemical Engineering - Computer Science and Engineering - Civil Engineering - Electrical Engineering - Electronics and Communication Engineering - Information Technology - Production and Industrial Engineering - Mechanical Engineering - Product Design & Development > Science - Chemistry - Mathematics - Physics > Humanities and Social Science > School of Management Studies 
   utter_playground:
-    - text: "Available Sports Facilities: Badminton Court|Basketball Court|Cricket Ground|Football Ground|Tennis Court|Baseball Court|Table Tennis|Kabaddi|Gymnastics|Yoga Exercises|Boxing|Karate"
+  - text: 'Available Sports Facilities: Badminton Court|Basketball Court|Cricket Ground|Football Ground|Tennis Court|Baseball Court|Table Tennis|Kabaddi|Gymnastics|Yoga Exercises|Boxing|Karate'
   utter_director:
-    - text: "An expert of molecular biology, genomics, immunology and cell biology, Prof Rama Shanker Verma, has    been appointed the new director of state’s lone NIT—Motilal Nehru National Institute of Technology(MNNIT)-Allahabad.\nHe is presently serving as a professor in the department of biotechnology of Indian Institute of Technology-Madras in Chennai. He will take up his new responsibility in the first week of February and head the institute for the next five years."
+  - text: |-
+      An expert of molecular biology, genomics, immunology and cell biology, Prof Rama Shanker Verma, has    been appointed the new director of state’s lone NIT—Motilal Nehru National Institute of Technology(MNNIT)-Allahabad.
+      He is presently serving as a professor in the department of biotechnology of Indian Institute of Technology-Madras in Chennai. He will take up his new responsibility in the first week of February and head the institute for the next five years.
   utter_dean:
-    - text: "
-        S.No.	Desgination	               Name\n
-        1.	Academic Affairs	           Prof. Laxmi  Kant Mishra\n
-        2.	Faculty Welfare	             Prof. M.M. Gore\n
-        3.	Planning and Development	   Prof. Ravi Prakash Tewari\n
-        4.	Research and Consultancy	   Prof. Ajay Kumar Singh\n
-        5.	Students Welfare	           Prof. Rajeev Srivastava\n
-        6.	Resource Generation 	       Prof. Mukul Shukla\n
-        and International Affairs"
+  - text: |2-
+       S.No.	Desgination	               Name
+       1.	Academic Affairs	           Prof. Laxmi  Kant Mishra
+       2.	Faculty Welfare	             Prof. M.M. Gore
+       3.	Planning and Development	   Prof. Ravi Prakash Tewari
+       4.	Research and Consultancy	   Prof. Ajay Kumar Singh
+       5.	Students Welfare	           Prof. Rajeev Srivastava
+       6.	Resource Generation 	       Prof. Mukul Shukla
+       and International Affairs
   utter_CSE_dept:
-    - text:
-        " The Computer Science and Engineering (CSE) Department at the Motilal Nehru National Institute of Technology (MNNIT) is one of the most prestigious and sought-after departments in the institute. The department offers undergraduate, postgraduate, and research programs in Computer Science and Engineering.
-        The department has a highly qualified faculty with expertise in various areas of computer science and engineering. The faculty members are actively engaged in research and have published papers in reputed international journals and conferences. The department also has state-of-the-art infrastructure with well-equipped labs, modern classrooms, and a well-stocked library.
-        Graduates from the department are highly sought after by top companies in the IT industry, and also have the opportunity to pursue research and academic careers in prestigious institutions around the world.
-        "
-
+  - text: ' The Computer Science and Engineering (CSE) Department at the Motilal Nehru National Institute of Technology (MNNIT) is one of the most prestigious and sought-after departments in the institute. The department offers undergraduate, postgraduate, and research programs in Computer Science and Engineering. The department has a highly qualified faculty with expertise in various areas of computer science and engineering. The faculty members are actively engaged in research and have published papers in reputed international journals and conferences. The department also has state-of-the-art infrastructure with well-equipped labs, modern classrooms, and a well-stocked library. Graduates from the department are highly sought after by top companies in the IT industry, and also have the opportunity to pursue research and academic careers in prestigious institutions around the world. '
   utter_CSE_dept_HOD:
-    - text:
-        " The head of department of Computer Science and Engineering Department is Prof. D.K. Yadav
-        "
-
+  - text: ' The head of department of Computer Science and Engineering Department is Prof. D.K. Yadav '
   utter_ECE_dept:
-    - text:
-        " The Electronics and Communication Engineering (ECE) Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the premier engineering departments in the country. The department offers undergraduate, postgraduate, and research programs in Electronics and Communication Engineering.
-        The undergraduate program in ECE at MNNIT is a four-year program that covers a wide range of topics, including electronic circuits, signals and systems, communication systems, digital signal processing, microprocessors, VLSI design, and control systems.
-        The postgraduate program in ECE at MNNIT is a two-year program that offers advanced courses in areas such as wireless communication, digital communication, microelectronics, VLSI design, and embedded systems.
-        The department has a highly qualified faculty with expertise in various areas of electronics and communication engineering. The faculty members are actively engaged in research and have published papers in reputed international journals and conferences.
-        The department has several research groups, including the Signal Processing Group, Communication and Networking Group, and VLSI Design Group, that are actively involved in research in cutting-edge technologies.
-        The department also collaborates with leading academic and research institutions, as well as with industry partners, to offer students research and internship opportunities.
-        "
-
+  - text: ' The Electronics and Communication Engineering (ECE) Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the premier engineering departments in the country. The department offers undergraduate, postgraduate, and research programs in Electronics and Communication Engineering. The undergraduate program in ECE at MNNIT is a four-year program that covers a wide range of topics, including electronic circuits, signals and systems, communication systems, digital signal processing, microprocessors, VLSI design, and control systems. The postgraduate program in ECE at MNNIT is a two-year program that offers advanced courses in areas such as wireless communication, digital communication, microelectronics, VLSI design, and embedded systems. The department has a highly qualified faculty with expertise in various areas of electronics and communication engineering. The faculty members are actively engaged in research and have published papers in reputed international journals and conferences. The department has several research groups, including the Signal Processing Group, Communication and Networking Group, and VLSI Design Group, that are actively involved in research in cutting-edge technologies. The department also collaborates with leading academic and research institutions, as well as with industry partners, to offer students research and internship opportunities. '
   utter_ECE_dept_HOD:
-    - text:
-        " The head of department of Electronics and Communication Engineering Department is Prof. R.A. Mishra
-        "
-
+  - text: ' The head of department of Electronics and Communication Engineering Department is Prof. R.A. Mishra '
   utter_EE_dept:
-    - text:
-        " The Electrical Engineering Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the oldest and most prestigious departments in the institute. The department was established in 1961 and has since then been offering undergraduate, postgraduate, and doctoral programs in Electrical Engineering.
-        The department has well-qualified faculty members who are actively involved in teaching and research in various areas of Electrical Engineering such as Power Systems, Control Systems, Power Electronics, Electrical Machines, Signal Processing, and Communication Systems. The faculty members are also involved in collaborative research with other institutions and industries.
-        The department also offers various opportunities for students to participate in extracurricular activities such as technical clubs, student chapters of professional societies, and industry-sponsored projects.
-        "
-
+  - text: ' The Electrical Engineering Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the oldest and most prestigious departments in the institute. The department was established in 1961 and has since then been offering undergraduate, postgraduate, and doctoral programs in Electrical Engineering. The department has well-qualified faculty members who are actively involved in teaching and research in various areas of Electrical Engineering such as Power Systems, Control Systems, Power Electronics, Electrical Machines, Signal Processing, and Communication Systems. The faculty members are also involved in collaborative research with other institutions and industries. The department also offers various opportunities for students to participate in extracurricular activities such as technical clubs, student chapters of professional societies, and industry-sponsored projects. '
   utter_EE_dept_HOD:
-    - text:
-        " The head of department of Electrical Engineering Department is Prof. Richa Negi
-        "
-
+  - text: ' The head of department of Electrical Engineering Department is Prof. Richa Negi '
   utter_ME_dept:
-    - text:
-        " The Department of Mechanical Engineering at Motilal Nehru National Institute of Technology (MNNIT) is one of the most prestigious departments of the institute. The department offers undergraduate, postgraduate, and doctoral programs in Mechanical Engineering.
-        The undergraduate program in Mechanical Engineering is a four-year program and covers various core areas such as mechanics, thermodynamics, materials science, manufacturing, design, and automation.
-        The postgraduate program in Mechanical Engineering includes specializations in areas such as Manufacturing Technology, Thermal Engineering, and Design Engineering. The department also offers a PhD program in Mechanical Engineering, where students can pursue research in various areas of mechanical engineering.
-        The department has a highly qualified and experienced faculty who are actively involved in research and teaching. The faculty members have published numerous research papers in reputed international journals and conferences.
-        The department has a placement record of more than 90% with students being placed in reputed companies such as Tata Motors, Mahindra and Mahindra, General Motors, and Larsen & Toubro, among others.
-        "
-
+  - text: ' The Department of Mechanical Engineering at Motilal Nehru National Institute of Technology (MNNIT) is one of the most prestigious departments of the institute. The department offers undergraduate, postgraduate, and doctoral programs in Mechanical Engineering. The undergraduate program in Mechanical Engineering is a four-year program and covers various core areas such as mechanics, thermodynamics, materials science, manufacturing, design, and automation. The postgraduate program in Mechanical Engineering includes specializations in areas such as Manufacturing Technology, Thermal Engineering, and Design Engineering. The department also offers a PhD program in Mechanical Engineering, where students can pursue research in various areas of mechanical engineering. The department has a highly qualified and experienced faculty who are actively involved in research and teaching. The faculty members have published numerous research papers in reputed international journals and conferences. The department has a placement record of more than 90% with students being placed in reputed companies such as Tata Motors, Mahindra and Mahindra, General Motors, and Larsen & Toubro, among others. '
   utter_ME_dept_HOD:
-    - text:
-        " The head of department of Mechanical Engineering Department is Prof. K N Pandey
-        "
-
+  - text: ' The head of department of Mechanical Engineering Department is Prof. K N Pandey '
   utter_ChE_Dept:
-    - text:
-        " The Chemical Engineering Department at MNNIT offers undergraduate, postgraduate, and doctoral programs in Chemical Engineering. The department has a team of highly qualified and experienced faculty members who are actively involved in research and development activities.
-        The undergraduate program in Chemical Engineering at MNNIT covers topics such as thermodynamics, transport phenomena, process control, chemical reaction engineering, and process design.
-        The postgraduate program includes advanced topics such as computational fluid dynamics, process simulation, process optimization, and sustainable energy systems.
-        The department has well-equipped laboratories for conducting experiments and research in various areas of Chemical Engineering. The research activities of the department focus on areas such as renewable energy, environmental engineering, process intensification, and nanotechnology.
-        The Chemical Engineering Department at MNNIT also has collaborations with various industries and research institutions in India and abroad.
-        "
-
+  - text: ' The Chemical Engineering Department at MNNIT offers undergraduate, postgraduate, and doctoral programs in Chemical Engineering. The department has a team of highly qualified and experienced faculty members who are actively involved in research and development activities. The undergraduate program in Chemical Engineering at MNNIT covers topics such as thermodynamics, transport phenomena, process control, chemical reaction engineering, and process design. The postgraduate program includes advanced topics such as computational fluid dynamics, process simulation, process optimization, and sustainable energy systems. The department has well-equipped laboratories for conducting experiments and research in various areas of Chemical Engineering. The research activities of the department focus on areas such as renewable energy, environmental engineering, process intensification, and nanotechnology. The Chemical Engineering Department at MNNIT also has collaborations with various industries and research institutions in India and abroad. '
   utter_ChE_Dept_HOD:
-    - text:
-        " The head of department of Chemical Engineering Department is Prof. Sadhana Sachan
-        "
-
+  - text: ' The head of department of Chemical Engineering Department is Prof. Sadhana Sachan '
   utter_CE_dept:
-    - text:
-        " The Civil Engineering Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the oldest and most reputed departments at the institute. It was established in the year 1961.
-        The department offers undergraduate, postgraduate, and doctoral programs in Civil Engineering. The undergraduate program is a four-year course leading to a Bachelor of Technology (B.Tech) degree in Civil Engineering.
-        The postgraduate program includes a two-year Master of Technology (M.Tech) course in Structural Engineering, Environmental Engineering, Geotechnical Engineering, and Transportation Engineering. The department also offers a Ph.D. program in various specializations.
-        The department has well-equipped laboratories for testing materials, soil mechanics, concrete, and structural engineering. The faculty members are highly qualified and experienced, with many of them holding Ph.D. degrees from reputed institutes. They actively engage in research and consultancy work in various fields of Civil Engineering, such as earthquake engineering, environmental engineering, transportation engineering, etc.
-        The Civil Engineering Society (CES) is a student-run organization that organizes technical events, workshops, and seminars to help students enhance their skills and knowledge.
-        "
-
+  - text: ' The Civil Engineering Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the oldest and most reputed departments at the institute. It was established in the year 1961. The department offers undergraduate, postgraduate, and doctoral programs in Civil Engineering. The undergraduate program is a four-year course leading to a Bachelor of Technology (B.Tech) degree in Civil Engineering. The postgraduate program includes a two-year Master of Technology (M.Tech) course in Structural Engineering, Environmental Engineering, Geotechnical Engineering, and Transportation Engineering. The department also offers a Ph.D. program in various specializations. The department has well-equipped laboratories for testing materials, soil mechanics, concrete, and structural engineering. The faculty members are highly qualified and experienced, with many of them holding Ph.D. degrees from reputed institutes. They actively engage in research and consultancy work in various fields of Civil Engineering, such as earthquake engineering, environmental engineering, transportation engineering, etc. The Civil Engineering Society (CES) is a student-run organization that organizes technical events, workshops, and seminars to help students enhance their skills and knowledge. '
   utter_CE_dept_HOD:
-    - text:
-        " The head of department of Civil Engineering Department is Dr. P.K Mehata
-        "
-
+  - text: ' The head of department of Civil Engineering Department is Dr. P.K Mehata '
   utter_BE_dept:
-    - text:
-        "Motilal Nehru National Institute of Technology (MNNIT) offers a Bachelor of Technology (B.Tech) program in Biotechnology. The Department of Biotechnology at MNNIT aims to impart quality education and research opportunities to students in the field of Biotechnology.
-        The department has well-equipped laboratories with advanced instruments and infrastructure to provide hands-on experience to students. The curriculum of the program covers various aspects of Biotechnology, including Molecular Biology, Genetic Engineering, Microbiology, Biochemistry, Immunology, and Bioprocess Engineering.
-        Apart from academics, the department also encourages students to participate in various extracurricular activities, including workshops, seminars, conferences, and industrial visits, to enhance their knowledge and skills.
-        The faculty members also guide students in their research projects and help them in developing their skills in problem-solving and critical thinking.
-        "
-
+  - text: 'Motilal Nehru National Institute of Technology (MNNIT) offers a Bachelor of Technology (B.Tech) program in Biotechnology. The Department of Biotechnology at MNNIT aims to impart quality education and research opportunities to students in the field of Biotechnology. The department has well-equipped laboratories with advanced instruments and infrastructure to provide hands-on experience to students. The curriculum of the program covers various aspects of Biotechnology, including Molecular Biology, Genetic Engineering, Microbiology, Biochemistry, Immunology, and Bioprocess Engineering. Apart from academics, the department also encourages students to participate in various extracurricular activities, including workshops, seminars, conferences, and industrial visits, to enhance their knowledge and skills. The faculty members also guide students in their research projects and help them in developing their skills in problem-solving and critical thinking. '
   utter_BE_dept_HOD:
-    - text:
-        " The head of department of Biotechnology Engineering Department is Dr. Sangeeta Negi
-        "
-
+  - text: ' The head of department of Biotechnology Engineering Department is Dr. Sangeeta Negi '
   utter_PIE_dept:
-    - text:
-        " The department of Production and Industrial Engineering at MNNIT aims to equip students with a strong foundation in engineering principles and practical skills to address real-world challenges in the industry.
-        The curriculum of Production and Industrial Engineering at MNNIT covers a wide range of topics such as manufacturing processes, quality control, production planning and scheduling, supply chain management, operations research, lean manufacturing, and industrial automation. Students also get to work on projects and undertake internships to gain hands-on experience and exposure to industry practices.
-        Graduates of Production and Industrial Engineering from MNNIT are highly sought after by industries such as automotive, aerospace, electronics, and manufacturing, as they possess a unique skill set that enables them to optimize production processes, improve quality and productivity, and reduce costs.
-        "
-
+  - text: ' The department of Production and Industrial Engineering at MNNIT aims to equip students with a strong foundation in engineering principles and practical skills to address real-world challenges in the industry. The curriculum of Production and Industrial Engineering at MNNIT covers a wide range of topics such as manufacturing processes, quality control, production planning and scheduling, supply chain management, operations research, lean manufacturing, and industrial automation. Students also get to work on projects and undertake internships to gain hands-on experience and exposure to industry practices. Graduates of Production and Industrial Engineering from MNNIT are highly sought after by industries such as automotive, aerospace, electronics, and manufacturing, as they possess a unique skill set that enables them to optimize production processes, improve quality and productivity, and reduce costs. '
   utter_PIE_dept_HOD:
-    - text:
-        " The head of department of Production and Industrial Engineering Department is same as that of Mechanical Engineering , that is , Prof. K N Pandey
-        "
+  - text: ' The head of department of Production and Industrial Engineering Department is same as that of Mechanical Engineering , that is , Prof. K N Pandey '
   utter_AM_dept:
-    - text: "The Department of Mathematics at Motilal Nehru National Institute of Technology (MNNIT) offers undergraduate, postgraduate, and doctoral programs in Mathematics and Scientific Computing . The department has a team of highly qualified faculty members who are actively involved in research and teaching. The research areas of the department include Algebra, Analysis, Differential Equations, Fluid Dynamics, Graph Theory, Numerical Analysis, Optimization, and Probability Theory"
+  - text: The Department of Mathematics at Motilal Nehru National Institute of Technology (MNNIT) offers undergraduate, postgraduate, and doctoral programs in Mathematics and Scientific Computing . The department has a team of highly qualified faculty members who are actively involved in research and teaching. The research areas of the department include Algebra, Analysis, Differential Equations, Fluid Dynamics, Graph Theory, Numerical Analysis, Optimization, and Probability Theory
   utter_default:
-    - text: "fall_back happer"
+  - text: fall_back happer
   utter_gac_pay:
-    - text: "Here is the bank payment link, https://alumni.mnnit.ac.in/funds/view/692.dz
-             Here is the UPI QR code: https://vaave.s3.amazonaws.com/funds/images/7c0e9a8d1403af78a6169cdc9b…"
+  - text: 'Here is the bank payment link, https://alumni.mnnit.ac.in/funds/view/692.dz Here is the UPI QR code: https://vaave.s3.amazonaws.com/funds/images/7c0e9a8d1403af78a6169cdc9b…'
   utter_don:
-    - text: "This year, our cherished Alumni have generously contributed a total of ₹1,67,60,598.00 to support the well-being of our beloved students. Their benevolent donations are a testament to their enduring commitment to our institution and its future. Here is the heartwarming list of contributions from our esteemed Alumni this year:https://vaave.s3.amazonaws.com/attachments/1690610182_21648b5708eca5ddc075cf0eeb38fb66.pdf
-              If you want to donate, here is the link to the donation page:https://alumni.mnnit.ac.in/funds/view/692.dz"
+  - text: This year, our cherished Alumni have generously contributed a total of ₹1,67,60,598.00 to support the well-being of our beloved students. Their benevolent donations are a testament to their enduring commitment to our institution and its future. Here is the heartwarming list of contributions from our esteemed Alumni this year:https://vaave.s3.amazonaws.com/attachments/1690610182_21648b5708eca5ddc075cf0eeb38fb66.pdf If you want to donate, here is the link to the donation page:https://alumni.mnnit.ac.in/funds/view/692.dz
   utter_mnnit_location:
-    - text: "The Motilal Nehru National Institute of Technology (MNNIT) is situated in Allahabad, Uttar Pradesh, India. The complete address for MNNIT is as follows> Motilal Nehru National Institute of Technology, Teliarganj, Prayagraj, Uttar Pradesh 211004, India, with the corresponding pin code 211004. For precise location accuracy, you can use the GPS coordinates > Latitude 25.4530° N and Longitude 81.7682° E. These coordinates will guide you to the exact location of MNNIT within Allahabad, ensuring you can find the institute with precision."
-
+  - text: The Motilal Nehru National Institute of Technology (MNNIT) is situated in Allahabad, Uttar Pradesh, India. The complete address for MNNIT is as follows> Motilal Nehru National Institute of Technology, Teliarganj, Prayagraj, Uttar Pradesh 211004, India, with the corresponding pin code 211004. For precise location accuracy, you can use the GPS coordinates > Latitude 25.4530° N and Longitude 81.7682° E. These coordinates will guide you to the exact location of MNNIT within Allahabad, ensuring you can find the institute with precision.
   utter_mnnit_full_form:
-    - text: "MNNIT stands for Motilal Nehru National Institute of Technology."
-
+  - text: MNNIT stands for Motilal Nehru National Institute of Technology.
   utter_girls_hostel_count:
-    - text: "MNNIT has 4 girls' hostels on its campus. These hostels provide accommodations for female students."
-
+  - text: MNNIT has 4 girls' hostels on its campus. These hostels provide accommodations for female students.
   utter_girls_hostel_names:
-    - text: "MNNIT has several girls hostels, and their names are DJ(Diamond jubilee) , KNGH(Kamla Nehru  girls hostel), SNGH (Sarojini Naidu girls hostel) , IHB (International house - B). These hostels provide accommodations for female students."
-
+  - text: MNNIT has several girls hostels, and their names are DJ(Diamond jubilee) , KNGH(Kamla Nehru  girls hostel), SNGH (Sarojini Naidu girls hostel) , IHB (International house - B). These hostels provide accommodations for female students.
   utter_mnnit_clubs:
-    - text: "MNNIT offers a wide range of student clubs and organizations that cater to various interests and activities. Some of the clubs at MNNIT include cc club , robotics ,enactus,,IIC ,LIT ,Anokhi pehel ,Rotract ,Ecell ,Green Club ,SMP ,Cisco thingQbator. These clubs provide opportunities for students to engage in extracurricular activities and pursue their interests"
-
+  - text: MNNIT offers a wide range of student clubs and organizations that cater to various interests and activities. Some of the clubs at MNNIT include cc club , robotics ,enactus,,IIC ,LIT ,Anokhi pehel ,Rotract ,Ecell ,Green Club ,SMP ,Cisco thingQbator. These clubs provide opportunities for students to engage in extracurricular activities and pursue their interests
   utter_what_is_academic_building:
-    - text: "The Academic Building at MNNIT, which stands for Motilal Nehru National Institute of Technology, is a central structure on the campus dedicated to academic activities. It houses classrooms, lecture halls, faculty offices, and serves as a hub for various academic events, meetings, and educational endeavors. It plays a crucial role in the educational mission of MNNIT."
-
+  - text: The Academic Building at MNNIT, which stands for Motilal Nehru National Institute of Technology, is a central structure on the campus dedicated to academic activities. It houses classrooms, lecture halls, faculty offices, and serves as a hub for various academic events, meetings, and educational endeavors. It plays a crucial role in the educational mission of MNNIT.
   utter_what_is_administrative_building:
-    - text: "The Administrative Building at MNNIT, or Motilal Nehru National Institute of Technology, serves as the central administrative hub of the institution. It houses offices for administrative staff, including the Registrar, Director, and various administrative departments. This building is responsible for managing the administrative affairs of the institute and plays a key role in ensuring the smooth operation of MNNIT."
-
+  - text: The Administrative Building at MNNIT, or Motilal Nehru National Institute of Technology, serves as the central administrative hub of the institution. It houses offices for administrative staff, including the Registrar, Director, and various administrative departments. This building is responsible for managing the administrative affairs of the institute and plays a key role in ensuring the smooth operation of MNNIT.
   utter_girls_gym_mnnit:
-    - text: "The girls' gym at MNNIT is a dedicated fitness facility for female students. It offers a range of workout equipment and facilities to help students stay active and healthy. The gym is equipped with modern exercise machines, free weights, and offers fitness classes. It is conveniently located near the Gymkhana."
-
+  - text: The girls' gym at MNNIT is a dedicated fitness facility for female students. It offers a range of workout equipment and facilities to help students stay active and healthy. The gym is equipped with modern exercise machines, free weights, and offers fitness classes. It is conveniently located near the Gymkhana.
   utter_canteens_girls_hostel_mnnit:
-    - text: "MNNIT has 2 canteens for girls, the night canteen and Amul canteen. These canteens offer a variety of dining options to cater to the needs of female students staying in the girls' hostels. You can enjoy a diverse range of food choices."
-
-
+  - text: MNNIT has 2 canteens for girls, the night canteen and Amul canteen. These canteens offer a variety of dining options to cater to the needs of female students staying in the girls' hostels. You can enjoy a diverse range of food choices.
   utter_seminar_hall_mnnit:
-    - text: "The Seminar Hall at MNNIT is a prominent venue for hosting a variety of events, particularly seminars and conferences. It is located opposite the Dean of Academics' office. The Seminar Hall has been a hub for numerous academic and professional seminars, workshops, and lectures. It offers state-of-the-art facilities and a spacious seating arrangement to accommodate a large audience. Many significant events and knowledge-sharing sessions have taken place in this esteemed venue."
-
+  - text: The Seminar Hall at MNNIT is a prominent venue for hosting a variety of events, particularly seminars and conferences. It is located opposite the Dean of Academics' office. The Seminar Hall has been a hub for numerous academic and professional seminars, workshops, and lectures. It offers state-of-the-art facilities and a spacious seating arrangement to accommodate a large audience. Many significant events and knowledge-sharing sessions have taken place in this esteemed venue.
   utter_mp_hall_mnnit:
-    - text: "MP Hall at MNNIT is a multi purpose hall situated near Saraswati Gate and Dewsis Cafe. It offers a range of amenities, including a badminton court, and provides space for various clubs and organizations. The hall is known for hosting a plethora of events, seminars, workshops, and other activities. It has been a central hub for numerous gatherings and knowledge-sharing sessions."
-
+  - text: MP Hall at MNNIT is a multi purpose hall situated near Saraswati Gate and Dewsis Cafe. It offers a range of amenities, including a badminton court, and provides space for various clubs and organizations. The hall is known for hosting a plethora of events, seminars, workshops, and other activities. It has been a central hub for numerous gatherings and knowledge-sharing sessions.
   utter_dean_office_mnnit:
-    - text: "The Dean's Office at MNNIT plays a pivotal role in the institution's academic and administrative affairs. It is  located in a central administrative building on campus. The Dean's Office is responsible for various functions, including overseeing academic programs, managing student affairs, and ensuring the smooth operation of the institute. They provide support and guidance to students and faculty members. "
+  - text: "The Dean's Office at MNNIT plays a pivotal role in the institution's academic and administrative affairs. It is  located in a central administrative building on campus. The Dean's Office is responsible for various functions, including overseeing academic programs, managing student affairs, and ensuring the smooth operation of the institute. They provide support and guidance to students and faculty members. "
   utter_boys_hostel_count:
-    - text: "Hello! On our campus, we have a total of 8 boy's hostels. These are Swami Vivekananda Boy's Hostel, Bal Gangadhar Tilak Hostel, Sardar Vallabhbhai Patel Hostel, Tandon Hostel, Malviya Hostel, the new Mega-Hostel, Tagore Hostel, and Raman Hostel. Each of these hostels offers a unique and comfortable living environment for our students."
+  - text: Hello! On our campus, we have a total of 8 boy's hostels. These are Swami Vivekananda Boy's Hostel, Bal Gangadhar Tilak Hostel, Sardar Vallabhbhai Patel Hostel, Tandon Hostel, Malviya Hostel, the new Mega-Hostel, Tagore Hostel, and Raman Hostel. Each of these hostels offers a unique and comfortable living environment for our students.
   utter_library_mnnit:
-    - text: "The library at MNNIT is a well-equipped and essential resource for students and researchers. It offers a comfortable and fully air-conditioned environment with internet access. The library houses a wide variety of books, and the collection is computerized for easy access and cataloging. With good seating capacity, it provides an excellent space for study and research. Additionally, the library often extends its working hours during exam periods to accommodate the needs of students. For specific details about operating hours, the catalog, or any other services, please contact the MNNIT library administration or visit their official website."
+  - text: The library at MNNIT is a well-equipped and essential resource for students and researchers. It offers a comfortable and fully air-conditioned environment with internet access. The library houses a wide variety of books, and the collection is computerized for easy access and cataloging. With good seating capacity, it provides an excellent space for study and research. Additionally, the library often extends its working hours during exam periods to accommodate the needs of students. For specific details about operating hours, the catalog, or any other services, please contact the MNNIT library administration or visit their official website.
   utter_boys_hostel_canteen:
-    - text: "Dear Alumni, we are delighted to offer dedicated dining facilities: 'Talwar Cafe' for Swami Vivekananda Boy's Hostel, and 'Raj, Ojha, Tirath Raj, Pillai Canteens' for senior hostels like Tilak, Patel, and Tandon"
+  - text: "Dear Alumni, we are delighted to offer dedicated dining facilities: 'Talwar Cafe' for Swami Vivekananda Boy's Hostel, and 'Raj, Ojha, Tirath Raj, Pillai Canteens' for senior hostels like Tilak, Patel, and Tandon"
   utter_warden_office_mnnit:
-    - text: "The Warden's Office at MNNIT is  located near the Lecture Hall Complex or opposite to the Computer Centre. It is where the Chief Warden typically oversees various matters related to hostels and students. This office plays a central role in addressing and managing issues concerning hostels and students' welfare. For specific inquiries, such as contacting the Chief Warden or discussing any hostel-related concerns, you can visit the Warden's Office or contact MNNIT administration for further guidance."
+  - text: The Warden's Office at MNNIT is  located near the Lecture Hall Complex or opposite to the Computer Centre. It is where the Chief Warden typically oversees various matters related to hostels and students. This office plays a central role in addressing and managing issues concerning hostels and students' welfare. For specific inquiries, such as contacting the Chief Warden or discussing any hostel-related concerns, you can visit the Warden's Office or contact MNNIT administration for further guidance.
   utter_project:
-    - text: "The current projects of club include
-           1. Self balancing bot
-           2. Humanoid
-           3. Spider Bot
-           4. RL Super Mario
-           5. Chatbot
-           6. Line Follower
-           7. Self Driving Cart"
+  - text: The current projects of club include 1. Self balancing bot 2. Humanoid 3. Spider Bot 4. RL Super Mario 5. Chatbot 6. Line Follower 7. Self Driving Cart
   utter_balance:
-    - text: "The Self-balancing bot is an automated vehicle that balances itself without any outside help or support.
-           This project involves using PID Control and involuted programming.Self-balancing bot is based on the principle of Inverted pendulum, 
-           which is a two wheel vehicle balances itself up in the vertical position with reference to the ground "
+  - text: 'The Self-balancing bot is an automated vehicle that balances itself without any outside help or support. This project involves using PID Control and involuted programming.Self-balancing bot is based on the principle of Inverted pendulum, which is a two wheel vehicle balances itself up in the vertical position with reference to the ground '
   utter_human:
-    - text: " Humanoid robots are professional service robots built to mimic human motion and interaction.
-   Like all service robots, they provide value by automating tasks in a way that leads to cost-savings and productivity. "
+  - text: ' Humanoid robots are professional service robots built to mimic human motion and interaction. Like all service robots, they provide value by automating tasks in a way that leads to cost-savings and productivity. '
   utter_spider:
-    - text: "A spiderbot is a computer program that scans the web automatically,
-   “reading” everything it finds, analyzing the information and classifying it in the database or index of the search engine. "
+  - text: 'A spiderbot is a computer program that scans the web automatically, “reading” everything it finds, analyzing the information and classifying it in the database or index of the search engine. '
   utter_rl:
-    - text: "RL Super Mario is a platform game ,an AI Mario model using reinforcement learning with Python.
-  The game mechanics of Super Mario Bros. involve movement, obstacles, enemies, power-ups, and level design."
+  - text: RL Super Mario is a platform game ,an AI Mario model using reinforcement learning with Python. The game mechanics of Super Mario Bros. involve movement, obstacles, enemies, power-ups, and level design.
   utter_chatbot:
-    - text: " A chatbot is a computer program that simulates and processes human conversation (either written or spoken), allowing humans to interact wit "
+  - text: ' A chatbot is a computer program that simulates and processes human conversation (either written or spoken), allowing humans to interact wit '
   utter_linefollower:
-    - text: "The line follower robot is a mobile machine that can detect and follow the line drawn on the floor.
-  Generally, the path is predefined and can be either visible like a black line on a white surface with a high contrasted color or it can be invisible like a magnetic filed. "
+  - text: 'The line follower robot is a mobile machine that can detect and follow the line drawn on the floor. Generally, the path is predefined and can be either visible like a black line on a white surface with a high contrasted color or it can be invisible like a magnetic filed. '
   utter_self:
-    - text: "A self-driving car, also known as an autonomous car (AC), driverless car, or robotic car (robo-car), is a car that is capable of traveling without human input. 
-  Self-driving cars are responsible for perceiving the environment, monitoring important systems, and control, including navigation."
+  - text: A self-driving car, also known as an autonomous car (AC), driverless car, or robotic car (robo-car), is a car that is capable of traveling without human input. Self-driving cars are responsible for perceiving the environment, monitoring important systems, and control, including navigation.
   utter_gacspon:
-    - text: "Here you can find the details about the sponsorship: https://vaave.s3.amazonaws.com/attachments/1685368221_bc91f35905affd992433b8df9e8c4f15.pdf"
+  - text: 'Here you can find the details about the sponsorship: https://vaave.s3.amazonaws.com/attachments/1685368221_bc91f35905affd992433b8df9e8c4f15.pdf'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

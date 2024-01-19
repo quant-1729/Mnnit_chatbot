@@ -25,6 +25,7 @@ import sys
 import random
 from bson import ObjectId
 import openai
+import requests
 
 client = pymongo.MongoClient("mongodb+srv://Derik714:Hrithiman1856@cluster0.c5z73yl.mongodb.net/")
 DataBase = client['GACData']
@@ -119,21 +120,6 @@ class ActionOpenLink(Action):
 
 
 
-
-
-class ActionFallback(Action):
-    def name(self) -> Text:
-        return "say_fallback"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        user_input = tracker.latest_message.get("text")
-        response = openai.Completion.create(
-            engine="text-davinci-003",  # GPT-3.5 engine
-            prompt=user_input,
-            max_tokens=50)
-
-        fallback_response = response.choices[0].text.strip()
-        dispatcher.utter_message(text=fallback_response)
 
 
 class ConvoRestart(Action):
@@ -340,3 +326,64 @@ class ConvoRestart(Action):
             else:
                 dispatcher.utter_message(
                     "It's a joyous moment for us as registration for this event has officially started. We're looking forward to having you join us, and remember, the last day to register is November 3rd. Let's make this event an unforgettable experience together.")
+
+## fall back is not working
+class CustomFallbackAction(Action):
+    def name(self) -> Text:
+        return "action_custom_fallback"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        user_input = tracker.latest_message.get('text')
+
+        # Call OpenAI API to generate a response
+        openai.api_key = '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'
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt=user_input,
+            max_tokens=50  # Adjust as needed
+        )
+
+        # Extract the generated response from OpenAI
+        generated_response = response['choices'][0]['text']
+
+        dispatcher.utter_message(generated_response)
+        return []
+
+## image feature
+class ActionGetImage(Action):
+    def name(self) -> Text:
+        return "action_get_image"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Get the latest entity value for image_requested
+        image_requested = next(tracker.get_latest_entity_values("image_requested"), None)
+
+        if image_requested:
+            # Call Unsplash API to get an image based on the user's request
+            # unsplash_access_key = uzbmPCSrwIBW2uDmsWAISrSRO6G4jE5x3sdy-Xcpz-I
+            search_query = image_requested
+
+            unsplash_url = f'https://api.unsplash.com/photos/random?query={search_query}&client_id=uzbmPCSrwIBW2uDmsWAISrSRO6G4jE5x3sdy-Xcpz-I'
+
+            try:
+                response = requests.get(unsplash_url)
+                data = response.json()
+
+                # Extract the image URL
+                if 'urls' in data and 'regular' in data['urls']:
+                    image_url = data['urls']['regular']
+
+                    # Send the image URL back to the user
+                    dispatcher.utter_message(text=f"Here is an image of {image_requested}: {image_url}")
+                else:
+                    dispatcher.utter_message(text=f"Sorry, I couldn't find an image for {image_requested}.")
+
+            except Exception as e:
+                print(f"An exception occurred: {e}")
+                dispatcher.utter_message(text="Sorry, there was an error while fetching the image.")
+        else:
+            dispatcher.utter_message(text="I'm sorry, but I didn't understand the specific image you're looking for.")
+
+        return []
