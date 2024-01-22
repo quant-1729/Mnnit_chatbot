@@ -38,7 +38,6 @@ nlu:
     - that sounds good
     - correct
 - intent: deny
-- intent: deny
   examples: |
     - no
     - n
@@ -93,6 +92,7 @@ nlu:
 
 - intent: my_name
   examples: |
+    - my name is [amandeep](name)
     - my name is [sarthak](name)
     - my name is [bhanu](name)
     - my name is [piyush](name)
@@ -411,186 +411,11 @@ nlu:
     - Give me the directions from [SVBH](user_location) to [Admin Building](destination_given)
     - Tell me the directions from [SVBH](user_location) to [athletic ground]{"entity": "destination_given", "value": "Athletic Ground"}
     - Tell me the directions from [SVBH](user_location) to [Admin Building](destination_given)
-
-- lookup: directions_look
-  examples: |
-    - Central Library
-    - Admin Building
-    - Dean Academics
-    - SVBH
-    - Patel Hostel
- 
-- lookup: library_resources
-  examples: |
-    - books
-    - journals
-    - online databases
-    - study spaces
-    - computers
-    - multimedia resources
-    - research materials
-- lookup: library_days
-  examples: |
-    - weekdays
-    - weekends
-    - Monday
-    - Tuesday
-    - Wednesday
-    - Thursday
-    - Friday
-    - Saturday
-    - Sunday
-- lookup: exam_preparation_tips
-  examples: |
-    - final exams
-    - midsem
-    - viva
-    - practical exam
-    - study resources
-    - effective study techniques
-    - improve test scores
-    - strategies for exams
-    - recommended textbooks
-    - prepare for oral exams
-    - stay focused during exams
-    - past exam papers
-    - multiple-choice exams
-    - manage exam stress
-    - key topics for essays
-    - study groups for quizzes
-    - recommended study schedule
-    - open-book exams
-    - reviewing notes effectively
-    - take-home exams strategy
-    - online tutorials for tests
-    - time management for viva exams
-- lookup: mentorship_program
-  examples: |
-    - mentorship
-    - mentor
-    - mentors
-    - mentorship opportunities
-    - mentorship program
-- lookup: grading_system
-  examples: |
-    - grading system
-    - evaluation process
-    - passing criteria
-    - grading scale
-    - grade points
-    - GPA calculations
-    - grade conversion
-    - transcript
-    - grading policy
-    - grading updates
-- lookup: faculty_information
-  examples: |
-    - faculty
-    - professors
-    - faculty awards and recognitions
-    - faculty-to-student ratio
-    - research collaboration
-    - faculty members from diverse academic backgrounds
-    - faculty success stories and contributions
-    - faculty development programs
-    - faculty teaching styles described by students
-    - faculty recruitment process in place
-    - faculty qualifications
-    - faculty expertise in various fields
-    - students rate the faculty
-    - faculty publications and research work
-    - faculty resources available for students
-    - faculty committees in the college
-    - faculty involvement in student organizations
-- lookup: lab_facilities
-  examples: |
-    - lab facilities
-    - labs
-    - book lab equipment
-    - safety guidelines
-    - equipment
-    - technology and tools
-    - propose new lab equipment
-    - lab assistants
-    - academic programs or majors
-    - research opportunities
-    - accessibility
-    - lab schedules
-    - lab funding
-- lookup: hostel_facilities
-  examples: |
-    - hostel facilities
-    - accommodation options
-    - boys
-    - girls
-    - amenities
-    - accommodations
-    - features
-    - hostel rooms
-    - hostel options
-    - single
-    - shared rooms
-    - hostel room
-    - rules and regulations
-    - dining facilities
-    - Wi-Fi
-    - laundry services
-    - apply for hostel accommodation
-- lookup: fees_type
-  examples: |
-    - tuition fees
-    - fee structure
-    - additional fees
-    - academic year fees
-    - scholarships
-    - payment schedule
-    - budget expenses
-    - account balance
-    - high-achieving students discounts
-    - financial aid
-    - room and board
-    - international student fees
-    - installment plan
-    - payment deadline
-- lookup: intro_type
-  examples: |
-    - format
-    - structure
-    - specific guidelines
-    - key elements
-    - template
-    - memorable introduction
-    - tips
-- lookup: current_location
-  examples: |
-    - my current location
-    - my location
-    - where I am
-    - my present location
-- lookup: destination
-  examples: |
-    - Central Park
-    - Times Square
-    - Eiffel Tower
-    - Grand Central Station
-    - Empire State Building
-    - Golden Gate Bridge
-    - Louvre Museum
-- lookup: mode_of_transport
-  examples: |
-    - car
-    - bike
-    - subway
-    - bus
-    - taxi
-    - walking
-    - tram
-
-#ujjawal Code
-
+    - give me direction to [SVBH](user_location) to [Central Library](destination_given)
+    - Tell me the directions from [SVBH](user_location) to [Central Library](destination_given)
 - intent: more_about_college
   examples: |
-    - MNNIT 
+    - MNNIT
     - mnnit college
     - Inform about MNNIT college
     - inform about mnnit college
@@ -703,7 +528,7 @@ nlu:
     - Can you share the price range of dishes at Dwesis ?
     - Are there any cultural or themed nights at dwesis , like "Mexican Mondays" or "Asian Fusion Fridays"?
     - Tell me about the dessert options at Dwesis .
-    - Is there outdogor seating available at dwesis ?
+    - Is there outdoor seating available at dwesis ?
     - Are there any loyalty programs or rewards for frequent visitors to Dwesis ?
     - How do I place an order or reserve a table at Dwesis ?
     - Can you provide information about the staff and chefs at Dwesis ?
@@ -1175,33 +1000,30 @@ nlu:
 #Hrithiman's code starting
 - intent: gac_event_info
   examples: |
-    - [What is the GAC 2023 event](general_info:DESC) all about?
-    - [GAC 2023](general_info:DESC)?
-    - Give me an [overview of the GAC](general_info:DESC) event
-    - Give me an [overview of the GAC 2023](general_info:DESC)
-    - [What is GAC](general_info:DESC)?
-    - [what is GAC 2023](general_info:DESC)?
-    - [GAC 2023 2023](general_info:DESC)
-    - [Explain the GAC 2023 event](general_info:DESC) to me in detail.
-    - [Can you tell me about GAC 2023](general_info:DESC)?
-    - [What is the Global Alumni Convention event](general_info:DESC)?
-    - [Tell me about the GAC 2023 event](general_info:DESC).
-    - Briefly [describe the GAC 2023 event](general_info:DESC).
-    - Share [information about the Global Alumni Convention](general_info:DESC).
-    - [Describe the Global Alumni Convention](general_info:DESC) for me.
-    - [Explain the GAC 2023 event](general_info:DESC) to me in detail.
-    - Share [some insights about the Global Alumni Convention](general_info:DESC).
-    - Provide a comprehensive [overview of the GAC 2023 event](general_info:DESC).
-    - Tell me [all about the Global Alumni Convention]{"entity":"general_info","value":"DESC"}.
-    - [What is the GAC event](general_info:DESC) all about?
-    - [GAC](general_info:DESC)?
-    - [GAC 2023](general_info:DESC)
-    - [Explain the GAC event](general_info:DESC) to me in detail.
-    - [Can you tell me about GAC](general_info:DESC)?
-    - [What is the Global Alumni Convention event](general_info:DESC)?
-    - [Tell me about the GAC event](general_info:DESC).
-    - Briefly [describe the GAC event](general_info:DESC).
-    - Share [information about the Global Alumni Convention](general_info:DESC).
+    - [What is the GAC 2023 event]{"entity": "general_info", "value": "DESC"} all about?
+    - [GAC 2023]{"entity": "general_info", "value": "DESC"}?
+    - Give me an [overview of the GAC]{"entity": "general_info", "value": "DESC"} event
+    - Give me an [overview of the GAC 2023]{"entity": "general_info", "value": "DESC"}
+    - [What is GAC]{"entity": "general_info", "value": "DESC"}?
+    - [what is GAC 2023]{"entity": "general_info", "value": "DESC"}?
+    - [GAC 2023 2023]{"entity": "general_info", "value": "DESC"}
+    - [Explain the GAC 2023 event]{"entity": "general_info", "value": "DESC"} to me in detail.
+    - [Can you tell me about GAC 2023]{"entity": "general_info", "value": "DESC"}?
+    - [What is the Global Alumni Convention event]{"entity": "general_info", "value": "DESC"}?
+    - [Tell me about the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
+    - Briefly [describe the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
+    - Share [information about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
+    - [Describe the Global Alumni Convention]{"entity": "general_info", "value": "DESC"} for me.
+    - Share [some insights about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
+    - Provide a comprehensive [overview of the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
+    - Tell me [all about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
+    - [What is the GAC event]{"entity": "general_info", "value": "DESC"} all about?
+    - [GAC]{"entity": "general_info", "value": "DESC"}?
+    - [GAC 2023]{"entity": "general_info", "value": "DESC"}
+    - [Explain the GAC event]{"entity": "general_info", "value": "DESC"} to me in detail.
+    - [Can you tell me about GAC]{"entity": "general_info", "value": "DESC"}?
+    - [Tell me about the GAC event]{"entity": "general_info", "value": "DESC"}.
+    - Briefly [describe the GAC event]{"entity": "general_info", "value": "DESC"}.
     - [Describe the Global Alumni Convention 2023] for me.
     - [Share some information about Global Alumni Convention](general_info:DESC)
     - [Explain the GAC event](general_info:DESC) to me in detail.
@@ -1424,79 +1246,75 @@ nlu:
 #isme gacspon krke daal de
 - intent: gac_2023_sponsorship
   examples: |
-   - What is the different [sponsorship amounts](gacspan) provided?
-   - Is there any detail of [sponsorship amount](gacspan)?
-   - Give me the detail of [sponsorship amount](gacspan)?
-   - What is the minimum [sponsorship amount](gacspan) available?
-   - What are the details of the less than [sponsorship amount](gacspan)?
-   - How can I become a [sponsor for GAC 2023](gacspan)?
-   - Tell me about the [sponsorship opportunities](gacspan) available for GAC 2023.
-   - What are the different [sponsorship packages](gacspan) for GAC 2023?
-   - Provide information on [sponsorship levels](gacspan) and benefits for GAC 2023.
-   - I'm interested in [sponsoring GAC 2023](gacspan). Can you guide me through the process?
-   - Explain the [sponsorship details](gacspan) and requirements for GAC 2023.
-   - Give me an overview of the [sponsorship packages](gacspan) and their costs for GAC 2023.
-   - What promotional opportunities are available for [sponsors](gacspan) at GAC 2023?
-   - How can I inquire about [custom sponsorship options](gacspan) for GAC 2023?
-   - Share information on the [sponsorship application](gacspan) deadline for GAC 2023.
-   - Can you provide a list of previous [sponsors](gacspan) for GAC  events?
-   - What is the process for submitting a [sponsorship proposal](gacspan) for GAC 2023?
-   - Explain the [benefits](gacspan) and [perks](gacspan) of being a [sponsor](gacspan) at GAC 2023.
-   - Are there specific industries or sectors that GAC  is looking for [sponsors](gacspan) from?
-   - I'd like to know if there are [exclusive sponsorship opportunities](gacspan) for certain events at GAC 2023.
-   - What are the [sponsorship payment](gacspan) and [invoicing procedures](gacspan) for GAC 2023?
-   - Can you provide information on [sponsorship contacts](gacspan) or representatives for GAC 2023?
-   - What is the [timeline](gacspan) for [sponsorship confirmation](gacspan) for GAC 2023?
-   - Are there any [partnership](gacspan) or [co-sponsorship opportunities](gacspan) for GAC 2023?
-   - Tell me about any [special perks](gacspan) or [recognition](gacspan) for [long-term sponsors](gacspan) of GAC .
-   - What is the process for signing a [sponsorship agreement](gacspan) for GAC 2023?
-   - How can I request a [sponsorship prospectus](gacspan) for GAC 2023?
-   - Explain the policy for [sponsorship exclusivity](gacspan) in specific categories at GAC 2023.
-   - Tell me about the [opportunities for sponsors](gacspan) to host workshops or sessions at GAC 2023.
-   - Can you provide examples of [successful sponsorships](gacspan) from past [GAC conferences](gacspan)?
-   - I'd like to learn more about [sponsorship marketing](gacspan) and promotion at GAC 2023.
-   - What is the procedure for [sponsor acknowledgment](gacspan) and [recognition](gacspan) at GAC 2023.
-   - Provide details on the [sponsorship support](gacspan) and [assistance](gacspan) available for [sponsors](gacspan) at GAC 2023.
-   - Explain the process for canceling or modifying a [sponsorship commitment](gacspan) for GAC 2023.
-
-#isme gaccorcom
-#ye waala dekhte h
+    - What is the different [sponsorship amounts](gacspan) provided?
+    - Is there any detail of [sponsorship amount](gacspan)?
+    - Give me the detail of [sponsorship amount](gacspan)?
+    - What is the minimum [sponsorship amount](gacspan) available?
+    - What are the details of the less than [sponsorship amount](gacspan)?
+    - How can I become a [sponsor for GAC 2023](gacspan)?
+    - Tell me about the [sponsorship opportunities](gacspan) available for GAC 2023.
+    - What are the different [sponsorship packages](gacspan) for GAC 2023?
+    - Provide information on [sponsorship levels](gacspan) and benefits for GAC 2023.
+    - I'm interested in [sponsoring GAC 2023](gacspan). Can you guide me through the process?
+    - Explain the [sponsorship details](gacspan) and requirements for GAC 2023.
+    - Give me an overview of the [sponsorship packages](gacspan) and their costs for GAC 2023.
+    - What promotional opportunities are available for [sponsors](gacspan) at GAC 2023?
+    - How can I inquire about [custom sponsorship options](gacspan) for GAC 2023?
+    - Share information on the [sponsorship application](gacspan) deadline for GAC 2023.
+    - Can you provide a list of previous [sponsors](gacspan) for GAC  events?
+    - What is the process for submitting a [sponsorship proposal](gacspan) for GAC 2023?
+    - Explain the [benefits](gacspan) and [perks](gacspan) of being a [sponsor](gacspan) at GAC 2023.
+    - Are there specific industries or sectors that GAC  is looking for [sponsors](gacspan) from?
+    - I'd like to know if there are [exclusive sponsorship opportunities](gacspan) for certain events at GAC 2023.
+    - What are the [sponsorship payment](gacspan) and [invoicing procedures](gacspan) for GAC 2023?
+    - Can you provide information on [sponsorship contacts](gacspan) or representatives for GAC 2023?
+    - What is the [timeline](gacspan) for [sponsorship confirmation](gacspan) for GAC 2023?
+    - Are there any [partnership](gacspan) or [co-sponsorship opportunities](gacspan) for GAC 2023?
+    - Tell me about any [special perks](gacspan) or [recognition](gacspan) for [long-term sponsors](gacspan) of GAC .
+    - What is the process for signing a [sponsorship agreement](gacspan) for GAC 2023?
+    - How can I request a [sponsorship prospectus](gacspan) for GAC 2023?
+    - Explain the policy for [sponsorship exclusivity](gacspan) in specific categories at GAC 2023.
+    - Tell me about the [opportunities for sponsors](gacspan) to host workshops or sessions at GAC 2023.
+    - Can you provide examples of [successful sponsorships](gacspan) from past [GAC conferences](gacspan)?
+    - I'd like to learn more about [sponsorship marketing](gacspan) and promotion at GAC 2023.
+    - What is the procedure for [sponsor acknowledgment](gacspan) and [recognition](gacspan) at GAC 2023.
+    - Provide details on the [sponsorship support](gacspan) and [assistance](gacspan) available for [sponsors](gacspan) at GAC 2023.
+    - Explain the process for canceling or modifying a [sponsorship commitment](gacspan) for GAC 2023.
 - intent: maa
   examples: |
-   - Give me the details of MNNIT alumni association?
-   - What are the contact details for MNNIT alumni association?
-   - How to contact MNNIT alumni association?
-   - Is there any way to reach MNNIT alumni association?
-   - How can I get in touch with the MNNIT alumni association?
-   - Tell me the contact information for the MNNIT alumni association.
-   - What is the email address for the MNNIT alumni association?
-   - Provide details on how to reach out to the MNNIT alumni network.
-   - I'd like to contact the MNNIT alumni association. Can you assist me?
-   - Share the phone number for the MNNIT alumni association.
-   - Give me an overview of the MNNIT alumni association's contact details.
-   - What are the social media profiles for the MNNIT alumni association?
-   - How can I inquire about membership with the MNNIT alumni network?
-   - Can you provide the mailing address for the MNNIT alumni association?
-   - Tell me about the official website of the MNNIT alumni network.
-   - What is the process for joining the MNNIT alumni association?
-   - Explain the benefits of becoming a member of the MNNIT alumni network.
-   - I'd like to know if there are local chapters of the MNNIT alumni association.
-   - Share information on the alumni association's LinkedIn page.
-   - How can I access the MNNIT alumni association's newsletter or updates?
-   - What is the alumni association's support email for inquiries?
-   - Tell me about any alumni networking platforms used by the MNNIT alumni association.
-   - Can you provide information on the annual alumni meet organized by MNNIT?
-   - How can I contact the MNNIT alumni association's administrative office?
-   - I'd like to learn about the alumni association's alumni mentoring program.
-   - Share details on alumni success stories featured by MNNIT alumni association.
-   - What is the process for donating to the MNNIT alumni association?
-   - Tell me about the process for updating my contact information with MNNIT alumni.
-   - Provide information on alumni scholarships offered by the association.
-   - How can I reach out to the local alumni chapter in my city?
-   - Tell me about the history and mission of the MNNIT alumni association.
-   - What is the alumni association's social media hashtag for updates?
-   - Explain the process for alumni volunteering opportunities with MNNIT.
-
+    - Give me the details of MNNIT alumni association?
+    - What are the contact details for MNNIT alumni association?
+    - How to contact MNNIT alumni association?
+    - Is there any way to reach MNNIT alumni association?
+    - How can I get in touch with the MNNIT alumni association?
+    - Tell me the contact information for the MNNIT alumni association.
+    - What is the email address for the MNNIT alumni association?
+    - Provide details on how to reach out to the MNNIT alumni network.
+    - I'd like to contact the MNNIT alumni association. Can you assist me?
+    - Share the phone number for the MNNIT alumni association.
+    - Give me an overview of the MNNIT alumni association's contact details.
+    - What are the social media profiles for the MNNIT alumni association?
+    - How can I inquire about membership with the MNNIT alumni network?
+    - Can you provide the mailing address for the MNNIT alumni association?
+    - Tell me about the official website of the MNNIT alumni network.
+    - What is the process for joining the MNNIT alumni association?
+    - Explain the benefits of becoming a member of the MNNIT alumni network.
+    - I'd like to know if there are local chapters of the MNNIT alumni association.
+    - Share information on the alumni association's LinkedIn page.
+    - How can I access the MNNIT alumni association's newsletter or updates?
+    - What is the alumni association's support email for inquiries?
+    - Tell me about any alumni networking platforms used by the MNNIT alumni association.
+    - Can you provide information on the annual alumni meet organized by MNNIT?
+    - How can I contact the MNNIT alumni association's administrative office?
+    - I'd like to learn about the alumni association's alumni mentoring program.
+    - Share details on alumni success stories featured by MNNIT alumni association.
+    - What is the process for donating to the MNNIT alumni association?
+    - Tell me about the process for updating my contact information with MNNIT alumni.
+    - Provide information on alumni scholarships offered by the association.
+    - How can I reach out to the local alumni chapter in my city?
+    - Tell me about the history and mission of the MNNIT alumni association.
+    - What is the alumni association's social media hashtag for updates?
+    - Explain the process for alumni volunteering opportunities with MNNIT.
 - intent: give_feedback
   examples: |
     - I have some feedback about the event.
@@ -2000,7 +1818,7 @@ nlu:
     - best project of Robotics Club
     - excellent project of Robotics Club MNNIT
     - Robotics Club Project MNNIT
-    - Name some projects of Robotics Club 
+    - Name some projects of Robotics Club
     - Tell me something about projects of Robotics Club
 
 - intent: ask_self_balancing_bot
@@ -2145,3 +1963,503 @@ nlu:
     - Are there specific applications or industries where this project could be useful?
     - What was the most rewarding aspect of completing this self driving cart project?
     - Can you share any tips or advice for others interested in building their own self driving cart robots?
+- synonym: mentorship_program, value:mentorship
+  examples: |
+    - mentorship
+- synonym: mentorship_program, value:mentor
+  examples: |
+    - mentor
+- synonym: mentorship_program, value:mentors
+  examples: |
+    - mentors
+- synonym: mentorship_program, value:mentorship opportunities
+  examples: |
+    - mentorship opportunities
+- synonym: mentorship_program, value:mentorship program
+  examples: |
+    - mentorship program
+- synonym: grading_system, value:grading system
+  examples: |
+    - grading system
+- synonym: grading_system, value:evaluation process
+  examples: |
+    - evaluation process
+- synonym: grading_system, value:passing criteria
+  examples: |
+    - passing criteria
+- synonym: grading_system, value:grading scale
+  examples: |
+    - grading scale
+- synonym: grading_system, value:grade points
+  examples: |
+    - grade points
+- synonym: grading_system, value:GPA calculations
+  examples: |
+    - GPA calculations
+- synonym: grading_system, value:grade conversion
+  examples: |
+    - grade conversion
+- synonym: grading_system, value:transcript
+  examples: |
+    - transcript
+- synonym: grading_system, value:grading policy
+  examples: |
+    - grading policy
+- synonym: grading_system, value:grading updates
+  examples: |
+    - grading updates
+- synonym: ''
+  examples: |
+    - faculty
+    - professors
+    - faculty awards and recognitions
+    - faculty-to-student ratio
+    - research collaboration
+    - faculty members
+    - faculty success stories
+    - faculty development
+    - faculty teaching styles
+    - faculty recruitment
+    - faculty qualifications
+    - faculty expertise
+    - rate the faculty
+    - faculty publications
+    - faculty resources
+    - faculty committees
+    - faculty involvement
+- synonym: lab_facilities, value:lab facilities
+  examples: |
+    - lab facilities
+- synonym: lab_facilities, value:labs
+  examples: |
+    - labs
+- synonym: lab_facilities, value:book lab equipment
+  examples: |
+    - book lab equipment
+- synonym: lab_facilities, value:safety guidelines
+  examples: |
+    - safety guidelines
+- synonym: lab_facilities, value:equipment
+  examples: |
+    - equipment
+- synonym: lab_facilities, value:technology and tools
+  examples: |
+    - technology and tools
+- synonym: lab_facilities, value:propose new lab equipment
+  examples: |
+    - propose new lab equipment
+- synonym: lab_facilities, value:lab assistants
+  examples: |
+    - lab assistants
+- synonym: lab_facilities, value:academic programs or majors
+  examples: |
+    - academic programs or majors
+- synonym: lab_facilities, value:research opportunities
+  examples: |
+    - research opportunities
+- synonym: lab_facilities, value:accessibility
+  examples: |
+    - accessibility
+- synonym: lab_facilities, value:lab schedules
+  examples: |
+    - lab schedules
+- synonym: lab_facilities, value:lab funding
+  examples: |
+    - lab funding
+- synonym: requested_hostel
+  examples: |
+    - hostel
+    - hostels
+    - accommodation options
+- synonym: fees_type
+  examples: |
+    - tuition fees
+    - fee structure
+    - tuition
+    - academic year
+    - undergraduate programs
+    - Btech program
+    - scholarships
+    - tuition costs
+    - financial aid
+    - room and board
+    - international students
+- synonym: FR
+  examples: |
+    - fees
+    - registration details
+    - registration process
+    - Can alumni register for GAC 2023?
+    - How can I register for GAC 2023
+    - process for GAC 2023 registration
+    - GAC 2023 registration
+    - sign up for GAC 2023
+    - registration options
+    - registration
+    - event
+    - sign up for the event
+    - registration procedure
+    - registered
+    - steps
+    - event registration
+    - account
+    - register
+    - attendees
+    - payment methods
+    - registration status
+    - registration form
+    - day
+    - prerequisites
+    - cancel
+    - modify
+    - registration schedule
+    - documents
+    - copy
+    - registration receipt
+    - early bird registration
+    - included
+    - registration package
+    - registration support contact
+    - online registration portal
+    - speaker
+- synonym: intro_format
+  examples: |
+    - format
+    - template
+    - introduction
+    - tips
+- synonym: intro_type
+  examples: |
+    - college
+    - seniors
+    - community
+    - junior's
+- synonym: Athletic Ground
+  examples: |
+    - athletic ground
+- synonym: DESC
+  examples: |
+    - What is the GAC 2023 event
+    - GAC 2023
+    - overview of the GAC
+    - overview of the GAC 2023
+    - What is GAC
+    - what is GAC 2023
+    - GAC 2023 2023
+    - Explain the GAC 2023 event
+    - Can you tell me about GAC 2023
+    - What is the Global Alumni Convention event
+    - Tell me about the GAC 2023 event
+    - describe the GAC 2023 event
+    - information about the Global Alumni Convention
+    - Describe the Global Alumni Convention
+    - some insights about the Global Alumni Convention
+    - overview of the GAC 2023 event
+    - all about the Global Alumni Convention
+    - What is the GAC event
+    - GAC
+    - Explain the GAC event
+    - Can you tell me about GAC
+    - Tell me about the GAC event
+    - describe the GAC event
+    - Share some information about Global Alumni Convention
+    - overview of the GAC event
+    - G A C
+    - G.A.C
+    - G.A.C 2023
+    - Global Alumni Convention 2023
+- synonym: DL
+  examples: |
+    - What's the date and location
+    - When and where
+    - Describe the event's date and location
+    - date and location
+    - When is the event, and where will it be?
+    - when is GAC
+    - When is the GAC
+    - When is GAC
+- synonym: L
+  examples: |
+    - Where is GAC 2023
+    - venue
+    - Where is GAC
+    - place
+    - location
+    - Where
+- synonym: S
+  examples: |
+    - schedule
+- synonym: Pat
+  examples: |
+    - Patron
+- synonym: Ad
+  examples: |
+    - Advisor
+- synonym: chair
+  examples: |
+    - Chairman
+- synonym: CoChair
+  examples: |
+    - Co-Chairman
+- synonym: oSec
+  examples: |
+    - Organizing Secretary
+- synonym: Tres
+  examples: |
+    - Treasurer
+- synonym: Jsec
+  examples: |
+    - Joint Organizing Secretaries
+- synonym: RL
+  examples: |
+    - Registration link
+    - link for registering
+- synonym: FO
+  examples: |
+    - fee for others
+- synonym: FF
+  examples: |
+    - fee for felicitation
+- synonym: RD
+  examples: |
+    - last date to register
+    - When does the registration
+    - deadline
+- synonym: F
+  examples: |
+    - registration fee
+    - fee
+- lookup: directions_look
+  examples: |
+    - Central Library
+    - Admin Building
+    - Dean Academics
+    - SVBH
+    - Patel Hostel
+- lookup: library_resources
+  examples: |
+    - books
+    - journals
+    - online databases
+    - study spaces
+    - computers
+    - multimedia resources
+    - research materials
+- lookup: library_days
+  examples: |
+    - weekdays
+    - weekends
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+- lookup: exam_preparation_tips
+  examples: |
+    - final exams
+    - midsem
+    - viva
+    - practical exam
+    - study resources
+    - effective study techniques
+    - improve test scores
+    - strategies for exams
+    - recommended textbooks
+    - prepare for oral exams
+    - stay focused during exams
+    - past exam papers
+    - multiple-choice exams
+    - manage exam stress
+    - key topics for essays
+    - study groups for quizzes
+    - recommended study schedule
+    - open-book exams
+    - reviewing notes effectively
+    - take-home exams strategy
+    - online tutorials for tests
+    - time management for viva exams
+- lookup: mentorship_program
+  examples: |
+    - mentorship
+    - mentor
+    - mentors
+    - mentorship opportunities
+    - mentorship program
+- lookup: grading_system
+  examples: |
+    - grading system
+    - evaluation process
+    - passing criteria
+    - grading scale
+    - grade points
+    - GPA calculations
+    - grade conversion
+    - transcript
+    - grading policy
+    - grading updates
+- lookup: faculty_information
+  examples: |
+    - faculty
+    - professors
+    - faculty awards and recognitions
+    - faculty-to-student ratio
+    - research collaboration
+    - faculty members from diverse academic backgrounds
+    - faculty success stories and contributions
+    - faculty development programs
+    - faculty teaching styles described by students
+    - faculty recruitment process in place
+    - faculty qualifications
+    - faculty expertise in various fields
+    - students rate the faculty
+    - faculty publications and research work
+    - faculty resources available for students
+    - faculty committees in the college
+    - faculty involvement in student organizations
+- lookup: lab_facilities
+  examples: |
+    - lab facilities
+    - labs
+    - book lab equipment
+    - safety guidelines
+    - equipment
+    - technology and tools
+    - propose new lab equipment
+    - lab assistants
+    - academic programs or majors
+    - research opportunities
+    - accessibility
+    - lab schedules
+    - lab funding
+- lookup: hostel_facilities
+  examples: |
+    - hostel facilities
+    - accommodation options
+    - boys
+    - girls
+    - amenities
+    - accommodations
+    - features
+    - hostel rooms
+    - hostel options
+    - single
+    - shared rooms
+    - hostel room
+    - rules and regulations
+    - dining facilities
+    - Wi-Fi
+    - laundry services
+    - apply for hostel accommodation
+- lookup: fees_type
+  examples: |
+    - tuition fees
+    - fee structure
+    - additional fees
+    - academic year fees
+    - scholarships
+    - payment schedule
+    - budget expenses
+    - account balance
+    - high-achieving students discounts
+    - financial aid
+    - room and board
+    - international student fees
+    - installment plan
+    - payment deadline
+- lookup: intro_type
+  examples: |
+    - format
+    - structure
+    - specific guidelines
+    - key elements
+    - template
+    - memorable introduction
+    - tips
+- lookup: current_location
+  examples: |
+    - my current location
+    - my location
+    - where I am
+    - my present location
+- lookup: destination
+  examples: |
+    - Central Park
+    - Times Square
+    - Eiffel Tower
+    - Grand Central Station
+    - Empire State Building
+    - Golden Gate Bridge
+    - Louvre Museum
+- lookup: mode_of_transport
+  examples: |
+    - car
+    - bike
+    - subway
+    - bus
+    - taxi
+    - walking
+    - tram
+- lookup: general_info
+  examples: |
+    - sehcudle
+    - Scheldue
+    - schedle
+## image intent
+- intent: ask_for_image
+  examples: |
+    - Can you show me an image of [dogs](image_requested)?
+    - Find a picture of [mountains](image_requested) for me
+    - Show me photos of [cities](image_requested)
+    - I'd like to see an image related to [technology](image_requested)
+    - Can you show me pictures of [flowers](image_requested)?
+    - Find an image related to [food](image_requested) for me.
+    - Show me photos of [wildlife](image_requested).
+    - I'd like to see an image of [space](image_requested), please.
+    - Find pictures of [architecture](image_requested).
+    - Can you get me an image of [sunsets](image_requested)?
+    - Show me photos of [birds](image_requested).
+    - I want to see pictures of [sports](image_requested).
+    - Get me an image of [cars](image_requested).
+    - Find pictures related to [music](image_requested).
+    - Show me an image of [beaches](image_requested).
+    - Can you get me a photo of [cities](image_requested)?
+    - I'd like to see pictures of [fashion](image_requested).
+    - Find an image related to [technology](image_requested).
+    - Can you show me a picture of [animals](image_requested)?
+    - Get me photos of [art](image_requested).
+    - Show me an image of [movies](image_requested).
+    - I want to see pictures of [celebrities](image_requested).
+    - Find me an image of [mountains](image_requested).
+    - Show me photos of [desserts](image_requested).
+    - Show me pictures of [landscapes](image_requested).
+    - Find an image of [galaxies](image_requested).
+    - I'd like to see photos of [street art](image_requested).
+    - Get me pictures of [underwater life](image_requested).
+    - Can you show me an image of [abstract art](image_requested)?
+    - Find pictures related to [historic landmarks](image_requested).
+    - Show me photos of [outer space](image_requested).
+    - I want to see an image of [modern architecture](image_requested).
+    - Get me a picture of [vintage cars](image_requested).
+    - Find me images of [exotic fruits](image_requested).
+    - Show me a photo of [ancient ruins](image_requested).
+    - Can you get me an image of [technology gadgets](image_requested)?
+    - I'd like to see pictures of [winter landscapes](image_requested).
+    - Find an image related to [robotics](image_requested).
+    - Show me photos of [coastal scenery](image_requested).
+    - Get me pictures of [tropical birds](image_requested).
+    - Can you show me an image of [fantasy artwork](image_requested)?
+    - Find me images of [classic movies](image_requested).
+    - Show me a photo of [haute couture](image_requested).
+    - I want to see pictures of [fast cars](image_requested).
+    - Get me images of [waterfalls](image_requested).
+    - Can you find an image of [ancient civilizations](image_requested)?
+    - I'd like to see photos of [luxury homes](image_requested).  
+
+- lookup: image_requested
+  examples: |
+    - dogs
+    - mountains
+    - cities
+    - technology

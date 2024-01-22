@@ -640,7 +640,7 @@ stories:
 - story: fallback
   steps:
   - intent: nlu_fallback
-  - action: say_fallback
+  - action: action_custom_fallback
 - story: self
   steps:
   - intent: selfdrivingcart_info
@@ -657,3 +657,37 @@ stories:
   - slot_was_set:
     - user_location: SVBH
   - action: action_provide_directions
+
+- story: interactive_story_1
+  steps:
+  - intent: nlu_fallback
+    entities:
+    - user_location: SVBH
+  - slot_was_set:
+    - user_location: SVBH
+  - intent: ask_for_directions
+    entities:
+    - user_location: SVBH
+    - destination_given: Central Library
+  - action: action_provide_directions
+  - intent: nlu_fallback
+    entities:
+    - user_location: SVBH
+  - slot_was_set:
+    - user_location: SVBH
+  - intent: ask_for_directions
+    entities:
+    - user_location: SVBH
+  - slot_was_set:
+    - user_location: SVBH
+  - slot_was_set:
+    - destination_given: Cenral Library
+  - action: action_provide_directions
+
+## image feature
+- story: User asks for an image
+  steps:
+  - intent: ask_for_image
+    entities:
+    - image_requested: "dogs"
+  - action: action_get_image
