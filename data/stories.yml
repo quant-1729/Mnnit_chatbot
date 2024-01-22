@@ -130,7 +130,7 @@ stories:
     entities:
     - name: Priyanshu
   - slot_was_set:
-      - name: Priyanshu
+      - first_name: Priyanshu
   - action: utter_mobile_number
   - intent: mobile_number
     entities:

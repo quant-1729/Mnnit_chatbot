@@ -2,7 +2,8 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
+    - hey 
+    - hey my name is
     - hello
     - hi
     - hello there
@@ -36,6 +37,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+- intent: deny
 - intent: deny
   examples: |
     - no
@@ -83,9 +85,14 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: request_names
+  examples: |
+    - So you want my name
+    - Great me with my name 
+    - Use my name in further communication
+
 - intent: my_name
   examples: |
-    - my name is [amandeep](name)
     - my name is [sarthak](name)
     - my name is [bhanu](name)
     - my name is [piyush](name)
@@ -94,6 +101,13 @@ nlu:
     - people call me [amandeep](name)
     - you can call me [amandeep](name)
     - My name is Priyanshu
+- intent: last_name
+  examples: |
+    - my last name is [sarthak](lastname)
+    - my family name is [bhanu](lastname)
+    - my surname is [piyush](lastname)
+    - My full name is [Priyanshu Agrawal](lastname)
+
 - intent: mobile_number
   examples: |
     - my number is [9876987699](number)
@@ -689,7 +703,7 @@ nlu:
     - Can you share the price range of dishes at Dwesis ?
     - Are there any cultural or themed nights at dwesis , like "Mexican Mondays" or "Asian Fusion Fridays"?
     - Tell me about the dessert options at Dwesis .
-    - Is there outdoor seating available at dwesis ?
+    - Is there outdogor seating available at dwesis ?
     - Are there any loyalty programs or rewards for frequent visitors to Dwesis ?
     - How do I place an order or reserve a table at Dwesis ?
     - Can you provide information about the staff and chefs at Dwesis ?

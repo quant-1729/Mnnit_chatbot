@@ -100,6 +100,7 @@ intents:
 - linefollower_info
 - selfdrivingcart_info
 - out_of_scope
+- last_name
 entities:
 - user_location
 - destination_given
@@ -126,13 +127,24 @@ entities:
 - gacspan
 - gacpay
 - maa
+- lastname
 slots:
-  name:
+  first_name:
     type: text
     mappings:
     - type: from_text
-      intent: inform
+      conditions:
+        - active_loop: name_form
+      intent: my_name
       role: target
+  last_name:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+        intent: last_name
+        role: target
   mobile_number:
     type: text
     mappings:
@@ -153,6 +165,12 @@ slots:
     mappings:
     - type: from_entity
       entity: user_location
+forms:
+  name_form:
+    required_slots:
+      - first_name
+      - last_name
+
 actions:
 - action_provide_directions
 - utter_greet
@@ -168,7 +186,7 @@ actions:
 - action_text_to_speech
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hey{first_name} How are you?
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
