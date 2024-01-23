@@ -1,0 +1,2606 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - Hii
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: my_name
+    examples: |
+      - my name is [amandeep](name)
+      - my name is [sarthak](name)
+      - my name is [bhanu](name)
+      - my name is [piyush](name)
+      - [amandeep](name) is my name
+      - [amandeep](name) this side.
+      - people call me [amandeep](name)
+      - you can call me [amandeep](name)
+      - My name is Priyanshu
+  - intent: mobile_number
+    examples: |
+      - my number is [9876987699](number)
+      - [9876987699](number)
+      - [9876987699](number) is my number
+      - my mobile number is [9876987699](number)
+      - phone number: [9876987699](number)
+      - contact me at [9876987699](number)
+      - [9876987699](number) is my mobile contact
+      - my number: [9876987699](number)
+      - [8755799544](number)
+  - intent: mnnit_website
+    examples: |
+      - take me to mnnit's website
+      - can you provide the link for mnnit official website
+      - where can I find latest announcements for college
+      - where can I get more information about college
+      - Is there any official website of mnnit
+      - website of mnnit
+      - Can you help me with course registration?
+      - Where can I find information about majors?
+  - intent: courses
+    examples: |
+      - what different courses are offered
+      - different courses provided by the college
+      - list of different courses
+      - list of different programs
+      - can you help me with the programs mnnit allahabad offers
+      - different programs offered by the college
+      - different training programs offered
+      - branches in mnnit allahabad
+      - branches under b.tech in our college
+      - What are the available courses in the college?
+      - Can you provide information about the course curriculum?
+      - Which courses are popular among students?
+  - intent: ask_placements
+    examples: |
+      - placement offers
+      - what are the previous placement offers?
+      - different placement offers offered to students
+      - different companies offers
+      - different placement offered
+      - previous placement offers
+      - what are the different placement offers offered to students
+      - student's placement offers
+      - what are the placement stats of our college
+      - which companies come to college
+      - who is in charge of our placements
+      - where can i get information about placements
+      - Does the college have a placement cell?
+      - How does the college support students with job placements?
+      - What companies visit the campus for placements?
+  - intent: ask_admission_process
+    examples: |
+      - Can you guide me through the admission procedure?
+      - Are there any specific requirements for admission?
+      - How can I submit my admission documents?
+      - Is there an online application portal for admissions?
+      - What documents do I need for the admission application?
+      - Are there any interviews as part of the admission process?
+      - Can you explain the selection criteria for admissions?
+      - When will the admission results be announced?
+      - Is there an application fee for admissions?
+      - What are the important dates for admission?
+
+  - intent: ask_about_internship_opportunities
+    examples: |
+      - Are there internship opportunities for students?
+      - How can I apply for internships through the college?
+      - Can the college help me find internships?
+      - Tell me about the process of securing an internship.
+      - Are internships available for specific majors or disciplines?
+      - How are internship opportunities communicated to students?
+      - Are there on-campus recruitment events for internships?
+      - Can I get academic credit for internships?
+      - What support does the college provide during internships?
+      - Are there networking opportunities for students seeking internships?
+      - Can international students pursue internships during their studies?
+      - Are there virtual internship options for remote work experience?
+  - intent: ask_about_healthcare_facilities
+    examples: |
+      - What healthcare facilities are available on campus?
+      - Is there a [facility_type](medical clinic) for medical assistance?
+      - [facility_type](medical clinic) for medical assistance?
+      - How can I access healthcare services?
+      - Tell me about the [facility_type](campus nurse).
+      - Where is the nearest [facility_type](hospital) on campus?
+      - The nearest [facility_type](hospital) on campus?
+      - Are there any doctors available in the [facility_type](campus area)?
+      - List of doctors available in the [facility_type](campus area)?
+      - Can you provide information on the [facility_type](dental clinic)?
+      - Provide me the information on the [facility_type](dental clinic)?
+      - I need to find the [facility_type](pharmacy) on campus.
+      - Need to find the [facility_type](pharmacy) on campus.
+      - How do I contact the [facility_type](campus nurse)?
+      - Where can I get first aid on campus?
+      - Are there any [facility_type](mental health services) available?
+      - List of [facility_type](mental health services) available?
+      - Tell me more about the [facility_type](health and wellness center).
+      - [facility_type](health and wellness center) provide information.
+      - What services does the [facility_type](student health center) offer?
+      - List of services [facility_type](student health center) offer?
+      - Do we have an on-campus [facility_type](optometrist)?
+      - Is there on-campus [facility_type](optometrist)?
+      - Is there a [facility_type](gym with medical facilities)?
+      - [facility_type](gym with medical facilities) is there are availble?
+      - I'm looking for the [facility_type](physical therapy center).
+      - I want to find [facility_type](physical therapy center).
+      - Tell the direction of [facility_type](physical therapy center).
+      - How do I schedule an appointment at the [facility_type](campus clinic)?
+      - Scheduling appointment at [facility_type](campus clinic)?
+      - What are the hours of operation for the [facility_type](health center)?
+      - List the hours of operation for the [facility_type](health center)?
+      - Can you recommend a good [facility_type](dermatologist) on campus?
+      - Recommend good [facility_type](dermatologist) of the campus?
+      - Where can I get information about [facility_type](COVID-19 testing)?
+      - Give me some information about [facility_type](COVID-19 testing)?
+  - intent: ask_about_exam_preparation_tips
+    examples: |
+      - Can you provide tips for [final exam](exam_preparation_tips) preparation?
+      - How should I manage my study time effectively for [viva](exam_preparation_tips)?
+      - What are some effective study techniques for [midsem](exam_preparation_tips)?
+      - How can I improve my [midsem](exam_preparation_tips) scores?
+      - Tell me about strategies for [midsem](exam_preparation_tips).
+      - Are there any recommended textbooks for [viva](exam_preparation_tips)?
+      - I need advice on preparing for [viva](exam_preparation_tips).
+      - Can you suggest ways to stay focused during [viva](exam_preparation_tips)?
+      - What's the best approach to [viva](exam_preparation_tips)?
+      - How can I manage stress during [viva](exam_preparation_tips)?
+      - What are the key topics to cover for [practical exam](exam_preparation_tips)?
+      - What's the recommended study schedule for [practical exam](exam_preparation_tips)?
+      - Can you share tips for [practical exam](exam_preparation_tips)?
+      - How do I review my notes effectively for [practical exam](exam_preparation_tips)?
+      - What's the strategy for [practical exam](exam_preparation_tips)?
+      - How can I access [study_resource](exam_preparation_tips) for [practical exam](exam_preparation_tips)?
+      - Tell me about time management for [practical exam](exam_preparation_tips).
+  - intent: ask_about_mentorship_program
+    examples: |
+      - Does the college have a mentorship program?
+      - How does [mentorship]{"entity": "entity", "value": "mentorship_program, value:mentorship"} benefit students?
+      - Can I get academic guidance from a [mentor]{"entity": "entity", "value": "mentorship_program, value:mentor"}?
+      - Are [mentors]{"entity": "entity", "value": "mentorship_program, value:mentors"} assigned based on academic interests?
+      - How often do students interact with their [mentors]{"entity": "entity", "value": "mentorship_program, value:mentors"}?
+      - Can [mentors]{"entity": "entity", "value": "mentorship_program, value:mentors"} help with career development too?
+      - Are there [mentorship opportunities]{"entity": "entity", "value": "mentorship_program, value:mentorship opportunities"} for specific majors?
+      - Tell me about success stories from the [mentorship program]{"entity": "entity", "value": "mentorship_program, value:mentorship program"}.
+      - How can I request a [mentor]{"entity": "entity", "value": "mentorship_program, value:mentor"} within a particular field?
+      - Is [mentorship]{"entity": "entity", "value": "mentorship_program, value:mentorship"} available for both undergraduate and postgraduate students?
+  - intent: ask_about_grading_system
+    examples: |
+      - How is the [grading system]{"entity": "entity", "value": "grading_system, value:grading system"} in the college?
+      - Can you explain the [evaluation process]{"entity": "entity", "value": "grading_system, value:evaluation process"}?
+      - What is the [passing criteria]{"entity": "entity", "value": "grading_system, value:passing criteria"} for exams?
+      - Tell me about the [grading scale]{"entity": "entity", "value": "grading_system, value:grading scale"} used at the college.
+      - Are there [grade points]{"entity": "entity", "value": "grading_system, value:grade points"} associated with each grade?
+      - How are [GPA calculations]{"entity": "entity", "value": "grading_system, value:GPA calculations"} done here?
+      - Is there a [grade conversion]{"entity": "entity", "value": "grading_system, value:grade conversion"} system for international students?
+      - Can I request a [transcript]{"entity": "entity", "value": "grading_system, value:transcript"} of my grades?
+      - What's the [grading policy]{"entity": "entity", "value": "grading_system, value:grading policy"} for late submissions?
+      - Are there any [grading updates]{"entity": "entity", "value": "grading_system, value:grading updates"} or changes this year?
+  - intent: ask_about_faculty
+    examples: |
+      - Can you provide information about the [faculty]{"entity": "faculty_information", "value": ""} at the college?
+      - Are the [professors]{"entity": "faculty_information", "value": ""} experienced and qualified?
+      - How accessible are the [professors]{"entity": "faculty_information", "value": ""} for student queries?
+      - Are there any renowned [professors]{"entity": "faculty_information", "value": ""} in a specific department?
+      - Can you share [faculty awards and recognitions]{"entity": "faculty_information", "value": ""} with me?
+      - Tell me about the [faculty-to-student ratio]{"entity": "faculty_information", "value": ""} at the college.
+      - Are there opportunities for [research collaboration]{"entity": "faculty_information", "value": ""} with faculty?
+      - Do [professors]{"entity": "faculty_information", "value": ""} have office hours for individual consultations?
+      - Are there [faculty members]{"entity": "faculty_information", "value": ""} from diverse academic backgrounds?
+      - Share [faculty success stories]{"entity": "faculty_information", "value": ""} and their contributions.
+      - Explain the [faculty development]{"entity": "faculty_information", "value": ""} programs at the college.
+      - How are [faculty teaching styles]{"entity": "faculty_information", "value": ""} described by students?
+      - Is there a [faculty recruitment]{"entity": "faculty_information", "value": ""} process in place?
+      - Can you provide details on [faculty qualifications]{"entity": "faculty_information", "value": ""}?
+      - What is the [faculty expertise]{"entity": "faculty_information", "value": ""} in various fields?
+      - How do students [rate the faculty]{"entity": "faculty_information", "value": ""} at the college?
+      - Tell me about [faculty publications]{"entity": "faculty_information", "value": ""} and research work.
+      - Are there [faculty resources]{"entity": "faculty_information", "value": ""} available for students?
+      - Explain the role of [faculty committees]{"entity": "faculty_information", "value": ""} in the college.
+      - Tell me about [faculty involvement]{"entity": "faculty_information", "value": ""} in student organizations.
+  - intent: ask_about_lab_facilities
+    examples: |
+      - What [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"} are available in the college?
+      - Can I access the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} outside of class hours?
+      - How do I [book lab equipment]{"entity": "entity", "value": "lab_facilities, value:book lab equipment"}?
+      - Are there specific [safety guidelines]{"entity": "entity", "value": "lab_facilities, value:safety guidelines"} for using [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"}?
+      - Can I bring my own [equipment]{"entity": "entity", "value": "lab_facilities, value:equipment"} to the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"}?
+      - Are the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} equipped with the latest [technology and tools]{"entity": "entity", "value": "lab_facilities, value:technology and tools"}?
+      - How often are the [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"} updated or improved?
+      - Can students [propose new lab equipment]{"entity": "entity", "value": "lab_facilities, value:propose new lab equipment"} or improvements?
+      - Are there [lab assistants]{"entity": "entity", "value": "lab_facilities, value:lab assistants"} available to provide guidance?
+      - Are the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} suitable for specific [academic programs or majors]{"entity": "entity", "value": "lab_facilities, value:academic programs or majors"}?
+      - Tell me about the [research opportunities]{"entity": "entity", "value": "lab_facilities, value:research opportunities"} in the labs.
+      - Is there [accessibility]{"entity": "entity", "value": "lab_facilities, value:accessibility"} for students with disabilities in the labs?
+      - How are [lab schedules]{"entity": "entity", "value": "lab_facilities, value:lab schedules"} organized?
+      - Can you provide information on [lab funding]{"entity": "entity", "value": "lab_facilities, value:lab funding"} sources?
+  - intent: ask_about_hostel_facilities
+    examples: |
+      - How are the [hostel facilities](hostel_facilities) in the college?
+      - Can you provide details about the [accommodation options](hostel_facilities)?
+      - Is there a separate [hostel](hostel_facilities) for [boys](hostel_facilities) and [girls](hostel_facilities)?
+      - What are the [hostel facilities](hostel_facilities) available?
+      - Tell me about the [amenities](hostel_facilities) in the [hostels](hostel_facilities).
+      - Can you describe the [accommodations](hostel_facilities) in the [hostels](hostel_facilities)?
+      - Explain the [features](hostel_facilities) of the [hostel rooms](hostel_facilities).
+      - I'd like to know more about the [hostel options](hostel_facilities).
+      - What is the condition of the [hostel rooms](hostel_facilities)?
+      - Share information about the [hostel services](hostel_facilities).
+      - Are there [single](hostel_facilities) or [shared rooms](hostel_facilities) in the [hostels](hostel_facilities)?
+      - How many students can a [hostel room](hostel_facilities) accommodate?
+      - What are the [rules and regulations](hostel_facilities) in the [hostels](hostel_facilities)?
+      - Tell me about the [dining facilities](hostel_facilities) in the [hostels](hostel_facilities).
+      - Do the [hostels](hostel_facilities) have [Wi-Fi](hostel_facilities) and [laundry services](hostel_facilities)?
+      - Is there a common room in the [hostels](hostel_facilities) for students to gather?
+      - How do I [apply for hostel accommodation](hostel_facilities)?
+      - Tell me about SVBH [Hostel](requested_hostel)
+      - tell me about [SVBH](requested_hostel)
+      - Tell me about the [hostel facilities](hostel_facilities) at MNNIT
+      - Which [hostel]{"entity": "hostel_choice", "value": "requested_hostel"} would you like to know about?
+      - Can you provide details about a specific [hostel]{"entity": "hostel_choice", "value": "requested_hostel"}?
+      - I'm interested in learning more about the [hostels]{"entity": "hostel_choice", "value": "requested_hostel"}. Which one do you have in mind?
+      - Please tell me about a particular [hostel]{"entity": "hostel_choice", "value": "requested_hostel"}.
+      - I need information about the [accommodation options]{"entity": "hostel_choice", "value": "requested_hostel"}. Could you specify a [hostel]{"entity": "hostel_choice", "value": "requested_hostel"}?
+      - [SVBH](requested_hostel)
+      - Tell me about [SVBH](requested_hostel)
+  - intent: ask_about_fees
+    examples: |
+      - How much are the [tuition fees]{"entity": "entity", "value": "fees_type"} for the courses?
+      - Can you provide details about the [fee structure]{"entity": "entity", "value": "fees_type"}?
+      - Are there any additional fees apart from [tuition]{"entity": "entity", "value": "fees_type"}?
+      - What are the [tuition fees]{"entity": "entity", "value": "fees_type"} for this semester?
+      - Can you provide details on the fees for the [academic year]{"entity": "entity", "value": "fees_type"}?
+      - I'm interested in the cost of [tuition]{"entity": "entity", "value": "fees_type"}. How much is it?
+      - How do I pay my [tuition fees]{"entity": "entity", "value": "fees_type"}?
+      - What is the fee structure for [undergraduate programs]{"entity": "entity", "value": "fees_type"}?
+      - Tell me about the fees for the [Btech program]{"entity": "entity", "value": "fees_type"} in MNNIT.
+      - Are there any [scholarships]{"entity": "entity", "value": "fees_type"} available to offset [tuition costs]{"entity": "entity", "value": "fees_type"}?
+      - Can you explain the payment schedule for [fees]{"entity": "entity", "value": "fees_type"}?
+      - What additional expenses should I budget for besides [tuition]{"entity": "entity", "value": "fees_type"}?
+      - How can I check my account balance for [fees]{"entity": "entity", "value": "fees_type"}?
+      - Are there any discounts on [tuition]{"entity": "entity", "value": "fees_type"} for high-achieving students?
+      - Do you offer [financial aid]{"entity": "entity", "value": "fees_type"} for [tuition]{"entity": "entity", "value": "fees_type"}?
+      - What is the cost of [room and board]{"entity": "entity", "value": "fees_type"} if I live on campus?
+      - Can you break down the [fees]{"entity": "entity", "value": "fees_type"} for [international students]{"entity": "entity", "value": "fees_type"}?
+      - Is there an installment plan for paying [tuition]{"entity": "entity", "value": "fees_type"}?
+      - What is the deadline for paying this semester's [fees]{"entity": "entity", "value": "fees_type"}?
+  - intent: ask_intro_format
+    examples: |
+      - What is the [format]{"entity": "entity", "value": "intro_format"} for introducing oneself in [college]{"entity": "entity", "value": "intro_type"}?
+      - How should I structure my self-introduction to [seniors]{"entity": "entity", "value": "intro_type"}?
+      - Are there specific guidelines for introducing myself in the [community]{"entity": "entity", "value": "intro_type"}?
+      - What are the key elements to include in a [junior's]{"entity": "entity", "value": "intro_type"} self-introduction?
+      - Can you provide a [template]{"entity": "entity", "value": "intro_format"} for a [college]{"entity": "entity", "value": "intro_type"} self-introduction?
+      - How can I create a memorable [introduction]{"entity": "entity", "value": "intro_format"} in [college]{"entity": "entity", "value": "intro_type"}?
+      - Share [tips]{"entity": "entity", "value": "intro_format"} on delivering an engaging self-introduction.
+  - intent: ask_for_directions
+    examples: |
+      - Can you help me with directions to [destination](destination_given) from [user_location](user_location)?
+      - I need directions to [destination](destination_given) from [user_location](user_location).
+      - How can I reach [destination](destination_given) from [user_location](user_location)?
+      - Guide me to [destination](destination_given) from [user_location](user_location), please.
+      - What's the way to get to [destination](destination_given) from [user_location](user_location)?
+      - How do I go to [destination](destination_given) from my location at [user_location](user_location)?
+      - How can I get to [destination](destination_given) from [user_location](user_location)?
+      - Give me directions to [destination](destination_given) starting from [user_location](user_location).
+      - Can you show me the way to [destination](destination_given) starting from [user_location](user_location)?
+      - I'm looking for directions to [destination](destination_given) from my current location at [user_location](user_location).
+      - Tell me the route to [destination](destination_given) from [user_location](user_location).
+      - I'm at [user_location](user_location).
+      - My current location is [user_location](user_location).
+      - I'm starting from [user_location](user_location).
+      - I need directions from [user_location](user_location).
+      - Can you guide me from [user_location](user_location) to [destination](destination_given).
+      - Are there any landmarks near [destination](destination_given) from [user_location](user_location)?
+      - What landmarks are near [destination](destination_given) from [user_location](user_location)?
+      - Tell me about prominent landmarks near [destination](destination_given) from [user_location](user_location).
+      - How far is [destination](destination_given) from [user_location](user_location)?
+      - What's the distance to [destination](destination_given) from [user_location](user_location)?
+      - Can you provide the distance between [user_location](user_location) and [destination](destination_given)?
+      - Is [destination](destination_given) nearby [user_location](user_location)?
+      - What are the travel options to get to [destination](destination_given) from [user_location](user_location)?
+      - Are there public transportation options to reach [destination](destination_given) from [user_location](user_location)?
+      - Can you suggest different modes of travel to [destination](destination_given) from [user_location](user_location)?
+      - How can I travel to [destination](destination_given) using [mode_of_transport](mode_of_transport) from [user_location](user_location)?
+      - Are there alternative routes to [destination](destination_given) from [user_location](user_location)?
+      - Can you suggest a different way to reach [destination](destination_given) from [user_location](user_location)?
+      - What other routes can I take to [destination](destination_given) from [user_location](user_location)?
+      - Are there shortcuts to [destination](destination_given) from [user_location](user_location)?
+      - Is there parking available at [destination](destination_given) from [user_location](user_location)?
+      - Can I find parking near [destination](destination_given) from [user_location](user_location)?
+      - Tell me about the parking options at [destination](destination_given) from [user_location](user_location).
+      - Where can I park when I reach [destination](destination_given) from [user_location](user_location)?
+      - How's the traffic to [destination](destination_given) from [user_location](user_location)?
+      - Is there heavy traffic on the way to [destination](destination_given) from [user_location](user_location)?
+      - Can you update me on the current traffic conditions to [destination](destination_given) from [user_location](user_location)?
+      - What are the opening hours of [destination](destination_given) from [user_location](user_location)?
+      - When does [destination](destination_given) open and close from [user_location](user_location)?
+      - Can you provide the operating hours for [destination](destination_given) from [user_location](user_location)?
+      - Tell me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
+      - Give me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
+      - Give me the directions from [SVBH](user_location) to [Admin Building](destination_given)
+      - Tell me the directions from [SVBH](user_location) to [athletic ground]{"entity": "destination_given", "value": "Athletic Ground"}
+      - Tell me the directions from [SVBH](user_location) to [Admin Building](destination_given)
+  - lookup: library_resources
+    examples: |
+      - books
+      - journals
+      - online databases
+      - study spaces
+      - computers
+      - multimedia resources
+      - research materials
+  - lookup: library_days
+    examples: |
+      - weekdays
+      - weekends
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+      - Sunday
+  - lookup: exam_preparation_tips
+    examples: |
+      - final exams
+      - midsem
+      - viva
+      - practical exam
+      - study resources
+      - effective study techniques
+      - improve test scores
+      - strategies for exams
+      - recommended textbooks
+      - prepare for oral exams
+      - stay focused during exams
+      - past exam papers
+      - multiple-choice exams
+      - manage exam stress
+      - key topics for essays
+      - study groups for quizzes
+      - recommended study schedule
+      - open-book exams
+      - reviewing notes effectively
+      - take-home exams strategy
+      - online tutorials for tests
+      - time management for viva exams
+  - lookup: mentorship_program
+    examples: |
+      - mentorship
+      - mentor
+      - mentors
+      - mentorship opportunities
+      - mentorship program
+  - lookup: grading_system
+    examples: |
+      - grading system
+      - evaluation process
+      - passing criteria
+      - grading scale
+      - grade points
+      - GPA calculations
+      - grade conversion
+      - transcript
+      - grading policy
+      - grading updates
+  - lookup: faculty_information
+    examples: |
+      - faculty
+      - professors
+      - faculty awards and recognitions
+      - faculty-to-student ratio
+      - research collaboration
+      - faculty members from diverse academic backgrounds
+      - faculty success stories and contributions
+      - faculty development programs
+      - faculty teaching styles described by students
+      - faculty recruitment process in place
+      - faculty qualifications
+      - faculty expertise in various fields
+      - students rate the faculty
+      - faculty publications and research work
+      - faculty resources available for students
+      - faculty committees in the college
+      - faculty involvement in student organizations
+  - lookup: lab_facilities
+    examples: |
+      - lab facilities
+      - labs
+      - book lab equipment
+      - safety guidelines
+      - equipment
+      - technology and tools
+      - propose new lab equipment
+      - lab assistants
+      - academic programs or majors
+      - research opportunities
+      - accessibility
+      - lab schedules
+      - lab funding
+  - lookup: hostel_facilities
+    examples: |
+      - hostel facilities
+      - accommodation options
+      - boys
+      - girls
+      - amenities
+      - accommodations
+      - features
+      - hostel rooms
+      - hostel options
+      - single
+      - shared rooms
+      - hostel room
+      - rules and regulations
+      - dining facilities
+      - Wi-Fi
+      - laundry services
+      - apply for hostel accommodation
+  - lookup: fees_type
+    examples: |
+      - tuition fees
+      - fee structure
+      - additional fees
+      - academic year fees
+      - scholarships
+      - payment schedule
+      - budget expenses
+      - account balance
+      - high-achieving students discounts
+      - financial aid
+      - room and board
+      - international student fees
+      - installment plan
+      - payment deadline
+  - lookup: intro_type
+    examples: |
+      - format
+      - structure
+      - specific guidelines
+      - key elements
+      - template
+      - memorable introduction
+      - tips
+  - lookup: current_location
+    examples: |
+      - my current location
+      - my location
+      - where I am
+      - my present location
+  - lookup: destination
+    examples: |
+      - Central Park
+      - Times Square
+      - Eiffel Tower
+      - Grand Central Station
+      - Empire State Building
+      - Golden Gate Bridge
+      - Louvre Museum
+  - lookup: mode_of_transport
+    examples: |
+      - car
+      - bike
+      - subway
+      - bus
+      - taxi
+      - walking
+      - tram
+
+  #ujjawal Code
+
+  - intent: more_about_college
+    examples: |
+      - MNNIT 
+      - mnnit college
+      - Inform about MNNIT college
+      - inform about mnnit college
+      - tell me something more about MNNIT Allahabad
+      - Is MNNIT Allahabad a good college?
+      - Is MNNIT a good college for engineering?
+      - When MNNIT college is established?
+      - How old is the MNNIT Allahabad?
+      - Is MNNIT a Regional Engineering Colleges of India?
+      - Is MNNIT a Government or Private college?
+      - What are the college's core values and mission?
+      - Can you tell me about the MNNIT's history and founding?
+      - Can you tell me about the mnnit's history and founding?
+      - Share some facts and statistics about the college
+      - Share some facts and statistics about the MNNIT
+      - Share some statistics about the mnnit
+
+  - intent: club
+    examples: |
+      - What are clubs present in MNNIT?
+      - Which type of clubs are present in college?
+      - What are different activities happen in MNNIT?
+      - Mention the name of clubs of MNNIT.
+      - Tell the name of clubs of MNNIT.
+      - clubs of mnnit college
+      - Which type of clubs are present in MNNIT college?
+      - Tell me about the clubs in the college
+      - Tell me about the clubs in the mnnit
+      - Tell me extra co-curricular activity of the college
+      - Tell me extra co-curricular activity of the MNNIT
+
+  - intent: benfit_of_the_club
+    examples: |
+      - What are the facility of exploring different fields in MNNIT?
+      - What are the benefits of joining club ?
+      - What are advantages of joining different club?
+      - Is there any benefit of joining different club?
+      - Is there any advantage of participating different club?
+      - Is it worth to work in different clubs of MNNIT? 
+      - What are the reasons for joining a club?
+      - Why is it important to join clubs in college?
+      - Should you join clubs in college?
+      - What are the benefits of joining clubs at your college?
+      - Can you tell me why I should join a club on campus?
+      - What advantages do college clubs offer to students?
+      - How can joining a club enhance my corasllege experience?
+      - Share some reasons why I should consider joining a student organization.
+      - What opportunities do clubs provide for personal development?
+      - Tell me more about the positive impacts of participating in clubs.
+      - How can joining a club help me make friends and connections?
+      - Explain the social and networking benefits of college clubs.
+      - What are the advantages of being part of a club in terms of career development?
+
+  - intent: explore_campus
+    examples: |
+      - Tell me someting about campus of MNNIT college
+      - How the campus of MNNIT looks like?
+      - Is campus life of mnnit college good?
+      - How was your life at MNNIT?
+      - Is campus of MNNIT colloge beautiful?
+      - What is the campus area of MNNIT college?
+      - How can I explore your college campus?
+      - Tell me about campus tours at your college.
+      - What are the options for visiting your college?
+      - Can I schedule a campus visit?
+      - Share information about open house events at your college.
+      - How can I get a feel for the college before applying?
+      - What resources are available for prospective students to explore your college?
+      - Is there a virtual tour of your college available?
+      - Are there any upcoming college events for visitors?
+      - Tell me about the admissions office and how to contact them for a visit.
+
+  - intent: cafetarea
+    examples: |
+      - Is there any good canteen present in campus area?
+      - Can you tell me about cafe.
+      - Which cafe are present near MNNIT Allahabad?
+      - Is food cafe shop are present in campus area?
+      - Can we order food from near by cafe in mnnit college ?
+      - Tell me about the college cafe.
+      - What cafeteria options are available on campus?
+      - Can you provide information about meal plans at the college?
+      - How does the cafeteria accommodate dietary restrictions?
+      - Are there vegetarian or vegan options in the cafe?
+      - What are the opening hours of the college cafeteria?
+      - Is there a food court on campus?
+      - Are there any special events or promotions in the cafeteria?
+      - Can you share the menu options and prices in the cafeteria?
+      - Tell me about the quality of food in the college cafeteria.
+      - Where can I grab a meal on campus?
+      - where are the canteen in campus
+      - what are the canteen in campus
+      - where are the cafe in campus
+      - what are the cafe in campus
+      - eating spot in the campus
+  - intent: dwesis_canteen
+    examples: |
+      - Tell me more about Dwesis .
+      - What's on the menu at Dwesis ?
+      - Can you share the operating hours of Dwesis ?
+      - Are there any special dishes at dwesis ?
+      - What's the pricing like at dwesis ?
+      - Tell me about the ambiance and seating at Dwesis .
+      - Is there a student discount available at Dwesis ?
+      - What are the popular food items at Dwesis ?
+      - Share some reviews or recommendations for Dwesis .
+      - How can I provide feedback about my experience at Dwesis ?
+      - What's the specialty of Dwesis ?
+      - What type of cuisine does dwesis  primarily serve?
+      - Can you share the price range of dishes at Dwesis ?
+      - Are there any cultural or themed nights at dwesis , like "Mexican Mondays" or "Asian Fusion Fridays"?
+      - Tell me about the dessert options at Dwesis .
+      - Is there outdoor seating available at dwesis ?
+      - Are there any loyalty programs or rewards for frequent visitors to Dwesis ?
+      - How do I place an order or reserve a table at Dwesis ?
+      - Can you provide information about the staff and chefs at Dwesis ?
+      - Are there any special considerations for allergen information at Dwesis ?
+  - intent: dwesis_location
+    examples: |
+      - Where is the college dwesis located?
+      - Can you tell me the address of the dwesis on campus?
+      - How do I find the Mr. Dwesis's location?
+      - Give me directions to the college Dwesis.
+      - Is there a map to the dwesis?
+      - What building or area is the dwesis situated in?
+      - I'm new here, where can I find the dwesis?
+      - Tell me how to get to the nearest dwesis.
+      - Can you guide me to the dwesis's location on campus?
+  - intent: cafe_96
+    examples: |
+      - Tell me more about cafe 96 .
+      - What's on the menu at cafe 96 ?
+      - Can you share the operating hours of Cafe 96 ?
+      - Are there any special dishes at Cafe 96 ?
+      - What's the pricing like at cafe 96 ?
+      - Tell me about the ambiance and seating at Cafe 96 .
+      - Is there a student discount available at Cafe 96 ?
+      - What are the popular food items at Cafe 96 ?
+      - Share some reviews or recommendations for Cafe 96 .
+      - How can I provide feedback about my experience at Cafe 96 ?
+      - What's the specialty of cafe 96 ?
+      - What type of cuisine does Cafe 96  primarily serve?
+      - Can you share the price range of dishes at cafe 96 ?
+      - Are there any cultural or themed nights at Cafe 96 , like "Mexican Mondays" or "Asian Fusion Fridays"?
+      - Tell me about the dessert options at Cafe 96 .
+      - Is there outdoor seating available at cafe 96 ?
+      - Are there any loyalty programs or rewards for frequent visitors to Cafe 96 ?
+      - How do I place an order or reserve a table at Cafe 96 ?
+      - Can you provide information about the staff and chefs at Cafe 96 ?
+      - Are there any special considerations for allergen information at Cafe 96 ?
+  - intent: cafe_96_location
+    examples: |
+      - Where is the college cafe 96 located?
+      - Can you tell me the address of the Cafe 96 on campus?
+      - How do I find the Mr. Cafe 96's location?
+      - Give me directions to the college Cafe 96.
+      - Is there a map to the cafe 96?
+      - What building or area is the Cafe 96 situated in?
+      - I'm new here, where can I find the Cafe 96?
+      - Tell me how to get to the nearest Cafe 96.
+      - Can you guide me to the cafe 96's location on campus?
+  - intent: yamuna_canteen
+    examples: |
+      - Tell me more about yamuna canteen .
+      - Tell me more about yamuna  .
+      - What's on the menu at yamuna  ?
+      - Can you share the operating hours of yamuna canteen ?
+      - Are there any special dishes at yamuna canteen ?
+      - What's the pricing like at yamuna canteen ?
+      - Tell me about the ambiance and seating at Yamuna canteen .
+      - Is there a student discount available at yamuna canteen ?
+      - What are the popular food items at yamuna canteen ?
+      - Share some reviews or recommendations for yamuna canteen .
+      - How can I provide feedback about my experience at yamuna canteen ?
+      - What's the specialty of yamuna  ?
+      - What type of cuisine does yamuna canteen  primarily serve?
+      - Can you share the price range of dishes at yamuna canteen ?
+      - Are there any cultural or themed nights at yamuna canteen , like "Mexican Mondays" or "Asian Fusion Fridays"?
+      - Tell me about the dessert options at yamuna canteen .
+      - Is there outdoor seating available at yamuna canteen ?
+      - Are there any loyalty programs or rewards for frequent visitors to yamuna canteen ?
+      - How do I place an order or reserve a table at yamuna canteen ?
+      - Can you provide information about the staff and chefs at yamuna canteen ?
+      - Are there any special considerations for allergen information at yamuna canteen ?
+  - intent: yamuna_location
+    examples: |
+      - Where is the college yamuna canteen located?
+      - Can you tell me the address of the yamuna canteen on campus?
+      - How do I find the Mr. yamuna canteen's location?
+      - Give me directions to the college yamuna canteen.
+      - Give me directions to the college yamuna.
+      - Is there a map to the yamuna?
+      - What building or area is the yamuna canteen situated in?
+      - I'm new here, where can I find the yamuna canteen?
+      - Tell me how to get to the nearest yamuna canteen.
+      - Can you guide me to the yamuna canteen's location on campus?
+
+  - intent: lit_club
+    examples: |
+      - What is Literary Cub?
+      - Is there any literary club of MNNIT college ?
+      - Tell me something about literary club
+      - Is literary club of mnnit college good?
+      - What are the benefits of joining Literary club ?
+      - What does we do in Literary club ?
+  - intent: robotics_club
+    examples: |
+      - Tell me more about the college's robotics club.
+      - Can you provide information about the robotics club on campus?
+      - What are the activities and projects of the robotics club?
+      - How can I join the robotics club?
+      - When and where does the robotics club meet?
+      - Do I need any prior experience to be part of the robotics club?
+      - Can you share details about the leadership and mentors in the robotics club?
+      - Are there any upcoming robotics events or competitions?
+      - Tell me about the achievements and awards of the robotics club.
+      - Do you have a robotics lab or workspace for club members?
+  # ######### hostels
+  - intent: boys_hostel
+    examples: |
+      - How many boys hostels are there in Mnnit Allahabad?
+      - What facilities are provide in boys hostel of mnnit allahabad?
+      - Tell me something about boys hostel
+      - How rooms are alloted in mnnit college?
+      - What are the condition of boys hostel in mnnit college?
+      - Is the condition of boys hostel good?
+      - Can you provide information about the boys' hostel at the college?
+      - Tell me about the accommodation options for male students.
+      - What are the facilities available in the boys' hostel?
+      - How do I apply for a room in the boys' hostel?
+      - Are there any rules or regulations for residents in the boys' hostel?
+      - Can you share the contact details for the boys' hostel office?
+      - What's the cost of staying in the boys' hostel, and are there any payment options?
+      - Are there any security measures in place at the boys' hostel?
+      - Can you provide details about the dining options in the boys' hostel?
+      - Tell me about any common areas and recreational facilities in the boys' hostel.
+
+  - intent: girls_hostel
+    examples: |
+      - How many girls hostels are there in Mnnit Allahabad?
+      - What facilities are provide in girls hostel of mnnit allahabad?
+      - Tell me something about girls hostel
+      - How rooms are alloted for girls in mnnit college?
+      - What are the condition of girls hostel in mnnit college?
+      - Is the condition of girls hostel good?
+      - intent: girls_hostel_info
+      - Can you provide information about the girls' hostel at the college?
+      - Tell me about the accommodation options for female students.
+      - What are the facilities available in the girls' hostel?
+      - How do I apply for a room in the girls' hostel?
+      - Are there any rules or regulations for residents in the girls' hostel?
+      - Can you share the contact details for the girls' hostel office?
+      - What's the cost of staying in the girls' hostel, and are there any payment options?
+      - Are there any security measures in place at the girls' hostel?
+      - Can you provide details about the dining options in the girls' hostel?
+      - Tell me about any common areas and recreational facilities in the girls' hostel.
+
+  #  department
+
+  - intent: Department
+    examples: |
+      - department name
+      - how many Deaprtment in the college
+      - How many Accademic department is present in the college
+      - How many Degree courses are available in the mnnit
+      - How many Degree courses are available in the college
+      - How many Degree courses are available in the campus
+      - Degree courses
+      - how many branches are present
+      - What are the branches present ?
+      - What academic departments are available in the college?
+      - Can you provide a list of departments in the college?
+      - Tell me about the various academic departments on campus.
+      - I'd like to know which departments the college offers.
+      - Is there a specific department for computer science?
+      - What fields of study are represented in the college's departments?
+      - How many departments are there at the college?
+      - Give me an overview of the academic departments at the college.
+      - What are the main areas of study offered by the college's departments?
+      - Can you list the department names and their locations in the college?
+
+  - intent: Director
+    examples: |
+      - Director of MNNIT
+      - director
+      - person name who is govern rule in the campus
+      - Director Names
+      - Whos is the director of MNNIT
+      - Who is the director of college
+      - Who is the Director of MNNIT Campus
+      - Who is the current Director of the college?
+      - Can you provide information about the college's director?
+      - Tell me about the person in charge of the college.
+      - Who is leading the college as the director?
+      - How can I contact the Director of the college?
+      - Can you share the background and qualifications of the college's director?
+      - Is there an email address or phone number for the college Director?
+      - What is the director's vision for the college?
+      - Are there any upcoming events or meetings with the college Director?
+      - Give me details about the director's office and hours of availability.
+  - intent: dean
+    examples: |
+      - dean of MNNIT
+      - Dean
+      - Dean Names
+      - Whos is the dean of MNNIT
+      - Who is the dean of college
+      - Who is the dean of MNNIT Campus
+      - Who is the current dean of the college?
+      - Can you provide information about the college's dean?
+      - Who is leading the college as the Dean?
+      - How can I contact the Dean of the college?
+      - Can you share the background and qualifications of the college's dean?
+      - Is there an email address or phone number for the college dean?
+      - What is the dean's vision for the college?
+      - Are there any upcoming events or meetings with the college Dean?
+      - Give me details about the dean's office and hours of availability.
+
+    #About departments and their HODs
+
+  - intent: CSE_dept
+    examples: |
+      - Computer Science and Engineering Department .
+      - CSE Department .
+      - What kind of facilities does the CSE or Computer Science and Engineering Department have?
+      - Are there any research labs in the CSE or Computer Science and Engineering Department?
+      - Resources are available to students in the CSE or Computer Science and Engineering Department
+      - Professors in the CSE or Computer Science Department
+      - How experienced are the faculty members in the CSE or Computer Science and Engineering Department?
+      - The CSE or Computer Science and Engineering Department offers .
+      - Scope of the CSE or Computer Science and Engineering Department .
+      - Undergraduate programs offered by the CSE or Computer Science and Engineering Department.
+      - Tell me about the graduate programs in CSE or Computer Science and Engineering .
+      - Does the CSE or Computer Science and Engineering Department offer any research-based programs?
+      - How is Computer Science and Engineering Department at MNNIT ?
+      - About faculty of CSE or Computer Science and Engineering depatment .
+      - About faculty of Computer Science and Engineering Department .
+      - How is Computer Science and Engineering Department at Motilal Nehru National Institute of Technology ?
+      - CS at Motilal Nehru National Institute of Technology or MNNIT .
+      - Computer Science at MNNIT or Motilal Nehru National Institute of Technology .
+
+  - intent: CSE_dept_HOD
+    examples: |
+      - Who is the head of department of Computer Science and Engineering Department ?
+      - HOD of Computer Science and Engineering Department .
+      - Head of department of CS or CSE .
+      - Faculty who is HOD of CSE Or Computer Science and Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+      - What is the name of the head of the CSE department?
+      - Head of Department of CSE or Computer Science and Engineering depatment
+
+  - intent: ECE_dept
+    examples: |
+      - Facilities does the ECE or Electronics and Communication Engineering Department have?
+      - Electronics and Communication Engineering .
+      - Research labs in the ECE or Electronics and Communication Engineering Department
+      - Resources are available to students in the ECE Department
+      - Professors in the ECE Department?
+      - Faculty members in the ECE Department
+      - The ECE or Department offers
+      - Tell me about the ECE Department at Motilal Nehru National Institute of Technology or MNNIT .
+      - Scope of the ECE or Electronics and Communication Engineering Department?
+      - Undergraduate programs offered by the ECE Department .
+      - Tell me about the graduate programs in ECE or Electronics and Communication Engineering .
+      - Does the ECE or Electronics and Communication Engineering Department offer any research-based programs?
+      - How is Electronics and Communication Engineering Department at MNNIT ?
+      - About faculty of ECE or Electronics and Communication Engineering depatment .
+      - About faculty of Electronics and Communication Engineering Department .
+      - Electronics and Communication Engineering at Motilal Nehru National Institute of Technology 
+      - EC at Motilal Nehru National Institute of Technology or MNNIT .
+      - Electronics at MNNIT or Motilal Nehru National Institute of Technology .
+
+  - intent: ECE_dept_HOD
+    examples: |
+      - Who is the head of department of Electronics and Communication Engineering Department ?
+      - HOD of Electronics and Communication Engineering Department .
+      - Head of department of Electronics and Communication Engineering Department .
+      - Faculty who is HOD of Electronics and Communication Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+      - What is the name of the head of the ECE department?
+      - Head of Department of ECE or Electronics and Communication Engineering Department .
+
+  - intent: EE_dept
+    examples: |
+      - Facilities does the EE or Electrical Engineering Department have?
+      - Electrical Engineering .
+      - Research labs in the ECE or EE or Electrical Engineering Department
+      - Resources are available to students in the EE or Electrical Engineering Department
+      - Professors in the EE or Electrical Engineering Department?
+      - Faculty members in the EE or Electrical Engineering Department
+      - The EE or Electrical Engineering Department offers
+      - Tell me about the EE or Electrical Engineering Department at Motilal Nehru National Institute of Technology or MNNIT .
+      - Scope of the EE or Electrical Engineering?
+      - Undergraduate programs offered by the EE or Electrical Department?
+      - Tell me about the graduate programs in EE or Electrical Engineering?
+      - Does the EE or Electrical Engineering Department offer any research-base programs?
+      - How is EE or Electrical Engineering Department at MNNIT ?
+      - About faculty of EE or Electrical Engineering depatment .
+      - How is EE or Electrical Engineering at Motilal Nehru National Institute of Technology ?
+      - EE at Motilal Nehru National Institute of Technology or MNNIT .
+      - Electrical at MNNIT or Motilal Nehru National Institute of Technology .
+
+  - intent: EE_dept_HOD
+    examples: |
+      - Who is the head of department of EE or Electrical Engineering Department ?
+      - HOD of Electrical Engineering Department .
+      - Head of department of EE or Electrical Engineering Department .
+      - Faculty who is HOD of EE Electrical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+      - What is the name of the head of the EE or Electrical Engineering Department department?
+      - Head of Department of EE or Electrical Engineering Department .
+
+  - intent: ME_dept
+    examples: |
+      - Facilities does the ME or Mechanical Engineering Department have.
+      - Mechanical Engineering .
+      - Research labs in the ME or Mechanical Engineering Department
+      - Resources are available to students in the ME or Mechanical Engineering Department
+      - Professors in the ME or Mechanical Engineering Department .
+      - Faculty members in the ME or Mechanical Engineering Department .
+      - The ME or Mechanical Engineering Department offers .
+      - Tell me about the ME or Mechanical Engineering Department Department at Motilal Nehru National Institute of Technology or MNNIT .
+      - Scope of the ME or Mechanical Engineering Department
+      - Undergraduate programs offered by the ME or Mechanical Engineering Department
+      - Tell me about the graduate programs in ME or Mechanical Engineering Department
+      - Does the ME or Mechanical Engineering Department offer any research-base programs?
+      - How is ME or Mechanical Engineering Department at MNNIT ?
+      - About faculty of ME or Mechanical Engineering Department depatment .
+      - How is ME or Mechanical Engineering Department at Motilal Nehru National Institute of Technology ?
+      - ME at Motilal Nehru National Institute of Technology or MNNIT .
+      - Mechanical at MNNIT or Motilal Nehru National Institute of Technology .
+
+  - intent: ME_dept_HOD
+    examples: |
+      - Who is the head of department of ME or Mechanical Engineering Department ?
+      - HOD of Mechanical Engineering Department .
+      - Head of department of ME or Mechanical Engineering Department .
+      - Faculty who is HOD of ME or Mechanical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+      - What is the name of the head of the ME or Mechanical Engineering Department department?
+      - Head of Department of ME or Mechanical Engineering Department .
+
+  - intent: ChE_Dept
+    examples: |
+      - Facilities does the ChE or Chemical Engineering Department have.
+      - Chemical Engineering .
+      - Research labs in the ChE or Chemical Engineering Department
+      - Resources are available to students in the ChE or Chemical Engineering Department
+      - Professors in the ChE or Chemical Engineering Department .
+      - Faculty members in the ChE or Chemical Engineering Department .
+      - The ChE or Chemical Engineering Department offers .
+      - Tell me about the ChE or Chemical Engineering Department Department at Motilal Nehru National Institute of Technology or MNNIT .
+      - Scope of the ChE or Chemical Engineering Department
+      - Undergraduate programs offered by the ChE or Chemical Engineering Department
+      - Tell me about the graduate programs in ChE or Chemical Engineering Department
+      - Does the ChE or Chemical Engineering Department offer any research-base programs?
+      - How is ChE or Chemical Engineering Department at MNNIT ?
+      - About faculty of ChE or Chemical Engineering Department depatment .
+      - How is ChE or Chemical Engineering Department at Motilal Nehru National Institute of Technology ?
+      - Chemical at MNNIT or Motilal Nehru National Institute of Technology .
+
+  - intent: ChE_Dept_HOD
+    examples: |
+      - Who is the head of department of ChE or Chemical Engineering Department ?
+      - HOD of Chemical Engineering Department .
+      - Head of department of ChE or Chemical Engineering Department .
+      - Faculty who is HOD of ChE or Chemical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+      - What is the name of the head of the ChE or Chemical Engineering Department department?
+      - Head of Department of ChE or Chemical Engineering Department .
+
+  - intent: CE_dept
+    examples: |
+      - Facilities does the CE or Civil Engineering Department have.
+      - Civil Engineering .
+      - Research labs in the CE or Civil Engineering Department
+      - Resources are available to students in the CE or Civil Engineering Department
+      - Professors in the CE or Civil Engineering Department .
+      - Faculty members in the CE or Civil Engineering Department .
+      - CE or Civil Engineering offers .
+      - Tell me about the CE or Civil Engineering Department Department at Motilal Nehru National Institute of Technology or MNNIT .
+      - Scope of the CE or Civil Engineering Department
+      - Undergraduate programs offered by the CE or Civil Engineering Department
+      - Tell me about the graduate programs in CE or Civil Engineering Department
+      - Does the CE or Civil Engineering Department offer any research-base programs?
+      - How is CE or Civil Engineering Department at MNNIT ?
+      - About faculty of CE or Civil Engineering depatment .
+      - How is CE or Civil Engineering Department at Motilal Nehru National Institute of Technology ?
+      - Civil at MNNIT or Motilal Nehru National Institute of Technology .
+
+  - intent: CE_dept_HOD
+    examples: |
+      - Who is the head of department of CE or Civil Engineering Department ?
+      - HOD of Civil Engineering Department .
+      - Head of department of CE or Civil Engineering Department .
+      - Faculty who is HOD of CE or Civil Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+      - What is the name of the head of the CE or Civil Engineering Department department?
+      - Head of Department of CE or Civil Engineering Department .
+
+  - intent: BE_dept
+    examples: |
+      - Facilities does the Biotechnology Engineering Department have.
+      - Biotech .
+      - Biotechnology Engineering .
+      - Research labs in the Biotechnology Engineering Department
+      - Resources are available to students in the Biotechnology Engineering Department
+      - Professors in the Biotechnology Engineering Department .
+      - Faculty members in the Biotechnology Engineering Department .
+      - Biotechnology Engineering offers .
+      - Tell me about the Biotechnology Engineering Department Department at Motilal Nehru National Institute of Technology or MNNIT .
+      - Scope of the Biotechnology Engineering Department
+      - Undergraduate programs offered by the Biotechnology Engineering Department
+      - Tell me about the graduate programs in Biotechnology Engineering Department
+      - Does the Biotechnology Engineering Department offer any research-base programs?
+      - How is Biotechnology Engineering Department at MNNIT ?
+      - About faculty of Biotechnology Engineering depatment .
+      - How is Biotechnology Engineering Department at Motilal Nehru National Institute of Technology ?
+      - Biotech at MNNIT or Motilal Nehru National Institute of Technology .
+
+  - intent: BE_dept_HOD
+    examples: |
+      - Who is the head of department of Biotechnology Engineering Department ?
+      - HOD of Biotechnology Engineering Department .
+      - Head of department of Biotechnology Engineering Department .
+      - Faculty who is HOD of Biotechnology Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+      - What is the name of the head of the Biotechnology Engineering Department department?
+      - Head of Department of Biotechnology Engineering Department .
+
+  - intent: PIE_dept
+    examples: |
+      - Facilities does the Production and Industrial Engineering Department have.
+      - PIE or Production and Industrial Engineering Department
+      - Production Engineering.
+      - Production and Industrial Engineering.
+      - Research labs in the Production and Industrial Engineering Department
+      - Resources are available to students in the Production and Industrial Engineering or production Department
+      - Professors in the Production and Industrial Engineering Department .
+      - Faculty members in the Production and Industrial Engineering Department .
+      - Production and Industrial Engineering Engineering offers .
+      - Tell me about the Production and Industrial Engineering Department at Motilal Nehru National Institute of Technology or MNNIT .
+      - Scope of the Production and Industrial Engineering Department
+      - Undergraduate programs offered by the Production and Industrial Engineering Department
+      - Tell me about the graduate programs in Production or Production and Industrial Engineering Department
+      - Does the Production and Industrial Engineering Department offer any research-base programs?
+      - How is Production and Industrial Engineering Department at MNNIT ?
+      - About faculty of Production and Industrial Engineering depatment .
+      - How is Production and Industrial Engineering Department at Motilal Nehru National Institute of Technology ?
+      - Production at MNNIT or Motilal Nehru National Institute of Technology .
+
+  - intent: PIE_dept_HOD
+    examples: |
+      - Who is the head of department of PIE or Production and Industrial Engineering Department Department ?
+      - HOD of Production and Industrial Engineering Department .
+      - Head of department of PIE or Production and Industrial Engineering Department Department .
+      - Faculty who is HOD of PIE or Production and Industrial Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
+      - What is the name of the head of the PIE or Production and Industrial Engineering Department department?
+      - Head of Department of PIE or Production and Industrial Engineering Department .
+
+  - intent: AM_dept
+    examples: |
+      - Can you tell me more about the Applied Mathematics department at the college?
+      - What programs and courses are offered by the Applied Mathematics department?
+      - Who are the faculty members in the Applied Mathematics department?
+      - How can I apply for a program within the Applied Mathematics department?
+      - What research areas are covered by the Applied Mathematics department?
+      - Is there an Applied Mathematics club or student organization?
+      - Are there any scholarships or opportunities specific to Applied Mathematics students?
+      - Can you provide information about the location of the Applied Mathematics department's office?
+      - What are the department's office hours and contact information?
+      - Tell me about any upcoming events or seminars hosted by the Applied Mathematics department.
+
+  # sport area
+  - intent: college_playground
+    examples: |
+      - Tell me about the college's playground and sports facilities.
+      - What sports facilities are available on campus?
+      - Can you provide information about the location of the college playground?
+      - Are there any sports teams at the college?
+      - How can I access the college's sports facilities?
+      - Is there a track or field for athletics on campus?
+      - What types of sports and activities can I participate in at the college?
+      - Are there any upcoming sports events or tournaments?
+      - Tell me about the fitness and recreational options at the college.
+      - Can you provide details about the gym or fitness center on campus?
+
+  #Hrithiman's code starting
+  - intent: gac_event_info
+    examples: |
+      - [What is the GAC 2023 event](general_info:DESC) all about?
+      - [GAC 2023](general_info:DESC)?
+      - Give me an [overview of the GAC](general_info:DESC) event
+      - Give me an [overview of the GAC 2023](general_info:DESC)
+      - [What is GAC](general_info:DESC)?
+      - [what is GAC 2023](general_info:DESC)?
+      - [GAC 2023 2023](general_info:DESC)
+      - [Explain the GAC 2023 event](general_info:DESC) to me in detail.
+      - [Can you tell me about GAC 2023](general_info:DESC)?
+      - [What is the Global Alumni Convention event](general_info:DESC)?
+      - [Tell me about the GAC 2023 event](general_info:DESC).
+      - Briefly [describe the GAC 2023 event](general_info:DESC).
+      - Share [information about the Global Alumni Convention](general_info:DESC).
+      - [Describe the Global Alumni Convention](general_info:DESC) for me.
+      - [Explain the GAC 2023 event](general_info:DESC) to me in detail.
+      - Share [some insights about the Global Alumni Convention](general_info:DESC).
+      - Provide a comprehensive [overview of the GAC 2023 event](general_info:DESC).
+      - Tell me [all about the Global Alumni Convention]{"entity":"general_info","value":"DESC"}.
+      - [What is the GAC event](general_info:DESC) all about?
+      - [GAC](general_info:DESC)?
+      - [GAC 2023](general_info:DESC)
+      - [Explain the GAC event](general_info:DESC) to me in detail.
+      - [Can you tell me about GAC](general_info:DESC)?
+      - [What is the Global Alumni Convention event](general_info:DESC)?
+      - [Tell me about the GAC event](general_info:DESC).
+      - Briefly [describe the GAC event](general_info:DESC).
+      - Share [information about the Global Alumni Convention](general_info:DESC).
+      - [Describe the Global Alumni Convention 2023] for me.
+      - [Share some information about Global Alumni Convention](general_info:DESC)
+      - [Explain the GAC event](general_info:DESC) to me in detail.
+      - Share [some insights about the Global Alumni Convention](general_info:DESC).
+      - Provide a comprehensive [overview of the GAC event](general_info:DESC).
+      - Tell me [all about the Global Alumni Convention]{"entity":"general_info","value":"DESC"}.
+      - [G A C](general_info:DESC) 
+      - [G.A.C](general_info:DESC)
+      - [G.A.C 2023](general_info:DESC)
+      - [Global Alumni Convention 2023](general_info:DESC)
+  - intent: ask_event_info_2023
+    examples: |
+      - [What's the date and location]{"entity":"general_info", "value":"DL"} of the event?
+      - [Where is GAC 2023](general_info:L) going to be held?
+      - What is the [venue](general_info:L) of GAC 2023?
+      - [Where is GAC](general_info:L) going to be held?
+      - [Where is GAC](general_info:L) going to be conducted?
+      - Can you let me know the [venue](general_info:L) of GAC 2023?
+      - [When and where]{"entity":"general_info", "value":"DL"} is the event happening?
+      - [Describe the event's date and location]{"entity":"general_info", "value":"DL"}.
+      - Give me the [date and location]{"entity":"general_info", "value":"DL"} of the event.
+      - Share the event [schedule]{"entity":"general_info", "value":"S"} with me.
+      - Can you tell me the [schedule]{"entity":"general_info", "value":"S"} for the convention?
+      - Where will the convention take [place]{"entity":"general_info", "value":"L"}? 
+      - [When and where]{"entity":"general_info","value":"DL"} can I attend the event?
+      - Tell me the [date and location]{"entity":"general_info","value":"DL"} for the convention.
+      - What's the [schedule]{"entity":"general_info", "value":"S"} for the event?
+      - Provide details about the event [location]{"entity":"general_info", "value":"L"}.    -
+      - [When and where]{"entity":"general_info", "value":"DL"} is the event scheduled for?
+      - Share information about the [date and location]{"entity":"general_info", "value":"DL"}.
+      - What is the event's [date and location]{"entity":"general_info", "value":"DL"}?
+      - Can you provide details on the convention's [schedule]{"entity":"general_info", "value":"S"}?
+      - Where is the event's [venue]{"entity":"general_info", "value":"L"}?
+      - What's the [date and location]{"entity":"general_info", "value":"DL"} of the convention?
+      - What's on the [schedule]{"entity":"general_info", "value":"S"} for the event?
+      - [When is the event, and where will it be?]{"entity":"general_info","value":"DL"}
+      - Provide the [date and location]{"entity":"general_info", "value":"DL"} details.
+      - What can you tell me about the convention's [schedule]{"entity":"general_info", "value":"S"}?
+      - [Where]{"entity":"general_info","value":"L"} can I find the event?
+      - What's the [date and location]{"entity":"general_info", "value":"DL"} information for the event?
+      - Can you outline the [schedule]{"entity":"general_info", "value":"S"} for the convention?
+      - [Where]{"entity":"general_info","value":"L"} should I go for the event?
+      - Can you tell me [when is GAC](general_info:DL) event?
+      - [When is the GAC](general_info:DL) 2023 event?
+      - Can you tell me [when is GAC](general_info:DL?
+      - [When is GAC](general_info:DL) 2023 going to be held?
+      - What is the [date and location](general_info:DL) for GAC 2023?
+  - lookup: general_info
+    examples: |
+      - sehcudle
+      - Scheldue
+      - schedle
+  - intent: gac_2023_donations
+    examples: |
+      - Who gave the donations from 1998 batch?
+      - List of those who gave the donations) from 1998 batch?
+      - List of all the Alumni who gave donationsfor 1998 batch?
+      - Names of those who gave donations to college from 1998 batch?
+      - Names of those who provided donations to college from 1998 batch?
+      - Who from the 1998 batch made a donations?
+      - Can you tell me the names of 1998 batch alumni who contributed to donations?
+      - Provide a list of donors from the 1998 batch.
+      - I'm interested in knowing which 1998 batch alumni donated.
+      - Tell me about the 1998 batch alumni who made contributions.
+      - Give me the names of those who gave donations from the 1998 batch.
+      - I want to find out who donated from the 1998 batch.
+      - Who are the 1998 batch alumni donors?
+      - Provide information about 1998 batch donations and donors.
+      - List the names of 1998 batch alumni who participated in donations.
+      - Can you provide the names of donors from the 1998 batch?
+      - I'm interested in learning about 1998 batch alumni who contributed to donations.
+      - Tell me about the 1998 batch alumni who made donations.
+      - Give me a list of donors from the 1998 batch.
+      - Who from the 1998 batch donated to the cause?
+      - I'd like to know which 1998 batch alumni gave donations.
+      - Share information about the 1998 batch alumni donors.
+      - Provide a list of names from the 1998 batch who participated in donations.
+      - Tell me who the donors are from the 1998 batch.
+      - List the 1998 batch alumni who donated to the organization.
+      - Who are the 1998 batch alumni donors?
+      - I'm curious about the 1998 batch donors. Can you help?
+      - Who contributed to donations from the 1998 batch?
+      - Give me information about the 1998 batch donors and their names.
+      - Share details about the 1998 batch alumni who supported the cause.
+      - Tell me about the 1998 batch alumni who generously donated.
+      - I'd like to learn about the 1998 batch and their donations.
+      - Can you provide the names of donors specifically from the 1998 batch?
+      - List the 1998 batch alumni who participated in [fundraising efforts](gacdon).
+      - [fundraising efforts](gacdon) list out the 1998 batch alumni. 
+      - Who in the 1998 batch made contributions to the organization?
+
+  - intent: gac_2023_organizing
+    examples: |
+      - Who are the part of [organizing committee](gacorg) of GAC 2023?
+      - List all the members of [organizing team](gacorg) of GAC 2023?
+      - Provide me the names of [organizers](gacorg) of GAC 2023?
+      - Who is on the [organizing team](gacorg) for GAC 2023?
+      - Can you provide a list of members in the GAC 2023 [organizing team](gacorg)?
+      - Tell me about the team responsible for [organizing](gacorg) GAC 2023.
+      - I'd like to know the names of the [organizers](gacorg) for the GAC 2023 event.
+      - Share information about the GAC 2023 [organizing committee](gacorg).
+      - Give me details about the [people behind the scenes](gacorg) of GAC 2023.
+      - Who are the key [members](gacorg) of the GAC 2023 [organization](gacorg)?
+      - Provide a list of [individuals](gacorg) involved in planning GAC 2023.
+      - Tell me about the [team members](gacorg) responsible for GAC 2023.
+      - List the names of the [organizers](gacorg) for the GAC 2023 conference.
+      - Who are the [event planners](gacorg) for GAC 2023?
+      - I'm interested in learning about the [team behind GAC 2023](gacorg). Can you help?
+      - Share details about the [organizing team](gacorg) of GAC 2023.
+      - Who is responsible for [coordinating](gacorg) GAC 2023?
+      - Give me information about the GAC 2023 [organizing team](gacorg) and their roles.
+      - Tell me about the individuals who are [organizing](gacorg) GAC 2023.
+      - I'd like to learn about the GAC 2023 [organizing committee](gacorg) members.
+      - Can you provide the names of the [team members](gacorg) working on GAC 2023?
+      - List the key [people](gacorg) involved in planning GAC 2023.
+      - Who is part of the [organizing team](gacorg) for the GAC 2023 conference?
+      - Tell me about the team leading the [organization](gacorg) of GAC 2023.
+      - Provide information about the [individuals](gacorg) in charge of GAC 2023.
+      - Who is overseeing the [planning](gacorg) and execution of GAC 2023?
+      - I'd like to get to know the [people](gacorg) responsible for GAC 2023. Can you share their names?
+      - List the event [organizers](gacorg) for GAC 2023.
+      - Can you give me an overview of the [team](gacorg) behind GAC 2023?
+      - Share details about the roles and responsibilities of the GAC 2023 [organizing team](gacorg).
+      - Who are the key [players](gacorg) in the GAC 2023 [organization](gacorg)?
+      - Tell me about the committee [members](gacorg) of GAC 2023.
+      - Provide an introduction to the [organizing team](gacorg) of GAC 2023.
+      - Who is the [Patron](gacorg:Pat) of the event?
+      - Who serves as the [Advisor](gacorg:Ad) for the event?
+      - Who holds the position of [Chairman](gacorg:chair) in the event?
+      - Who is the [Co-Chairman](gacorg:CoChair) of the event?
+      - Who is the [Organizing Secretary](gacorg:oSec) for the event?
+      - Who is responsible for the treasury as the [Treasurer](gacorg:Tres)?
+      - Who are the [Joint Organizing Secretaries](gacorg:Jsec) for the event
+  - intent: gac_2023_registration
+    examples: |
+      - What are the [registration details](gacreg:FR) for GAC 2023?
+      - What is the [registration process](gacreg:FR) for GAC 2023?
+      - Can you give me the [Registration link](gacreg:RL) for GAC?
+      - How much is the registration [fee for others](gacreg:FO) ?
+      - What is the registration [fee for felicitation](gacreg:FF) batch for GAC 2023?
+      - What is the registration [fee for others](gacreg:FO) for GAC 2023?
+      - What is the [link for registering](gacreg:RL) for GAC 2023?
+      - What is the [last date to register](gacreg:RD) for GAC 2023?
+      - [Can alumni register for GAC 2023?](gacreg:FR)
+      - How much is the [registration fee](gacreg:F) for GAC 2023?
+      - What are the [fees](gacreg:FR) associated with GAC 2023 registration?
+      - Tell me about the pricing structure for GAC 2023 registration.
+      - I'd like to know the registration [fee](gacreg:F) for students attending GAC 2023.
+      - [How can I register for GAC 2023](gacreg:FR)?
+      - What is the [process for GAC 2023 registration](gacreg:FR)?
+      - Can you guide me through the [GAC 2023 registration](gacreg:FR)?
+      - I'd like to [sign up for GAC 2023](gacreg:FR). What are the steps?
+      - Tell me about the [registration options](gacreg:FR) for GAC 2023.
+      - What is the cost of [registration](gacreg:FR) for GAC 2023?
+      - How can I register for the [event](gacreg:FR)?
+      - What is the registration [fee](gacreg:F)?
+      - Can you guide me through the [registration process](gacreg:FR)?
+      - Where do I [sign up for the event](gacreg:FR)?
+      - Tell me about the [registration procedure](gacreg:FR).
+      - Is there a [fee](gacreg:F) to attend the event?
+      - How do I get [registered](gacreg:FR) for 2023?
+      - What are the [steps](gacreg:FR) to complete the [registration](gacreg:FR)?
+      - [When does the registration](gacreg:RD) for start?
+      - What is the [deadline](gacreg:RD) for [event registration](gacreg:FR)?
+      - How can I pay for the [registration fee](gacreg:F)?
+      - Do I need to create an [account](gacreg:FR) to [register](gacreg:FR)?
+      - Can I [register](gacreg:FR) multiple [attendees](gacreg:FR) at once?
+      - What [payment methods](gacreg:FR) are accepted for [registration](gacreg:FR)?
+      - How do I confirm my [registration status](gacreg:FR)?
+      - What information is required for the [registration form](gacreg:FR)?
+      - Is there a group registration(gacreg:FR) option?
+      - Can I [register](gacreg:FR) on the [day](gacreg:FR) of the [event](gacreg:FR)?
+      - Are there any [prerequisites](gacreg:FR) for [registration](gacreg:FR)?
+      - Can I [cancel](gacreg:FR) or [modify](gacreg:FR) my [registration](gacreg:FR)?
+      - Tell me about the [registration schedule](gacreg:FR).
+      - What is the [registration process](gacreg:FR) like?
+      - Are there any [documents](gacreg:FR) needed for [registration](gacreg:FR)?
+      - How can I get a [copy](gacreg:FR) of my [registration receipt](gacreg:FR)?
+      - Can you provide details on [early bird registration](gacreg:FR)?
+      - What is [included](gacreg:FR) in the [registration package](gacreg:FR)?
+      - Tell me about the [registration support contact](gacreg:FR).
+      - Where can I find the [online registration portal](gacreg:FR)?
+      - How do I [register](gacreg:FR) as a [speaker](gacreg:FR) for the [event](gacreg:FR)?
+  #HRITHIMAN GUHA
+  #ISME DAAL DE gacpay krke
+  - intent: gac_2023_payment
+    examples: |
+      - What are the [payment](gacpay) details for registering for GAC 2023?
+      - What are the different ways to [pay](gacpay) for GAC 2023?
+      - What are the different ways to make a donation as [payment](gacpay) for GAC 2023?
+      - How can I [pay](gacpay) for GAC 2023?
+      - Could you please share the bank details for [making a payment](gacpay) for GAC 2023?
+      - Provide me with the bank details for [making a payment](gacpay) for GAC 2023.
+      - How can I make a [payment](gacpay) for GAC 2023?
+      - Tell me about the various [payment](gacpay) options for GAC 2023 registration.
+      - What are the accepted methods of [payment](gacpay) for GAC 2023 registration?
+      - Provide information regarding the [payment](gacpay) process for GAC 2023.
+      - I'd like to know how to [make a payment](gacpay) for GAC 2023. Can you guide me?
+      - Could you explain the [details](gacpay) of payment for GAC 2023?
+      - Please give me an overview of the [payment](gacpay) procedures for GAC 2023.
+      - How much do I need to [pay](gacpay) for attending GAC 2023?
+      - Share information regarding the [payment](gacpay) deadlines for GAC 2023.
+      - Tell me about any discounts or promo codes available for [registration](gacpay) for GAC 2023.
+      - What is the [refund](gacpay) policy for [payments](gacpay) made for GAC 2023?
+      - Could you explain the steps required to complete the [payment](gacpay) for GAC 2023?
+      - How do I [make a payment](gacpay) for additional services or workshops at GAC 2023?
+      - What is the currency used for [payments](gacpay) related to GAC 2023?
+      - I'd like to know if [installment options](gacpay) are available for GAC 2023.
+      - Tell me about the [payment](gacpay) portal or platform for GAC 2023.
+      - Are there any group discounts for those [registering](gacpay) multiple attendees for GAC 2023?
+      - Can you provide information about scholarship opportunities or financial aid for [payment](gacpay) at GAC 2023?
+      - What is the [registration](gacpay) fee for students attending GAC 2023?
+      - Please explain the process for confirming my [payment](gacpay) for GAC 2023.
+      - Tell me about any additional costs associated with [payment](gacpay) for attending GAC 2023.
+      - I'd like to learn more about [payment](gacpay) confirmation and receipts for GAC 2023.
+      - What is the policy for late or on-site [payments](gacpay) for GAC 2023?
+      - Can you provide details for the [payment](gacpay) support contact for GAC 2023?
+      - Please explain the process for canceling or modifying my [payment](gacpay) for GAC 2023.
+
+  #isme gacspon krke daal de
+  - intent: gac_2023_sponsorship
+    examples: |
+      - What is the different [sponsorship amounts](gacspan) provided?
+      - Is there any detail of [sponsorship amount](gacspan)?
+      - Give me the detail of [sponsorship amount](gacspan)?
+      - What is the minimum [sponsorship amount](gacspan) available?
+      - What are the details of the less than [sponsorship amount](gacspan)?
+      - How can I become a [sponsor for GAC 2023](gacspan)?
+      - Tell me about the [sponsorship opportunities](gacspan) available for GAC 2023.
+      - What are the different [sponsorship packages](gacspan) for GAC 2023?
+      - Provide information on [sponsorship levels](gacspan) and benefits for GAC 2023.
+      - I'm interested in [sponsoring GAC 2023](gacspan). Can you guide me through the process?
+      - Explain the [sponsorship details](gacspan) and requirements for GAC 2023.
+      - Give me an overview of the [sponsorship packages](gacspan) and their costs for GAC 2023.
+      - What promotional opportunities are available for [sponsors](gacspan) at GAC 2023?
+      - How can I inquire about [custom sponsorship options](gacspan) for GAC 2023?
+      - Share information on the [sponsorship application](gacspan) deadline for GAC 2023.
+      - Can you provide a list of previous [sponsors](gacspan) for GAC  events?
+      - What is the process for submitting a [sponsorship proposal](gacspan) for GAC 2023?
+      - Explain the [benefits](gacspan) and [perks](gacspan) of being a [sponsor](gacspan) at GAC 2023.
+      - Are there specific industries or sectors that GAC  is looking for [sponsors](gacspan) from?
+      - I'd like to know if there are [exclusive sponsorship opportunities](gacspan) for certain events at GAC 2023.
+      - What are the [sponsorship payment](gacspan) and [invoicing procedures](gacspan) for GAC 2023?
+      - Can you provide information on [sponsorship contacts](gacspan) or representatives for GAC 2023?
+      - What is the [timeline](gacspan) for [sponsorship confirmation](gacspan) for GAC 2023?
+      - Are there any [partnership](gacspan) or [co-sponsorship opportunities](gacspan) for GAC 2023?
+      - Tell me about any [special perks](gacspan) or [recognition](gacspan) for [long-term sponsors](gacspan) of GAC .
+      - What is the process for signing a [sponsorship agreement](gacspan) for GAC 2023?
+      - How can I request a [sponsorship prospectus](gacspan) for GAC 2023?
+      - Explain the policy for [sponsorship exclusivity](gacspan) in specific categories at GAC 2023.
+      - Tell me about the [opportunities for sponsors](gacspan) to host workshops or sessions at GAC 2023.
+      - Can you provide examples of [successful sponsorships](gacspan) from past [GAC conferences](gacspan)?
+      - I'd like to learn more about [sponsorship marketing](gacspan) and promotion at GAC 2023.
+      - What is the procedure for [sponsor acknowledgment](gacspan) and [recognition](gacspan) at GAC 2023.
+      - Provide details on the [sponsorship support](gacspan) and [assistance](gacspan) available for [sponsors](gacspan) at GAC 2023.
+      - Explain the process for canceling or modifying a [sponsorship commitment](gacspan) for GAC 2023.
+
+  #isme gaccorcom
+  #ye waala dekhte h
+
+  - intent: mnnit_location
+    examples: |
+      - Where is MNNIT located?
+      - Can you tell me the address of MNNIT?
+      - What is the location of Motilal Nehru National Institute of Technology?
+      - Where can I find MNNIT?
+      - Please provide the campus address for MNNIT.
+      - What's the physical address of MNNIT?
+      - Tell me the geographical location of MNNIT.
+      - Where exactly is Motilal Nehru National Institute of Technology situated?
+      - I'm looking for information about MNNIT's location.
+      - Can you give me directions to MNNIT?
+      - What's the street address for MNNIT?
+      - Where is the MNNIT campus situated?
+      - Tell me about MNNIT's whereabouts.
+      - How do I get to MNNIT?
+      - Can you guide me to the MNNIT campus?
+      - What's the physical location of MNNIT?
+      - Where in India is MNNIT located?
+      - What's the full address of MNNIT?
+      - I need to know MNNIT's geographic coordinates.
+      - Tell me the precise location of MNNIT in Allahabad.
+      - Where can I visit MNNIT?
+      - What is the street name for MNNIT?
+      - Give me directions to MNNIT in Allahabad.
+      - What's the official address for MNNIT?
+      - Where can I physically go to MNNIT?
+      - Can you provide me with the location of MNNIT in Uttar Pradesh?
+      - I'm searching for the campus location of MNNIT.
+      - Tell me the specific address of MNNIT in Allahabad.
+      - How can I reach MNNIT in Allahabad?
+      - Please share the geographical details of MNNIT's campus.
+      - Where is the institute Motilal Nehru National Institute of Technology?
+      - I want to know the physical site of MNNIT in Allahabad.
+
+  - intent: mnnit_full_form
+    examples: |
+      - What does MNNIT stand for?
+      - Can you tell me the full form of MNNIT?
+      - What is the meaning of MNNIT?
+      - Please explain the acronym MNNIT.
+      - What does the abbreviation MNNIT represent?
+      - I want to know the full name of MNNIT.
+      - What is the expanded form of MNNIT?
+      - Can you provide the complete name of MNNIT?
+      - Tell me the full form of MNNIT.
+      - What does MNNIT's initials mean?
+      - Give me the full name of MNNIT.
+      - Explain the full form of MNNIT.
+      - Tell me the complete expansion of MNNIT.
+      - What is the full name of MNNIT?
+      - I'm curious about the meaning of MNNIT.
+      - Share the extended form of MNNIT.
+      - Can you provide the full title of MNNIT?
+      - What does the acronym MNNIT denote?
+      - Please elaborate on MNNIT's full form.
+      - I'd like to know the complete name of MNNIT.
+      - What's the full name of MNNIT?
+      - Share the expanded form of MNNIT's initials.
+      - Can you explain MNNIT's abbreviation in full?
+      - I'm looking for the expanded form of MNNIT.
+      - What is the full name of the institute with the acronym MNNIT?
+
+  - intent: girls_hostel_count
+    examples: |
+      - How many girls' hostels are there at MNNIT?
+      - Can you tell me the count of girls' hostels in MNNIT?
+      - How many accommodations are available for female students in MNNIT?
+      - Please provide information about the girls' hostels at MNNIT.
+      - Tell me the number of girls' hostels on the campus.
+      - What's the quantity of girls' hostels in MNNIT?
+      - I'd like to know the total count of girls' hostels at MNNIT.
+      - Are there multiple hostels for female students in MNNIT?
+      - How many dormitories are there for girls in MNNIT?
+      - Give me details about the girls' hostels in MNNIT.
+      - Can you provide me with the number of accommodations for female students in MNNIT?
+      - What's the girls' hostel count at MNNIT?
+      - I'm interested in knowing the total girls' hostels in MNNIT.
+      - Share information about the housing options for female students at MNNIT.
+      - How many places for girls to stay are there in MNNIT?
+      - What is the total count of girls' hostels in MNNIT?
+      - Can you provide the girls' hostel quantity at MNNIT?
+      - What is the number of housing facilities for female students in MNNIT?
+      - Please share details about the girls' hostels at MNNIT.
+      - Tell me the total girls' hostel count in MNNIT.
+      - How many accommodations for female students can be found in MNNIT?
+
+  - intent: girls_hostel_names
+    examples: |
+      - What are the names of the girls' hostels at MNNIT?
+      - Can you provide me with the names of the girls' hostels in MNNIT?
+      - Tell me the names of the accommodations for female students in MNNIT.
+      - Please share the names of the girls' hostels at MNNIT.
+      - What are the specific names of the girls' hostels on the campus?
+      - Can you list the names of girls' hostels in MNNIT?
+      - I'd like to know the names of the girls' hostels at MNNIT.
+      - Are there multiple hostels for female students, and can you share their names in MNNIT?
+      - Tell me the names of the dormitories for girls in MNNIT.
+      - Give me the names of the girls' hostels in MNNIT.
+      - Can you provide me with the specific names of accommodations for female students in MNNIT?
+      - What are the names of the girls' hostels in MNNIT?
+      - I'm interested in knowing the names of the girls' hostels at MNNIT.
+      - Share information about the housing options for female students, including their names at MNNIT.
+      - What are the names of the places for girls to stay in MNNIT?
+      - Tell me the specific names of the girls' hostels in MNNIT.
+      - Can you list the names of accommodations for female students at MNNIT?
+      - What are the names of the girls' hostels in MNNIT?
+      - I'd like to know the names of the girls' hostels at MNNIT.
+      - Share information about the housing options for female students, including their names at MNNIT.
+      - What are the names of the places for girls to stay in MNNIT?
+
+  - intent: mnnit_clubs
+    examples: |
+      - Tell me about the clubs at MNNIT.
+      - Can you list the clubs available at MNNIT?
+      - What are the clubs in MNNIT?
+      - Please provide information about the clubs at MNNIT.
+      - List the student clubs in MNNIT.
+      - I'd like to know about the extracurricular clubs at MNNIT.
+      - Are there any clubs or societies at MNNIT?
+      - Tell me about the student organizations and clubs in MNNIT.
+      - Can you share information on the clubs and societies in MNNIT?
+      - What are the various clubs that students can join at MNNIT?
+      - I'm interested in learning about the clubs at MNNIT.
+      - Give me details about the student clubs and organizations in MNNIT.
+      - Can you tell me which clubs exist at MNNIT?
+      - What extracurricular clubs are available for students at MNNIT?
+      - Share information about the student clubs and societies in MNNIT.
+      - List the names of clubs in MNNIT.
+      - Tell me about the student organizations and clubs available for students at MNNIT.
+      - Can you provide a list of clubs and societies in MNNIT?
+      - I want to know about the clubs that students can participate in at MNNIT.
+      - Tell me the names of clubs and organizations in MNNIT.
+
+  - intent: what_is_academic_building
+    examples: |
+      - What is the Academic Building?
+      - Tell me about the Academic Building.
+      - Explain the purpose of the Academic Building.
+      - What happens in the Academic Building at MNNIT?
+      - Can you provide information about the Academic Building?
+      - Describe the Academic Building to me.
+      - I want to learn more about the Academic Building.
+      - Give me details on the Academic Building.
+      - Please tell me what the Academic Building is.
+      - What's the significance of the Academic Building?
+      - Academic Building at MNNIT, what's that?
+      - I'm curious about the Academic Building.
+      - Share some insights on the Academic Building.
+      - What goes on inside the Academic Building?
+      - Could you brief me on the Academic Building?
+      - I need information on the Academic Building.
+      - Tell me everything you know about the Academic Building.
+      - Let's talk about the Academic Building.
+      - Give me an overview of the Academic Building.
+      - What's special about the Academic Building?
+      - I'm interested in the Academic Building, tell me more.
+      - Academic Building - tell me its purpose.
+      - What's the Academic Building used for?
+      - Academic Building: details, please.
+      - I'd like to know about the Academic Building at MNNIT.
+      - Share some insights on MNNIT's Academic Building.
+
+  - intent: what_is_administrative_building
+    examples: |
+      - What is the Administrative Building at MNNIT?
+      - Tell me about the Administrative Building.
+      - Explain the purpose of the Administrative Building.
+      - Where is the Administrative Building located?
+      - Can you provide information about the Administrative Building?
+      - Describe the Administrative Building to me.
+      - I want to learn more about the Administrative Building.
+      - Give me details on the Administrative Building.
+      - Please tell me what the Administrative Building is.
+      - What's the significance of the Administrative Building?
+      - Administrative Building at MNNIT, what's that?
+      - I'm curious about the Administrative Building.
+      - Share some insights on the Administrative Building.
+      - What goes on inside the Administrative Building?
+      - Could you brief me on the Administrative Building?
+      - I need information on the Administrative Building.
+      - Tell me everything you know about the Administrative Building.
+      - Let's talk about the Administrative Building.
+      - Give me an overview of the Administrative Building.
+      - What's special about the Administrative Building?
+      - I'm interested in the Administrative Building, tell me more.
+      - Administrative Building - tell me its purpose.
+      - What's the Administrative Building used for?
+      - Administrative Building: details, please.
+      - I'd like to know about the Administrative Building at MNNIT.
+      - Share some insights on MNNIT's Administrative Building.
+
+  - intent: girls_gym_mnnit
+    examples: |
+      - Where is the girls' gym at MNNIT located?
+      - Tell me about the girls' gym in MNNIT.
+      - Can you provide information about the gym for girls at MNNIT?
+      - Describe the facilities at the girls' gym.
+      - What are the operating hours of the girls' gym in MNNIT?
+      - I want to learn more about the girls' gym at MNNIT.
+      - Give me details on the girls' gym at MNNIT.
+      - What are the special features of the girls' gym?
+      - Girls' gym at MNNIT, tell me more.
+      - What's available for female students at the gym?
+      - Share some insights on the girls' gym.
+      - Can you explain the services offered at the girls' gym?
+      - Is there a specific girls' gym at MNNIT?
+      - I'm curious about the girls' gym. Tell me more.
+      - Girls' gym - what's it like?
+      - Tell me about the facilities at the girls' gym.
+      - Girls' gym in MNNIT: details, please.
+      - I'd like to know about the girls' gym at MNNIT.
+      - Share some insights on MNNIT's girls' gym.
+      - How can female students access the gym facilities?
+      - Is the girls' gym well-equipped for workouts?
+      - Tell me about the amenities in the girls' gym.
+      - What are the rules for using the girls' gym?
+      - Are there any restrictions to enter the girls' gym?
+      - What are the membership requirements for the girls' gym?
+
+  - intent: canteens_girls_hostel_mnnit
+    examples: |
+      - Are there any canteens for the girls' hostel at MNNIT?
+      - Tell me about the dining options near the girls' hostel in MNNIT.
+      - Can you provide information about the canteens for female students in MNNIT?
+      - Where can girls from the hostel grab a meal?
+      - I want to learn more about the dining facilities for girls in MNNIT.
+      - Give me details on the canteens near the girls' hostel.
+      - What are the dining choices for female students in MNNIT?
+      - Girls' hostel canteens at MNNIT, tell me more.
+      - What's available for female students in terms of dining options?
+      - Share some insights on the canteens for girls in MNNIT.
+      - Can you explain the dining services offered to female students?
+      - Is there a specific canteen for girls near the hostel at MNNIT?
+      - I'm curious about the dining options for girls. Tell me more.
+      - Dining options  what's available for female students?
+      - Tell me about the meal facilities near the girls' hostel.
+      - Canteens in MNNIT for female students: details, please.
+      - I'd like to know about the dining options for girls in MNNIT.
+      - Share some insights on MNNIT's canteens for female students.
+      - How can female students access the dining facilities near the girls' hostel?
+      - Are there any restrictions to access the canteens for girls?
+      - What are the menu options at the girls' hostel canteens?
+      - What are the operating hours for the canteens near the girls' hostel?
+      - Are there any specific dietary considerations for female students in the canteens?
+      - Can you provide information about the quality of food in the canteens for girls?
+      - What's the pricing for the meals in the girls' hostel canteens?
+  - intent: boys_hostel_canteens
+    examples: |
+      - Are there any canteens for the boys' hostel at MNNIT?
+      - Tell me about the dining options near the boys' hostel in MNNIT.
+      - Can you provide information about the canteens for male students in MNNIT?
+      - Where can boys from the hostel grab a meal?
+      - I want to learn more about the dining facilities for boys in MNNIT.
+      - Give me details on the canteens near the boys' hostel.
+      - What are the dining choices for male students in MNNIT?
+      - Boys' hostel canteens at MNNIT, tell me more.
+      - What's available for male students in terms of dining options?
+      - Share some insights on the canteens for boys in MNNIT.
+      - Can you explain the dining services offered to male students?
+      - Is there a specific canteen for boys near the hostel at MNNIT?
+      - I'm curious about the dining options for boys. Tell me more.
+      - Dining options, what's available for male students?
+      - Tell me about the meal facilities near the boys' hostel.
+      - Canteens in MNNIT for male students: details, please.
+      - I'd like to know about the dining options for boys in MNNIT.
+      - Share some insights on MNNIT's canteens for male students.
+      - How can male students access the dining facilities near the boys' hostel?
+      - Are there any restrictions to access the canteens for boys?
+      - What are the menu options at the boys' hostel canteens?
+      - What are the operating hours for the canteens near the boys' hostel?
+      - Are there any specific dietary considerations for male students in the canteens?
+      - Can you provide information about the quality of food in the canteens for boys?
+      - What's the pricing for the meals in the boys' hostel canteens?
+
+  - intent: seminar_hall_mnnit
+    examples: |
+      - Tell me about the Seminar Hall in MNNIT.
+      - Can you provide information about the seminar hall at MNNIT?
+      - What's the purpose of the Seminar Hall?
+      - Where is the Seminar Hall located at MNNIT?
+      - Give me details on the seminar facilities in MNNIT.
+      - Explain the features of the Seminar Hall at MNNIT.
+      - What events take place in the Seminar Hall?
+      - I want to learn more about the Seminar Hall.
+      - Share insights on the Seminar Hall.
+      - Is there a specific seminar hall at MNNIT?
+      - Tell me everything you know about the Seminar Hall.
+      - Let's talk about the Seminar Hall.
+      - Can you describe the amenities in the Seminar Hall?
+      - How can I access the Seminar Hall?
+      - Are there any restrictions to enter the Seminar Hall?
+      - What are the special features of the Seminar Hall?
+      - Seminar Hall at MNNIT, what's that?
+      - I'm curious about the Seminar Hall.
+      - Share some insights on MNNIT's Seminar Hall.
+      - What goes on inside the Seminar Hall at MNNIT?
+      - Could you brief me on the Seminar Hall?
+      - I need information on the Seminar Hall.
+      - Where can I find the Seminar Hall at MNNIT?
+      - What are the events or functions organized in the Seminar Hall?
+      - What is the seating capacity of the Seminar Hall at MNNIT?
+      - Is the Seminar Hall available for student events?
+
+  - intent: mp_hall_mnnit
+    examples: |
+      - Tell me about MP Hall at MNNIT.
+      - Can you provide information about the MP Hall in MNNIT?
+      - What's the purpose of MP Hall?
+      - Where is MP Hall located at MNNIT?
+      - Give me details on the facilities in MP Hall.
+      - Explain the features of MP Hall at MNNIT.
+      - What events take place in MP Hall?
+      - I want to learn more about MP Hall.
+      - Share insights on MP Hall.
+      - Is there a specific MP Hall at MNNIT?
+      - Tell me everything you know about MP Hall.
+      - Let's talk about MP Hall.
+      - Can you describe the amenities in MP Hall?
+      - How can I access MP Hall?
+      - Are there any restrictions to enter MP Hall?
+      - What are the special features of MP Hall?
+      - MP Hall at MNNIT, what's that?
+      - I'm curious about MP Hall.
+      - Share some insights on MNNIT's MP Hall.
+      - What goes on inside MP Hall at MNNIT?
+      - Could you brief me on MP Hall?
+      - I need information on MP Hall.
+      - Where can I find MP Hall at MNNIT?
+      - What are the events or functions organized in MP Hall?
+      - Is MP Hall available for student events?
+      - Tell me about the history of MP Hall at MNNIT.
+
+  - intent: dean_office_mnnit
+    examples: |
+      - Tell me about the Dean's Office at MNNIT.
+      - Can you provide information about the Dean's Office in MNNIT?
+      - Where is the Dean's Office located at MNNIT?
+      - Give me details on the functions of the Dean's Office.
+      - Explain the roles of the Dean's Office at MNNIT.
+      - What services are provided by the Dean's Office?
+      - I want to learn more about the Dean's Office.
+      - Share insights on the Dean's Office.
+      - Is there a specific Dean's Office building at MNNIT?
+      - Tell me everything you know about the Dean's Office.
+      - Let's talk about the Dean's Office.
+      - Can you describe the organizational structure of the Dean's Office?
+      - How can I contact the Dean's Office?
+      - Are there any specific rules or procedures for the Dean's Office?
+      - What are the special features of the Dean's Office?
+      - Dean's Office at MNNIT, what's its role?
+      - I'm curious about the Dean's Office.
+      - Share some insights on MNNIT's Dean's Office.
+      - What goes on inside the Dean's Office at MNNIT?
+      - Could you brief me on the Dean's Office?
+      - I need information on the Dean's Office.
+      - Where can I find the Dean's Office at MNNIT?
+      - What is the Dean's Office responsible for at MNNIT?
+
+  - intent: Boys_hostel
+    examples: |
+      - How many boys' hostels are there at MNNIT?
+      - Can you tell me the count of boys' hostels in MNNIT?
+      - How many accommodations are available for male students in MNNIT?
+      - Please provide information about the boys' hostels at MNNIT.
+      - Tell me the number of boys' hostels on the campus.
+      - What's the quantity of boys' hostels in MNNIT?
+      - I'd like to know the total count of boys' hostels at MNNIT.
+      - Are there multiple hostels for male students in MNNIT?
+      - How many dormitories are there for boys in MNNIT?
+      - Give me details about the boys' hostels in MNNIT.
+      - Can you provide me with the number of accommodations for male students in MNNIT?
+      - What's the boys' hostel count at MNNIT?
+      - I'm interested in knowing the total boys' hostels in MNNIT.
+      - Share information about the housing options for male students at MNNIT.
+      - How many places for boys to stay are there in MNNIT?
+      - What is the total count of boys' hostels in MNNIT?
+      - Can you provide the boys' hostel quantity at MNNIT?
+      - What is the number of housing facilities for male students in MNNIT?
+      - Please share details about the boys' hostels at MNNIT.
+      - Tell me the total boys' hostel count in MNNIT.
+      - How many accommodations for male students can be found in MNNIT?
+      - What are the names of the boys' hostels at MNNIT?
+      - Can you provide me with the names of the boys' hostels in MNNIT?
+      - Tell me the names of the accommodations for male students in MNNIT.
+      - Please share the names of the boys' hostels at MNNIT.
+      - What are the specific names of the boys' hostels on the campus?
+      - Can you list the names of boys' hostels in MNNIT?
+      - I'd like to know the names of the boys' hostels at MNNIT.
+      - Are there multiple hostels for male students, and can you share their names in MNNIT?
+      - Tell me the names of the dormitories for boys in MNNIT.
+      - Give me the names of the boys' hostels in MNNIT.
+      - Can you provide me with the specific names of accommodations for male students in MNNIT?
+      - What are the names of the boys' hostels in MNNIT?
+      - I'm interested in knowing the names of the boys' hostels at MNNIT.
+      - Share information about the housing options for male students, including their names at MNNIT.
+      - What are the names of the places for boys to stay in MNNIT?
+      - Tell me the specific names of the boys' hostels in MNNIT.
+      - Can you list the names of accommodations for male students at MNNIT?
+      - What are the names of the boys' hostels in MNNIT?
+      - I'd like to know the names of the boys' hostels at MNNIT.
+      - Share information about the housing options for male students, including their names at MNNIT.
+      - What are the names of the places for boys to stay in MNNIT?
+  - intent: library_mnnit
+    examples: |
+      - Tell me about the library at MNNIT.
+      - Can you provide information about the MNNIT library?
+      - Where is the library located at MNNIT?
+      - Give me details on the services offered by the library.
+      - Explain the resources available at the library.
+      - What's the operating hours of the library?
+      - I want to learn more about the library at MNNIT.
+      - Share insights on the library.
+      - Is there a specific building for the library at MNNIT?
+      - Tell me everything you know about the library.
+      - Let's talk about the library.
+      - Can you describe the amenities in the library?
+      - How can I access the library?
+      - Are there any specific rules or procedures for using the library?
+      - What are the special features of the library?
+      - MNNIT library, what's it like?
+      - I'm curious about the library.
+      - Share some insights on MNNIT's library.
+      - What goes on inside the library at MNNIT?
+      - Could you brief me on the library's services?
+      - I need information on the library.
+      - Where can I find the library at MNNIT?
+      - What resources are available for research in the library?
+      - Is the library open to the public?
+
+  - intent: warden_office_mnnit
+    examples: |
+      - Tell me about the Warden's Office at MNNIT.
+      - Can you provide information about the Warden's Office in MNNIT?
+      - Where is the Warden's Office located at MNNIT?
+      - Give me details on the functions of the Warden's Office.
+      - Explain the roles of the Warden's Office at MNNIT.
+      - What services are provided by the Warden's Office?
+      - I want to learn more about the Warden's Office.
+      - Share insights on the Warden's Office.
+      - Is there a specific building for the Warden's Office at MNNIT?
+      - Tell me everything you know about the Warden's Office.
+      - Let's talk about the Warden's Office.
+      - Can you describe the organizational structure of the Warden's Office?
+      - How can I contact the Warden's Office?
+      - Are there any specific rules or procedures for the Warden's Office?
+      - What are the special features of the Warden's Office?
+      - Warden's Office at MNNIT, what's its role?
+      - I'm curious about the Warden's Office.
+      - Share some insights on MNNIT's Warden's Office.
+      - What goes on inside the Warden's Office at MNNIT?
+      - Could you brief me on the Warden's Office?
+      - I need information on the Warden's Office.
+      - Where can I find the Warden's Office at MNNIT?
+      - What responsibilities do the Wardens have at MNNIT?
+  - intent: projects
+    examples: |
+      - What are the current projects of Robotics Club?
+      - What are some featured project of Robotics Club?
+      - Projects of Robotics Club
+      - outstanding projects of Robotics Club
+      - best project of Robotics Club
+      - excellent project of Robotics Club MNNIT
+      - Robotics Club Project MNNIT
+      - Name some projects of Robotics Club 
+      - Tell me something about projects of Robotics Club
+
+  - intent: ask_self_balancing_bot
+    examples: |
+      - Self Balancing Bot
+      - selfbalancingbot
+      - tell me about self balancing bot
+      - Tell me about Self Balancing Bot
+      - Brief introduction about self balancing bot
+      - Can you give me a brief overview of  the self balancing bot project?
+      - I'm new to self balancing bot. Can you explain what they are?
+      - Tell me the basics of self balancing bot
+      - tell me something about self balancing bot
+      - self balancing bot project
+      - I'm interested in learning about the fundamentals of self balancing bot.
+      - tell me something about self balancing bot project
+      - What do I need to know about self-balancing bots as a beginner?
+      - an introduction to self-balancing robot
+      - Explain the concept of self-balancing bots in simple terms
+      - I want to understand the fundamental principles of self-balancing bots.
+      - What are the key concepts behind self-balancing bots?
+      - Tell me the basics of how self-balancing bots work
+      - foundational aspects of self-balancing bots.
+      - give me an overview of self-balancing bot technology?
+      - What are the fundamental principles of balance in self-balancing bots?
+      - How do self-balancing bots maintain stability while moving?
+      - Can you explain the basic mechanics of self-balancing robots?
+      - I'm looking for a beginner-friendly introduction to self-balancing bots.
+      - What are the main components of a self balancing bot?
+      - Can you list the key parts of a self balancing bot project?
+      - Tell me about the main elements that make up a self balancing bot.
+
+  - intent: humanoid_info
+    examples: |
+      - Tell me about the humanoid robot project .
+      - Purpose of the humanoid robot project?
+      - Features of the humanoid robot project?|
+      - What components are used in the humanoid robot project?
+      - Give me the details about the components of the humanoid robot project ?
+      - Tell me something about humanoid robot project
+      - About humanoid robot project .
+      - How is the humanoid robot project view .
+      - What are the dimensions of the humanoid robot project?
+      - What is the humanoid robot project?
+      - Please tell me more about the humanoid robot project .
+  - intent: SpiderBot_info
+    examples: |
+      - Spider bot project
+      - Project about for the spider bot project?
+      - Information about the project related to the spider bot project .
+      - More about the project involving the spider bot project.
+      - About the project that focuses on the spider bot project.
+      - Details about the project related to the spider bot project?
+      - What do the spider bot project do ?
+      - Please , Share information about the spider bot project.
+      - About the project that utilizes the spider bot project .
+      - Project details for spider bot project.
+      - Project information for the spider bot project?
+      - Spider bot project
+      - Project about for the spider bot project?
+      - Information about the project related to the spider bot project .
+      - More about the project involving the spider bot project.
+      - About the project that focuses on the spider bot project.
+      - Details about the project related to the spider bot project?
+      - What do the spider bot project do ?
+      - Please , Share information about the spider bot project.
+      - About the project that utilizes the spider bot project .
+      - Project details for spider bot project.
+      - Project information for the spider bot project?
+  - intent: humanoid_info
+    examples: |
+      - Tell me about the humanoid robot project .
+      - Purpose of the humanoid robot project?
+      - Features of the humanoid robot project?|
+      - What components are used in the humanoid robot project?
+      - Give me the details about the components of the humanoid robot project ?
+      - Tell me something about humanoid robot project
+      - About humanoid robot project .
+      - How is the humanoid robot project view .
+      - What are the dimensions of the humanoid robot project?
+      - What is the humanoid robot project?
+      - Please tell me more about the humanoid robot project .
+  - intent: rlsupermario_info
+    examples: |
+      - tell me about rl super mario project project?
+      - rl super mario project?
+      - what are the features of rl super mario project?
+      - what is the use of rl super mario project?
+      - tell me something about rl super mario project?
+      - what is the purpose of this rl super mario project?
+      - About the project that focuses on the rl super mario project.
+      - Details about the project related to the rl super mario project?
+      - What do the rl super mario project do ?
+      - What is the rl super mario robot project?
+      - Please tell me more about the rl super mario robot project .
+
+  - intent: chatbot_info
+    examples: |
+      - tell me about chatbot project project?
+      - chatbot project?
+      - what are the features of chatbot project?
+      - what is the use of chatbot project?
+      - tell me something about chatbot project?
+      - what is the purpose of this chatbot project?
+      - About the project that focuses on the chatbot project.
+      - Details about the project related to the chatbot project?
+      - What do the chatbot project do ?
+      - What is the chatbot robot project?
+      - Please tell me more about the chatbot robot project .
+  - intent: linefollower_info
+    examples: |
+      - what is line follower bot
+      - tell me about line follower bot
+      - Purpose of the  line follower project?
+      - Features of the line follower project?
+      - about line follower bot?
+      - What is the main objective of the line follower bot project?
+      - Could you describe the technology or components used in your line follower bot?
+      - How does the line follower bot detect and follow lines or paths?
+      - What inspired you to work on a line follower robot project?
+      - What challenges did you encounter while building the line follower bot?
+      - What programming languages or software did you use for the project?
+      - How do you control or interface with the line follower bot?
+      - Are there specific applications or industries where this project could be useful?
+      - What kind of sensors or detectors are employed to make the bot follow lines accurately?
+      - Can you share some details about the design and physical structure of the bot?
+      - What are the potential future improvements or enhancements you plan for the project?
+      - Were there any unique features or innovations you introduced in your line follower bot?
+      - How does the bot handle intersections or complex line patterns?
+      - What was the most rewarding aspect of completing this line follower bot project?
+      - Can you share any tips or advice for others interested in building their own line follower robots?
+  - intent: selfdrivingcart_info
+    examples: |
+      - what is self driving cart
+      - tell me about self driving cart
+      - Purpose of the  self driving cart project?
+      - Features of the self driving cart project?
+      - about self driving cart?
+      - What is the main objective of the self driving cart project?
+      - What inspired you to work on a self driving cart robot project?
+      - What challenges did you encounter while building the self driving cart?
+      - What was the most rewarding aspect of completing this self driving cart project?
+      - Can you share any tips or advice for others interested in building their own self driving cart robots?
+  # - intent:
+  - intent: basic_details_bbsee
+    examples: |
+      - Bumbe See?
+      - Bumble see?
+      - Bubmle See?
+      - What is the problem statement of Bumblesee event?
+      - Can you tell me the basic details of BumbleSee event?
+      - Can you tell me about the Bumblesee event?
+      - Describe the Bumblesee event
+      - What do you know about the Bumblesee event?
+      - BumbleSee event?
+      - Provide an overview of the BumbleSee event.
+      - Share some basic information about BumbleSee.
+      - I'd like to learn more about the BumbleSee event. What can you tell me?
+      - Tell me the key information about the BumbleSee competition.
+      - What's the BumbleSee event all about?
+      - What are the main details of the BumbleSee event?
+      - I'm interested in learning about the BumbleSee competition. Can you provide an overview?
+      - Could you give me an introduction to the BumbleSee event?
+      - Tell me the fundamental information about BumbleSee.
+      - BumbleSee event details?
+      - I'd like to know the basics of the BumbleSee event.
+      - Provide a summary of the BumbleSee competition.
+      - Share key facts about the BumbleSee event.
+      - What's the BumbleSee event like, in a nutshell?
+      - Can you give me a quick overview of the BumbleSee competition?
+      - Share some key information about the BumbleSee event.
+      - Can you provide a brief summary of the BumbleSee competition?
+      - Tell me about the BumbleSee event in a few words.
+      - What are the essential facts about the BumbleSee event?
+      - I'm looking for a quick overview of the BumbleSee competition.
+      - What's the scoop on the BumbleSee event?
+      - Summarize the BumbleSee event for me.
+      - Give me a snapshot of the BumbleSee competition.
+      - Provide a short description of the BumbleSee event.
+      - I'd like to get the basics of the BumbleSee competition.
+  - intent: user_asks_arena_desc
+    examples: |
+      - Can you describe the arena of the BumbleSee event for me?
+      - What would the arena of the BumbleSee event be like?
+      - Can you provide me with the arena descriptions?
+      - Can you show me a [map]{"entity":"boolMap","value":"True"} of the arena?
+      - Can you tell me what the arena will [look]{"entity":"boolMap","value":"True"} like?
+      - Can you give me a [map]{"entity":"boolMap","value":"True"} of the Arena?
+      - Show me a [map]{"entity":"boolMap", "value":"True"} of the arena
+      - Describe the BumbleSee event arena layout
+      - How is the arena designed for BumbleSee?
+      - Tell me about the setup of the BumbleSee event arena.
+      - What is the layout of the arena for the BumbleSee event?
+      - Can you provide details about the BumbleSee event arena?
+      - I'd like to know more about the physical setup of the BumbleSee arena.
+      - Give me a visual representation [map]{"entity":"boolMap","value":"True"} of the BumbleSee event arena.
+      - How is the arena structured for the BumbleSee competition?
+      - Explain the arena design for the BumbleSee event.
+      - Show me a [map]{"entity":"boolMap", "value":"True"} of the BumbleSee arena.
+      - Describe the BumbleSee event arena in detail.
+      - Provide information about the environment in which BumbleSee takes place.
+      - Can you show me a [map]{"entity":"boolMap","value":"True"} of the BumbleSee event arena layout?
+      - Explain the BumbleSee event's arena design using a [map]{"entity":"boolMap","value":"True"}.
+      - How is the BumbleSee event arena structured? Provide a visual [map]{"entity":"boolMap","value":"True"}.
+      - Describe the BumbleSee event's playing area. Can you include a [map]{"entity":"boolMap","value":"True"}?
+      - What can you tell me about the arena of the BumbleSee event using a [map]{"entity":"boolMap", "value":"True"}?
+      - Can you depict the BumbleSee arena with a [map]{"entity":"boolMap", "value":"True"}?
+      - Share details about the BumbleSee event arena and provide a [map]{"entity":"boolMap","value":"True"}.
+      - I'm interested in understanding the BumbleSee event's arena. Can you include a [map]{"entity":"boolMap", "value":"True"}?
+      - What's the physical layout of the BumbleSee arena, and can you show it with a [map]{"entity":"boolMap", "value":"True"}?
+  - intent: specific_details_about_BBSEE
+    examples: |
+      - Can you tell me about Rule [5]{"entity":"SpecificDetail_BBSE","value":"5"} of BumbleSee Event?
+      - What is Rule [4] {"entity:""SpecificDetail_BBSE","value":"4"} of bumblesee event?
+      - Tell me about Rule [6]{"entity":"SpecificDetail_BBSE","value":"6"} of the BumbleSee event
+      - What was rule [3]{"entity":"SpecificDetail_BBSE","value":"3"} of the BumbleSee event?
+      - Can you tell me about the [Gameplay]{"entity":"SpecificDetail_BBSE","value":"Game_Play"} of BumbleSee event?
+      - What is the [Gameplay]{"entity":"SpecificDetail_BBSE","value":"Game_Play"} of the BumbleSee event?
+      - Can you tell me about the [Marking Scheme]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} of the BumbleSee Event?
+      - What is the [Marking Scheme]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} of the BumbleSee Event?
+      - Describe the [marking]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} of the BumbleSee Event
+      - Can you tell me about the [Penalties]{"entity":"SpecificDetail_BBSE","value":"Penalty"} in the BumbleSee event?
+      - What are the [Penalties]{"entity":"SpecificDetail_BBSE","value":"Penalty"} that can be applied in the Bumblesee event?
+      - Tell me about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of the BumbleSee event
+      - Explain the [Gameplay]{"entity":"SpecificDetail_BBSE","value":"Game_Play"} of BumbleSee event
+      - Can you provide information on the [Marking Scheme]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} for the BumbleSee Event?
+      - What are the [Penalties]{"entity":"SpecificDetail_BBSE","value":"Penalty"} that can be applied in the BumbleSee event?
+      - Tell me about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of the BumbleSee event
+      - Explain the [Gameplay]{"entity":"SpecificDetail_BBSE","value":"Game_Play"} of BumbleSee event
+      - Can you provide information on the [Marking Scheme]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} for the BumbleSee Event?
+      - What are the [Penalties]{"entity":"SpecificDetail_BBSE","value":"Penalty"} that can be applied in the BumbleSee event?
+      - What are the event [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} for BumbleSee?
+      - Can you provide information about the [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} of the BumbleSee event?
+      - Tell me about the [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} for BumbleSee.
+      - What do the [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} of the BumbleSee event say?
+      - Explain the [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} for BumbleSee.
+      - Tell me about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for bumblesee
+      - Tell me about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - Can you provide information about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} of the BumbleSee event?
+      - What are the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for the BumbleSee event?
+      - Describe the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - Share details about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - I'd like to learn about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - What do the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee include?
+      - Can you explain the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee in detail?
+      - Tell me about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - Provide information on the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - What details can you share about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} of the BumbleSee event?
+      - Describe the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee in depth.
+      - I'm interested in learning more about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - Could you explain the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee?
+      - What components and quantities are included in the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee?
+      - Can you provide a comprehensive overview of the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee?
+      - Tell me about the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee.
+      - Provide information on the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee.
+      - What are the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for the BumbleSee event?
+      - Describe the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee in detail.
+      - I'd like to learn more about the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee.
+      - Could you explain the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee?
+      - What are the individual components included in the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee?
+      - Can you provide a comprehensive overview of the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee?
+  - intent: Allrules_BBSE
+    examples: |
+      - Tell me about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of BumbleSee event
+      - Can you list me the [rules of the Bumblesee event]{"entity":"SpecificDetail_BBSE","value":"AllRules"}?
+      - What are the [rules of the Bumblesee event]{"entity":"SpecificDetail_BBSE","value":"AllRules"}?
+      - What [rules]{"entity":"SpecificDetail_BBSE","value":"AllRules"} should I follow for BumbleSee event?
+      - Tell me about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of the BumbleSee event.
+      - Can you list me the [rules of the BumbleSee event]{"entity":"SpecificDetail_BBSE","value":"AllRules"}?
+      - What are the [rules of the BumbleSee event]{"entity":"SpecificDetail_BBSE","value":"AllRules"}?
+      - What [rules]{"entity":"SpecificDetail_BBSE","value":"AllRules"} should I follow for BumbleSee event?
+      - Provide details about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} for the BumbleSee event.
+      - Share the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} that apply to BumbleSee.
+      - Explain the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} for the BumbleSee event.
+      - List the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} for BumbleSee.
+      - I'd like to learn about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of BumbleSee.
+      - What are the key [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} for BumbleSee event?
+  - intent: Coordinator_BBSEE
+    examples: |
+      - Who are the event coordinators for BumbleSee?
+      - Can you provide me with the names of the BumbleSee event coordinators?
+      - Tell me about the individuals responsible for coordinating the BumbleSee event.
+      - I'd like to know the names of the coordinators of BumbleSee.
+      - Who is in charge of organizing the BumbleSee competition?
+      - Please share information about the BumbleSee event coordinators.
+      - What are the names of the people managing the BumbleSee event?
+      - I'm interested in knowing the event coordinators for BumbleSee.
+      - Provide details about the individuals responsible for overseeing the BumbleSee competition.
+      - Can you tell me about the event coordinators for BumbleSee and their roles?
+      - I'm curious about the people responsible for coordinating the BumbleSee event. Could you provide their names and roles?
+      - Who is on the organizing team for BumbleSee, and what are their roles?
+      - Please introduce me to the event coordinators of BumbleSee and provide information about their roles in the event.
+      - What is the team composition of the BumbleSee event coordinators, and what are their responsibilities?
+      - Share details about the individuals managing the BumbleSee competition, including their names and roles.
+      - I'd like to get to know the individuals who are in charge of organizing the BumbleSee event. What are their names and roles?
+      - Provide insights into the event coordinators for BumbleSee and elaborate on their respective roles.
+  - intent: Match_n_engage_PS
+    examples: |
+      - What is the problem statement for the Match and Engage event?
+      - Can you explain the main problem of the Match and Engage competition?
+      - I need information about the problem statement of the Match and Engage event.
+      - Please provide details about the problem participants need to solve in the Match and Engage competition.
+      - What challenges are participants expected to tackle in the Match and Engage event?
+      - What is the primary challenge in the Match and Engage event?
+      - Please provide insights into the main problem statement for Match and Engage.
+      - I'm looking for details on the problem participants need to solve in Match and Engage.
+      - What's the central issue that competitors will address in the Match and Engage competition?
+      - Describe the key problem statement of the Match and Engage event.
+      - What is the prblem statement for the Match and Engage event?
+      - Can you explain the main problm of the Match and Engage competition?
+      - I need information about the problm statement of the Match and Engage event.
+      - Please provide details about the problem participants need to solve in the Match and Engage competition.
+      - What challenges are participants expected to tackle in the Match and Engage event?
+      - What is the problem statement for the Match and Engage event?
+      - Can you explain the main problem of the Match and Engage competition?
+      - I need information about the problem statement of the Match and Engage event.
+      - Please provide details about the problem participants need to solve in the Match and Engage competition.
+      - What challenges are participants expected to tackle in the Match and Engage event?
+      - What is the primary challenge in the Match and Engage event?
+      - Please provide insights into the main problem statement for Match and Engage.
+      - I'm looking for details on the problem participants need to solve in Match and Engage.
+      - What's the central issue that competitors will address in the Match and Engage competition?
+      - Describe the key problem statement of the Match and Engage event.
+      - What is the prblem statement for the Match and Engage event?
+      - Can you explain the main problm of the Match and Engage competition?
+      - I need information about the problm statement of the Match and Engage event.
+      - Please provide details about the problem participants need to solve in the Match and Engage competition.
+      - What challenges are participants expected to tackle in the Match and Engage event?
+      - What's the problm statement for Match and Engage?
+      - Tell me about the problm statement in the Match and Engage competition.
+      - Details on the problm statement for Match and Engage, please.
+      - The main problm in Match and Engage, what is it?
+      - What's the challenge that needs to be addressed in the problm statement for Match and Engage?
+  - intent: Match_n_engage_Reg
+    examples: |
+      - Can you explain the regulations of the Match and Engage event?
+      - Tell me about the guidelines for participating in Match and Engage.
+      - What do I need to know about the event's regulations?
+      - Please provide information on the dos and don'ts of Match and Engage.
+      - Are there any specific regulations for the Match and Engage competition?
+      - How is the Match and Engage event regulated?
+      - What are the dos and don'ts for competitors in Match and Engage?
+      - Can you outline the event's regulations for me?
+      - Tell me about the Match and Engage event's guidelines.
+      - Explain the event's guidelines and standards for Match and Engage.
+      - Provide details about the event's protocols for Match and Engage.
+      - I'd like to know more about the event's terms and conditions for Match and Engage.
+      - How is the Match and Engage competition structured in terms of rules?
+      - Explain the event's policies and regulations for Match and Engage.
+      - What is the official event code of conduct for Match and Engage?
+      - Can you provide information on the event's rule enforcement for Match and Engage?
+      - Tell me about the event's regulatory framework for Match and Engage.
+      - Are there specific event mandates for participating in Match and Engage?
+      - Please elaborate on the dos and don'ts for participants in Match and Engage.
+      - Explain how the Match and Engage event is governed and regulated.
+      - What are the key guidelines for ensuring fair competition in Match and Engage?
+      - Describe the event's rule enforcement mechanisms for Match and Engage.
+      - Provide insights into the event's rulebook and compliance for Match and Engage.
+      - Can you clarify the event's procedures and standards for Match and Engage.
+      - Tell me about the official event's code of conduct and fairness principles for Match and Engage.
+      - Provide information on the event's protocols and dispute resolution process for Match and Engage.
+      - How do participants navigate the event's legal and regulatory framework in Match and Engage?
+      - Explain the key policies that govern the event's ethical conduct for Match and Engage.
+      - What are the procedures for ensuring compliance with the guidelines and regulations in Match and Engage?
+  - intent: Match_n_engage_Rules
+    examples: |
+      - Explain the main challenge in the Match and Engage competition using RASA.
+      - How do participants address the primary problem statement in RASA for Match and Engage?
+      - Provide insights into the guidelines for RASA in the Match and Engage event.
+      - Can you explain the dos and don'ts in RASA for the Match and Engage competition?
+      - What are the specific regulations for RASA in the Match and Engage event?
+      - Describe the event's RASA code of conduct and fairness principles.
+      - What are the procedures for ensuring compliance with the RASA guidelines and regulations?
+      - How do participants navigate the RASA legal and regulatory framework in Match and Engage?
+      - Explain the key RASA rules and policies governing the event's ethical conduct for Match and Engage.
+      - What are the event's RASA protocols and dispute resolution process for Match and Engage?
+      - Can you clarify the RASA procedures and standards for Match and Engage?
+      - Tell me about the official RASA rules and regulations for the Match and Engage event.
+      - What are the event's RASA expectations and policies for Match and Engage?
+      - Explain how participants are expected to follow the RASA guidelines and regulations in Match and Engage.
+      - What are the event's RASA guidelines and ethical standards for Match and Engage?
+      - Can you outline the event's RASA structure in terms of rules and guidelines for Match and Engage?
+      - Tell me about the event's RASA rule enforcement and penalties for Match and Engage.
+      - Describe the official RASA event's code of conduct and fairness principles for Match and Engage.
+      - Provide information on the event's RASA protocols and dispute resolution process for Match and Engage.
+  - intent: Match_n_engage_Coordis
+    examples: |
+      - Who are the coordinators of Match and engage event?
+      - Who is responsible for organizing the Match and Engage event?
+      - Tell me the names of the coordinators for Match and Engage.
+      - Who are the organizers of the Match and Engage competition?
+      - Can you provide information about the people in charge of Match and Engage?
+      - Who should I contact regarding Match and Engage event coordination?
+      - Give me details about the event coordinators for Match and Engage.
+      - I'd like to know the team behind organizing Match and Engage.
+      - Who is managing the Match and Engage event?
+      - Tell me about the team running the Match and Engage competition.
+      - Who's in charge of organizing Match and Engage?
+      - Provide me with details on the event coordinators for Match and Engage.
+      - I want to contact the coordinators of the Match and Engage event.
+      - Can you give me the names of the coordinators for Match and Engage?
+      - I need to reach out to the Match and Engage organizers.
+      - Who are the people behind Match and Engage's coordination?
+      - Share information about the individuals responsible for Match and Engage.
+      - Tell me about the team in charge of the Match and Engage competition.
+      - I'd like to connect with the coordinators of Match and Engage.
+      - Who should I contact regarding Match and Engage event coordination?
+      - Who are the event coordinators for Match and Engage?
+      - Can you provide details about the Match and Engage event's team?
+      - I'm interested in knowing the names of the coordinators for Match and Engage.
+      - Who's responsible for the organization of Match and Engage?
+      - Give me the contact details for Match and Engage's coordinators.
+      - Tell me about the Match and Engage event's management team.
+      - Who leads the coordination of Match and Engage?
+      - Share the names of the people managing Match and Engage.
+      - I need information about the event coordinators for Match and Engage.
+      - Who is overseeing the coordination of Match and Engage?
+      - Tell me about the individuals handling Match and Engage.
+      - Who can I contact for questions about the Match and Engage competition?
+      - I want to know who's organizing the Match and Engage event.
+      - Can you provide the names of the coordinators for Match and Engage?
+  - intent: Timing_Place
+    examples: |
+      - Where and when would the Bumblesee event be conducted?
+      - Where and when would the Match and Engage event be conducted?
+      - Where will BotRush event be held?
+      - When should I go to MP Hall for Bumblesee event?
+      - When and where is the Bumblesee event scheduled?
+      - Where and when can I find the Bumblesee event?
+      - Tell me about the venue and schedule for the Bumblesee event.
+      - What's the location and time for the Bumblesee event?
+      - Where and when is the Bumblesee competition taking place?
+      - I need information on the Bumblesee event's location and time.
+      - Where and when should I go for the Bumblesee event?
+      - Could you share the details of the Bumblesee event's venue and timing?
+      - When is the Bumblesee event happening, and where is it held?
+      - Please let me know the location and schedule of the Bumblesee event.
+      - Where can I attend the Bumblesee event, and when is it scheduled?
+      - What's the location and timing for the Bumblesee competition?
+      - Give me information about the Bumblesee event's venue and time.
+      - When and where would the Bumblesee event take place?
+      - What's the schedule and location for the Bumblesee competition?
+      - Could you tell me where and when the Bumblesee event is?
+      - Where and when is the Bumblesee event being conducted?
+      - I'm looking for details about the Bumblesee event's location and timing.
+      - When and where should I be for the Bumblesee event?
+      - Where is the Match and Engage event happening?
+      - When and where would the Match and Engage event be conducted?
+      - Where will BotRush event be held?
+      - When should I go to MP Hall for Bumblesee event?
+      - What's the venue for the Match and Engage competition?
+      - Tell me about the location and timing of the BotRush event.
+      - Where can I find the Match and Engage event?
+      - Provide information about the Bumblesee event's location and schedule.
+      - I need to know where the Match and Engage event is held.
+      - Where should I go for the BotRush event?
+      - Tell me the place for the Match and Engage competition.
+      - What's the event location for the BotRush event?
+      - Where is the Bumblesee event taking place?
+      - Share the venue details for the Match and Engage event.
+      - I want to know the location of the BotRush event.
+      - Where is the Match and Engage competition held?
+      - What's the site of the Bumblesee event?
+      - Where can I attend the Match and Engage event?
+      - Please provide the location and timing for the BotRush competition.
+      - I'm looking for the venue and schedule of the Match and Engage event
+      - When and where is the Meep Mop event happening?
+      - Where and when would the Decept of Home competition take place?
+      - Tell me the venue and schedule for the Meep Mop event.
+      - What's the location and time for the Decept of Home competition?
+      - Where and when is the Meep Mop competition being conducted?
+      - I need information on the Decept of Home event's location and time.
+      - When should I be at the venue for the Meep Mop event?
+      - Share details about the Decept of Home competition's location and schedule.
+      - Could you provide me with the location and timing of the Meep Mop event?
+      - Where can I attend the Decept of Home competition, and when is it scheduled?
+      - What's the venue and timing for the Meep Mop competition?
+      - Give me information about the Decept of Home event's venue and time.
+      - When and where would the Decept of Home competition take place?
+      - Could you tell me where and when the Meep Mop event is?
+      - Where and when is the Meep Mop event conducted?
+      - I'm looking for details about the Decept of Home event's location and timing.
+      - When and where should I be for the Meep Mop event?
+      - Where is the Match and Engage event happening?
+      - When and where would the Match and Engage event be conducted?
+      - Where will the BotRush event be held?
+      - When should I go to MP Hall for the Bumblesee event?
+      - What's the venue for the Meep Mop competition?
+      - Tell me about the location and timing of the Decept of Home event.
+      - Where can I find the Match and Engage event?
+      - Provide information about the venue and schedule of the BotRush event.
+      - I need to know where the Bumblesee event is held.
+      - Where should I go for the Meep Mop competition?
+      - Tell me the place for the Decept of Home event.
+      - What's the event location for the BotRush event?
+      - Where is the Bumblesee event taking place?
+      - Share the venue details for the Match and Engage event.
+      - I want to know the location of the Decept of Home event.
+      - Where is the Meep Mop competition held?
+      - What's the site of the BotRush event?
+      - Where can I attend the Decept of Home event?
+      - Please provide the location and timing for the Bumblesee competition.
+      - I'm looking for the venue and schedule of the Match and Engage event.
+      - When and where is the Meep Mop event happening?
+      - Where and when would the Home Automation competition take place?
+      - Tell me the venue and schedule for the Meep Mop event.
+      - What's the location and time for the Home Automation competition?
+      - Where and when is the Meep Mop competition being conducted?
+      - I need information on the Home Automation event's location and time.
+      - When should I be at the venue for the Meep Mop event?
+      - Share details about the Home Automation competition's location and schedule.
+      - Could you provide me with the location and timing of the Meep Mop event?
+      - Where can I attend the Home Automation competition, and when is it scheduled?
+      - What's the venue and timing for the Meep Mop competition?
+      - Give me information about the Home Automation event's venue and time.
+      - When and where would the Home Automation competition take place?
+      - What's the schedule and location for the Meep Mop event?
+      - Could you tell me where and when the Home Automation event is?
+      - Where and when is the Meep Mop event conducted?
+      - I'm looking for details about the Home Automation event's location and timing.
+      - When and where should I be for the Meep Mop event?
+  - intent: More_info
+    examples: |
+      - Can you give me more info about the event?
+      - Where can I find more info about the Bumblesee event?
+      - Can you provide me with more details about the event?
+      - I'd like to learn more about this event.
+      - Tell me about the event in more detail.
+      - What additional information do you have about the event?
+      - Share further details about the event.
+      - Could you give me more info on this event?
+      - I want to know additional details about the event.
+      - Provide me with in-depth information about the event.
+      - Please tell me more about the event.
+      - What else can you tell me about the event?
+      - Where can I find more information about the Bumblesee event?
+      - Tell me where I can get additional details about this event.
+      - How can I access more info about the event?
+      - Please guide me on where to find event information.
+      - Where should I look for more event details?
+      - What's the source for additional event info?
+      - How can I get more insights about this event?
+      - I need to know where to find event-related information.
+      - Where can I locate additional event details?
+      - Help me find more info about the Bumblesee event.
+      - Can you give me more information about Decept of Home?
+      - Tell me about the Decept of Home event.
+      - What's the Decept of Home competition all about?
+      - I'd like to know more about the Decept of Home event.
+      - Please provide details about Decept of Home.
+      - Explain the Decept of Home event to me.
+      - What's the main concept behind Decept of Home?
+      - Share additional info on Decept of Home.
+      - Can you provide insights into Decept of Home?
+      - I want to learn more about the Decept of Home event.
+      - Where can I find more details about Match and Engage?
+      - Tell me about the Match and Engage competition.
+      - What's the Match and Engage event all about?
+      - Provide information on the Match and Engage competition.
+      - Explain the purpose of Match and Engage.
+      - I'd like to know more about the Match and Engage event.
+      - Please share additional info on Match and Engage.
+      - What's the key concept behind Match and Engage?
+      - Can you give me insights into Match and Engage?
+      - I want to learn more about the Match and Engage competition.
+
+  - synonym: Match_n_engage_PS
+    examples: |
+      - Match and Engage
+      - Match & Engage
+      - Match n Engage
+      - Match & Engage
+      - Match & Engge
+      - Macth and Engage
+      - Match and Engaage
+      - Matcch and Engage
+      - Engage and Match
+      - Engage & Match
+      - Engage n Match
+      - Engage & Match
+      - Engage & Matcch
+  - lookup: SpecificDetail_BBSE
+    examples: |
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - Marking
+      - Gameplay
+  - intent: meeptimeline
+    examples: |
+      - what is the deadline of meemmop?
+      - What is the form realease date of meep mop?
+      - What is the submission date of meem mop form?
+      - what is the last date to register for meep mop?
+      - what is the date for project related guideline session?
+      - when will  project guidline session be kept?
+      - when will the project begin?
+      - when will the project start?
+      - start date for the project?
+      - what is the complete timeline for meepmop?
+      - what is the  time table for meep mop?
+      - what is the time map of meepmop?
+  - intent: meepmop_ins
+    examples: |
+      - what are the rules of meepmop?
+      - what are the instructions for meepmop?
+      - what wiil be the intructions to be followed for meepmop?
+      - need more details about operating Meep Mop.
+      - Provide step-by-step guidance for Meep Mop.
+      - Walk me through the process of using Meep Mop.
+      - Can you guide me on how to work with Meep Mop?
+      - Explain the functionality of Meep Mop.
+      - What are the key features of Meep Mop?
+      - Give me a brief overview of how Meep Mop functions.
+      - MeepMop, can you tell me what to do, please?
+      - How should I operate Meep Mop?
+      - Give me instructions for Meep Mop.
+      - What are the steps to use Meep Mop?
+      - I need guidance on how to work with Meep Mop.
+      - Could you provide me with directions for using Meep Mop?
+      - What's the user manual for Meep Mop?
+
+  - intent: meepmop_basicthings
+    examples: |
+      - what are the basic details of meep mop?
+      - what are the minimun hardware requirements of meepmop?
+      - what is the theme of meep mop?
+      - on what theme meep mop is based?
+      - what are the basic requirements of meepm op?
+      - what are the basic features of meepmop?
+      - what hardware is required for meep mop?
+      - which hardware must be a part of meep mop?
+      - give a brief overview of meep mop?
+      - provide the basic overview of meepmop?
+      - basic overview meepmop?
+      - basic guidline meepmop?
+      - basic structure of meepmop?
+      - meepmop basic structure?
+  - intent: doh_rules
+    examples: |
+      - what are the rules for decept of home?
+      - what are the instructions for decept of home?
+      - what wiil be the intructions to be followed for decept of home?
+      - need more details about operating decept of home.
+      - Provide step-by-step guidance for decept of home
+      - Walk me through the process of using decept of home.
+      - Can you guide me on how to work with decept of home?
+      - Explain the functionality of decept of home.
+      - What are the key features of decept of home?
+      - Give me a brief overview of how decept of home functions.
+      - Decept of home, can you tell me what to do, please?
+      - How should I operate decept of home?
+      - Give me instructions for decept of home.
+      - What are the steps to use decept of home?
+      - I need guidance on how to work with deept of home.
+      - Could you provide me with directions for using decept of home?
+      - What's the user manual for decept of home?
+  - intent: doh_bot
+    examples: |
+      - what are the bot specifications of decept of home
+      - what the specifications of bot to be made in decept event?
+      - what hardware can be used in decept event?
+      - what hardware is allowed in decept event?
+      - what hardware can be employed in decept event?
+      - is there any speceification for the hardware in decept event?
+      - what hardware  specification need to be followed for decept event?
+      - what hardware is must to be used in decept event?
+      - what hardware parts needs to be necessarily used in decept event?
+      - what hardware must be used in decept event?
+      - waht are those hardware parts whithout which bot is not allowed?
+      - hardware requirements of decept event?
+  - intent: doh_tips
+    examples: |
+      - what are the tips for decept event?
+      - give me some tips for decept of home?
+      - is ther any tips for decept ?
+      - what are the helping statements for decept?
+      - tips of decept
+      - decept tips
+      - what are the useful instruction of decept 
+      - what are some of the useful instructions available in decept?
+      - give me some useful instruction for decept?
+      - is there any helping instruction available for decept event?
+      - what are the helping statements for decept of home event
+  - intent: doh_prblmstmnt
+    examples: |
+      - what are the problem statements of decept event?
+      - provide me with the problem statements for decept event?
+      - is there any problem statement available for decept event?
+      - what the the basic features for decept event?
+      - basic implementations of decept event?
+      - what are the basic implementations of decept event?
+      - what are the necessary features for decept event?
+      - is there some features which must be present in bot of decept event?
+      - what are some of the most important features to be included in the bot of decept event?
+      - give me the most important features to be implemented in the decept event?
