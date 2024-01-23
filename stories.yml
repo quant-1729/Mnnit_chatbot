@@ -1,531 +1,617 @@
 version: "3.1"
 
 stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+  - story: mnnit website path
+    steps:
+      - intent: mnnit_website
+      - action: utter_website
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-- story: mnnit website path
-  steps:
-  - intent: mnnit_website
-  - action: utter_website
+  - story: courses information
+    steps:
+      - intent: courses
+      - action: utter_courses
 
-- story: courses information
-  steps:
-  - intent: courses
-  - action: utter_courses
+  - story: placement information
+    steps:
+      - intent: ask_placements
+      - action: utter_ask_placements
 
-- story: placement information
-  steps:
-  - intent: ask_placements
-  - action: utter_ask_placements
+  - story: admission process
+    steps:
+      - intent: ask_admission_process
+      - action: utter_ask_admission_process
 
-- story: admission process
-  steps:
-  - intent: ask_admission_process
-  - action: utter_ask_admission_process
+  - story: Ask About Internship Opportunities
+    steps:
+      - intent: ask_about_internship_opportunities
+      - action: utter_ask_about_internship_opportunities
 
-- story: Ask About Internship Opportunities
-  steps:
-  - intent: ask_about_internship_opportunities
-  - action: utter_ask_about_internship_opportunities
+  - story: Ask About Healthcare Facilities
+    steps:
+      - intent: ask_about_healthcare_facilities
+      - action: utter_ask_about_healthcare_facilities
 
-- story: Ask About Healthcare Facilities
-  steps:
-  - intent: ask_about_healthcare_facilities
-  - action: utter_ask_about_healthcare_facilities
+  - story: Ask About Exam Preparation Tips
+    steps:
+      - intent: ask_about_exam_preparation_tips
+      - action: utter_ask_about_exam_preparation_tips
 
-- story: Ask About Exam Preparation Tips
-  steps:
-  - intent: ask_about_exam_preparation_tips
-  - action: utter_ask_about_exam_preparation_tips
+  - story: Ask About Mentorship Program
+    steps:
+      - intent: ask_about_mentorship_program
+      - action: utter_ask_about_mentorship_program
 
-- story: Ask About Mentorship Program
-  steps:
-  - intent: ask_about_mentorship_program
-  - action: utter_ask_about_mentorship_program
+  - story: Ask About Grading System
+    steps:
+      - intent: ask_about_grading_system
+      - action: utter_ask_about_grading_system
 
-- story: Ask About Grading System
-  steps:
-  - intent: ask_about_grading_system
-  - action: utter_ask_about_grading_system
+  - story: Ask About Faculty
+    steps:
+      - intent: ask_about_faculty
+      - action: utter_ask_about_faculty
 
-- story: Ask About Faculty
-  steps:
-  - intent: ask_about_faculty
-  - action: utter_ask_about_faculty
+  - story: Ask About Lab Facilities
+    steps:
+      - intent: ask_about_lab_facilities
+      - action: utter_ask_about_lab_facilities
 
-- story: Ask About Lab Facilities
-  steps:
-  - intent: ask_about_lab_facilities
-  - action: utter_ask_about_lab_facilities
+  - story: Ask About Hostel Facility
+    steps:
+      - intent: ask_about_hostel_facilities
+      - action: utter_ask_hostel
 
-- story: Ask About Hostel Facility
-  steps:
-  - intent: ask_about_hostel_facilities
-  - action: utter_ask_hostel
+  - story: Ask About Hostel Choice
+    steps:
+      - intent: ask_about_hostel_facilities
+        entities:
+          - hostel_choice: SVBH
+          - hostel_facility: SVBH
+      - slot_was_set:
+          - hostel: SVBH
+      - action: utter_thanks_for_hostel
 
-- story: Ask About Hostel Choice
-  steps:
-    - intent: ask_about_hostel_facilities
-      entities:
-      - hostel_choice: SVBH
-      - hostel_facility: SVBH
-    - slot_was_set:
-        - hostel: SVBH
-    - action: utter_thanks_for_hostel
+  - story: Ask About Fees
+    steps:
+      - intent: ask_about_fees
+      - action: utter_ask_about_fees
 
-- story: Ask About Fees
-  steps:
-  - intent: ask_about_fees
-  - action: utter_ask_about_fees
+  - story: Ask About introduction
+    steps:
+      - intent: ask_intro_format
+      - action: utter_ask_intro_format
 
-- story: Ask About introduction
-  steps:
-  - intent: ask_intro_format
-  - action: utter_ask_intro_format
+  - story: Ask for directions
+    steps:
+      - intent: ask_for_directions
+      - slot_was_set:
+          - destination_given: destination_given
+      - slot_was_set:
+          - user_location: user_location
+      - action: action_provide_directions
 
-- story: Ask for directions
-  steps:
-  - intent: ask_for_directions
-  - slot_was_set:
-      - destination_given: destination_given
-  - slot_was_set:
-      - user_location: user_location
-  - action: action_provide_directions
+  - story: interactive_story_1
+    steps:
+      - intent: my_name
+        entities:
+          - name: Priyanshu
+      - slot_was_set:
+          - name: Priyanshu
+      - action: utter_mobile_number
+      - intent: mobile_number
+        entities:
+          - number: "8755799544"
+      - slot_was_set:
+          - mobile_number: "8755799544"
 
-- story: interactive_story_1
-  steps:
-  - intent: my_name
-    entities:
-    - name: Priyanshu
-  - slot_was_set:
-      - name: Priyanshu
-  - action: utter_mobile_number
-  - intent: mobile_number
-    entities:
-    - number: '8755799544'
-  - slot_was_set:
-    - mobile_number: '8755799544'
+  - story: interactive_story_2
+    steps:
+      - intent: my_name
+        entities:
+          - name: Priyanshu
+      - action: utter_mobile_number
+      - intent: mobile_number
+        entities:
+          - number: "8755799544"
+      - slot_was_set:
+          - mobile_number: "8755799544"
+      - intent: my_name
+        entities:
+          - name: Priyanshu
+      - action: utter_my_name
+      # - action: action_default_fallback
+      #   entities:
+      #   - name: Priyanshu Agrawal
+      - action: utter_mobile_number
+      - intent: mobile_number
+        entities:
+          - number: "8755799544"
+      - slot_was_set:
+          - mobile_number: "8755799544"
+  #ujjawal stories
 
+  - story: asking_more_about_college
+    steps:
+      - intent: more_about_college
+      - action: utter_about_college
+  - story: asking_about_club
+    steps:
+      - intent: club
+      - action: utter_club
+  - story: asking_benefit_of_the_club
+    steps:
+      - intent: benfit_of_the_club
+      - action: utter_benfit_club
+  - story: campus_life
+    steps:
+      - intent: explore_campus
+      - action: utter_explore_campus
 
-- story: interactive_story_2
-  steps:
-  - intent: my_name
-    entities:
-    - name: Priyanshu
-  - action: utter_mobile_number
-  - intent: mobile_number
-    entities:
-    - number: '8755799544'
-  - slot_was_set:
-    - mobile_number: '8755799544'
-  - intent: my_name
-    entities:
-    - name: Priyanshu
-  - action: utter_my_name
-  - action: action_default_fallback
-  - intent: my_name
-  - intent: my_name
-    entities:
-    - name: Priyanshu Agrawal
-  - action: utter_mobile_number
-  - intent: mobile_number
-    entities:
-    - number: '8755799544'
-  - slot_was_set:
-    - mobile_number: '8755799544'
-#ujjawal stories
+  - story: cafetarea
+    steps:
+      - intent: cafetarea
+      - action: utter_cafetarea
+  - story: about_dwesis
+    steps:
+      - intent: dwesis_canteen
+      - action: utter_about_dwesis
 
+  - story: location_of_dwesis
+    steps:
+      - intent: dwesis_location
+      - action: utter_location_dwesis
+  - story: about_cafe96
+    steps:
+      - intent: cafe_96
+      - action: utter_about_cafe96
 
-- story: asking_more_about_college
-  steps:
-    - intent: more_about_college
-    - action: utter_about_college
-- story: asking_about_club
-  steps:
-    - intent: club
-    - action: utter_club
-- story: asking_benefit_of_the_club
-  steps:
-    - intent: benfit_of_the_club
-    - action: utter_benfit_club
-- story: campus_life
-  steps:
-    - intent: explore_campus
-    - action: utter_explore_campus
+  - story: location_of_cafe96
+    steps:
+      - intent: cafe_96_location
+      - action: utter_location_cafe96
+  - story: about_yamuna_canteen
+    steps:
+      - intent: yamuna_canteen
+      - action: utter_about_yamuna_canteen
 
-- story: cafetarea
-  steps:
-    - intent: cafetarea
-    - action: utter_cafetarea
-- story: about_dwesis
-  steps:
-    - intent: dwesis_canteen
-    - action: utter_about_dwesis
+  - story: location_of_yamuna
+    steps:
+      - intent: yamuna_location
+      - action: utter_yamuna_location
+  - story: lit_club
+    steps:
+      - intent: lit_club
+      - action: utter_lit_club
+  - story: robotics
+    steps:
+      - intent: robotics_club
+      - action: utter_robotics
+  - story: boys_hostel
+    steps:
+      - intent: boys_hostel
+      - action: utter_boys_hostel
 
-- story: location_of_dwesis
-  steps:
-    - intent: dwesis_location
-    - action: utter_location_dwesis
-- story: about_cafe96
-  steps:
-    - intent: cafe_96
-    - action: utter_about_cafe96
+  - story: girls_hostel
+    steps:
+      - intent: girls_hostel
+      - action: utter_girls_hostel
+  - story: department
+    steps:
+      - intent: Department
+      - action: utter_department
+  - story: director
+    steps:
+      - intent: Director
+      - action: utter_director
+  - story: dean
+    steps:
+      - intent: dean
+      - action: utter_dean
 
-- story: location_of_cafe96
-  steps:
-    - intent: cafe_96_location
-    - action: utter_location_cafe96
-- story: about_yamuna_canteen
-  steps:
-    - intent: yamuna_canteen
-    - action: utter_about_yamuna_canteen
+  - story: CSED
+    steps:
+      - intent: CSE_dept
+      - action: utter_CSE_dept
 
-- story: location_of_yamuna
-  steps:
-    - intent: yamuna_location
-    - action: utter_yamuna_location
-- story: lit_club
-  steps:
-    - intent: lit_club
-    - action: utter_lit_club
-- story: robotics
-  steps:
-    - intent: robotics_club
-    - action: utter_robotics
-- story: boys_hostel
-  steps:
-    - intent: boys_hostel
-    - action: utter_boys_hostel
+  - story: CSEDH
+    steps:
+      - intent: CSE_dept_HOD
+      - action: utter_CSE_dept_HOD
 
-- story: girls_hostel
-  steps:
-    - intent: girls_hostel
-    - action: utter_girls_hostel
-- story: department
-  steps:
-    - intent: Department
-    - action: utter_department
-- story: director
-  steps:
-    - intent: Director
-    - action: utter_director
-- story: dean
-  steps:
-    - intent: dean
-    - action: utter_dean
+  - story: ECED
+    steps:
+      - intent: ECE_dept
+      - action: utter_ECE_dept
 
-- story: CSED
-  steps:
-    - intent: CSE_dept
-    - action: utter_CSE_dept
+  - story: ECEDH
+    steps:
+      - intent: ECE_dept_HOD
+      - action: utter_ECE_dept_HOD
 
-- story: CSEDH
-  steps:
-    - intent: CSE_dept_HOD
-    - action: utter_CSE_dept_HOD
+  - story: EED
+    steps:
+      - intent: EE_dept
+      - action: utter_EE_dept
 
-- story: ECED
-  steps:
-    - intent: ECE_dept
-    - action: utter_ECE_dept
+  - story: EEDH
+    steps:
+      - intent: EE_dept_HOD
+      - action: utter_EE_dept_HOD
 
-- story: ECEDH
-  steps:
-    - intent: ECE_dept_HOD
-    - action: utter_ECE_dept_HOD
+  - story: MED
+    steps:
+      - intent: ME_dept
+      - action: utter_ME_dept
 
-- story: EED
-  steps:
-    - intent: EE_dept
-    - action: utter_EE_dept
+  - story: MEDH
+    steps:
+      - intent: ME_dept_HOD
+      - action: utter_ME_dept_HOD
+  - story: ChED
+    steps:
+      - intent: ChE_Dept
+      - action: utter_ChE_Dept
 
-- story: EEDH
-  steps:
-    - intent: EE_dept_HOD
-    - action: utter_EE_dept_HOD
+  - story: ChEDH
+    steps:
+      - intent: ChE_Dept_HOD
+      - action: utter_ChE_Dept_HOD
 
-- story: MED
-  steps:
-    - intent: ME_dept
-    - action: utter_ME_dept
+  - story: CED
+    steps:
+      - intent: CE_dept
+      - action: utter_CE_dept
 
-- story: MEDH
-  steps:
-    - intent: ME_dept_HOD
-    - action: utter_ME_dept_HOD
-- story: ChED
-  steps:
-    - intent: ChE_Dept
-    - action: utter_ChE_Dept
+  - story: CEDH
+    steps:
+      - intent: CE_dept_HOD
+      - action: utter_CE_dept_HOD
 
-- story: ChEDH
-  steps:
-    - intent: ChE_Dept_HOD
-    - action: utter_ChE_Dept_HOD
+  - story: BED
+    steps:
+      - intent: BE_dept
+      - action: utter_BE_dept
 
-- story: CED
-  steps:
-    - intent: CE_dept
-    - action: utter_CE_dept
+  - story: BEDH
+    steps:
+      - intent: BE_dept_HOD
+      - action: utter_BE_dept_HOD
 
-- story: CEDH
-  steps:
-    - intent: CE_dept_HOD
-    - action: utter_CE_dept_HOD
+  - story: PIED
+    steps:
+      - intent: PIE_dept
+      - action: utter_PIE_dept
 
-- story: BED
-  steps:
-    - intent: BE_dept
-    - action: utter_BE_dept
+  - story: PIEDH
+    steps:
+      - intent: PIE_dept_HOD
+      - action: utter_PIE_dept_HOD
 
-- story: BEDH
-  steps:
-    - intent: BE_dept_HOD
-    - action: utter_BE_dept_HOD
+  - story: AM_dept
+    steps:
+      - intent: AM_dept
+      - action: utter_AM_dept
+  - story: playground
+    steps:
+      - intent: college_playground
+      - action: utter_playground
 
-- story: PIED
-  steps:
-    - intent: PIE_dept
-    - action: utter_PIE_dept
+  # Hrithiman's Stories
 
-- story: PIEDH
-  steps:
-    - intent: PIE_dept_HOD
-    - action: utter_PIE_dept_HOD
+  - story: gac path
+    steps:
+      - intent: ask_event_info_2023
+      - action: gac2023_basic_info
+      - action: restart_convo
+  - story: gac path2
+    steps:
+      - intent: gac_event_info
+      - action: gac2023_basic_info
+      - action: restart_convo
+  - story: gac path
+    steps:
+      - intent: gac_2023_donations
+      - action: utter_don
+      - action: restart_convo
+  - story: gac org
+    steps:
+      - intent: gac_2023_organizing
+      - action: gac2023_orgcom
+      - action: restart_convo
+  - story: gac spon
+    steps:
+      - intent: gac_2023_sponsorship
+      - action: utter_gacspon
+      - action: restart_convo
+  - story: gac reg
+    steps:
+      - intent: gac_2023_registration
+      - action: gac_reg
+      - action: restart_convo
+  - story: gac pay
+    steps:
+      - intent: gac_2023_payment
+      - action: utter_gac_pay
+      - action: restart_convo
+  - story: mnnit location
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mnnit_location
+      - action: utter_mnnit_location
 
-- story: AM_dept
-  steps:
-    - intent: AM_dept
-    - action: utter_AM_dept
-- story: playground
-  steps:
-    - intent: college_playground
-    - action: utter_playground
+  - story: mnnit full  form
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mnnit_full_form
+      - action: utter_mnnit_full_form
+  - story: boys_hostel
+    steps:
+      - intent: Boys_hostel
+      - action: utter_boys_hostel_count
+      - action: restart_convo
 
-# Hrithiman's Stories
+  - story: girls hostel count
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: girls_hostel_count
+      - action: utter_girls_hostel_count
 
-- story: gac path
-  steps:
-  - intent: ask_event_info_2023
-  - action: gac2023_basic_info
-  - action: restart_convo
-- story: gac path2
-  steps:
-  - intent: gac_event_info
-  - action: gac2023_basic_info
-  - action: restart_convo
-- story: gac path
-  steps:
-  - intent: gac_2023_donations
-  - action: utter_don
-  - action: restart_convo
-- story: gac org
-  steps:
-  - intent: gac_2023_organizing
-  - action: gac2023_orgcom
-  - action: restart_convo
-- story: gac spon
-  steps:
-  - intent: gac_2023_sponsorship
-  - action: utter_gacspon
-  - action: restart_convo
-- story: gac reg
-  steps:
-  - intent: gac_2023_registration
-  - action: gac_reg
-  - action: restart_convo
-- story: gac pay
-  steps:
-  - intent: gac_2023_payment
-  - action: utter_gac_pay
-  - action: restart_convo
-- story: mnnit location
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mnnit_location
-  - action: utter_mnnit_location
+  - story: girls hostel names
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: girls_hostel_names
+      - action: utter_girls_hostel_names
 
-- story: mnnit full  form
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mnnit_full_form
-  - action: utter_mnnit_full_form
-- story: boys_hostel
-  steps:
-  - intent: Boys_hostel
-  - action: utter_boys_hostel_count
-  - action: restart_convo
+  - story: mnnit_clubs
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mnnit_clubs
+      - action: utter_mnnit_clubs
 
-- story: girls hostel count
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: girls_hostel_count
-  - action: utter_girls_hostel_count
+  - story: what_is_academic_building
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: what_is_academic_building
+      - action: utter_what_is_academic_building
 
-- story: girls hostel names
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: girls_hostel_names
-  - action: utter_girls_hostel_names
+  - story: what_is_administrative_building
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: what_is_administrative_building
+      - action: utter_what_is_administrative_building
 
-- story: mnnit_clubs
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mnnit_clubs
-  - action: utter_mnnit_clubs
+  - story: what_is_administrative_building
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: girls_gym_mnnit
+      - action: utter_girls_gym_mnnit
 
-- story:  what_is_academic_building
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: what_is_academic_building
-  - action: utter_what_is_academic_building
+  - story: what_is_administrative_building
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: canteens_girls_hostel_mnnit
+      - action: utter_canteens_girls_hostel_mnnit
 
-- story:  what_is_administrative_building
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: what_is_administrative_building
-  - action: utter_what_is_administrative_building
+  - story: girls_gym_mnnit
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: girls_gym_mnnit
+      - action: utter_girls_gym_mnnit
 
-- story:  what_is_administrative_building
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: girls_gym_mnnit
-  - action: utter_girls_gym_mnnit
+  - story: canteens_girls_hostel_mnnit
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: canteens_girls_hostel_mnnit
+      - action: utter_canteens_girls_hostel_mnnit
 
-- story:  what_is_administrative_building
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: canteens_girls_hostel_mnnit
-  - action: utter_canteens_girls_hostel_mnnit
+  - story: seminar_hall_mnnit
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: seminar_hall_mnnit
+      - action: utter_seminar_hall_mnnit
 
-- story: girls_gym_mnnit
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: girls_gym_mnnit
-  - action: utter_girls_gym_mnnit
+  - story: mp_hall_mnnit
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mp_hall_mnnit
+      - action: utter_mp_hall_mnnit
 
-- story: canteens_girls_hostel_mnnit
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: canteens_girls_hostel_mnnit
-  - action: utter_canteens_girls_hostel_mnnit
+  - story: dean_office_mnnit
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: dean_office_mnnit
+      - action: utter_dean_office_mnnit
 
-- story: seminar_hall_mnnit
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: seminar_hall_mnnit
-  - action: utter_seminar_hall_mnnit
+  - story: library_mnnit
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: library_mnnit
+      - action: utter_library_mnnit
 
-- story: mp_hall_mnnit
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mp_hall_mnnit
-  - action: utter_mp_hall_mnnit
-
-- story: dean_office_mnnit
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: dean_office_mnnit
-  - action: utter_dean_office_mnnit
-
-- story: library_mnnit
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: library_mnnit
-  - action: utter_library_mnnit
-
-- story: warden_office_mnnit
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: warden_office_mnnit
-  - action: utter_warden_office_mnnit
-- story: boys hostel canteens
-  steps:
-  - intent: boys_hostel_canteens
-  - action: utter_boys_hostel_canteen
-  - action:
-- story: project
-  steps:
-  - intent: projects
-  - action: utter_project
-  - action: restart_convo
-- story: balance
-  steps:
-  - intent: ask_self_balancing_bot
-  - action: utter_balance
-  - action: restart_convo
-- story: human
-  steps:
-  - intent: humanoid_info
-  - action: utter_human
-  - action: restart_convo
-- story: spider
-  steps:
-  - intent: SpiderBot_info
-  - action: utter_spider
-  - action: restart_convo
-- story: rl
-  steps:
-  - intent: rlsupermario_info
-  - action: utter_rl
-  - action: restart_convo
-- story: chatbot
-  steps:
-  - intent: chatbot_info
-  - action: utter_chatbot
-  - action: restart_convo
-- story: linefollower
-  steps:
-  - intent: linefollower_info
-  - action: utter_linefollower
-  - action: restart_convo
-- story: fallback
-  steps:
-  - intent: nlu_fallback
-  - action: say_fallback
-- story: self
-  steps:
-  - intent: selfdrivingcart_info
-  - action: utter_self
-  - action: restart_convo
+  - story: warden_office_mnnit
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: warden_office_mnnit
+      - action: utter_warden_office_mnnit
+  - story: boys hostel canteens
+    steps:
+      - intent: boys_hostel_canteens
+      - action: utter_boys_hostel_canteen
+  - story: project
+    steps:
+      - intent: projects
+      - action: utter_project
+      - action: restart_convo
+  - story: balance
+    steps:
+      - intent: ask_self_balancing_bot
+      - action: utter_balance
+      - action: restart_convo
+  - story: human
+    steps:
+      - intent: humanoid_info
+      - action: utter_human
+      - action: restart_convo
+  - story: spider
+    steps:
+      - intent: SpiderBot_info
+      - action: utter_spider
+      - action: restart_convo
+  - story: rl
+    steps:
+      - intent: rlsupermario_info
+      - action: utter_rl
+      - action: restart_convo
+  - story: chatbot
+    steps:
+      - intent: chatbot_info
+      - action: utter_chatbot
+      - action: restart_convo
+  - story: linefollower
+    steps:
+      - intent: linefollower_info
+      - action: utter_linefollower
+      - action: restart_convo
+  - story: fallback
+    steps:
+      - intent: nlu_fallback
+      - action: say_fallback
+  - story: self
+    steps:
+      - intent: selfdrivingcart_info
+      - action: utter_self
+      - action: restart_convo
+  - story: bumblesee_full_descip
+    steps:
+      - intent: basic_details_bbsee
+      - action: say_bbsee_details
+      - action: restart_convo
+  - story: bumblesee_desc_map
+    steps:
+      - intent: user_asks_arena_desc
+      - action: show_arena_map
+      - action: restart_convo
+  - story: specific_detail
+    steps:
+      - intent: specific_details_about_BBSEE
+        entities:
+          - specific_details_about_BBSEE: "AllRules"
+      - action: decide_details
+      - action: restart_convo
+  - story: All_rules_BBSE
+    steps:
+      - intent: Allrules_BBSE
+      - action: utter_allrules_bbse
+      - action: restart_convo
+  - story: MNGE PS
+    steps:
+      - intent: Match_n_engage_PS
+      - action: utter_MNGE_PS
+      - action: restart_convo
+  - story: MNGE REG
+    steps:
+      - intent: Match_n_engage_Reg
+      - action: utter_MNGE_REG
+      - action: restart_convo
+  - story: MNGE Rules
+    steps:
+      - intent: Match_n_engage_Rules
+      - action: utter_MNGE_Rules
+      - action: restart_convo
+  - story: MNGE COORDI
+    steps:
+      - intent: Match_n_engage_Coordis
+      - action: utter_MNGE_Coordis
+      - action: restart_convo
+  - story: Time Place
+    steps:
+      - intent: Timing_Place
+      - action: utter_Location_time
+      - action: restart_convo
+  - story: More_info
+    steps:
+      - intent: More_info
+      - action: utter_more_info
+      - action: restart_convo
+  - story: bumblesee_coordi
+    steps:
+      - intent: Coordinator_BBSEE
+      - action: utter_BBSEE_Coordinator
+      - action: restart_convo
+  - story: meeptime
+    steps:
+      - intent: meeptimeline
+      - action: utter_meeptimeline
+      - action: restart_convo
+  - story: meeptime
+    steps:
+      - intent: meepmop_ins
+      - action: utter_meepins
+      - action: restart_convo
+  - story: meepbasic
+    steps:
+      - intent: meepmop_basicthings
+      - action: utter_meepbasic
+      - action: restart_convo
+  - story: dohrules
+    steps:
+      - intent: doh_rules
+      - action: utter_dohrules
+      - action: restart_convo
+  - story: dohbot
+    steps:
+      - intent: doh_bot
+      - action: utter_dohbot
+      - action: restart_convo
+  - story: dottips
+    steps:
+      - intent: doh_tips
+      - action: utter_dohtips
+      - action: restart_convo
+  - story: dohprblms
+    steps:
+      - intent: doh_prblmstmnt
+      - action: utter_dohprblm
+      - action: restart_convo
