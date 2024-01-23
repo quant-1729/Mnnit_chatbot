@@ -2336,7 +2336,11 @@ nlu:
     - I want to see pictures of [fast cars](image_requested).
     - Get me images of [waterfalls](image_requested).
     - Can you find an image of [ancient civilizations](image_requested)?
-    - I'd like to see photos of [luxury homes](image_requested).  
+    - I'd like to see photos of [luxury homes](image_requested).
+    - get me the images of the [poet](images_requested).
+    - get me the images of the [god](images_requested).
+    - i wanna images of the [god](images_requested).
+    
 
 - lookup: image_requested
   examples: |
@@ -2344,3 +2348,4 @@ nlu:
     - mountains
     - cities
     - technology
+    - data/image_lookup.yml

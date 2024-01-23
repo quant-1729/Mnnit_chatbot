@@ -1,0 +1,569 @@
+nlu:
+  - lookup: image_requested
+    examples: |
+      - cat
+      - mountain
+      - beaches
+      - cities
+      - nature
+      - animals
+      - technology
+      - food
+      - travel
+      - fashion
+      - sports
+      - music
+      - art
+      - books
+      - movies
+      - cars
+      - architecture
+      - people
+      - cities
+      - landscapes
+      - beaches
+      - mountains
+      - skies
+      - buildings
+      - flowers
+      - trees
+      - water
+      - sunsets
+      - sunrises
+      - clouds
+      - rain
+      - snow
+      - desserts
+      - fruits
+      - vegetables
+      - coffee
+      - tea
+      - cocktails
+      - wine
+      - beer
+      - whiskey
+      - gadgets
+      - computers
+      - phones
+      - cameras
+      - fashion
+      - sports
+      - concerts
+      - festivals
+      - movies
+      - actors
+      - musicians
+      - artists
+      - authors
+      - landmarks
+      - historical places
+      - museums
+      - paintings
+      - sculptures
+      - pottery
+      - street art
+      - dance
+      - yoga
+      - fitness
+      - animals
+      - pets
+      - wildlife
+      - underwater
+      - outer space
+      - planets
+      - stars
+      - galaxies
+      - travel destinations
+      - landmarks
+      - historical sites
+      - cultural events
+      - festivals
+      - parades
+      - carnivals
+      - amusement parks
+      - fireworks
+      - fashion shows
+      - runway
+      - clothing
+      - accessories
+      - jewelry
+      - makeup
+      - hairstyles
+      - tattoos
+      - piercings
+      - beauty
+      - hairstyles
+      - dogs
+      - mountains
+      - cities
+      - technology
+      - forests
+      - beaches
+      - cars
+      - food
+      - sports
+      - landmarks
+      - nature
+      - wildlife
+      - space
+      - architecture
+      - people
+      - art
+      - fashion
+      - music
+      - books
+      - movies
+      - sports cars
+      - bicycles
+      - motorcycles
+      - airplanes
+      - trains
+      - boats
+      - underwater
+      - desserts
+      - fruits
+      - vegetables
+      - coffee
+      - tea
+      - cocktails
+      - beer
+      - wine
+      - spirits
+      - sunrise
+      - sunset
+      - beaches at sunset
+      - snowy landscapes
+      - tropical islands
+      - skyscrapers
+      - historical buildings
+      - museums
+      - paintings
+      - sculptures
+      - pottery
+      - street art
+      - festivals
+      - concerts
+      - dance
+      - theater
+      - movies
+      - celebrities
+      - historical figures
+      - famous landmarks
+      - ancient ruins
+      - caves
+      - waterfalls
+      - lakes
+      - rivers
+      - oceans
+      - deserts
+      - canyons
+      - valleys
+      - mountains at sunrise
+      - mountain climbers
+      - camping
+      - hiking
+      - biking
+      - running
+      - yoga
+      - meditation
+      - fitness
+      - team sports
+      - individual sports
+      - extreme sports
+      - wildlife photography
+      - macro photography
+      - abstract art
+      - minimalist art
+      - modern art
+      - classical art
+      - traditional art
+      - pottery making
+      - cooking
+      - baking
+      - grilling
+      - sushi
+      - pasta
+      - pizza
+      - burgers
+      - salads
+      - desserts
+      - vegetarian dishes
+      - vegan dishes
+      - smoothies
+      - juices
+      - herbal tea
+      - coffee art
+      - barista skills
+      - mixology
+      - cocktail recipes
+      - wine tasting
+      - whiskey tasting
+      - beer brewing
+      - home gardening
+      - indoor plants
+      - outdoor plants
+      - flowers
+      - trees
+      - mushrooms
+      - insects
+      - butterflies
+      - birds
+      - reptiles
+      - mammals
+      - underwater creatures
+      - outer space
+      - planets
+      - galaxies
+      - stars
+      - constellations
+      - nebulae
+      - black holes
+      - asteroids
+      - comets
+      - meteor showers
+      - spacecraft
+      - space exploration
+      - astronomy
+      - astrology
+      - astrology signs
+      - zodiac symbols
+      - horoscopes
+      - tarot cards
+      - fortune-telling
+      - magic tricks
+      - illusions
+      - circuses
+      - carnivals
+      - amusement parks
+      - roller coasters
+      - ferris wheels
+      - hot air balloons
+      - parades
+      - fireworks
+      - traditional dances
+      - cultural festivals
+      - historical reenactments
+      - cosplay
+      - fashion shows
+      - runway models
+      - clothing designs
+      - accessories
+      - jewelry
+      - makeup artistry
+      - hairstyles
+      - hair colors
+      - nail art
+      - tattoos
+      - piercings
+      - body painting
+      - street fashion
+      - vintage fashion
+      - retro style
+      - gothic fashion
+      - punk fashion
+      - hip-hop fashion
+      - electronic music festivals
+      - rock concerts
+      - classical music performances
+      - jazz clubs
+      - country music festivals
+      - pop music concerts
+      - music instruments
+      - musical notes
+      - sheet music
+      - vinyl records
+      - CD collections
+      - bookshelves
+      - libraries
+      - bookstores
+      - reading nooks
+      - e-books
+      - audiobooks
+      - bookmarks
+      - literary quotes
+      - famous authors
+      - poetry
+      - spoken word performances
+      - book clubs
+      - film festivals
+      - movie theaters
+      - film directors
+      - film genres
+      - film quotes
+      - movie posters
+      - film sets
+      - behind-the-scenes
+      - animation
+      - CGI effects
+      - film soundtracks
+      - actors
+      - actresses
+      - movie characters
+      - superheroes
+      - supervillains
+      - fantasy worlds
+      - science fiction
+      - historical dramas
+      - documentaries
+      - true crime stories
+      - mysteries
+      - thrillers
+      - horror movies
+      - comedy films
+      - romantic movies
+      - action movies
+      - adventure films
+      - animated movies
+      - family films
+      - film awards
+      - red carpet events
+      - film premieres
+      - film festivals
+      - film reviews
+      - film analysis
+      - filmmaking process
+      - scriptwriting
+      - cinematography
+      - film editing
+      - film criticism
+      - film history
+      - film trivia
+      - film education
+      - film theories
+      - film industry news
+      - film studios
+      - film financing
+      - film distribution
+      - film marketing
+      - film technology
+      - film festivals
+      - film industry events
+      - film careers
+      - film industry challenges
+      - film industry trends
+      - film industry influencers
+      - film industry controversies
+      - film industry innovations
+      - film industry success stories
+      - film industry awards
+      - film industry celebrations
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry support organizations
+      - film industry resources
+      - film industry forums
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
+      - film industry podcasts
+      - film industry documentaries
+      - film industry history
+      - film industry statistics
+      - film industry economics
+      - film industry globalization
+      - film industry regulation
+      - film industry ethics
+      - film industry social impact
+      - film industry sustainability
+      - film industry diversity and inclusion
+      - film industry future trends
+      - film industry challenges
+      - film industry innovations
+      - film industry predictions
+      - film industry opportunities
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry events
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
+      - film industry podcasts
+      - film industry documentaries
+      - film industry history
+      - film industry statistics
+      - film industry economics
+      - film industry globalization
+      - film industry regulation
+      - film industry ethics
+      - film industry social impact
+      - film industry sustainability
+      - film industry diversity and inclusion
+      - film industry future trends
+      - film industry challenges
+      - film industry innovations
+      - film industry predictions
+      - film industry opportunities
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry events
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
+      - film industry podcasts
+      - film industry documentaries
+      - film industry history
+      - film industry statistics
+      - film industry economics
+      - film industry globalization
+      - film industry regulation
+      - film industry ethics
+      - film industry social impact
+      - film industry sustainability
+      - film industry diversity and inclusion
+      - film industry future trends
+      - film industry challenges
+      - film industry innovations
+      - film industry predictions
+      - film industry opportunities
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry events
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
+      - film industry podcasts
+      - film industry documentaries
+      - film industry history
+      - film industry statistics
+      - film industry economics
+      - film industry globalization
+      - film industry regulation
+      - film industry ethics
+      - film industry social impact
+      - film industry sustainability
+      - film industry diversity and inclusion
+      - film industry future trends
+      - film industry challenges
+      - film industry innovations
+      - film industry predictions
+      - film industry opportunities
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry events
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
+      - film industry podcasts
+      - film industry documentaries
+      - film industry history
+      - film industry statistics
+      - film industry economics
+      - film industry globalization
+      - film industry regulation
+      - film industry ethics
+      - film industry social impact
+      - film industry sustainability
+      - film industry diversity and inclusion
+      - film industry future trends
+      - film industry challenges
+      - film industry innovations
+      - film industry predictions
+      - film industry opportunities
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry events
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
+      - film industry podcasts
+      - film industry documentaries
+      - film industry history
+      - film industry statistics
+      - film industry economics
+      - film industry globalization
+      - film industry regulation
+      - film industry ethics
+      - film industry social impact
+      - film industry sustainability
+      - film industry diversity and inclusion
+      - film industry future trends
+      - film industry challenges
+      - film industry innovations
+      - film industry predictions
+      - film industry opportunities
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry events
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
+      - film industry podcasts
+      - film industry documentaries
+      - film industry history
+      - film industry statistics
+      - film industry economics
+      - film industry globalization
+      - film industry regulation
+      - film industry ethics
+      - film industry social impact
+      - film industry sustainability
+      - film industry diversity and inclusion
+      - film industry future trends
+      - film industry challenges
+      - film industry innovations
+      - film industry predictions
+      - film industry opportunities
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry events
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
+      - film industry podcasts
+      - film industry documentaries
+      - film industry history
+      - film industry statistics
+      - film industry economics
+      - film industry globalization
+      - film industry regulation
+      - film industry ethics
+      - film industry social impact
+      - film industry sustainability
+      - film industry diversity and inclusion
+      - film industry future trends
+      - film industry challenges
+      - film industry innovations
+      - film industry predictions
+      - film industry opportunities
+      - film industry collaborations
+      - film industry partnerships
+      - film industry networking
+      - film industry events
+      - film industry conferences
+      - film industry workshops
+      - film industry mentorship programs
+      - film industry competitions
+      - film industry publications
+      - film industry blogs
