@@ -2,7 +2,8 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
+    - hey 
+    - hey my name is
     - hello
     - hi
     - hello there
@@ -83,6 +84,12 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: request_names
+  examples: |
+    - So you want my name
+    - Great me with my name 
+    - Use my name in further communication
+
 - intent: my_name
   examples: |
     - my name is [amandeep](name)
@@ -94,6 +101,13 @@ nlu:
     - people call me [amandeep](name)
     - you can call me [amandeep](name)
     - My name is Priyanshu
+- intent: last_name
+  examples: |
+    - my last name is [sarthak](lastname)
+    - my family name is [bhanu](lastname)
+    - my surname is [piyush](lastname)
+    - My full name is [Priyanshu Agrawal](lastname)
+
 - intent: mobile_number
   examples: |
     - my number is [9876987699](number)
@@ -418,6 +432,7 @@ nlu:
     - Share some facts and statistics about the college
     - Share some facts and statistics about the MNNIT
     - Share some statistics about the mnnit
+
 - intent: club
   examples: |
     - What are clubs present in MNNIT?
@@ -431,6 +446,7 @@ nlu:
     - Tell me about the clubs in the mnnit
     - Tell me extra co-curricular activity of the college
     - Tell me extra co-curricular activity of the MNNIT
+
 - intent: benfit_of_the_club
   examples: |
     - What are the facility of exploring different fields in MNNIT?
@@ -438,7 +454,7 @@ nlu:
     - What are advantages of joining different club?
     - Is there any benefit of joining different club?
     - Is there any advantage of participating different club?
-    - Is it worth to work in different clubs of MNNIT?
+    - Is it worth to work in different clubs of MNNIT? 
     - What are the reasons for joining a club?
     - Why is it important to join clubs in college?
     - Should you join clubs in college?
@@ -452,6 +468,7 @@ nlu:
     - How can joining a club help me make friends and connections?
     - Explain the social and networking benefits of college clubs.
     - What are the advantages of being part of a club in terms of career development?
+
 - intent: explore_campus
   examples: |
     - Tell me someting about campus of MNNIT college
@@ -470,6 +487,7 @@ nlu:
     - Is there a virtual tour of your college available?
     - Are there any upcoming college events for visitors?
     - Tell me about the admissions office and how to contact them for a visit.
+
 - intent: cafetarea
   examples: |
     - Is there any good canteen present in campus area?
@@ -594,6 +612,7 @@ nlu:
     - I'm new here, where can I find the yamuna canteen?
     - Tell me how to get to the nearest yamuna canteen.
     - Can you guide me to the yamuna canteen's location on campus?
+
 - intent: lit_club
   examples: |
     - What is Literary Cub?
@@ -614,6 +633,7 @@ nlu:
     - Are there any upcoming robotics events or competitions?
     - Tell me about the achievements and awards of the robotics club.
     - Do you have a robotics lab or workspace for club members?
+# ######### hostels
 - intent: boys_hostel
   examples: |
     - How many boys hostels are there in Mnnit Allahabad?
@@ -632,6 +652,7 @@ nlu:
     - Are there any security measures in place at the boys' hostel?
     - Can you provide details about the dining options in the boys' hostel?
     - Tell me about any common areas and recreational facilities in the boys' hostel.
+
 - intent: girls_hostel
   examples: |
     - How many girls hostels are there in Mnnit Allahabad?
@@ -651,6 +672,9 @@ nlu:
     - Are there any security measures in place at the girls' hostel?
     - Can you provide details about the dining options in the girls' hostel?
     - Tell me about any common areas and recreational facilities in the girls' hostel.
+
+#  department
+
 - intent: Department
   examples: |
     - department name
@@ -672,6 +696,7 @@ nlu:
     - Give me an overview of the academic departments at the college.
     - What are the main areas of study offered by the college's departments?
     - Can you list the department names and their locations in the college?
+
 - intent: Director
   examples: |
     - Director of MNNIT
@@ -708,6 +733,9 @@ nlu:
     - What is the dean's vision for the college?
     - Are there any upcoming events or meetings with the college Dean?
     - Give me details about the dean's office and hours of availability.
+
+  #About departments and their HODs
+
 - intent: CSE_dept
   examples: |
     - Computer Science and Engineering Department .
@@ -728,6 +756,7 @@ nlu:
     - How is Computer Science and Engineering Department at Motilal Nehru National Institute of Technology ?
     - CS at Motilal Nehru National Institute of Technology or MNNIT .
     - Computer Science at MNNIT or Motilal Nehru National Institute of Technology .
+
 - intent: CSE_dept_HOD
   examples: |
     - Who is the head of department of Computer Science and Engineering Department ?
@@ -736,6 +765,7 @@ nlu:
     - Faculty who is HOD of CSE Or Computer Science and Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the CSE department?
     - Head of Department of CSE or Computer Science and Engineering depatment
+
 - intent: ECE_dept
   examples: |
     - Facilities does the ECE or Electronics and Communication Engineering Department have?
@@ -753,9 +783,10 @@ nlu:
     - How is Electronics and Communication Engineering Department at MNNIT ?
     - About faculty of ECE or Electronics and Communication Engineering depatment .
     - About faculty of Electronics and Communication Engineering Department .
-    - Electronics and Communication Engineering at Motilal Nehru National Institute of Technology
+    - Electronics and Communication Engineering at Motilal Nehru National Institute of Technology 
     - EC at Motilal Nehru National Institute of Technology or MNNIT .
     - Electronics at MNNIT or Motilal Nehru National Institute of Technology .
+
 - intent: ECE_dept_HOD
   examples: |
     - Who is the head of department of Electronics and Communication Engineering Department ?
@@ -764,6 +795,7 @@ nlu:
     - Faculty who is HOD of Electronics and Communication Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the ECE department?
     - Head of Department of ECE or Electronics and Communication Engineering Department .
+
 - intent: EE_dept
   examples: |
     - Facilities does the EE or Electrical Engineering Department have?
@@ -783,6 +815,7 @@ nlu:
     - How is EE or Electrical Engineering at Motilal Nehru National Institute of Technology ?
     - EE at Motilal Nehru National Institute of Technology or MNNIT .
     - Electrical at MNNIT or Motilal Nehru National Institute of Technology .
+
 - intent: EE_dept_HOD
   examples: |
     - Who is the head of department of EE or Electrical Engineering Department ?
@@ -791,6 +824,7 @@ nlu:
     - Faculty who is HOD of EE Electrical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the EE or Electrical Engineering Department department?
     - Head of Department of EE or Electrical Engineering Department .
+
 - intent: ME_dept
   examples: |
     - Facilities does the ME or Mechanical Engineering Department have.
@@ -810,6 +844,7 @@ nlu:
     - How is ME or Mechanical Engineering Department at Motilal Nehru National Institute of Technology ?
     - ME at Motilal Nehru National Institute of Technology or MNNIT .
     - Mechanical at MNNIT or Motilal Nehru National Institute of Technology .
+
 - intent: ME_dept_HOD
   examples: |
     - Who is the head of department of ME or Mechanical Engineering Department ?
@@ -818,6 +853,7 @@ nlu:
     - Faculty who is HOD of ME or Mechanical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the ME or Mechanical Engineering Department department?
     - Head of Department of ME or Mechanical Engineering Department .
+
 - intent: ChE_Dept
   examples: |
     - Facilities does the ChE or Chemical Engineering Department have.
@@ -836,6 +872,7 @@ nlu:
     - About faculty of ChE or Chemical Engineering Department depatment .
     - How is ChE or Chemical Engineering Department at Motilal Nehru National Institute of Technology ?
     - Chemical at MNNIT or Motilal Nehru National Institute of Technology .
+
 - intent: ChE_Dept_HOD
   examples: |
     - Who is the head of department of ChE or Chemical Engineering Department ?
@@ -844,6 +881,7 @@ nlu:
     - Faculty who is HOD of ChE or Chemical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the ChE or Chemical Engineering Department department?
     - Head of Department of ChE or Chemical Engineering Department .
+
 - intent: CE_dept
   examples: |
     - Facilities does the CE or Civil Engineering Department have.
@@ -862,6 +900,7 @@ nlu:
     - About faculty of CE or Civil Engineering depatment .
     - How is CE or Civil Engineering Department at Motilal Nehru National Institute of Technology ?
     - Civil at MNNIT or Motilal Nehru National Institute of Technology .
+
 - intent: CE_dept_HOD
   examples: |
     - Who is the head of department of CE or Civil Engineering Department ?
@@ -870,6 +909,7 @@ nlu:
     - Faculty who is HOD of CE or Civil Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the CE or Civil Engineering Department department?
     - Head of Department of CE or Civil Engineering Department .
+
 - intent: BE_dept
   examples: |
     - Facilities does the Biotechnology Engineering Department have.
@@ -889,6 +929,7 @@ nlu:
     - About faculty of Biotechnology Engineering depatment .
     - How is Biotechnology Engineering Department at Motilal Nehru National Institute of Technology ?
     - Biotech at MNNIT or Motilal Nehru National Institute of Technology .
+
 - intent: BE_dept_HOD
   examples: |
     - Who is the head of department of Biotechnology Engineering Department ?
@@ -897,6 +938,7 @@ nlu:
     - Faculty who is HOD of Biotechnology Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the Biotechnology Engineering Department department?
     - Head of Department of Biotechnology Engineering Department .
+
 - intent: PIE_dept
   examples: |
     - Facilities does the Production and Industrial Engineering Department have.
@@ -917,6 +959,7 @@ nlu:
     - About faculty of Production and Industrial Engineering depatment .
     - How is Production and Industrial Engineering Department at Motilal Nehru National Institute of Technology ?
     - Production at MNNIT or Motilal Nehru National Institute of Technology .
+
 - intent: PIE_dept_HOD
   examples: |
     - Who is the head of department of PIE or Production and Industrial Engineering Department Department ?
@@ -925,6 +968,7 @@ nlu:
     - Faculty who is HOD of PIE or Production and Industrial Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the PIE or Production and Industrial Engineering Department department?
     - Head of Department of PIE or Production and Industrial Engineering Department .
+
 - intent: AM_dept
   examples: |
     - Can you tell me more about the Applied Mathematics department at the college?
@@ -937,6 +981,8 @@ nlu:
     - Can you provide information about the location of the Applied Mathematics department's office?
     - What are the department's office hours and contact information?
     - Tell me about any upcoming events or seminars hosted by the Applied Mathematics department.
+
+# sport area
 - intent: college_playground
   examples: |
     - Tell me about the college's playground and sports facilities.
@@ -949,6 +995,9 @@ nlu:
     - Are there any upcoming sports events or tournaments?
     - Tell me about the fitness and recreational options at the college.
     - Can you provide details about the gym or fitness center on campus?
+
+
+#Hrithiman's code starting
 - intent: gac_event_info
   examples: |
     - [What is the GAC 2023 event]{"entity": "general_info", "value": "DESC"} all about?
@@ -976,49 +1025,57 @@ nlu:
     - [Tell me about the GAC event]{"entity": "general_info", "value": "DESC"}.
     - Briefly [describe the GAC event]{"entity": "general_info", "value": "DESC"}.
     - [Describe the Global Alumni Convention 2023] for me.
-    - [Share some information about Global Alumni Convention]{"entity": "general_info", "value": "DESC"}
-    - Provide a comprehensive [overview of the GAC event]{"entity": "general_info", "value": "DESC"}.
-    - [G A C]{"entity": "general_info", "value": "DESC"}
-    - [G.A.C]{"entity": "general_info", "value": "DESC"}
-    - [G.A.C 2023]{"entity": "general_info", "value": "DESC"}
-    - [Global Alumni Convention 2023]{"entity": "general_info", "value": "DESC"}
+    - [Share some information about Global Alumni Convention](general_info:DESC)
+    - [Explain the GAC event](general_info:DESC) to me in detail.
+    - Share [some insights about the Global Alumni Convention](general_info:DESC).
+    - Provide a comprehensive [overview of the GAC event](general_info:DESC).
+    - Tell me [all about the Global Alumni Convention]{"entity":"general_info","value":"DESC"}.
+    - [G A C](general_info:DESC) 
+    - [G.A.C](general_info:DESC)
+    - [G.A.C 2023](general_info:DESC)
+    - [Global Alumni Convention 2023](general_info:DESC)
 - intent: ask_event_info_2023
   examples: |
-    - [What's the date and location]{"entity": "general_info", "value": "DL"} of the event?
-    - [Where is GAC 2023]{"entity": "general_info", "value": "L"} going to be held?
-    - What is the [venue]{"entity": "general_info", "value": "L"} of GAC 2023?
-    - [Where is GAC]{"entity": "general_info", "value": "L"} going to be held?
-    - [Where is GAC]{"entity": "general_info", "value": "L"} going to be conducted?
-    - Can you let me know the [venue]{"entity": "general_info", "value": "L"} of GAC 2023?
-    - [When and where]{"entity": "general_info", "value": "DL"} is the event happening?
-    - [Describe the event's date and location]{"entity": "general_info", "value": "DL"}.
-    - Give me the [date and location]{"entity": "general_info", "value": "DL"} of the event.
-    - Share the event [schedule]{"entity": "general_info", "value": "S"} with me.
-    - Can you tell me the [schedule]{"entity": "general_info", "value": "S"} for the convention?
-    - Where will the convention take [place]{"entity": "general_info", "value": "L"}?
-    - [When and where]{"entity": "general_info", "value": "DL"} can I attend the event?
-    - Tell me the [date and location]{"entity": "general_info", "value": "DL"} for the convention.
-    - What's the [schedule]{"entity": "general_info", "value": "S"} for the event?
-    - Provide details about the event [location]{"entity": "general_info", "value": "L"}.    -
-    - [When and where]{"entity": "general_info", "value": "DL"} is the event scheduled for?
-    - Share information about the [date and location]{"entity": "general_info", "value": "DL"}.
-    - What is the event's [date and location]{"entity": "general_info", "value": "DL"}?
-    - Can you provide details on the convention's [schedule]{"entity": "general_info", "value": "S"}?
-    - Where is the event's [venue]{"entity": "general_info", "value": "L"}?
-    - What's the [date and location]{"entity": "general_info", "value": "DL"} of the convention?
-    - What's on the [schedule]{"entity": "general_info", "value": "S"} for the event?
-    - [When is the event, and where will it be?]{"entity": "general_info", "value": "DL"}
-    - Provide the [date and location]{"entity": "general_info", "value": "DL"} details.
-    - What can you tell me about the convention's [schedule]{"entity": "general_info", "value": "S"}?
-    - [Where]{"entity": "general_info", "value": "L"} can I find the event?
-    - What's the [date and location]{"entity": "general_info", "value": "DL"} information for the event?
-    - Can you outline the [schedule]{"entity": "general_info", "value": "S"} for the convention?
-    - [Where]{"entity": "general_info", "value": "L"} should I go for the event?
-    - Can you tell me [when is GAC]{"entity": "general_info", "value": "DL"} event?
-    - [When is the GAC]{"entity": "general_info", "value": "DL"} 2023 event?
+    - [What's the date and location]{"entity":"general_info", "value":"DL"} of the event?
+    - [Where is GAC 2023](general_info:L) going to be held?
+    - What is the [venue](general_info:L) of GAC 2023?
+    - [Where is GAC](general_info:L) going to be held?
+    - [Where is GAC](general_info:L) going to be conducted?
+    - Can you let me know the [venue](general_info:L) of GAC 2023?
+    - [When and where]{"entity":"general_info", "value":"DL"} is the event happening?
+    - [Describe the event's date and location]{"entity":"general_info", "value":"DL"}.
+    - Give me the [date and location]{"entity":"general_info", "value":"DL"} of the event.
+    - Share the event [schedule]{"entity":"general_info", "value":"S"} with me.
+    - Can you tell me the [schedule]{"entity":"general_info", "value":"S"} for the convention?
+    - Where will the convention take [place]{"entity":"general_info", "value":"L"}? 
+    - [When and where]{"entity":"general_info","value":"DL"} can I attend the event?
+    - Tell me the [date and location]{"entity":"general_info","value":"DL"} for the convention.
+    - What's the [schedule]{"entity":"general_info", "value":"S"} for the event?
+    - Provide details about the event [location]{"entity":"general_info", "value":"L"}.    -
+    - [When and where]{"entity":"general_info", "value":"DL"} is the event scheduled for?
+    - Share information about the [date and location]{"entity":"general_info", "value":"DL"}.
+    - What is the event's [date and location]{"entity":"general_info", "value":"DL"}?
+    - Can you provide details on the convention's [schedule]{"entity":"general_info", "value":"S"}?
+    - Where is the event's [venue]{"entity":"general_info", "value":"L"}?
+    - What's the [date and location]{"entity":"general_info", "value":"DL"} of the convention?
+    - What's on the [schedule]{"entity":"general_info", "value":"S"} for the event?
+    - [When is the event, and where will it be?]{"entity":"general_info","value":"DL"}
+    - Provide the [date and location]{"entity":"general_info", "value":"DL"} details.
+    - What can you tell me about the convention's [schedule]{"entity":"general_info", "value":"S"}?
+    - [Where]{"entity":"general_info","value":"L"} can I find the event?
+    - What's the [date and location]{"entity":"general_info", "value":"DL"} information for the event?
+    - Can you outline the [schedule]{"entity":"general_info", "value":"S"} for the convention?
+    - [Where]{"entity":"general_info","value":"L"} should I go for the event?
+    - Can you tell me [when is GAC](general_info:DL) event?
+    - [When is the GAC](general_info:DL) 2023 event?
     - Can you tell me [when is GAC](general_info:DL?
-    - [When is GAC]{"entity": "general_info", "value": "DL"} 2023 going to be held?
-    - What is the [date and location]{"entity": "general_info", "value": "DL"} for GAC 2023?
+    - [When is GAC](general_info:DL) 2023 going to be held?
+    - What is the [date and location](general_info:DL) for GAC 2023?
+- lookup: general_info
+  examples: |
+    - sehcudle
+    - Scheldue
+    - schedle
 - intent: gac_2023_donations
   examples: |
     - Who gave the donations from 1998 batch?
@@ -1046,6 +1103,7 @@ nlu:
     - Provide a list of names from the 1998 batch who participated in donations.
     - Tell me who the donors are from the 1998 batch.
     - List the 1998 batch alumni who donated to the organization.
+    - Who are the 1998 batch alumni donors?
     - I'm curious about the 1998 batch donors. Can you help?
     - Who contributed to donations from the 1998 batch?
     - Give me information about the 1998 batch donors and their names.
@@ -1055,6 +1113,7 @@ nlu:
     - Can you provide the names of donors specifically from the 1998 batch?
     - List the 1998 batch alumni who participated in [fundraising efforts](gacdon).
     - Who in the 1998 batch made contributions to the organization?
+
 - intent: gac_2023_organizing
   examples: |
     - Who are the part of [organizing committee](gacorg) of GAC 2023?
@@ -1090,63 +1149,65 @@ nlu:
     - Who are the key [players](gacorg) in the GAC 2023 [organization](gacorg)?
     - Tell me about the committee [members](gacorg) of GAC 2023.
     - Provide an introduction to the [organizing team](gacorg) of GAC 2023.
-    - Who is the [Patron]{"entity": "gacorg", "value": "Pat"} of the event?
-    - Who serves as the [Advisor]{"entity": "gacorg", "value": "Ad"} for the event?
-    - Who holds the position of [Chairman]{"entity": "gacorg", "value": "chair"} in the event?
-    - Who is the [Co-Chairman]{"entity": "gacorg", "value": "CoChair"} of the event?
-    - Who is the [Organizing Secretary]{"entity": "gacorg", "value": "oSec"} for the event?
-    - Who is responsible for the treasury as the [Treasurer]{"entity": "gacorg", "value": "Tres"}?
-    - Who are the [Joint Organizing Secretaries]{"entity": "gacorg", "value": "Jsec"} for the event
+    - Who is the [Patron](gacorg:Pat) of the event?
+    - Who serves as the [Advisor](gacorg:Ad) for the event?
+    - Who holds the position of [Chairman](gacorg:chair) in the event?
+    - Who is the [Co-Chairman](gacorg:CoChair) of the event?
+    - Who is the [Organizing Secretary](gacorg:oSec) for the event?
+    - Who is responsible for the treasury as the [Treasurer](gacorg:Tres)?
+    - Who are the [Joint Organizing Secretaries](gacorg:Jsec) for the event
 - intent: gac_2023_registration
   examples: |
-    - What are the [registration details]{"entity": "gacreg", "value": "FR"} for GAC 2023?
-    - What is the [registration process]{"entity": "gacreg", "value": "FR"} for GAC 2023?
-    - Can you give me the [Registration link]{"entity": "gacreg", "value": "RL"} for GAC?
-    - How much is the registration [fee for others]{"entity": "gacreg", "value": "FO"} ?
-    - What is the registration [fee for felicitation]{"entity": "gacreg", "value": "FF"} batch for GAC 2023?
-    - What is the registration [fee for others]{"entity": "gacreg", "value": "FO"} for GAC 2023?
-    - What is the [link for registering]{"entity": "gacreg", "value": "RL"} for GAC 2023?
-    - What is the [last date to register]{"entity": "gacreg", "value": "RD"} for GAC 2023?
-    - [Can alumni register for GAC 2023?]{"entity": "gacreg", "value": "FR"}
-    - How much is the [registration fee]{"entity": "gacreg", "value": "F"} for GAC 2023?
-    - What are the [fees]{"entity": "gacreg", "value": "FR"} associated with GAC 2023 registration?
+    - What are the [registration details](gacreg:FR) for GAC 2023?
+    - What is the [registration process](gacreg:FR) for GAC 2023?
+    - Can you give me the [Registration link](gacreg:RL) for GAC?
+    - How much is the registration [fee for others](gacreg:FO) ?
+    - What is the registration [fee for felicitation](gacreg:FF) batch for GAC 2023?
+    - What is the registration [fee for others](gacreg:FO) for GAC 2023?
+    - What is the [link for registering](gacreg:RL) for GAC 2023?
+    - What is the [last date to register](gacreg:RD) for GAC 2023?
+    - [Can alumni register for GAC 2023?](gacreg:FR)
+    - How much is the [registration fee](gacreg:F) for GAC 2023?
+    - What are the [fees](gacreg:FR) associated with GAC 2023 registration?
     - Tell me about the pricing structure for GAC 2023 registration.
-    - I'd like to know the registration [fee]{"entity": "gacreg", "value": "F"} for students attending GAC 2023.
-    - [How can I register for GAC 2023]{"entity": "gacreg", "value": "FR"}?
-    - What is the [process for GAC 2023 registration]{"entity": "gacreg", "value": "FR"}?
-    - Can you guide me through the [GAC 2023 registration]{"entity": "gacreg", "value": "FR"}?
-    - I'd like to [sign up for GAC 2023]{"entity": "gacreg", "value": "FR"}. What are the steps?
-    - Tell me about the [registration options]{"entity": "gacreg", "value": "FR"} for GAC 2023.
-    - What is the cost of [registration]{"entity": "gacreg", "value": "FR"} for GAC 2023?
-    - How can I register for the [event]{"entity": "gacreg", "value": "FR"}?
-    - What is the registration [fee]{"entity": "gacreg", "value": "F"}?
-    - Can you guide me through the [registration process]{"entity": "gacreg", "value": "FR"}?
-    - Where do I [sign up for the event]{"entity": "gacreg", "value": "FR"}?
-    - Tell me about the [registration procedure]{"entity": "gacreg", "value": "FR"}.
-    - Is there a [fee]{"entity": "gacreg", "value": "F"} to attend the event?
-    - How do I get [registered]{"entity": "gacreg", "value": "FR"} for 2023?
-    - What are the [steps]{"entity": "gacreg", "value": "FR"} to complete the [registration]{"entity": "gacreg", "value": "FR"}?
-    - [When does the registration]{"entity": "gacreg", "value": "RD"} for start?
-    - What is the [deadline]{"entity": "gacreg", "value": "RD"} for [event registration]{"entity": "gacreg", "value": "FR"}?
-    - How can I pay for the [registration fee]{"entity": "gacreg", "value": "F"}?
-    - Do I need to create an [account]{"entity": "gacreg", "value": "FR"} to [register]{"entity": "gacreg", "value": "FR"}?
-    - Can I [register]{"entity": "gacreg", "value": "FR"} multiple [attendees]{"entity": "gacreg", "value": "FR"} at once?
-    - What [payment methods]{"entity": "gacreg", "value": "FR"} are accepted for [registration]{"entity": "gacreg", "value": "FR"}?
-    - How do I confirm my [registration status]{"entity": "gacreg", "value": "FR"}?
-    - What information is required for the [registration form]{"entity": "gacreg", "value": "FR"}?
+    - I'd like to know the registration [fee](gacreg:F) for students attending GAC 2023.
+    - [How can I register for GAC 2023](gacreg:FR)?
+    - What is the [process for GAC 2023 registration](gacreg:FR)?
+    - Can you guide me through the [GAC 2023 registration](gacreg:FR)?
+    - I'd like to [sign up for GAC 2023](gacreg:FR). What are the steps?
+    - Tell me about the [registration options](gacreg:FR) for GAC 2023.
+    - What is the cost of [registration](gacreg:FR) for GAC 2023?
+    - How can I register for the [event](gacreg:FR)?
+    - What is the registration [fee](gacreg:F)?
+    - Can you guide me through the [registration process](gacreg:FR)?
+    - Where do I [sign up for the event](gacreg:FR)?
+    - Tell me about the [registration procedure](gacreg:FR).
+    - Is there a [fee](gacreg:F) to attend the event?
+    - How do I get [registered](gacreg:FR) for 2023?
+    - What are the [steps](gacreg:FR) to complete the [registration](gacreg:FR)?
+    - [When does the registration](gacreg:RD) for start?
+    - What is the [deadline](gacreg:RD) for [event registration](gacreg:FR)?
+    - How can I pay for the [registration fee](gacreg:F)?
+    - Do I need to create an [account](gacreg:FR) to [register](gacreg:FR)?
+    - Can I [register](gacreg:FR) multiple [attendees](gacreg:FR) at once?
+    - What [payment methods](gacreg:FR) are accepted for [registration](gacreg:FR)?
+    - How do I confirm my [registration status](gacreg:FR)?
+    - What information is required for the [registration form](gacreg:FR)?
     - Is there a group registration(gacreg:FR) option?
-    - Can I [register]{"entity": "gacreg", "value": "FR"} on the [day]{"entity": "gacreg", "value": "FR"} of the [event]{"entity": "gacreg", "value": "FR"}?
-    - Are there any [prerequisites]{"entity": "gacreg", "value": "FR"} for [registration]{"entity": "gacreg", "value": "FR"}?
-    - Can I [cancel]{"entity": "gacreg", "value": "FR"} or [modify]{"entity": "gacreg", "value": "FR"} my [registration]{"entity": "gacreg", "value": "FR"}?
-    - Tell me about the [registration schedule]{"entity": "gacreg", "value": "FR"}.
-    - What is the [registration process]{"entity": "gacreg", "value": "FR"} like?
-    - Are there any [documents]{"entity": "gacreg", "value": "FR"} needed for [registration]{"entity": "gacreg", "value": "FR"}?
-    - How can I get a [copy]{"entity": "gacreg", "value": "FR"} of my [registration receipt]{"entity": "gacreg", "value": "FR"}?
-    - Can you provide details on [early bird registration]{"entity": "gacreg", "value": "FR"}?
-    - What is [included]{"entity": "gacreg", "value": "FR"} in the [registration package]{"entity": "gacreg", "value": "FR"}?
-    - Tell me about the [registration support contact]{"entity": "gacreg", "value": "FR"}.
-    - Where can I find the [online registration portal]{"entity": "gacreg", "value": "FR"}?
-    - How do I [register]{"entity": "gacreg", "value": "FR"} as a [speaker]{"entity": "gacreg", "value": "FR"} for the [event]{"entity": "gacreg", "value": "FR"}?
+    - Can I [register](gacreg:FR) on the [day](gacreg:FR) of the [event](gacreg:FR)?
+    - Are there any [prerequisites](gacreg:FR) for [registration](gacreg:FR)?
+    - Can I [cancel](gacreg:FR) or [modify](gacreg:FR) my [registration](gacreg:FR)?
+    - Tell me about the [registration schedule](gacreg:FR).
+    - What is the [registration process](gacreg:FR) like?
+    - Are there any [documents](gacreg:FR) needed for [registration](gacreg:FR)?
+    - How can I get a [copy](gacreg:FR) of my [registration receipt](gacreg:FR)?
+    - Can you provide details on [early bird registration](gacreg:FR)?
+    - What is [included](gacreg:FR) in the [registration package](gacreg:FR)?
+    - Tell me about the [registration support contact](gacreg:FR).
+    - Where can I find the [online registration portal](gacreg:FR)?
+    - How do I [register](gacreg:FR) as a [speaker](gacreg:FR) for the [event](gacreg:FR)?
+#HRITHIMAN GUHA
+#ISME DAAL DE gacpay krke
 - intent: gac_2023_payment
   examples: |
     - What are the [payment](gacpay) details for registering for GAC 2023?
@@ -1180,6 +1241,9 @@ nlu:
     - What is the policy for late or on-site [payments](gacpay) for GAC 2023?
     - Can you provide details for the [payment](gacpay) support contact for GAC 2023?
     - Please explain the process for canceling or modifying my [payment](gacpay) for GAC 2023.
+
+
+#isme gacspon krke daal de
 - intent: gac_2023_sponsorship
   examples: |
     - What is the different [sponsorship amounts](gacspan) provided?
@@ -1317,6 +1381,7 @@ nlu:
     - Please share the geographical details of MNNIT's campus.
     - Where is the institute Motilal Nehru National Institute of Technology?
     - I want to know the physical site of MNNIT in Allahabad.
+
 - intent: mnnit_full_form
   examples: |
     - What does MNNIT stand for?
@@ -1344,6 +1409,7 @@ nlu:
     - Can you explain MNNIT's abbreviation in full?
     - I'm looking for the expanded form of MNNIT.
     - What is the full name of the institute with the acronym MNNIT?
+
 - intent: girls_hostel_count
   examples: |
     - How many girls' hostels are there at MNNIT?
@@ -1367,6 +1433,7 @@ nlu:
     - Please share details about the girls' hostels at MNNIT.
     - Tell me the total girls' hostel count in MNNIT.
     - How many accommodations for female students can be found in MNNIT?
+
 - intent: girls_hostel_names
   examples: |
     - What are the names of the girls' hostels at MNNIT?
@@ -1386,6 +1453,11 @@ nlu:
     - What are the names of the places for girls to stay in MNNIT?
     - Tell me the specific names of the girls' hostels in MNNIT.
     - Can you list the names of accommodations for female students at MNNIT?
+    - What are the names of the girls' hostels in MNNIT?
+    - I'd like to know the names of the girls' hostels at MNNIT.
+    - Share information about the housing options for female students, including their names at MNNIT.
+    - What are the names of the places for girls to stay in MNNIT?
+
 - intent: mnnit_clubs
   examples: |
     - Tell me about the clubs at MNNIT.
@@ -1408,6 +1480,7 @@ nlu:
     - Can you provide a list of clubs and societies in MNNIT?
     - I want to know about the clubs that students can participate in at MNNIT.
     - Tell me the names of clubs and organizations in MNNIT.
+
 - intent: what_is_academic_building
   examples: |
     - What is the Academic Building?
@@ -1436,6 +1509,7 @@ nlu:
     - Academic Building: details, please.
     - I'd like to know about the Academic Building at MNNIT.
     - Share some insights on MNNIT's Academic Building.
+
 - intent: what_is_administrative_building
   examples: |
     - What is the Administrative Building at MNNIT?
@@ -1464,6 +1538,8 @@ nlu:
     - Administrative Building: details, please.
     - I'd like to know about the Administrative Building at MNNIT.
     - Share some insights on MNNIT's Administrative Building.
+
+
 - intent: girls_gym_mnnit
   examples: |
     - Where is the girls' gym at MNNIT located?
@@ -1491,6 +1567,8 @@ nlu:
     - What are the rules for using the girls' gym?
     - Are there any restrictions to enter the girls' gym?
     - What are the membership requirements for the girls' gym?
+
+
 - intent: canteens_girls_hostel_mnnit
   examples: |
     - Are there any canteens for the girls' hostel at MNNIT?
@@ -1545,6 +1623,9 @@ nlu:
     - Are there any specific dietary considerations for male students in the canteens?
     - Can you provide information about the quality of food in the canteens for boys?
     - What's the pricing for the meals in the boys' hostel canteens?
+
+
+
 - intent: seminar_hall_mnnit
   examples: |
     - Tell me about the Seminar Hall in MNNIT.
@@ -1573,6 +1654,8 @@ nlu:
     - What are the events or functions organized in the Seminar Hall?
     - What is the seating capacity of the Seminar Hall at MNNIT?
     - Is the Seminar Hall available for student events?
+
+
 - intent: mp_hall_mnnit
   examples: |
     - Tell me about MP Hall at MNNIT.
@@ -1601,6 +1684,8 @@ nlu:
     - What are the events or functions organized in MP Hall?
     - Is MP Hall available for student events?
     - Tell me about the history of MP Hall at MNNIT.
+
+
 - intent: dean_office_mnnit
   examples: |
     - Tell me about the Dean's Office at MNNIT.
@@ -1626,6 +1711,7 @@ nlu:
     - I need information on the Dean's Office.
     - Where can I find the Dean's Office at MNNIT?
     - What is the Dean's Office responsible for at MNNIT?
+
 - intent: Boys_hostel
   examples: |
     - How many boys' hostels are there at MNNIT?
@@ -1666,6 +1752,10 @@ nlu:
     - What are the names of the places for boys to stay in MNNIT?
     - Tell me the specific names of the boys' hostels in MNNIT.
     - Can you list the names of accommodations for male students at MNNIT?
+    - What are the names of the boys' hostels in MNNIT?
+    - I'd like to know the names of the boys' hostels at MNNIT.
+    - Share information about the housing options for male students, including their names at MNNIT.
+    - What are the names of the places for boys to stay in MNNIT?
 - intent: library_mnnit
   examples: |
     - Tell me about the library at MNNIT.
@@ -1692,6 +1782,8 @@ nlu:
     - Where can I find the library at MNNIT?
     - What resources are available for research in the library?
     - Is the library open to the public?
+
+
 - intent: warden_office_mnnit
   examples: |
     - Tell me about the Warden's Office at MNNIT.
@@ -1728,6 +1820,7 @@ nlu:
     - Robotics Club Project MNNIT
     - Name some projects of Robotics Club
     - Tell me something about projects of Robotics Club
+
 - intent: ask_self_balancing_bot
   examples: |
     - Self Balancing Bot
@@ -1757,6 +1850,7 @@ nlu:
     - What are the main components of a self balancing bot?
     - Can you list the key parts of a self balancing bot project?
     - Tell me about the main elements that make up a self balancing bot.
+
 - intent: humanoid_info
   examples: |
     - Tell me about the humanoid robot project .
@@ -1783,6 +1877,30 @@ nlu:
     - About the project that utilizes the spider bot project .
     - Project details for spider bot project.
     - Project information for the spider bot project?
+     - Spider bot project
+    - Project about for the spider bot project?
+    - Information about the project related to the spider bot project .
+    - More about the project involving the spider bot project.
+    - About the project that focuses on the spider bot project.
+    - Details about the project related to the spider bot project?
+    - What do the spider bot project do ?
+    - Please , Share information about the spider bot project.
+    - About the project that utilizes the spider bot project .
+    - Project details for spider bot project.
+    - Project information for the spider bot project?
+- intent: humanoid_info
+  examples: |
+    - Tell me about the humanoid robot project .
+    - Purpose of the humanoid robot project?
+    - Features of the humanoid robot project?|
+    - What components are used in the humanoid robot project?
+    - Give me the details about the components of the humanoid robot project ?
+    - Tell me something about humanoid robot project
+    - About humanoid robot project .
+    - How is the humanoid robot project view .
+    - What are the dimensions of the humanoid robot project?
+    - What is the humanoid robot project?
+    - Please tell me more about the humanoid robot project .
 - intent: rlsupermario_info
   examples: |
     - tell me about rl super mario project project?
@@ -1796,6 +1914,7 @@ nlu:
     - What do the rl super mario project do ?
     - What is the rl super mario robot project?
     - Please tell me more about the rl super mario robot project .
+
 - intent: chatbot_info
   examples: |
     - tell me about chatbot project project?
