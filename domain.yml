@@ -1,5 +1,7 @@
 version: '3.1'
 intents:
+- my_name
+- last_name
 - affirm
 - ask_about_exam_preparation_tips
 - ask_about_faculty
@@ -106,6 +108,7 @@ entities:
 - requested_hostel
 - number
 - name
+- lastname
 - facility_type
 - hostel_facilities
 - lab_facilities
@@ -153,6 +156,7 @@ slots:
     mappings:
     - type: from_entity
       entity: user_location
+
 actions:
 - action_provide_directions
 - utter_greet

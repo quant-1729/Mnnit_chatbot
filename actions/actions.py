@@ -58,7 +58,46 @@ client = pymongo.MongoClient("mongodb+srv://Derik714:Hrithiman1856@cluster0.c5z7
 DataBase = client['GACData']
 coll1 = DataBase['GAC2023']
 openai.api_key = "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"
+# open Ai integration
+
+def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+) -> List[Dict[Text, Any]]:
+
+# Get user message from Rasa tracker
+    user_message = tracker.latest_message.get('text')
+    print(user_message)
+def get_chatgpt_response(self, message):
+    url = ' '
+    headers = {
+        'Authorization': 'fNzyk5rxfzkEn922GEGCT3BlbkFJbtbnaO9w9vGn1HAxbzVZ',
+        'Content-Type': 'application/json'
+    }
+    data = {
+        'model': "gpt-3.5-turbo",
+        'messages': [   {'role': 'system', 'content': 'You are an AI assistant for the user. You help to solve user query'},
+                        {'role': 'user', 'content': 'You: ' + user_message}
+                        ],
+        'max_tokens': 100
+    }
+    response = requests.post(url, headers=headers, json=data)
+    # response = requests.post(api_url, headers=headers, json=data)
+
+    if response.status_code == 200:
+        chatgpt_response = response.json()
+        message = chatgpt_response['choices'][0]['message']['content']
+        dispatcher.utter_message(message)
+    else:
+        # Handle error
+        return "Sorry, I couldn't generate a response at the moment. Please try again later."
+
+        # Revert user message which led to fallback.
+    return [UserUtteranceReverted()]
 def open_google_maps_link(link):
+
     driver = webdriver.Chrome()
     driver.get(link)
     input("Press any key to close the browser...")
