@@ -1,6 +1,5 @@
 version: '3.1'
 intents:
-- my_name
 - last_name
 - affirm
 - ask_about_exam_preparation_tips
@@ -15,10 +14,9 @@ intents:
     use_entities: library_resources
 - ask_about_mentorship_program
 - ask_admission_process
-- ask_for_direction
 - ask_for_directions
-- ask_hostel_choice:
-    use_entities: hostel
+#- ask_hostel_choice:
+#    use_entities: hostel
 - ask_intro_format
 - ask_placements
 - bot_challenge
@@ -102,6 +100,10 @@ intents:
 - linefollower_info
 - selfdrivingcart_info
 - out_of_scope
+- maa
+- ask_for_image
+- give_feedback
+- request_names
 entities:
 - user_location
 - destination_given
@@ -128,7 +130,7 @@ entities:
 - gacreg
 - gacspan
 - gacpay
-- maa
+#- maa
 slots:
   name:
     type: text
@@ -169,6 +171,9 @@ actions:
 - gac_reg
 - say_fallback
 - action_open_link
+- action_text_to_speech
+- action_get_image
+- action_custom_fallback
 responses:
   utter_greet:
   - text: Hey! How are you?

@@ -1,7 +1,5 @@
 version: "3.1"
-
 rules:
-
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -11,7 +9,7 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
-#
+
 - rule: Giving Hostel information
   steps:
   - intent: ask_hostel_choice
@@ -22,19 +20,21 @@ rules:
   - intent: ask_for_direction
   - action: action_provide_directions
 
-- rule: Activate form
-  steps:
-  - intent: request_names
-  - action: name_form
-  - active_loop: name_form
 
-- rule: Submit form
-  condition:
-  - active_loop: name_form
-  steps:
-  - action: name_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: utter_submit
-  - action: utter_slots_values
+#
+#- rule: Activate form
+#  steps:
+#  - intent: request_names
+#  - action: name_form
+#  - active_loop: name_form
+#
+#- rule: Submit form
+#  condition:
+#  - active_loop: name_form
+#  steps:
+#  - action: name_form
+#  - active_loop: null
+#  - slot_was_set:
+#    - requested_slot: null
+#  - action: utter_submit
+#  - action: utter_slots_values
