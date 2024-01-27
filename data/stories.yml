@@ -459,7 +459,8 @@ stories:
   steps:
   - intent: boys_hostel_canteens
   - action: utter_boys_hostel_canteen
-  - action:
+###############################################################33
+######### BOT RUSH EVENT START
 - story: project
   steps:
   - intent: projects
@@ -504,6 +505,100 @@ stories:
   - intent: selfdrivingcart_info
   - action: utter_self
   - action: restart_convo
+- story: bumblesee_full_descip
+  steps:
+  - intent: basic_details_bbsee
+  - action: say_bbsee_details
+  - action: restart_convo
+- story: bumblesee_desc_map
+  steps:
+  - intent: user_asks_arena_desc
+  - action: show_arena_map
+  - action: restart_convo
+- story: specific_detail
+  steps:
+  - intent: specific_details_about_BBSEE
+    entities:
+    - specific_details_about_BBSEE: "AllRules"
+  - action: decide_details
+  - action: restart_convo
+- story: All_rules_BBSE
+  steps:
+  - intent: Allrules_BBSE
+  - action: utter_allrules_bbse
+  - action: restart_convo
+- story: MNGE PS
+  steps:
+  - intent: Match_n_engage_PS
+  - action: utter_MNGE_PS
+  - action: restart_convo
+- story: MNGE REG
+  steps:
+  - intent: Match_n_engage_Reg
+  - action: utter_MNGE_REG
+  - action: restart_convo
+- story: MNGE Rules
+  steps:
+  - intent: Match_n_engage_Rules
+  - action: utter_MNGE_Rules
+  - action: restart_convo
+- story: MNGE COORDI
+  steps:
+  - intent: Match_n_engage_Coordis
+  - action: utter_MNGE_Coordis
+  - action: restart_convo
+- story: Time Place
+  steps:
+  - intent: Timing_Place
+  - action: utter_Location_time
+  - action: restart_convo
+- story: More_info
+  steps:
+  - intent: More_info
+  - action: utter_more_info
+  - action: restart_convo
+- story: bumblesee_coordi
+  steps:
+  - intent: Coordinator_BBSEE
+  - action: utter_BBSEE_Coordinator
+  - action: restart_convo
+- story: meeptime
+  steps:
+  - intent: meeptimeline
+  - action: utter_meeptimeline
+  - action: restart_convo
+- story: meeptime
+  steps:
+  - intent: meepmop_ins
+  - action: utter_meepins
+  - action: restart_convo
+- story: meepbasic
+  steps:
+  - intent: meepmop_basicthings
+  - action: utter_meepbasic
+  - action: restart_convo
+- story: dohrules
+  steps:
+  - intent: doh_rules
+  - action: utter_dohrules
+  - action: restart_convo
+- story: dohbot
+  steps:
+  - intent: doh_bot
+  - action:  utter_dohbot
+  - action: restart_convo
+- story: dottips
+  steps:
+  - intent: doh_tips
+  - action: utter_dohtips
+  - action: restart_convo
+- story: dohprblms
+  steps:
+  - intent: doh_prblmstmnt
+  - action: utter_dohprblm
+  - action: restart_convo
+######################## BOT RUSH STORIES END
+################################################################
 - story: interactive_story_1
   steps:
   - intent: ask_for_directions

@@ -15,8 +15,6 @@ intents:
 - ask_about_mentorship_program
 - ask_admission_process
 - ask_for_directions
-#- ask_hostel_choice:
-#    use_entities: hostel
 - ask_intro_format
 - ask_placements
 - bot_challenge
@@ -92,6 +90,10 @@ intents:
 - boys_hostel_canteens
 - Boys_hostel
 - projects
+- basic_details_bbsee
+- user_asks_arena_desc
+- specific_details_about_BBSEE
+- Coordinator_BBSEE
 - ask_self_balancing_bot
 - humanoid_info
 - SpiderBot_info
@@ -100,6 +102,20 @@ intents:
 - linefollower_info
 - selfdrivingcart_info
 - out_of_scope
+- Allrules_BBSE
+- Match_n_engage_PS
+- Match_n_engage_Reg
+- Match_n_engage_Rules
+- Match_n_engage_Coordis
+- Timing_Place
+- More_info
+- meeptimeline
+- meepmop_ins
+- meepmop_basicthings
+- doh_rules
+- doh_bot
+- doh_tips
+- doh_prblmstmnt
 - maa
 - ask_for_image
 - give_feedback
@@ -169,11 +185,17 @@ actions:
 - gac2023_basic_info
 - gac2023_orgcom
 - gac_reg
-- say_fallback
 - action_open_link
 - action_text_to_speech
 - action_get_image
 - action_custom_fallback
+- action_givegformlink
+- say_bbsee_details
+- show_arena_map
+- decide_details
+- voice_mode_on
+- voice_mode_off
+- say_fallback
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -569,38 +591,186 @@ responses:
     - text: "Dear Alumni, we are delighted to offer dedicated dining facilities: 'Talwar Cafe' for Swami Vivekananda Boy's Hostel, and 'Raj, Ojha, Tirath Raj, Pillai Canteens' for senior hostels like Tilak, Patel, and Tandon"
   utter_warden_office_mnnit:
     - text: "The Warden's Office at MNNIT is  located near the Lecture Hall Complex or opposite to the Computer Centre. It is where the Chief Warden typically oversees various matters related to hostels and students. This office plays a central role in addressing and managing issues concerning hostels and students' welfare. For specific inquiries, such as contacting the Chief Warden or discussing any hostel-related concerns, you can visit the Warden's Office or contact MNNIT administration for further guidance."
-  utter_project:
-    - text: "The current projects of club include
-           1. Self balancing bot
-           2. Humanoid
-           3. Spider Bot
-           4. RL Super Mario
-           5. Chatbot
-           6. Line Follower
-           7. Self Driving Cart"
-  utter_balance:
-    - text: "The Self-balancing bot is an automated vehicle that balances itself without any outside help or support.
-           This project involves using PID Control and involuted programming.Self-balancing bot is based on the principle of Inverted pendulum, 
-           which is a two wheel vehicle balances itself up in the vertical position with reference to the ground "
-  utter_human:
-    - text: " Humanoid robots are professional service robots built to mimic human motion and interaction.
-   Like all service robots, they provide value by automating tasks in a way that leads to cost-savings and productivity. "
-  utter_spider:
-    - text: "A spiderbot is a computer program that scans the web automatically,
-   “reading” everything it finds, analyzing the information and classifying it in the database or index of the search engine. "
-  utter_rl:
-    - text: "RL Super Mario is a platform game ,an AI Mario model using reinforcement learning with Python.
-  The game mechanics of Super Mario Bros. involve movement, obstacles, enemies, power-ups, and level design."
-  utter_chatbot:
-    - text: " A chatbot is a computer program that simulates and processes human conversation (either written or spoken), allowing humans to interact wit "
-  utter_linefollower:
-    - text: "The line follower robot is a mobile machine that can detect and follow the line drawn on the floor.
-  Generally, the path is predefined and can be either visible like a black line on a white surface with a high contrasted color or it can be invisible like a magnetic filed. "
-  utter_self:
-    - text: "A self-driving car, also known as an autonomous car (AC), driverless car, or robotic car (robo-car), is a car that is capable of traveling without human input. 
-  Self-driving cars are responsible for perceiving the environment, monitoring important systems, and control, including navigation."
   utter_gacspon:
     - text: "Here you can find the details about the sponsorship: https://vaave.s3.amazonaws.com/attachments/1685368221_bc91f35905affd992433b8df9e8c4f15.pdf"
+  utter_project:
+    - text: "The current projects of club include\n1. Self balancing bot\n2. Humanoid\n3. Spider Bot\n4. RL Super Mario\n5. Chatbot\n6. Line Follower\n7. Self Driving Cart"
+
+  utter_allrules_bbse:
+    - text: |
+        1. Your bot must not damage the arena in any way. Doing so will result in immediate disqualification.
+        2. There will be four checkpoints A, B, C, D.
+        3. If your bot misses a turn according to the LSRB algorithm or goes out of the path, your bot will be restarted from the last reached checkpoint.
+        4. During the wall following, if your bot hits the wall or goes out of the dashed line, it has to restart from point D.
+        5. There will be only 2 restarts allowed during the entire run.
+        6. There will be a provision to skip a checkpoint only once if your bot goes out of the path at least once. No points will be awarded for that checkpoint.
+  utter_MNGE_Coordis:
+    - text: |
+        **MATCH AND ENGAGE COORDINATORS**
+           *EVENT COORDINATOR*
+           1.Shashank Singh
+           9351648062
+           shashanksinghranu@gmail.com
+           2.Shreya Gupta
+           shreya.20208119@mnnit.ac.in
+           *DEPARTMENT COORDINATOR*
+           1.Prakhar Agarwal
+           8004730219
+           prakhar.20200035@mnnit.ac.in
+           2.Gautam Kumar
+           8987381926
+           gautam.20203059@mnnit.ac.in
+  utter_BBSEE_Coordinator:
+    - text: |
+        **BumbleSee Event Coordinators:**
+
+        1. Aditya Jain
+           - Contact: 9335780943
+           - Email: aditya.20203010@mnnit.ac.in
+
+        2. Shashank Singh
+           - Contact: 9351648062
+           - Email: shashanksinghranu@gmail.com
+
+        3. Prakhar Agarwal
+           - Contact: 8004730219
+           - Email: prakhar.20200035@mnnit.ac.in
+
+        4. Gautam Kumar
+           - Contact: 8987381926
+           - Email: gautam.20203059@mnnit.ac.in
+
+  utter_balance:
+    - text: "The Self-balancing bot is an automated vehicle that balances itself without any outside help or support. This project involves using PID Control and involuted programming. Self-balancing bot is based on the principle of Inverted pendulum, which is a two wheel vehicle balances itself up in the vertical position with reference to the ground."
+
+  utter_human:
+    - text: "Humanoid robots are professional service robots built to mimic human motion and interaction. Like all service robots, they provide value by automating tasks in a way that leads to cost-savings and productivity."
+
+  utter_spider:
+    - text: "A spiderbot is a computer program that scans the web automatically, “reading” everything it finds, analyzing the information and classifying it in the database or index of the search engine."
+
+  utter_rl:
+    - text: "RL Super Mario is a platform game, an AI Mario model using reinforcement learning with Python. The game mechanics of Super Mario Bros. involve movement, obstacles, enemies, power-ups, and level design."
+
+  utter_chatbot:
+      - text: "A chatbot is a computer program that simulates and processes human conversation (either written or spoken), allowing humans to interact wit."
+
+  utter_linefollower:
+      - text: "The line follower robot is a mobile machine that can detect and follow the line drawn on the floor. Generally, the path is predefined and can be either visible like a black line on a white surface with a high contrasted color or it can be invisible like a magnetic filed."
+
+  utter_self:
+      - text: "A self-driving car, also known as an autonomous car (AC), driverless car, or robotic car (robo-car), is a car that is capable of traveling without human input. Self-driving cars are responsible for perceiving the environment, monitoring important systems, and control, including navigation."
+
+  utter_MNGE_Rules:
+      - text: |
+          Bot Review & Preliminary Round:
+          The event coordinators will review the projects to assess progress. The Arduino code should be completed.
+
+          Final Round:
+          Bots selected for the final round must have both Arduino and ESP01 code completed. The bot should be fully operable through a cell phone app.
+
+          Judging Criteria:
+          a. Compact Code [+200 points]
+          b. Smooth Turns (Relative) [+300 points]
+          c. Time Factor: Max [600 points], allotted relative to the performance of all participants.
+
+  utter_MNGE_REG:
+      - text: |
+          1. This is a team event with a maximum of 4 members and a minimum of 2. Team members can be from any branch.
+          2. You are required to build a working robot for any one problem before the deadline. You can contact seniors for any discrepancies or doubts in the problem statement.
+          3. You will need to submit an abstract before submitting a solution, in which you will describe your approach to the problem and list all the hardware used.
+          4. The decision of the judges will be final and binding. Rules and Regulations.
+          5. This is a cumulative scoring event, so you need to perform well in all rounds to win.
+          6. ANY FORM OF CODE PLAGIARISM WILL NOT BE TOLERATED. If any part of the project is found to be copied, the team will be disqualified immediately.
+          7. Do not assume anything in the problem statement by yourself. Contact us to resolve any discrepancies.
+
+  utter_MNGE_PS:
+      - text: |
+          The war between the Autobots and the Decepticons has now reached its battlefield. The humans of Earth have decided to protect their homeland by taking the side of the Autobots. We have just received very sensitive information that the Decepticons can detect any Autobot technology in their vicinity but cannot detect human technology in the same way. Humans and Autobots want to use this information to their advantage and, as a result, win the war. However, they lack expertise in robotics. As a result, they have approached the Robotics Club at MNNIT to help them build special-purpose robots for specific tasks. Can you and your team help the humans and the Autobots win this war and reclaim our home? It's time to find out!
+
+  utter_meeptimeline:
+      - text: |
+          "timeline": 
+          "date": "23 march",
+          "events": ["Class 1", "Form release"]
+
+          "date": "25 march",
+          "events": ["Class 2", "Form submission deadline"]
+
+          "date": "2 april",
+          "events": ["Project related and Doubt class"]
+
+          "date": "15 april",
+          "events": ["Let the game begin!"]
+
+  utter_meepins:
+      - text: |
+          1. The task performed by your bot must be automated, which means that after you start your bot once, you cannot make any changes in it, and it should complete the specified task on its own.
+          2. Your bot must use a minimum of 2 sensors (motor as well), Arduino board, and should work on regular power supply.
+
+  utter_meepbasic:
+      - text: |
+          eventTitle: "Meep Mop",
+          openTo: "Open to all",
+          platform: "Arduino",
+          requiredComponents:
+            sensors: "Minimum 2 sensors",
+            board: "Arduino board",
+            powerSupply: "Regular power supply",
+            suggestedBotType: "Prefer creating a moving bot rather than a bot with no wheels"
+
+  utter_dohtips:
+      - text: |
+          1. Focus on making the bot durably and your code well commented. Your bot should not stop working on slightly bad handling.
+          2. The main motive of Bot-Rush 2k23 is to help you develop an interest in robotics and introduce you to your first hardware project.
+          3. The Basic/Advanced features are to guide you on your theme. You are free to add more features from your side which would enhance the quality of the bot. You would be judged on your creativity, the functionality of your bot. Any use of extra sensors/hardware should be informed beforehand.
+          4. Participate in the team as it will make you a team player and will be helpful in the future.
+          5. Note for first-time developers/beginners: Your focus should be to complete the bot in the given time.
+
+  utter_dohprblm:
+      - text: |
+          1. Automatic Door and a Secure Locking System-Smart locks leverage IoT-enabled sensors to operate keyless entry devices that allow users to access doors remotely.
+              1.1 Opening and Closing of Lock system must be done by either mobile application or by some web based system. [+250 points]
+              1.2 Password based protection should be implemented, Password can be entered using mobile, or by using keyboard. [+200 points]
+              1.3 A provision of alarm should be there for unauthorized access. [+50 points]
+              1.4 Any other advanced security ideas in addition to above will also be considered with provision of extra points. [Bonus points depends on ideas]
+          2. Visitors Counter-Visitors counter at the home entrance to store and display the data.
+              2.1 Simple one-way visitor counter at the home entrance. [+150 points]
+              2.2 Bidirectional visitor counter. Monitor the total number of visitors entering, existing and current visitors. [+250 points]
+              2.3 Display of real-time data in mobile application. [+100 points]
+          3. Smart Home-Various tasks related to smart switching, temperature and humidity monitoring, and gas level monitoring.
+              3.1 Controlling Light bulb switching and brightness control using wireless communication through Mobile or any other Remote. [+100 Points] 
+              3.2 Controlling Light bulb switching using voice Commands (Google Assistant.) [+100 Points]
+              3.3 Display all the parameters on serial monitor (on PC). [+100 Points]
+              3.4 Upload and display the parameter to the cloud (Thingspeak.com).
+              3.5 Measure the quantity of gas in percentage and send it over the internet using the Thingspeak server. [+100 Points]
+
+  utter_dohbot:
+      - text: |
+          1. IR Sensor - IR Infrared Sensor Module
+          2. 16x2 LCD Module with I2C Adapter - Display
+          3. Jumper Wires - Jumper Cables Breadboard friendly
+          4. Breadboard - Breadboard
+          5. SG90 Micro-servo Motor - ESP8266 12E Board
+          6. Basic white led-5mm DIP Led white
+          7. DHT22-digital temperature and humidity sensor module
+          8. MQ4-Digital methane sensor
+  utter_Location_time:
+      - text: It will take place in MP HALL, from 6PM to 9PM, contact Coordinators for exact timings
+  utter_more_info:
+      - text: For more information, you can ask me specific questions about the event or contact the event coordinators.
+
+  utter_dohrules:
+      - text: |
+          1. This is a team event with a maximum of 4 members and a minimum of 2. Team members can be from any branch.
+          2. You have to build a working bot for any one problem before the deadline. You can contact seniors for any discrepancies or doubts in the problem statement.
+          3. You’ll be required to submit an abstract before submitting a solution, in which you will describe the approach to the problem and list all the hardware used.
+          4. The decision of the judges will be final and binding. Rules and Regulations
+          5. This is a cumulative score event. So you need to perform well in all rounds to win.
+          6. ANY FORM OF CODE PLAGIARISM WILL NOT BE TOLERATED. If any part of the project is found copied the team will be disqualified immediately.
+          7. Do not assume anything in the problem statement by yourself. Contact us to resolve any discrepancies.
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

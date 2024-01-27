@@ -1809,6 +1809,8 @@ nlu:
     - I need information on the Warden's Office.
     - Where can I find the Warden's Office at MNNIT?
     - What responsibilities do the Wardens have at MNNIT?
+###########################################################################################
+################### BOT Rush Start
 - intent: projects
   examples: |
     - What are the current projects of Robotics Club?
@@ -1888,19 +1890,6 @@ nlu:
     - About the project that utilizes the spider bot project .
     - Project details for spider bot project.
     - Project information for the spider bot project?
-- intent: humanoid_info
-  examples: |
-    - Tell me about the humanoid robot project .
-    - Purpose of the humanoid robot project?
-    - Features of the humanoid robot project?|
-    - What components are used in the humanoid robot project?
-    - Give me the details about the components of the humanoid robot project ?
-    - Tell me something about humanoid robot project
-    - About humanoid robot project .
-    - How is the humanoid robot project view .
-    - What are the dimensions of the humanoid robot project?
-    - What is the humanoid robot project?
-    - Please tell me more about the humanoid robot project .
 - intent: rlsupermario_info
   examples: |
     - tell me about rl super mario project project?
@@ -1963,6 +1952,556 @@ nlu:
     - Are there specific applications or industries where this project could be useful?
     - What was the most rewarding aspect of completing this self driving cart project?
     - Can you share any tips or advice for others interested in building their own self driving cart robots?
+- intent: basic_details_bbsee
+  examples: |
+    - Bumbe See?
+    - Bumble see?
+    - Bubmle See?
+    - What is the problem statement of Bumblesee event?
+    - Can you tell me the basic details of BumbleSee event?
+    - Can you tell me about the Bumblesee event?
+    - Describe the Bumblesee event
+    - What do you know about the Bumblesee event?
+    - BumbleSee event?
+    - Provide an overview of the BumbleSee event.
+    - Share some basic information about BumbleSee.
+    - I'd like to learn more about the BumbleSee event. What can you tell me?
+    - Tell me the key information about the BumbleSee competition.
+    - What's the BumbleSee event all about?
+    - What are the main details of the BumbleSee event?
+    - I'm interested in learning about the BumbleSee competition. Can you provide an overview?
+    - Could you give me an introduction to the BumbleSee event?
+    - Tell me the fundamental information about BumbleSee.
+    - BumbleSee event details?
+    - I'd like to know the basics of the BumbleSee event.
+    - Provide a summary of the BumbleSee competition.
+    - Share key facts about the BumbleSee event.
+    - What's the BumbleSee event like, in a nutshell?
+    - Can you give me a quick overview of the BumbleSee competition?
+    - Share some key information about the BumbleSee event.
+    - Can you provide a brief summary of the BumbleSee competition?
+    - Tell me about the BumbleSee event in a few words.
+    - What are the essential facts about the BumbleSee event?
+    - I'm looking for a quick overview of the BumbleSee competition.
+    - What's the scoop on the BumbleSee event?
+    - Summarize the BumbleSee event for me.
+    - Give me a snapshot of the BumbleSee competition.
+    - Provide a short description of the BumbleSee event.
+    - I'd like to get the basics of the BumbleSee competition.
+
+- intent: user_asks_arena_desc
+  examples: |
+    - Can you describe the arena of the BumbleSee event for me?
+    - What would the arena of the BumbleSee event be like?
+    - Can you provide me with the arena descriptions?
+    - Describe the BumbleSee event arena layout
+    - How is the arena designed for BumbleSee?
+    - Tell me about the setup of the BumbleSee event arena.
+    - What is the layout of the arena for the BumbleSee event?
+    - Can you provide details about the BumbleSee event arena?
+    - I'd like to know more about the physical setup of the BumbleSee arena.
+    - How is the arena structured for the BumbleSee competition?
+    - Explain the arena design for the BumbleSee event.
+    - Describe the BumbleSee event arena in detail.
+    - Provide information about the environment in which BumbleSee takes place.
+
+- intent: specific_details_about_BBSEE
+  examples: |
+      - Can you tell me about Rule [5]{"entity":"SpecificDetail_BBSE","value":"5"} of BumbleSee Event?
+      - What is Rule [4] {"entity:""SpecificDetail_BBSE","value":"4"} of bumblesee event?
+      - Tell me about Rule [6]{"entity":"SpecificDetail_BBSE","value":"6"} of the BumbleSee event
+      - What was rule [3]{"entity":"SpecificDetail_BBSE","value":"3"} of the BumbleSee event?
+      - Can you tell me about the [Gameplay]{"entity":"SpecificDetail_BBSE","value":"Game_Play"} of BumbleSee event?
+      - What is the [Gameplay]{"entity":"SpecificDetail_BBSE","value":"Game_Play"} of the BumbleSee event?
+      - Can you tell me about the [Marking Scheme]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} of the BumbleSee Event?
+      - What is the [Marking Scheme]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} of the BumbleSee Event?
+      - Describe the [marking]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} of the BumbleSee Event
+      - Can you tell me about the [Penalties]{"entity":"SpecificDetail_BBSE","value":"Penalty"} in the BumbleSee event?
+      - What are the [Penalties]{"entity":"SpecificDetail_BBSE","value":"Penalty"} that can be applied in the Bumblesee event?
+      - Tell me about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of the BumbleSee event
+      - Explain the [Gameplay]{"entity":"SpecificDetail_BBSE","value":"Game_Play"} of BumbleSee event
+      - Can you provide information on the [Marking Scheme]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} for the BumbleSee Event?
+      - What are the [Penalties]{"entity":"SpecificDetail_BBSE","value":"Penalty"} that can be applied in the BumbleSee event?
+      - Tell me about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of the BumbleSee event
+      - Explain the [Gameplay]{"entity":"SpecificDetail_BBSE","value":"Game_Play"} of BumbleSee event
+      - Can you provide information on the [Marking Scheme]{"entity":"SpecificDetail_BBSE","value":"Marking_Scheme"} for the BumbleSee Event?
+      - What are the [Penalties]{"entity":"SpecificDetail_BBSE","value":"Penalty"} that can be applied in the BumbleSee event?
+      - What are the event [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} for BumbleSee?
+      - Can you provide information about the [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} of the BumbleSee event?
+      - Tell me about the [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} for BumbleSee.
+      - What do the [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} of the BumbleSee event say?
+      - Explain the [regulations]{"entity":"SpecificDetail_BBSE", "value":"REG"} for BumbleSee.
+      - Tell me about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for bumblesee
+      - Tell me about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - Can you provide information about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} of the BumbleSee event?
+      - What are the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for the BumbleSee event?
+      - Describe the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - Share details about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - I'd like to learn about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - What do the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee include?
+      - Can you explain the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee in detail?
+      - Tell me about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - Provide information on the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - What details can you share about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} of the BumbleSee event?
+      - Describe the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee in depth.
+      - I'm interested in learning more about the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee.
+      - Could you explain the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee?
+      - What components and quantities are included in the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee?
+      - Can you provide a comprehensive overview of the [bot specifications]{"entity":"SpecificDetail_BBSE", "value":"BotSpec"} for BumbleSee?
+      - Tell me about the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee.
+      - Provide information on the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee.
+      - What are the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for the BumbleSee event?
+      - Describe the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee in detail.
+      - I'd like to learn more about the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee.
+      - Could you explain the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee?
+      - What are the individual components included in the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee?
+      - Can you provide a comprehensive overview of the [bot components]{"entity":"SpecificDetail_BBSE", "value":"BotComp"} for BumbleSee?
+- intent: Allrules_BBSE
+  examples: |
+      - Tell me about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of BumbleSee event
+      - Can you list me the [rules of the Bumblesee event]{"entity":"SpecificDetail_BBSE","value":"AllRules"}?
+      - What are the [rules of the Bumblesee event]{"entity":"SpecificDetail_BBSE","value":"AllRules"}?
+      - What [rules]{"entity":"SpecificDetail_BBSE","value":"AllRules"} should I follow for BumbleSee event?
+      - Tell me about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of the BumbleSee event.
+      - Can you list me the [rules of the BumbleSee event]{"entity":"SpecificDetail_BBSE","value":"AllRules"}?
+      - What are the [rules of the BumbleSee event]{"entity":"SpecificDetail_BBSE","value":"AllRules"}?
+      - What [rules]{"entity":"SpecificDetail_BBSE","value":"AllRules"} should I follow for BumbleSee event?
+      - Provide details about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} for the BumbleSee event.
+      - Share the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} that apply to BumbleSee.
+      - Explain the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} for the BumbleSee event.
+      - List the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} for BumbleSee.
+      - I'd like to learn about the [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} of BumbleSee.
+      - What are the key [rules]{"entity":"SpecificDetail_BBSE", "value":"AllRules"} for BumbleSee event?
+- intent: Coordinator_BBSEE
+  examples: |
+      - Who are the event coordinators for BumbleSee?
+      - Can you provide me with the names of the BumbleSee event coordinators?
+      - Tell me about the individuals responsible for coordinating the BumbleSee event.
+      - I'd like to know the names of the coordinators of BumbleSee.
+      - Who is in charge of organizing the BumbleSee competition?
+      - Please share information about the BumbleSee event coordinators.
+      - What are the names of the people managing the BumbleSee event?
+      - I'm interested in knowing the event coordinators for BumbleSee.
+      - Provide details about the individuals responsible for overseeing the BumbleSee competition.
+      - Can you tell me about the event coordinators for BumbleSee and their roles?
+      - I'm curious about the people responsible for coordinating the BumbleSee event. Could you provide their names and roles?
+      - Who is on the organizing team for BumbleSee, and what are their roles?
+      - Please introduce me to the event coordinators of BumbleSee and provide information about their roles in the event.
+      - What is the team composition of the BumbleSee event coordinators, and what are their responsibilities?
+      - Share details about the individuals managing the BumbleSee competition, including their names and roles.
+      - I'd like to get to know the individuals who are in charge of organizing the BumbleSee event. What are their names and roles?
+      - Provide insights into the event coordinators for BumbleSee and elaborate on their respective roles.
+- intent: Match_n_engage_PS
+  examples: |
+      - What is the problem statement for the Match and Engage event?
+      - Can you explain the main problem of the Match and Engage competition?
+      - I need information about the problem statement of the Match and Engage event.
+      - Please provide details about the problem participants need to solve in the Match and Engage competition.
+      - What challenges are participants expected to tackle in the Match and Engage event?
+      - What is the primary challenge in the Match and Engage event?
+      - Please provide insights into the main problem statement for Match and Engage.
+      - I'm looking for details on the problem participants need to solve in Match and Engage.
+      - What's the central issue that competitors will address in the Match and Engage competition?
+      - Describe the key problem statement of the Match and Engage event.
+      - What is the prblem statement for the Match and Engage event?
+      - Can you explain the main problm of the Match and Engage competition?
+      - I need information about the problm statement of the Match and Engage event.
+      - Please provide details about the problem participants need to solve in the Match and Engage competition.
+      - What challenges are participants expected to tackle in the Match and Engage event?
+      - What is the problem statement for the Match and Engage event?
+      - Can you explain the main problem of the Match and Engage competition?
+      - I need information about the problem statement of the Match and Engage event.
+      - Please provide details about the problem participants need to solve in the Match and Engage competition.
+      - What challenges are participants expected to tackle in the Match and Engage event?
+      - What is the primary challenge in the Match and Engage event?
+      - Please provide insights into the main problem statement for Match and Engage.
+      - I'm looking for details on the problem participants need to solve in Match and Engage.
+      - What's the central issue that competitors will address in the Match and Engage competition?
+      - Describe the key problem statement of the Match and Engage event.
+      - What is the prblem statement for the Match and Engage event?
+      - Can you explain the main problm of the Match and Engage competition?
+      - I need information about the problm statement of the Match and Engage event.
+      - Please provide details about the problem participants need to solve in the Match and Engage competition.
+      - What challenges are participants expected to tackle in the Match and Engage event?
+      - What's the problm statement for Match and Engage?
+      - Tell me about the problm statement in the Match and Engage competition.
+      - Details on the problm statement for Match and Engage, please.
+      - The main problm in Match and Engage, what is it?
+      - What's the challenge that needs to be addressed in the problm statement for Match and Engage?
+- intent: Match_n_engage_Reg
+  examples: |
+      - Can you explain the regulations of the Match and Engage event?
+      - Tell me about the guidelines for participating in Match and Engage.
+      - What do I need to know about the event's regulations?
+      - Please provide information on the dos and don'ts of Match and Engage.
+      - Are there any specific regulations for the Match and Engage competition?
+      - How is the Match and Engage event regulated?
+      - What are the dos and don'ts for competitors in Match and Engage?
+      - Can you outline the event's regulations for me?
+      - Tell me about the Match and Engage event's guidelines.
+      - Explain the event's guidelines and standards for Match and Engage.
+      - Provide details about the event's protocols for Match and Engage.
+      - I'd like to know more about the event's terms and conditions for Match and Engage.
+      - How is the Match and Engage competition structured in terms of rules?
+      - Explain the event's policies and regulations for Match and Engage.
+      - What is the official event code of conduct for Match and Engage?
+      - Can you provide information on the event's rule enforcement for Match and Engage?
+      - Tell me about the event's regulatory framework for Match and Engage.
+      - Are there specific event mandates for participating in Match and Engage?
+      - Please elaborate on the dos and don'ts for participants in Match and Engage.
+      - Explain how the Match and Engage event is governed and regulated.
+      - What are the key guidelines for ensuring fair competition in Match and Engage?
+      - Describe the event's rule enforcement mechanisms for Match and Engage.
+      - Provide insights into the event's rulebook and compliance for Match and Engage.
+      - Can you clarify the event's procedures and standards for Match and Engage.
+      - Tell me about the official event's code of conduct and fairness principles for Match and Engage.
+      - Provide information on the event's protocols and dispute resolution process for Match and Engage.
+      - How do participants navigate the event's legal and regulatory framework in Match and Engage?
+      - Explain the key policies that govern the event's ethical conduct for Match and Engage.
+      - What are the procedures for ensuring compliance with the guidelines and regulations in Match and Engage?
+- intent: Match_n_engage_Rules
+  examples: |
+      - Explain the main challenge in the Match and Engage competition using RASA.
+      - How do participants address the primary problem statement in RASA for Match and Engage?
+      - Provide insights into the guidelines for RASA in the Match and Engage event.
+      - Can you explain the dos and don'ts in RASA for the Match and Engage competition?
+      - What are the specific regulations for RASA in the Match and Engage event?
+      - Describe the event's RASA code of conduct and fairness principles.
+      - What are the procedures for ensuring compliance with the RASA guidelines and regulations?
+      - How do participants navigate the RASA legal and regulatory framework in Match and Engage?
+      - Explain the key RASA rules and policies governing the event's ethical conduct for Match and Engage.
+      - What are the event's RASA protocols and dispute resolution process for Match and Engage?
+      - Can you clarify the RASA procedures and standards for Match and Engage?
+      - Tell me about the official RASA rules and regulations for the Match and Engage event.
+      - What are the event's RASA expectations and policies for Match and Engage?
+      - Explain how participants are expected to follow the RASA guidelines and regulations in Match and Engage.
+      - What are the event's RASA guidelines and ethical standards for Match and Engage?
+      - Can you outline the event's RASA structure in terms of rules and guidelines for Match and Engage?
+      - Tell me about the event's RASA rule enforcement and penalties for Match and Engage.
+      - Describe the official RASA event's code of conduct and fairness principles for Match and Engage.
+      - Provide information on the event's RASA protocols and dispute resolution process for Match and Engage.
+- intent: Match_n_engage_Coordis
+  examples: |
+      - Who are the coordinators of Match and engage event?
+      - Who is responsible for organizing the Match and Engage event?
+      - Tell me the names of the coordinators for Match and Engage.
+      - Who are the organizers of the Match and Engage competition?
+      - Can you provide information about the people in charge of Match and Engage?
+      - Who should I contact regarding Match and Engage event coordination?
+      - Give me details about the event coordinators for Match and Engage.
+      - I'd like to know the team behind organizing Match and Engage.
+      - Who is managing the Match and Engage event?
+      - Tell me about the team running the Match and Engage competition.
+      - Who's in charge of organizing Match and Engage?
+      - Provide me with details on the event coordinators for Match and Engage.
+      - I want to contact the coordinators of the Match and Engage event.
+      - Can you give me the names of the coordinators for Match and Engage?
+      - I need to reach out to the Match and Engage organizers.
+      - Who are the people behind Match and Engage's coordination?
+      - Share information about the individuals responsible for Match and Engage.
+      - Tell me about the team in charge of the Match and Engage competition.
+      - I'd like to connect with the coordinators of Match and Engage.
+      - Who should I contact regarding Match and Engage event coordination?
+      - Who are the event coordinators for Match and Engage?
+      - Can you provide details about the Match and Engage event's team?
+      - I'm interested in knowing the names of the coordinators for Match and Engage.
+      - Who's responsible for the organization of Match and Engage?
+      - Give me the contact details for Match and Engage's coordinators.
+      - Tell me about the Match and Engage event's management team.
+      - Who leads the coordination of Match and Engage?
+      - Share the names of the people managing Match and Engage.
+      - I need information about the event coordinators for Match and Engage.
+      - Who is overseeing the coordination of Match and Engage?
+      - Tell me about the individuals handling Match and Engage.
+      - Who can I contact for questions about the Match and Engage competition?
+      - I want to know who's organizing the Match and Engage event.
+      - Can you provide the names of the coordinators for Match and Engage?
+- intent: Timing_Place
+  examples: |
+      - Where and when would the Bumblesee event be conducted?
+      - Where and when would the Match and Engage event be conducted?
+      - Where will BotRush event be held?
+      - When should I go to MP Hall for Bumblesee event?
+      - When and where is the Bumblesee event scheduled?
+      - Where and when can I find the Bumblesee event?
+      - Tell me about the venue and schedule for the Bumblesee event.
+      - What's the location and time for the Bumblesee event?
+      - Where and when is the Bumblesee competition taking place?
+      - I need information on the Bumblesee event's location and time.
+      - Where and when should I go for the Bumblesee event?
+      - Could you share the details of the Bumblesee event's venue and timing?
+      - When is the Bumblesee event happening, and where is it held?
+      - Please let me know the location and schedule of the Bumblesee event.
+      - Where can I attend the Bumblesee event, and when is it scheduled?
+      - What's the location and timing for the Bumblesee competition?
+      - Give me information about the Bumblesee event's venue and time.
+      - When and where would the Bumblesee event take place?
+      - What's the schedule and location for the Bumblesee competition?
+      - Could you tell me where and when the Bumblesee event is?
+      - Where and when is the Bumblesee event being conducted?
+      - I'm looking for details about the Bumblesee event's location and timing.
+      - When and where should I be for the Bumblesee event?
+      - Where is the Match and Engage event happening?
+      - When and where would the Match and Engage event be conducted?
+      - Where will BotRush event be held?
+      - When should I go to MP Hall for Bumblesee event?
+      - What's the venue for the Match and Engage competition?
+      - Tell me about the location and timing of the BotRush event.
+      - Where can I find the Match and Engage event?
+      - Provide information about the Bumblesee event's location and schedule.
+      - I need to know where the Match and Engage event is held.
+      - Where should I go for the BotRush event?
+      - Tell me the place for the Match and Engage competition.
+      - What's the event location for the BotRush event?
+      - Where is the Bumblesee event taking place?
+      - Share the venue details for the Match and Engage event.
+      - I want to know the location of the BotRush event.
+      - Where is the Match and Engage competition held?
+      - What's the site of the Bumblesee event?
+      - Where can I attend the Match and Engage event?
+      - Please provide the location and timing for the BotRush competition.
+      - I'm looking for the venue and schedule of the Match and Engage event
+      - When and where is the Meep Mop event happening?
+      - Where and when would the Decept of Home competition take place?
+      - Tell me the venue and schedule for the Meep Mop event.
+      - What's the location and time for the Decept of Home competition?
+      - Where and when is the Meep Mop competition being conducted?
+      - I need information on the Decept of Home event's location and time.
+      - When should I be at the venue for the Meep Mop event?
+      - Share details about the Decept of Home competition's location and schedule.
+      - Could you provide me with the location and timing of the Meep Mop event?
+      - Where can I attend the Decept of Home competition, and when is it scheduled?
+      - What's the venue and timing for the Meep Mop competition?
+      - Give me information about the Decept of Home event's venue and time.
+      - When and where would the Decept of Home competition take place?
+      - Could you tell me where and when the Meep Mop event is?
+      - Where and when is the Meep Mop event conducted?
+      - I'm looking for details about the Decept of Home event's location and timing.
+      - When and where should I be for the Meep Mop event?
+      - Where is the Match and Engage event happening?
+      - When and where would the Match and Engage event be conducted?
+      - Where will the BotRush event be held?
+      - When should I go to MP Hall for the Bumblesee event?
+      - What's the venue for the Meep Mop competition?
+      - Tell me about the location and timing of the Decept of Home event.
+      - Where can I find the Match and Engage event?
+      - Provide information about the venue and schedule of the BotRush event.
+      - I need to know where the Bumblesee event is held.
+      - Where should I go for the Meep Mop competition?
+      - Tell me the place for the Decept of Home event.
+      - What's the event location for the BotRush event?
+      - Where is the Bumblesee event taking place?
+      - Share the venue details for the Match and Engage event.
+      - I want to know the location of the Decept of Home event.
+      - Where is the Meep Mop competition held?
+      - What's the site of the BotRush event?
+      - Where can I attend the Decept of Home event?
+      - Please provide the location and timing for the Bumblesee competition.
+      - I'm looking for the venue and schedule of the Match and Engage event.
+      - When and where is the Meep Mop event happening?
+      - Where and when would the Home Automation competition take place?
+      - Tell me the venue and schedule for the Meep Mop event.
+      - What's the location and time for the Home Automation competition?
+      - Where and when is the Meep Mop competition being conducted?
+      - I need information on the Home Automation event's location and time.
+      - When should I be at the venue for the Meep Mop event?
+      - Share details about the Home Automation competition's location and schedule.
+      - Could you provide me with the location and timing of the Meep Mop event?
+      - Where can I attend the Home Automation competition, and when is it scheduled?
+      - What's the venue and timing for the Meep Mop competition?
+      - Give me information about the Home Automation event's venue and time.
+      - When and where would the Home Automation competition take place?
+      - What's the schedule and location for the Meep Mop event?
+      - Could you tell me where and when the Home Automation event is?
+      - Where and when is the Meep Mop event conducted?
+      - I'm looking for details about the Home Automation event's location and timing.
+      - When and where should I be for the Meep Mop event?
+- intent: More_info
+  examples: |
+      - Can you give me more info about the event?
+      - Where can I find more info about the Bumblesee event?
+      - Can you provide me with more details about the event?
+      - I'd like to learn more about this event.
+      - Tell me about the event in more detail.
+      - What additional information do you have about the event?
+      - Share further details about the event.
+      - Could you give me more info on this event?
+      - I want to know additional details about the event.
+      - Provide me with in-depth information about the event.
+      - Please tell me more about the event.
+      - What else can you tell me about the event?
+      - Where can I find more information about the Bumblesee event?
+      - Tell me where I can get additional details about this event.
+      - How can I access more info about the event?
+      - Please guide me on where to find event information.
+      - Where should I look for more event details?
+      - What's the source for additional event info?
+      - How can I get more insights about this event?
+      - I need to know where to find event-related information.
+      - Where can I locate additional event details?
+      - Help me find more info about the Bumblesee event.
+      - Can you give me more information about Decept of Home?
+      - Tell me about the Decept of Home event.
+      - What's the Decept of Home competition all about?
+      - I'd like to know more about the Decept of Home event.
+      - Please provide details about Decept of Home.
+      - Explain the Decept of Home event to me.
+      - What's the main concept behind Decept of Home?
+      - Share additional info on Decept of Home.
+      - Can you provide insights into Decept of Home?
+      - I want to learn more about the Decept of Home event.
+      - Where can I find more details about Match and Engage?
+      - Tell me about the Match and Engage competition.
+      - What's the Match and Engage event all about?
+      - Provide information on the Match and Engage competition.
+      - Explain the purpose of Match and Engage.
+      - I'd like to know more about the Match and Engage event.
+      - Please share additional info on Match and Engage.
+      - What's the key concept behind Match and Engage?
+      - Can you give me insights into Match and Engage?
+      - I want to learn more about the Match and Engage competition.
+
+- synonym: Match_n_engage_PS
+  examples: |
+      - Match and Engage
+      - Match & Engage
+      - Match n Engage
+      - Match & Engage
+      - Match & Engge
+      - Macth and Engage
+      - Match and Engaage
+      - Matcch and Engage
+      - Engage and Match
+      - Engage & Match
+      - Engage n Match
+      - Engage & Match
+      - Engage & Matcch
+- lookup: SpecificDetail_BBSE
+  examples: |
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - Marking
+      - Gameplay
+- intent: meeptimeline
+  examples: |
+      - what is the deadline of meemmop?
+      - What is the form realease date of meep mop?
+      - What is the submission date of meem mop form?
+      - what is the last date to register for meep mop?
+      - what is the date for project related guideline session?
+      - when will  project guidline session be kept?
+      - when will the project begin?
+      - when will the project start?
+      - start date for the project?
+      - what is the complete timeline for meepmop?
+      - what is the  time table for meep mop?
+      - what is the time map of meepmop?
+- intent: meepmop_ins
+  examples: |
+      - what are the rules of meepmop?
+      - what are the instructions for meepmop?
+      - what wiil be the intructions to be followed for meepmop?
+      - need more details about operating Meep Mop.
+      - Provide step-by-step guidance for Meep Mop.
+      - Walk me through the process of using Meep Mop.
+      - Can you guide me on how to work with Meep Mop?
+      - Explain the functionality of Meep Mop.
+      - What are the key features of Meep Mop?
+      - Give me a brief overview of how Meep Mop functions.
+      - MeepMop, can you tell me what to do, please?
+      - How should I operate Meep Mop?
+      - Give me instructions for Meep Mop.
+      - What are the steps to use Meep Mop?
+      - I need guidance on how to work with Meep Mop.
+      - Could you provide me with directions for using Meep Mop?
+      - What's the user manual for Meep Mop?
+
+- intent: meepmop_basicthings
+  examples: |
+      - what are the basic details of meep mop?
+      - what are the minimun hardware requirements of meepmop?
+      - what is the theme of meep mop?
+      - on what theme meep mop is based?
+      - what are the basic requirements of meepm op?
+      - what are the basic features of meepmop?
+      - what hardware is required for meep mop?
+      - which hardware must be a part of meep mop?
+      - give a brief overview of meep mop?
+      - provide the basic overview of meepmop?
+      - basic overview meepmop?
+      - basic guidline meepmop?
+      - basic structure of meepmop?
+      - meepmop basic structure?
+- intent: doh_rules
+  examples: |
+      - what are the rules for decept of home?
+      - what are the instructions for decept of home?
+      - what wiil be the intructions to be followed for decept of home?
+      - need more details about operating decept of home.
+      - Provide step-by-step guidance for decept of home
+      - Walk me through the process of using decept of home.
+      - Can you guide me on how to work with decept of home?
+      - Explain the functionality of decept of home.
+      - What are the key features of decept of home?
+      - Give me a brief overview of how decept of home functions.
+      - Decept of home, can you tell me what to do, please?
+      - How should I operate decept of home?
+      - Give me instructions for decept of home.
+      - What are the steps to use decept of home?
+      - I need guidance on how to work with deept of home.
+      - Could you provide me with directions for using decept of home?
+      - What's the user manual for decept of home?
+- intent: doh_bot
+  examples: |
+      - what are the bot specifications of decept of home
+      - what the specifications of bot to be made in decept event?
+      - what hardware can be used in decept event?
+      - what hardware is allowed in decept event?
+      - what hardware can be employed in decept event?
+      - is there any speceification for the hardware in decept event?
+      - what hardware  specification need to be followed for decept event?
+      - what hardware is must to be used in decept event?
+      - what hardware parts needs to be necessarily used in decept event?
+      - what hardware must be used in decept event?
+      - waht are those hardware parts whithout which bot is not allowed?
+      - hardware requirements of decept event?
+- intent: doh_tips
+  examples: |
+      - what are the tips for decept event?
+      - give me some tips for decept of home?
+      - is ther any tips for decept ?
+      - what are the helping statements for decept?
+      - tips of decept
+      - decept tips
+      - what are the useful instruction of decept 
+      - what are some of the useful instructions available in decept?
+      - give me some useful instruction for decept?
+      - is there any helping instruction available for decept event?
+      - what are the helping statements for decept of home event
+- intent: doh_prblmstmnt
+  examples: |
+      - what are the problem statements of decept of home event?
+      - provide me with the problem statements for decept event?
+      - is there any problem statement available for decept event?
+      - what the the basic features for decept event?
+      - basic implementations of decept event?
+      - what are the basic implementations of decept event?
+      - what are the necessary features for decept event?
+      - is there some features which must be present in bot of decept of home event?
+      - what are some of the most important features to be included in the bot of decept event?
+      - give me the most important features to be implemented in the decept event?
+####################### BOT RUSH end
+######################################################################################################3
+- intent: out_of_scope
+  examples: |
+      - whos dksjd ksfhj
+      - sjkfhskjfhsjkfhd s
+      - bar
+
 - synonym: mentorship_program, value:mentorship
   examples: |
     - mentorship
