@@ -403,14 +403,32 @@ nlu:
     - Tell me the directions from [SVBH](user_location) to [Central Library](destination_given)
 # I want to go to MP hall
 - intent: Direct_Direction
+  examples: |
     - I want to [Central Library](destination_given)
     - Take me to [SVBH](destination_given)
     - Give me the direction to [Athletic Ground](destination_given)
     - How can I go to [SVBH](destination_given)
     - How to go to [SVBH](destination_given)
     - What is the way to [Central Library](destination_given)
-
+    - Tell me the path to [SVBH](destination_given)
+    - What is the path to [SVBH](destination_given)
+    - How can I travel to [Athletic Ground](destination_given)
+    - Can you show me the path to [Administrative Building](destination_given)
+    - How can I reach to [Central Library](destination_given)
+    - Take me to the [SVBH](destination_given)
+    - Show me the way to [Athletic Ground ](destination_given)
 # Show mw my current Location
+- intent: Current_Location
+  examples: |
+    - Where I am right now??
+    - What is my current Location 
+    - Tell me my current Location
+    - Which part of MNNIT is this ?? 
+    - Which is this place of Campus?
+    - Show me my current location? 
+    - Can you tell me where I am ? 
+    - What is this place 
+    - Which is this place 
 
 - intent: more_about_college
   examples: |
