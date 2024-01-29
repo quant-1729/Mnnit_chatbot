@@ -1,5 +1,8 @@
 version: '3.1'
 intents:
+- Direct_Direction
+- request_names
+- ask_for_image
 - last_name
 - affirm
 - ask_about_exam_preparation_tips
@@ -15,6 +18,8 @@ intents:
 - ask_about_mentorship_program
 - ask_admission_process
 - ask_for_directions
+#- ask_hostel_choice:
+#    use_entities: hostel
 - ask_intro_format
 - ask_placements
 - bot_challenge
@@ -90,10 +95,6 @@ intents:
 - boys_hostel_canteens
 - Boys_hostel
 - projects
-- basic_details_bbsee
-- user_asks_arena_desc
-- specific_details_about_BBSEE
-- Coordinator_BBSEE
 - ask_self_balancing_bot
 - humanoid_info
 - SpiderBot_info
@@ -102,20 +103,7 @@ intents:
 - linefollower_info
 - selfdrivingcart_info
 - out_of_scope
-- Allrules_BBSE
-- Match_n_engage_PS
-- Match_n_engage_Reg
-- Match_n_engage_Rules
-- Match_n_engage_Coordis
-- Timing_Place
-- More_info
-- meeptimeline
-- meepmop_ins
-- meepmop_basicthings
-- doh_rules
-- doh_bot
-- doh_tips
-- doh_prblmstmnt
+- give_feedback
 - maa
 - ask_for_image
 - give_feedback
@@ -185,17 +173,11 @@ actions:
 - gac2023_basic_info
 - gac2023_orgcom
 - gac_reg
+- say_fallback
 - action_open_link
 - action_text_to_speech
 - action_get_image
 - action_custom_fallback
-- action_givegformlink
-- say_bbsee_details
-- show_arena_map
-- decide_details
-- voice_mode_on
-- voice_mode_off
-- say_fallback
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -210,12 +192,12 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot.
-  utter_my_name:
-  - text: What is your name?
+#  utter_my_name:
+#  - text: What is your name?
   utter_mobile_number:
   - text: What is your mobile number?
-  utter_thanks:
-  - text: Thanks
+#  utter_thanks:
+#  - text: Thanks
   utter_website:
   - text: Here's the link for mnnit's official website,  http://www.mnnit.ac.in/  here you can find all the information about latest announcements, about our college and information regarding registration, result, academic schedule and curriculum
   utter_courses:
@@ -539,8 +521,8 @@ responses:
         "
   utter_AM_dept:
     - text: "The Department of Mathematics at Motilal Nehru National Institute of Technology (MNNIT) offers undergraduate, postgraduate, and doctoral programs in Mathematics and Scientific Computing . The department has a team of highly qualified faculty members who are actively involved in research and teaching. The research areas of the department include Algebra, Analysis, Differential Equations, Fluid Dynamics, Graph Theory, Numerical Analysis, Optimization, and Probability Theory"
-  utter_default:
-    - text: "fall_back happer"
+#  utter_default:
+#    - text: "fall_back happer"
   utter_gac_pay:
     - text: "Here is the bank payment link, https://alumni.mnnit.ac.in/funds/view/692.dz
              Here is the UPI QR code: https://vaave.s3.amazonaws.com/funds/images/7c0e9a8d1403af78a6169cdc9b…"

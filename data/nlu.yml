@@ -376,9 +376,6 @@ nlu:
     - Can you show me the way to [destination](destination_given) starting from [user_location](user_location)?
     - I'm looking for directions to [destination](destination_given) from my current location at [user_location](user_location).
     - Tell me the route to [destination](destination_given) from [user_location](user_location).
-    - I'm at [user_location](user_location).
-    - My current location is [user_location](user_location).
-    - I'm starting from [user_location](user_location).
     - I need directions from [user_location](user_location).
     - Can you guide me from [user_location](user_location) to [destination](destination_given).
     - Are there any landmarks near [destination](destination_given) from [user_location](user_location)?
@@ -389,8 +386,6 @@ nlu:
     - Can you provide the distance between [user_location](user_location) and [destination](destination_given)?
     - Is [destination](destination_given) nearby [user_location](user_location)?
     - What are the travel options to get to [destination](destination_given) from [user_location](user_location)?
-    - Are there public transportation options to reach [destination](destination_given) from [user_location](user_location)?
-    - Can you suggest different modes of travel to [destination](destination_given) from [user_location](user_location)?
     - How can I travel to [destination](destination_given) using [mode_of_transport](mode_of_transport) from [user_location](user_location)?
     - Are there alternative routes to [destination](destination_given) from [user_location](user_location)?
     - Can you suggest a different way to reach [destination](destination_given) from [user_location](user_location)?
@@ -398,13 +393,6 @@ nlu:
     - Are there shortcuts to [destination](destination_given) from [user_location](user_location)?
     - Is there parking available at [destination](destination_given) from [user_location](user_location)?
     - Can I find parking near [destination](destination_given) from [user_location](user_location)?
-    - Tell me about the parking options at [destination](destination_given) from [user_location](user_location).
-    - Where can I park when I reach [destination](destination_given) from [user_location](user_location)?
-    - How's the traffic to [destination](destination_given) from [user_location](user_location)?
-    - Is there heavy traffic on the way to [destination](destination_given) from [user_location](user_location)?
-    - Can you update me on the current traffic conditions to [destination](destination_given) from [user_location](user_location)?
-    - What are the opening hours of [destination](destination_given) from [user_location](user_location)?
-    - When does [destination](destination_given) open and close from [user_location](user_location)?
     - Can you provide the operating hours for [destination](destination_given) from [user_location](user_location)?
     - Tell me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
     - Give me the directions from [SVBH](user_location) to [Athletic Ground](destination_given)
@@ -413,6 +401,17 @@ nlu:
     - Tell me the directions from [SVBH](user_location) to [Admin Building](destination_given)
     - give me direction to [SVBH](user_location) to [Central Library](destination_given)
     - Tell me the directions from [SVBH](user_location) to [Central Library](destination_given)
+# I want to go to MP hall
+- intent: Direct_Direction
+    - I want to [Central Library](destination_given)
+    - Take me to [SVBH](destination_given)
+    - Give me the direction to [Athletic Ground](destination_given)
+    - How can I go to [SVBH](destination_given)
+    - How to go to [SVBH](destination_given)
+    - What is the way to [Central Library](destination_given)
+
+# Show mw my current Location
+
 - intent: more_about_college
   examples: |
     - MNNIT
@@ -1931,7 +1930,6 @@ nlu:
     - What challenges did you encounter while building the line follower bot?
     - What programming languages or software did you use for the project?
     - How do you control or interface with the line follower bot?
-    - Are there specific applications or industries where this project could be useful?
     - What kind of sensors or detectors are employed to make the bot follow lines accurately?
     - Can you share some details about the design and physical structure of the bot?
     - What are the potential future improvements or enhancements you plan for the project?
@@ -1949,7 +1947,6 @@ nlu:
     - What is the main objective of the self driving cart project?
     - What inspired you to work on a self driving cart robot project?
     - What challenges did you encounter while building the self driving cart?
-    - Are there specific applications or industries where this project could be useful?
     - What was the most rewarding aspect of completing this self driving cart project?
     - Can you share any tips or advice for others interested in building their own self driving cart robots?
 - intent: basic_details_bbsee

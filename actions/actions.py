@@ -10,6 +10,7 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from selenium import webdriver
+from spellchecker import SpellChecker
 import webbrowser
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
@@ -24,6 +25,8 @@ from bson import ObjectId
 import openai
 from gtts import gTTS
 from playsound import playsound
+#Spell Checker
+
 
 #Action for text to voice comversion
 
@@ -112,29 +115,23 @@ class ActionHelloWorld(Action):
         dispatcher.utter_message(text="Hello World!")
         return []
 
-class ActionSetHostelSlot(Action):
-    def name(self) -> Text:
-        return "action_set_hostel_slot"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        hostel_entry = next(tracker.get_latest_entity_values("requested_hostel"), None)
-
-        if hostel_entry:
-            dispatcher.utter_message(f"So, you want to dive into the life of {hostel_entry}")
-            return [SlotSet("hostel", hostel_entry)]
-        else:
-            dispatcher.utter_message("I'm sorry, I didn't understand which hostel you mentioned.")
-        return []
-
 class ActionProvideDirections(Action):
+    spell = SpellChecker()
+
+    def correct_spelling(user_input):
+        corrected_input = []
+        for word in user_input.split():
+            corrected_input.append(spell.correction(word))
+        return ' '.join(corrected_input)
     def name(self) -> Text:
         return "action_provide_directions"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         location_name = tracker.get_slot("user_location")
         destination_name = tracker.get_slot("destination_given")
+        correct_spelling(location_name)
+        correct_spelling(destination_name)
+
         # location_name = tracker.get_latest_entity_values(user_location)
         # destination_name = tracker.get_latest_entity_values(destination_given)
         location_coordinates = {
