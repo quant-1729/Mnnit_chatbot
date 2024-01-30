@@ -55,6 +55,11 @@ stories:
   - action: utter_ask_admission_process
   - action: action_text_to_speech
 
+- story: Ask about Library
+  steps:
+  - intent: ask_about_library
+  - action: utter_ask_about_library
+
 - story: Ask About Internship Opportunities
   steps:
   - intent: ask_about_internship_opportunities
@@ -124,7 +129,6 @@ stories:
       - user_location: user_location
   - action: action_provide_directions
 
-#ujjawal stories
 
 - story: askingcollege
   steps:

@@ -1,56 +1,45 @@
 version: '3.1'
 intents:
-  - Current_Location
-  - Direct_Direction
+#Here the Priyanshu's Intent
   - request_names
-  - ask_for_image
-  - last_name
-  - affirm
-  - ask_about_exam_preparation_tips
-  - ask_about_faculty
-  - ask_about_fees
-  - ask_about_grading_system
-  - ask_about_healthcare_facilities
-  - ask_about_hostel_facilities
-  - ask_about_internship_opportunities
-  - ask_about_lab_facilities
-  - ask_about_library:
-      use_entities: library_resources
-  - ask_about_mentorship_program
-  - ask_admission_process
-  - ask_for_directions
-  - ask_intro_format
-  - ask_placements
-  - bot_challenge
-  - courses
-  - deny
-  - goodbye
-  - greet
-  - mnnit_website
-  - mobile_number:
-      use_entities: number
-  - mood_great
-  - mood_unhappy
   - my_name:
       use_entities: name
-  - common_question
+  - mobile_number:
+      use_entities: number
+  - last_name
+  - ask_for_image
+  - mnnit_website
+  - courses
+  - ask_placements
+  - ask_admission_process
+  - ask_about_library:
+      use_entities: library_resources
+  - ask_about_internship_opportunities
+  - ask_about_healthcare_facilities
+  - ask_about_exam_preparation_tips
+  - ask_about_mentorship_program
+  - ask_about_grading_system
+  - ask_about_faculty
+  - ask_about_lab_facilities
+  - ask_about_hostel_facilities
+  - ask_about_fees
+  - ask_intro_format
+  - ask_for_directions
+  - Direct_Direction
+  - Current_Location
   - more_about_college
   - club
   - benfit_of_the_club
   - explore_campus
   - cafetarea
   - dwesis_canteen
-  - dwesis_location
   - cafe_96
-  - cafe_96_location
   - yamuna_canteen
-  - yamuna_location
   - lit_club
   - robotics_club
   - boys_hostel
   - girls_hostel
   - Department
-  - college_playground
   - Director
   - dean
   - CSE_dept
@@ -70,15 +59,9 @@ intents:
   - PIE_dept
   - PIE_dept_HOD
   - AM_dept
-  - ask_event_info_2023
-  - gac_2023_donations
-  - gac_2023_organizing
-  - gac_2023_registration
-  - gac_2023_payment
-  - gac_2023_sponsorship
-  - gac_event_info
-  - mnnit_location
-  - mnnit_full_form
+  - college_playground
+  - maa
+  - give_feedback
   - girls_hostel_count
   - girls_hostel_names
   - mnnit_clubs
@@ -89,10 +72,28 @@ intents:
   - seminar_hall_mnnit
   - mp_hall_mnnit
   - dean_office_mnnit
+  - Boys_hostel
   - library_mnnit
   - warden_office_mnnit
   - boys_hostel_canteens
-  - Boys_hostel
+#Priyanshu Intente ends
+  - affirm
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet
+  - mood_great
+  - mood_unhappy
+  - common_question
+
+
+#  - ask_event_info_2023
+#  - gac_2023_donations
+#  - gac_2023_organizing
+#  - gac_2023_registration
+#  - gac_2023_payment
+#  - gac_2023_sponsorship
+#  - gac_event_info
   - projects
   - ask_self_balancing_bot
   - humanoid_info
@@ -102,8 +103,6 @@ intents:
   - linefollower_info
   - selfdrivingcart_info
   - out_of_scope
-  - give_feedback
-  - maa
 entities:
   - user_location
   - destination_given
@@ -175,6 +174,8 @@ actions:
   - action_get_image
   - action_custom_fallback
   - decide_details
+  - say_bbsee_details
+  - show_arena_map
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -203,8 +204,10 @@ responses:
   - text: You can find the placement stats on the Mnnit website and its Linkdin Page
   utter_ask_admission_process:
   - text: For Admission in Undergraduate course one can give the Joint Entrance Examination and based on the perforamance of that exam the candidate can choose the stream he want to apply for. For Foreign Candidates they can apply through DASA portal.  To apply for PG in MNNIT Allahabad, you can visit the official website and follow the admission process.
+  utter_ask_about_library:
+  - text: The Central library is located in the Centre of the Institute, where visitors can approach easily. It is well equipped with the new and modern furniture including optimizers (stacks on tracks). The sitting area of the users is fully air-conditioned. Each sitting area/ hall is having different reading cubicles for the users. Library Database has been computerized through LibSys Software and books are issued through RFID System & Smartcard
   utter_ask_about_internship_opportunities:
-  - text: |-
+  - text: |- 
       MNNIT encourages students to explore internships to gain practical experience.
        The college's career services department assists with placements. The internships opportunity starts from the junior year of the college.
        The companies allows the students to participate in the internships training after some exams and Online Assignment. 
