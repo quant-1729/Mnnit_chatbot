@@ -8,9 +8,7 @@
 # from anaconda_navigator.api.external_apps.config_utils import Action
 # from anaconda_navigator.external.UniversalAnalytics.Tracker import Tracker
 # This is a simple example for a custom action which utters "Hello World!"
-
 from selenium import webdriver
-from spellchecker import SpellChecker
 import webbrowser
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
@@ -116,21 +114,21 @@ class ActionHelloWorld(Action):
         return []
 
 class ActionProvideDirections(Action):
-    spell = SpellChecker()
 
-    def correct_spelling(user_input):
-        corrected_input = []
-        for word in user_input.split():
-            corrected_input.append(spell.correction(word))
-        return ' '.join(corrected_input)
+
+    # def correct_spelling(user_input):
+    #     corrected_input = []
+    #     for word in user_input.split():
+    #         corrected_input.append(spell.correction(word))
+    #     return ' '.join(corrected_input)
     def name(self) -> Text:
         return "action_provide_directions"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         location_name = tracker.get_slot("user_location")
         destination_name = tracker.get_slot("destination_given")
-        correct_spelling(location_name)
-        correct_spelling(destination_name)
+        # correct_spelling(location_name)
+        # correct_spelling(destination_name)
 
         # location_name = tracker.get_latest_entity_values(user_location)
         # destination_name = tracker.get_latest_entity_values(destination_given)

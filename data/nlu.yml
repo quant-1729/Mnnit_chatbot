@@ -363,6 +363,7 @@ nlu:
     - Can you provide a [template]{"entity": "entity", "value": "intro_format"} for a [college]{"entity": "entity", "value": "intro_type"} self-introduction?
     - How can I create a memorable [introduction]{"entity": "entity", "value": "intro_format"} in [college]{"entity": "entity", "value": "intro_type"}?
     - Share [tips]{"entity": "entity", "value": "intro_format"} on delivering an engaging self-introduction.
+# From here the direction portion starts
 - intent: ask_for_directions
   examples: |
     - Can you help me with directions to [destination](destination_given) from [user_location](user_location)?
@@ -401,7 +402,7 @@ nlu:
     - Tell me the directions from [SVBH](user_location) to [Admin Building](destination_given)
     - give me direction to [SVBH](user_location) to [Central Library](destination_given)
     - Tell me the directions from [SVBH](user_location) to [Central Library](destination_given)
-# I want to go to MP hall
+# Direct direction
 - intent: Direct_Direction
   examples: |
     - I want to [Central Library](destination_given)
@@ -550,17 +551,6 @@ nlu:
     - How do I place an order or reserve a table at Dwesis ?
     - Can you provide information about the staff and chefs at Dwesis ?
     - Are there any special considerations for allergen information at Dwesis ?
-- intent: dwesis_location
-  examples: |
-    - Where is the college dwesis located?
-    - Can you tell me the address of the dwesis on campus?
-    - How do I find the Mr. Dwesis's location?
-    - Give me directions to the college Dwesis.
-    - Is there a map to the dwesis?
-    - What building or area is the dwesis situated in?
-    - I'm new here, where can I find the dwesis?
-    - Tell me how to get to the nearest dwesis.
-    - Can you guide me to the dwesis's location on campus?
 - intent: cafe_96
   examples: |
     - Tell me more about cafe 96 .
@@ -583,17 +573,6 @@ nlu:
     - How do I place an order or reserve a table at Cafe 96 ?
     - Can you provide information about the staff and chefs at Cafe 96 ?
     - Are there any special considerations for allergen information at Cafe 96 ?
-- intent: cafe_96_location
-  examples: |
-    - Where is the college cafe 96 located?
-    - Can you tell me the address of the Cafe 96 on campus?
-    - How do I find the Mr. Cafe 96's location?
-    - Give me directions to the college Cafe 96.
-    - Is there a map to the cafe 96?
-    - What building or area is the Cafe 96 situated in?
-    - I'm new here, where can I find the Cafe 96?
-    - Tell me how to get to the nearest Cafe 96.
-    - Can you guide me to the cafe 96's location on campus?
 - intent: yamuna_canteen
   examples: |
     - Tell me more about yamuna canteen .
@@ -617,19 +596,6 @@ nlu:
     - How do I place an order or reserve a table at yamuna canteen ?
     - Can you provide information about the staff and chefs at yamuna canteen ?
     - Are there any special considerations for allergen information at yamuna canteen ?
-- intent: yamuna_location
-  examples: |
-    - Where is the college yamuna canteen located?
-    - Can you tell me the address of the yamuna canteen on campus?
-    - How do I find the Mr. yamuna canteen's location?
-    - Give me directions to the college yamuna canteen.
-    - Give me directions to the college yamuna.
-    - Is there a map to the yamuna?
-    - What building or area is the yamuna canteen situated in?
-    - I'm new here, where can I find the yamuna canteen?
-    - Tell me how to get to the nearest yamuna canteen.
-    - Can you guide me to the yamuna canteen's location on campus?
-
 - intent: lit_club
   examples: |
     - What is Literary Cub?
@@ -691,7 +657,6 @@ nlu:
     - Tell me about any common areas and recreational facilities in the girls' hostel.
 
 #  department
-
 - intent: Department
   examples: |
     - department name
@@ -752,7 +717,6 @@ nlu:
     - Give me details about the dean's office and hours of availability.
 
   #About departments and their HODs
-
 - intent: CSE_dept
   examples: |
     - Computer Science and Engineering Department .
@@ -3014,7 +2978,6 @@ nlu:
     - get me the images of the [god](images_requested).
     - i wanna images of the [god](images_requested).
     
-
 - lookup: image_requested
   examples: |
     - dogs

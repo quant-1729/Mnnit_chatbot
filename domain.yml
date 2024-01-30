@@ -1,140 +1,135 @@
 version: '3.1'
 intents:
-- Current_Location
-- Direct_Direction
-- request_names
-- ask_for_image
-- last_name
-- affirm
-- ask_about_exam_preparation_tips
-- ask_about_faculty
-- ask_about_fees
-- ask_about_grading_system
-- ask_about_healthcare_facilities
-- ask_about_hostel_facilities
-- ask_about_internship_opportunities
-- ask_about_lab_facilities
-- ask_about_library:
-    use_entities: library_resources
-- ask_about_mentorship_program
-- ask_admission_process
-- ask_for_directions
-#- ask_hostel_choice:
-#    use_entities: hostel
-- ask_intro_format
-- ask_placements
-- bot_challenge
-- courses
-- deny
-- goodbye
-- greet
-- mnnit_website
-- mobile_number:
-    use_entities: number
-- mood_great
-- mood_unhappy
-- my_name:
-    use_entities: name
-- common_question
-- more_about_college
-- club
-- benfit_of_the_club
-- explore_campus
-- cafetarea
-- dwesis_canteen
-- dwesis_location
-- cafe_96
-- cafe_96_location
-- yamuna_canteen
-- yamuna_location
-- lit_club
-- robotics_club
-- boys_hostel
-- girls_hostel
-- Department
-- college_playground
-- Director
-- dean
-- CSE_dept
-- CSE_dept_HOD
-- ECE_dept
-- ECE_dept_HOD
-- EE_dept
-- EE_dept_HOD
-- ME_dept
-- ME_dept_HOD
-- ChE_Dept
-- ChE_Dept_HOD
-- CE_dept
-- CE_dept_HOD
-- BE_dept
-- BE_dept_HOD
-- PIE_dept
-- PIE_dept_HOD
-- AM_dept
-- ask_event_info_2023
-- gac_2023_donations
-- gac_2023_organizing
-- gac_2023_registration
-- gac_2023_payment
-- gac_2023_sponsorship
-- gac_event_info
-- mnnit_location
-- mnnit_full_form
-- girls_hostel_count
-- girls_hostel_names
-- mnnit_clubs
-- what_is_academic_building
-- what_is_administrative_building
-- girls_gym_mnnit
-- canteens_girls_hostel_mnnit
-- seminar_hall_mnnit
-- mp_hall_mnnit
-- dean_office_mnnit
-- library_mnnit
-- warden_office_mnnit
-- boys_hostel_canteens
-- Boys_hostel
-- projects
-- ask_self_balancing_bot
-- humanoid_info
-- SpiderBot_info
-- rlsupermario_info
-- chatbot_info
-- linefollower_info
-- selfdrivingcart_info
-- out_of_scope
-- give_feedback
-- maa
-- ask_for_image
-- give_feedback
-- request_names
+  - Current_Location
+  - Direct_Direction
+  - request_names
+  - ask_for_image
+  - last_name
+  - affirm
+  - ask_about_exam_preparation_tips
+  - ask_about_faculty
+  - ask_about_fees
+  - ask_about_grading_system
+  - ask_about_healthcare_facilities
+  - ask_about_hostel_facilities
+  - ask_about_internship_opportunities
+  - ask_about_lab_facilities
+  - ask_about_library:
+      use_entities: library_resources
+  - ask_about_mentorship_program
+  - ask_admission_process
+  - ask_for_directions
+  - ask_intro_format
+  - ask_placements
+  - bot_challenge
+  - courses
+  - deny
+  - goodbye
+  - greet
+  - mnnit_website
+  - mobile_number:
+      use_entities: number
+  - mood_great
+  - mood_unhappy
+  - my_name:
+      use_entities: name
+  - common_question
+  - more_about_college
+  - club
+  - benfit_of_the_club
+  - explore_campus
+  - cafetarea
+  - dwesis_canteen
+  - dwesis_location
+  - cafe_96
+  - cafe_96_location
+  - yamuna_canteen
+  - yamuna_location
+  - lit_club
+  - robotics_club
+  - boys_hostel
+  - girls_hostel
+  - Department
+  - college_playground
+  - Director
+  - dean
+  - CSE_dept
+  - CSE_dept_HOD
+  - ECE_dept
+  - ECE_dept_HOD
+  - EE_dept
+  - EE_dept_HOD
+  - ME_dept
+  - ME_dept_HOD
+  - ChE_Dept
+  - ChE_Dept_HOD
+  - CE_dept
+  - CE_dept_HOD
+  - BE_dept
+  - BE_dept_HOD
+  - PIE_dept
+  - PIE_dept_HOD
+  - AM_dept
+  - ask_event_info_2023
+  - gac_2023_donations
+  - gac_2023_organizing
+  - gac_2023_registration
+  - gac_2023_payment
+  - gac_2023_sponsorship
+  - gac_event_info
+  - mnnit_location
+  - mnnit_full_form
+  - girls_hostel_count
+  - girls_hostel_names
+  - mnnit_clubs
+  - what_is_academic_building
+  - what_is_administrative_building
+  - girls_gym_mnnit
+  - canteens_girls_hostel_mnnit
+  - seminar_hall_mnnit
+  - mp_hall_mnnit
+  - dean_office_mnnit
+  - library_mnnit
+  - warden_office_mnnit
+  - boys_hostel_canteens
+  - Boys_hostel
+  - projects
+  - ask_self_balancing_bot
+  - humanoid_info
+  - SpiderBot_info
+  - rlsupermario_info
+  - chatbot_info
+  - linefollower_info
+  - selfdrivingcart_info
+  - out_of_scope
+  - give_feedback
+  - maa
 entities:
-- user_location
-- destination_given
-- requested_hostel
-- number
-- name
-- lastname
-- facility_type
-- hostel_facilities
-- lab_facilities
-- faculty_information
-- grading_system
-- mentorship_program
-- exam_preparation_tips
-- library_resources
-- library_days
-- fees_type
-- hostel_choice
-- mode_of_transport
-- hostel
-- general_info
-- gacdon
-- gacorg
-- gacreg
-- gacspan
-- gacpay
+  - user_location
+  - destination_given
+  - requested_hostel
+  - number
+  - name
+  - lastname
+  - facility_type
+  - hostel_facilities
+  - lab_facilities
+  - faculty_information
+  - grading_system
+  - mentorship_program
+  - exam_preparation_tips
+  - library_resources
+  - library_days
+  - fees_type
+  - hostel_choice
+  - mode_of_transport
+  - hostel
+  - general_info
+  - gacdon
+  - gacorg
+  - gacreg
+  - gacspan
+  - gacpay
 #- maa
 slots:
   name:
@@ -165,20 +160,21 @@ slots:
       entity: user_location
 
 actions:
-- action_provide_directions
-- utter_greet
-- utter_ask_hostel
-- utter_mobile_number
-- action_Set_Hostel_slot
-- restart_convo
-- gac2023_basic_info
-- gac2023_orgcom
-- gac_reg
-- say_fallback
-- action_open_link
-- action_text_to_speech
-- action_get_image
-- action_custom_fallback
+  - action_provide_directions
+  - utter_greet
+  - utter_ask_hostel
+  - utter_mobile_number
+  - action_Set_Hostel_slot
+  - restart_convo
+  - gac2023_basic_info
+  - gac2023_orgcom
+  - gac_reg
+  - say_fallback
+  - action_open_link
+  - action_text_to_speech
+  - action_get_image
+  - action_custom_fallback
+  - decide_details
 responses:
   utter_greet:
   - text: Hey! How are you?
