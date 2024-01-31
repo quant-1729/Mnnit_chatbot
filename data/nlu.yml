@@ -2567,6 +2567,74 @@ nlu:
     - Can you provide information on how to access the problem statement for Force Secure?
 
 
+- intent: final_year_coordinators_names
+  examples: |
+     - Who are the Final Year coordinators?
+      - Can you tell me the names of the Final Year coordinators?
+     - What are the names of the Final Year coordinators?
+     - Who is in charge of coordinating Final Year activities?
+     - I'd like to know the individuals serving as Final Year coordinators.
+     - Can you provide the names of the coordinators for the Final Year students?
+     - Who are the individuals responsible for overseeing the Final Year events?
+     - I'm interested in learning the names of the Final Year coordinators.
+     - Which individuals make up the Final Year coordinators team?
+     - Could you list the names of the Final Year coordinators?
+     - Who are the current coordinators for the Final Year students?
+     - I need to know who the Final Year coordinators are.
+     - Can you give me the names of the Final Year coordinators?
+     - Who should I contact from the Final Year coordinators' team?
+     - What are the names of the coordinators for the Final Year students?
+     - Who is responsible for organizing activities for the Final Year students?
+     - I'd like to get in touch with the Final Year coordinators. Who are they?
+     - Are there specific individuals designated as Final Year coordinators?
+     - Who oversees the Final Year events and activities?
+     - Can you provide information on the Final Year coordinators' team members?
+
+- intent: third_year_coordinators_names
+  examples: |
+     - Who are the coordinators for the third year?
+     - Can you provide me with the names of the third-year coordinators?
+     - What are the names of the coordinators for the third year?
+     - Who is in charge of coordinating activities for third-year students?
+     - I'd like to know the individuals serving as third-year coordinators.
+     - Can you list the names of the coordinators for the third year?
+     - Who are the individuals responsible for overseeing third-year events?
+     - I'm interested in learning the names of the third-year coordinators.
+     - Which individuals make up the third-year coordinators team?
+     - Could you tell me the names of the third-year coordinators?
+     - Who are the current coordinators for the third year?
+     - I need to know who the third-year coordinators are.
+     - Can you give me the names of the third-year coordinators?
+     - Who should I contact from the third-year coordinators' team?
+     - What are the names of the coordinators for the third-year students?
+     - Who is responsible for organizing activities for the third-year students?
+     - I'd like to get in touch with the third-year coordinators. Who are they?
+     - Are there specific individuals designated as third-year coordinators?
+     - Who oversees the third-year events and activities?
+     - Can you provide information on the third-year coordinators' team members?
+
+- intent: botrush_2.0_event_heads
+  examples: |
+    - Who are the event heads for Botrush 2.0?
+    - Can you tell me the names of the Botrush 2.0 event heads?
+    - What are the names of the event heads for Botrush 2.0?
+    - Who is leading the Botrush 2.0 event?
+    - I'd like to know the individuals serving as event heads for Botrush 2.0.
+    - Can you list the names of the event heads for Botrush 2.0?
+    - Who are the individuals responsible for leading Botrush 2.0?
+    - I'm interested in learning the names of the Botrush 2.0 event heads.
+    - Which individuals make up the Botrush 2.0 event heads team?
+    - Could you tell me the names of the Botrush 2.0 event heads?
+    - Who are the current event heads for Botrush 2.0?
+    - I need to know who the Botrush 2.0 event heads are.
+    - Can you give me the names of the event heads for Botrush 2.0?
+    - Who should I contact from the Botrush 2.0 event heads' team?
+    - What are the names of the event heads for the Botrush 2.0?
+    - Who is responsible for leading Botrush 2.0?
+    - I'd like to get in touch with the Botrush 2.0 event heads. Who are they?
+    - Are there specific individuals designated as Botrush 2.0 event heads?
+    - Who oversees Botrush 2.0?
+    - Can you provide information on the Botrush 2.0 event heads' team members?
 
  
 

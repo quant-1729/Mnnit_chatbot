@@ -85,7 +85,15 @@ intents:
   - mood_great
   - mood_unhappy
   - common_question
-
+  - force_secure_event_information
+  - force_secure_event_rules
+  - force_secure_bot_specification
+  - force_secure_tips
+  - force_secure_event_contact_information
+  - force_secure_problem_statement
+  - final_year_coordinators_names
+  - third_year_coordinators_names
+  - botrush_2.0_event_heads
 
 #  - ask_event_info_2023
 #  - gac_2023_donations
@@ -752,6 +760,124 @@ responses:
           6. ANY FORM OF CODE PLAGIARISM WILL NOT BE TOLERATED. If any part of the project is found copied the team will be disqualified immediately.
           7. Do not assume anything in the problem statement by yourself. Contact us to resolve any discrepancies.
 
+  utter_force_secure_event:
+      - text: |
+          FORCE SECURE is an integral event in BotRush 2.0, designed to simulate a crucial mission within the galaxy's Rebel Alliance. Inspired by the clandestine battles between the Rebels and Imperial spies, participants are tasked with fortifying a secluded research facility to safeguard vital secrets. The event involves crafting an advanced home automation system, drawing inspiration from the Force, to ensure secure access and real-time monitoring. 
+
+          For example, participants may create a secure access system requiring a unique Jedi password, ensuring that only those with the correct Jedi incantation can enter. They may also implement a Force presence detection system to seamlessly monitor the number of personnel within the facility. Additionally, participants are challenged to design a holographic interface reminiscent of Jedi holocrons for secure access and surveillance.
+
+          In response to potential Sith infiltrations, participants must develop an alert system that triggers surveillance equipment, thus countering any threats effectively. FORCE SECURE event not only tests participants' technical skills but also their ability to strategize and protect Rebel secrets against Imperial threats in the vast reaches of the galaxy.
+
+          May the Force be with all participants as they embark on this crucial assignment!
+  utter_force_secure_event_rules:
+    - text: |
+        The rules for Force Secure event are as follows:
+        
+        1. Automatic Door and Secure Locking System:
+           - Implement a smart lock system with keyless entry devices operated remotely via IoT-enabled sensors. (+250 points)
+           - Opening and closing of the lock system must be done using a mobile application or web-based system.
+           - Password-based protection should be implemented, allowing entry via mobile or keyboard.
+           - Provision of an alarm for unauthorized access is mandatory. (+50 points)
+           - Bonus points will be awarded for any additional advanced security ideas.
+
+        2. Visitors Counter:
+           - Simple one-way visitor counter at the home entrance. (+150 points)
+           - Bidirectional visitor counter monitoring total number of visitors entering, exiting, and current visitors (BOTRUSH). (+250 points)
+           - Real-time data display in a mobile application. (+100 points)
+
+        3. Smart Home:
+           - SmartSwitching:
+             - Control light bulb switching and brightness using wireless communication through mobile or remote. (+100 points)
+             - Control light bulb switching using voice commands (Google Assistant). (+100 points)
+           - Temperature and Humidity:
+             - Display all parameters on the serial monitor (on PC). (+100 points)
+             - Upload and display parameters to the cloud (Thingspeak.com). (+100 points)
+           - Gas Level Monitor:
+             - Measure gas quantity in percentage and send data over the internet using the Thingspeak server. (+100 points)
+
+  utter_force_secure_bot_specification:
+    - text: |
+        The specifications for the Force Secure bot are as follows:
+        1. NodeMCU - ESP8266 12E Board (Quantity: 1)
+        2. USB cable (Quantity: 1)
+        3. IR Sensor - IR Infrared Sensor Module (Quantity: 3)
+        4. Jumper Wires - Jumper Cables Breadboard (Quantity: 120, assorted M2M, M2F, F2F)
+        5. Breadboard (Quantity: 1)
+        6. SG90 Micro-servo Motor (Quantity: 1)
+        7. Basic white LED - 5mm DIP Led white (Quantity: 10)
+        8. DHT11 - Digital temperature and humidity sensor module (Quantity: 1)
+        9. MQ4 - Digital methane sensor (Quantity: 1)
+        10. 5V Voltage Regulator (Quantity: 1)
+        11. 12V 1A Adapter (Quantity: 1)
+        12. RFID sensor (Quantity: 1)
+        13. DST (Quantity: 1)
+        14. DC Female Jack (Quantity: 1)
+        15. Screws and nuts
+
+        Note: Additional components may be added by participants based on desired features. Any microcontroller, such as Arduino or NodeMCU, can be used for implementation, with no bonus marking for using a different type of controller.
+  
+  utter_force_secure_tips:
+    - text: |
+        Here are some tips for participants of the Force Secure event:
+        1. Handle your hardware with care to avoid damage or malfunctioning. Even slight mishandling can impact performance.
+        2. The primary goal of Bot-Rush 2k24 is to spark your interest in robotics and provide an introduction to your first hardware project.
+        3. Use the Basic/Advanced features as guidance for your bot's theme, but feel free to add additional features to enhance its quality. Creativity and functionality are key, and any extra sensors or hardware should be communicated beforehand.
+        4. Consider participating in teams to develop teamwork skills, which will be beneficial in future endeavors.
+        5. For first-time developers or beginners, prioritize completing the bot within the given time frame.
+
+  utter_force_secure_event_contact_information:
+    - text: |
+        You can contact the organizers of the Force Secure event through the following channels:
+        - Event Secretary:
+          - Priyanshu Bharati: +91 7645997707
+          - Sarthak Kumar: +91 9582243710
+          - Devendra Saini: +91 9549164695
+
+        - Festival Secretary:
+          - Sudhanshu Ranjan: +91 7004010012
+          - Aayush Verma: +91 9807706707
+
+  utter_force_secure_problem_statement:
+    - text: "You can access the problem statement for Force Secure from the following link: [Force Secure Problem Statement](https://drive.google.com/file/d/1KSVQpvM0A9sSd0JT-O6hFYQ1Wb26Ne70/view)"
+
+  utter_final_year_coordinators_names:
+    - text: |
+        The Final Year coordinators for the current term are:
+        1) Shashank Singh
+        2) Gautam
+        3) Bipul Karna
+        4) Abhishek Hanotiya
+        5) Prakhar Agarwal
+        6) Shreya Gupta
+        7) Aditya Jain
+        8) Yaswanth Kandukuri
+        9) Ayush Singh Gour
+        10) Ankit Gupta
+
+
+  utter_third_year_coordinators_names:
+    - text: |
+        The coordinators for the third year are:
+        1) Sudhanshu Ranjan
+        2) Ayush Verma
+        3) Rishi Mishra
+        4) Sarthak Kumar
+        5) Devendra Saini
+        6) Bhanu Pratap Singh
+        7) Tushar Kesarwani
+        8) Akshay Jadav
+        9) Aditya Omar
+        10) Priyanshu Bharti
+        11) Anu Priya
+        12) Amisha
+
+
+  utter_botrush_2.0_event_heads:
+    - text: |
+        The event heads for Botrush 2.0 are:
+        1) Shashank Singh
+        2) Bipul Karna
+        3) Gautam
 
 session_config:
   session_expiration_time: 60

@@ -650,3 +650,53 @@ stories:
   - action: action_get_image
 
 #Here We will make stories
+
+# force secure
+- story: force secure event information
+  steps:
+  - intent: force_secure_event_information
+  - action:  utter_force_secure_event
+
+
+- story: force secure event rules
+  steps:
+  - intent: force_secure_event_rules
+  - action:  utter_force_secure_event_rules
+
+- story: force secure bot specification
+  steps:
+  - intent: force_secure_bot_specification
+  - action:  utter_force_secure_bot_specification
+
+- story: force_secure_tips
+  steps:
+  - intent: force_secure_tips
+  - action:  utter_force_secure_tips
+
+- story: force_secure_event_contact_information
+  steps:
+  - intent: force_secure_event_contact_information
+  - action:  utter_force_secure_event_contact_information
+
+- story: force_secure_problem_statement
+  steps:
+  - intent: force_secure_problem_statement
+  - action:  utter_force_secure_problem_statement
+
+
+- story: final year coordinators names
+  steps:
+  - intent: final_year_coordinators_names
+  - action:  utter_final_year_coordinators_names
+
+
+- story: third year coordinators names
+  steps:
+  - intent: third_year_coordinators_names
+  - action:  utter_third_year_coordinators_names
+
+
+- story: botrush 2.0 event heads
+  steps:
+  - intent: botrush_2.0_event_heads
+  - action:  utter_botrush_2.0_event_heads
