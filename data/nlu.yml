@@ -2410,6 +2410,167 @@ nlu:
       - give me the most important features to be implemented in the decept event?
 ####################### BOT RUSH end
 ######################################################################################################3
+
+
+
+#botrush 2.0
+- intent: force_secure_event_information
+  examples: |
+     - What can you tell me about Force Secure event?
+     - Give me some info on Force Secure event.
+     - Tell me about the Force Secure event.
+     - What's happening at Force Secure event?
+     - I want to know more about Force Secure event.
+     - Provide details for Force Secure event.
+     - Share info about the Force Secure event.
+     - Can you tell me about Force Secure event?
+     - What's the deal with Force Secure event?
+     - Tell me something about Force Secure event.
+     - Describe Force Secure event.
+     - I'm interested in Force Secure event. Tell me more.
+     - Share some details on Force Secure event.
+     - What's special about Force Secure event?
+     - Explain Force Secure event to me.
+     - I'd like to learn about Force Secure event.
+     - Can you provide an overview of Force Secure event?
+     - I want to get the scoop on Force Secure event.
+     - I need information on Force Secure event.
+     - Force Secure event details, please.
+     - Brief me on Force Secure event.
+     - What are the objectives of Force Secure event?
+     - Can you outline the key features of Force Secure event?
+     - What's the theme of Force Secure event?
+     - Are there any specific rules participants need to follow for Force Secure event?
+     - How does Force Secure event contribute to the Rebel Alliance's cause?
+     - Can you explain the significance of Force Secure event within BotRush 2.0?
+     - What sets Force Secure event apart from other events in BotRush 2.0?
+     - Can you provide a timeline for Force Secure event?
+     - How can participants prepare for Force Secure event?
+     - Is there any training provided for participants of Force Secure event?
+
+- intent: force_secure_event_rules
+  examples: |
+     - What are the rules for Force Secure event?
+     - Can you outline the rules of Force Secure event?
+     - Explain the regulations for participating in Force Secure event.
+     - What guidelines do participants need to follow for Force Secure event?
+     - Tell me about the dos and don'ts of Force Secure event.
+     - Share the requirements for participation in Force Secure event.
+     - What are the eligibility criteria for Force Secure event?
+     - Can you list the rules and regulations of Force Secure event?
+     - Provide details on the code of conduct for Force Secure event.
+     - Explain the restrictions for Force Secure event participants.
+     - I need information on the rules governing Force Secure event.
+     - What limitations should participants be aware of for Force Secure event?
+     - Tell me about the prerequisites for joining Force Secure event.
+     - What are the conditions for entry into Force Secure event?
+     - Share the official guidelines for Force Secure event participation.
+     - Can you clarify the requirements for participating in Force Secure event?
+     - Explain any restrictions on team composition for Force Secure event.
+     - What are the entry requirements for Force Secure event?
+     - Tell me about the criteria for disqualification from Force Secure event.
+     - What actions are prohibited during Force Secure event?
+     - I'm interested in knowing the rules and regulations of Force Secure event.
+     - Are there any specific protocols to follow during Force Secure event?
+     - Can you provide an overview of the competition rules for Force Secure event?
+     - What ethical considerations should participants keep in mind for Force Secure event?
+     - How are violations of the rules handled during Force Secure event?
+     - Explain the consequences of not adhering to the rules of Force Secure event.
+     - Share any penalties for rule violations during Force Secure event.
+     - What measures ensure fair play in Force Secure event?
+     - Can participants appeal against decisions made based on the rules of Force Secure event?
+
+- intent: force_secure_bot_specification
+  examples: |
+     - What are the specifications for the Force Secure bot?
+     - Can you provide details about the Force Secure bot?
+     - Tell me about the specifications of the bot for Force Secure event.
+     - What features does the Force Secure bot have?
+     - I'd like to know more about the Force Secure bot's capabilities.
+     - Provide information on the bot specifications for Force Secure event.
+     - What functionalities does the Force Secure bot offer?
+      - Explain the technical specifications of the Force Secure bot.
+     - Share details about the Force Secure bot's design and functionality.
+     - What is the architecture of the bot designed for Force Secure event?
+     - Tell me about the components of the bot used in Force Secure event.
+     - Can you list the requirements for the bot in Force Secure event?
+     - I'm interested in learning about the technology stack used in the Force Secure bot.
+     - Provide an overview of the Force Secure bot's performance metrics.
+     - Explain how the Force Secure bot enhances security in the event.
+     - What role does the Force Secure bot play in securing the research facility?
+     - Share any unique features of the Force Secure bot.
+     - How does the Force Secure bot contribute to the overall mission of the event?
+
+- intent: force_secure_tips
+  examples: |
+     - Can you provide some tips for Force Secure event?
+     - Share some advice for succeeding in Force Secure event.
+     - What are some helpful tips for participants of Force Secure event?
+     - Do you have any suggestions for preparing for Force Secure event?
+     - I'm looking for tips to excel in the Force Secure event. Can you help?
+     - Share some best practices for participating in Force Secure event.
+     - Any tips for optimizing performance in Force Secure event?
+     - What strategies can participants use to improve their chances in Force Secure event?
+     - I'd like some pointers for tackling challenges in Force Secure event.
+     - How can participants maximize their effectiveness in Force Secure event?
+     - Can you offer any insider tips for success in Force Secure event?
+     - Share some pro tips for navigating Force Secure event successfully.
+     - I'm seeking guidance on how to approach Force Secure event. Any tips?
+     - What are some common pitfalls to avoid in Force Secure event, and how can they be overcome?
+
+
+- intent: force_secure_event_contact_information
+  examples: |
+     - How can I contact the organizers of the Force Secure event?
+     - What is the contact information for the Force Secure event?
+     - Can you provide me with the contact details for the Force Secure event?
+     - I need to get in touch with someone regarding the Force Secure event. How do I do that?
+     - Where can I find contact information for the Force Secure event?
+     - Is there a phone number or email address I can use to reach out about the Force Secure event?
+     - I have some questions about the Force Secure event. How can I contact the organizers?
+     - Can you share the contact details for the organizers of the Force Secure event?
+     - How do I reach out to the team behind the Force Secure event?
+     - Who should I contact for more information about the Force Secure event?
+     - What are the contact details for the Force Secure event organizers?
+     - Where can I get in touch with the organizers of the Force Secure event?
+     - I want to reach out to someone regarding the Force Secure event. How can I do that?
+     - Do you have any contact information for the Force Secure event organizers?
+     - Who can I email or call regarding the Force Secure event?
+     - Where can I find the contact details of the Force Secure event organizers?
+     - I need to speak with someone about the Force Secure event. How can I contact them?
+     - Can you provide me with the contact information of the Force Secure event organizers?
+     - How do I get in touch with the organizers of the Force Secure event?
+     - Is there a way to contact the team responsible for the Force Secure event?
+
+
+- intent: force_secure_problem_statement
+  examples: |
+    - How can I access the problem statement for Force Secure?
+    - Where can I find the problem statement for Force Secure?
+    - How do I get the problem statement for Force Secure?
+    - Can you provide me with the problem statement for Force Secure?
+    - I need to see the problem statement for Force Secure. How do I do that?
+    - Is there a way to access the problem statement of Force Secure?
+    - Where do I find the problem statement details for Force Secure?
+    - How can I view the problem statement for Force Secure?
+    - Can you guide me on how to get the problem statement for Force Secure?
+    - What is the process to obtain the problem statement for Force Secure?
+    - I'm looking for the problem statement of Force Secure. How can I obtain it?
+    - Is there a specific document or webpage where I can find the problem statement for Force Secure?
+    - How do participants receive the problem statement for Force Secure?
+    - Where can I get more information about the problem statement for Force Secure?
+    - Can you direct me to the problem statement for Force Secure?
+    - What steps do I need to take to access the problem statement for Force Secure?
+    - How do I access the official problem statement for Force Secure?
+    - I need the problem statement details for Force Secure. How do I proceed?
+    - Where should I go to find the problem statement for Force Secure?
+    - Can you provide information on how to access the problem statement for Force Secure?
+
+
+
+ 
+
+
 - intent: out_of_scope
   examples: |
       - whos dksjd ksfhj
