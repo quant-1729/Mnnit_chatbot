@@ -5,6 +5,7 @@ nlu:
     - hey 
     - hey my name is
     - hello
+    - hellow
     - hi
     - hello there
     - good morning
@@ -131,13 +132,14 @@ nlu:
     - Where can I find information about majors?
 - intent: courses
   examples: |
+    - Courses 
+    - What are the avaible curses in Mnnit 
+    - Which courses are offered in our collage
+    - Give me the course detatils 
     - what different courses are offered
     - different courses provided by the college
     - list of different courses
     - list of different programs
-    - can you help me with the programs mnnit allahabad offers
-    - different programs offered by the college
-    - different training programs offered
     - branches in mnnit allahabad
     - branches under b.tech in our college
     - What are the available courses in the college?
@@ -2920,3 +2922,271 @@ nlu:
     - cities
     - technology
     - data/image_lookup.yml
+# Disha code merged by Priyanshu
+
+- intent: Botrush
+  examples: |
+      - What is botrush?
+      - Botrush Event?
+      - Tell me about Botrush event?
+      - Give me details on how to participate in Botrush.
+      - Can you provide information about Botrush?
+      - Give me an overview of Botrush.
+      - Tell me more about the Botrush event.
+      - Provide details about botrush
+      - Give a brief description of botrush
+      - Give brief information about botrush
+      - Can you shed light on Botrush?
+      - Provide the details for joining Botrush.
+      - Give me the rundown on participating in Botrush
+      - Brief me about Botrush.
+      - Offer details about Botrush.
+      - Elaborate on the Botrush event. 
+
+- intent: botwhen
+  examples: |
+      - When botrush is conducted
+      - What is the date of botrush
+      - Date of botrush
+      - Botrush date
+      - During what month botrush is conducted
+      - When is Botrush conducted?
+      - When does Botrush take place?
+      - Can you provide the Botrush schedule?
+      - Share the Botrush event date.
+      - In which month is Botrush held?
+      - What's the specific date for Botrush?
+      - Tell me the timing of Botrush.
+      - When can I expect Botrush to happen?
+      - Provide details on the Botrush calendar.
+      - Mention the Botrush event date.
+      - Specify the date for the Botrush event.
+- intent: botevents
+  examples: |
+      - What are the events conducted in botrush?
+      - List of events conducted in botrush.
+      - What are the events conducted in botrush?
+      - Name of the events conducted in botrush?
+      - Botrush events?
+      - Tell me about the different events held during Botrush.
+      - What's the lineup of events for Botrush this year?
+      - Can you provide details on the specific activities in Botrush?
+      - List down the various competitions organized in Botrush.
+      - Give me information about the contests during the Botrush event.
+      - Mention some of the major activities taking place in Botrush.
+      - Provide details on the Botrush competition categories.
+      - What can I expect from the Botrush event in terms of activities?
+      - Tell me more about the diverse events held in Botrush.
+- intent: odyssey_abt
+  examples: |
+      - Galactic Odyssey?
+      - Odyssey?
+      - What is the problem statement of Galactic Odyssey event?
+      - Can you tell me the basic details of Galactic Odyssey event?
+      - Can you tell me about the Galactic Odyssey event?
+      - Describe the Galactic Odyssey event
+      - What do you know about the Galactic Odyssey event?
+      - Galactic Odyssey event?
+      - Provide an overview of the Galactic Odyssey event.
+      - Share some basic information about Galactic Odyssey.
+      - I'd like to learn more about the Galactic Odyssey event. What can you tell me?
+      - Tell me the key information about the Galactic Odyssey competition.
+      - What's the Galactic Odyssey event all about?
+      - What are the main details of the Galactic Odyssey event?
+- intent: oddyssey_rules
+  examples: |
+     - Tell me about the [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} of Galactic Odyssey event
+     - Can you list me the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
+     - What are the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
+     - What [rules]{"entity":"SpecificDetail_GOE","value":"AllRules"} should I follow for Galactic Odyssey event?
+     - Tell me about the [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} of the Galactic Odyssey event.
+     - Can you list me the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
+     - What are the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
+     - What [rules]{"entity":"SpecificDetail_GOE","value":"AllRules"} should I follow for Galactic Odyssey event?
+     - Provide details about the [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} for the Galactic Odyssey event.
+
+- intent: odyssey_regulations
+  examples: |
+    - what are the regulations of galactic odyssey event?
+    - regulations of odyssey event.
+    - Tell me about the regulations for Galactic Odyssey.
+    - List down the regulations of the Galactic Odyssey event.
+    - Can you provide information on the regulations of the Galactic Odyssey competition?
+    - What guidelines should participants follow in Galactic Odyssey?
+    - Explain the regulations governing the Galactic Odyssey event.
+    - Share details about the Galactic Odyssey event regulations.
+    - Describe the specific rules participants need to adhere to in Galactic Odyssey.
+    - What are the dos and don'ts in the Galactic Odyssey competition?
+    - Provide an overview of the regulatory framework for Galactic Odyssey.
+    - Elaborate on the Galactic Odyssey event regulations and requirements.
+    - Tell me about the regulations for Galactic Odyssey.
+    - List down the rules and regulations of the Galactic Odyssey event.
+    - Can you provide information on the regulations of the Galactic Odyssey competition?
+    - What guidelines should participants follow in Galactic Odyssey?
+    - Explain the regulations governing the Galactic Odyssey event.
+    - Share details about the Galactic Odyssey event regulations.
+    - Describe the specific rules participants need to adhere to in Galactic Odyssey.
+    - What are the dos and don'ts in the Galactic Odyssey competition?
+    - Provide an overview of the regulatory framework for Galactic Odyssey.
+    - Elaborate on the Galactic Odyssey event regulations and requirements.
+
+- intent: odysssey_tips
+  examples: |
+    - provide me the tips on galactic odyssey event
+    - provide help on galactic odyssey event
+    - Can you offer some tips for participating in the Galactic Odyssey event?
+    - Share helpful advice for navigating the Galactic Odyssey competition.
+    - Provide me with some guidance on preparing for Galactic Odyssey.
+    - What are some useful tips for excelling in the Galactic Odyssey event?
+    - Can you give me assistance and advice for the Galactic Odyssey competition?
+    - Share tips and tricks for success in the Galactic Odyssey event.
+    - I'm looking for some guidance on how to approach the Galactic Odyssey. Any tips?
+    - What should I keep in mind while participating in the Galactic Odyssey event?
+    - Can you offer practical tips for participants of the Galactic Odyssey?
+    - Share insights and recommendations for those taking part in Galactic Odyssey.
+- intent: odyssey_bot
+  examples: |
+    - what are the bot specification of galactic odyssey bot
+    - bot requirements and components of galactic odyssey
+    - Share details about the bot specifications for Galactic Odyssey.
+    - What are the specific requirements for the Galactic Odyssey bot?
+    - Provide information on the components needed for the Galactic Odyssey bot.
+    - Can you outline the technical specifications for the Galactic Odyssey bot?
+    - Explain the bot requirements and essential components for Galactic Odyssey.
+    - Tell me about the hardware and software specifications for the Galactic Odyssey bot.
+    - What are the key features and components of the Galactic Odyssey bot?
+    - Provide an overview of the bot specifications and requirements for Galactic Odyssey.
+    - Can you list the necessary components for building a bot for Galactic Odyssey?
+    - Share insights into the technical specifications and requirements of Galactic Odyssey bots.
+- intent: cell_abt
+  examples: |
+    - provide details of cell phone controlled bot
+    - give brief idea about galactic challenge
+    - tell me about galactic challenge
+    - what is galactic challenge
+    - what is cell phone controlled robot
+    - give brief description of cell phone controlled robot
+    - galactic challenge
+    - cell phone controled bot
+    - I want to know about galactic challenge 
+    - I want to know about cell phone controlled bot
+- intent: challenge_rules
+  examples: |
+     - Tell me about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} of Challenge event
+     - Can you list me the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
+     - What are the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
+     - What [rules]{"entity":"SpecificDetail_CHE","value":"AllRules"} should I follow for Challenge event?
+     - Tell me about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} of the Challenge event.
+     - Can you list me the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
+     - What are the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
+     - What [rules]{"entity":"SpecificDetail_CHE","value":"AllRules"} should I follow for Challenge event?
+     - Provide details about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} for the Challenge event.
+- intent: challengeregulations
+  examples: |
+     - what are the [regulations]{"entity":"challengeregu"} of Challenge event?
+     - [regulations]{"entity":"challengeregu"} of challenge event.
+     - Tell me about the [regulations]{"entity":"challengeregu"} for Challenge.
+     - List down the [regulations]{"entity":"challengeregu"} of the Challenge event.
+     - Can you provide information on the [regulations]{"entity":"challengeregu"} of the Challenge competition?
+     
+     - Explain the [regulations]{"entity":"challengeregu"} governing the Challenge event.
+     - Share details about the Challenge event [regulations]{"entity":"challengeregu"}.
+     - Describe the specific [regulations]{"entity":"challengeregu"} participants need to adhere to in Challenge.
+     
+     - Provide an overview of the [regulations]{"entity":"challengeregu"} framework for Challenge.
+     - Elaborate on the Challenge event [regulations]{"entity":"challengeregu"} .
+     - Tell me about the [regulations]{"entity":"challengeregu"} for Challenge.
+     - List down the [regulations]{"entity":"challengeregu"} of the Challenge event.
+- intent: challenge_tips
+  examples: |
+     - provide me the [tips]{"entity":"challengetips"} on Challenge event
+     - provide help [tips]{"entity":"challengetips"} on Challenge event
+     - Can you offer some [tips]{"entity":"challengetips"} for participating in the Challenge event?
+     - Share helpful advice [tips]{"entity":"challengetips"} for navigating the Challenge competition.
+     - Provide me with some guidance [tips]{"entity":"challengetips"} on preparing for Challenge.
+     - What are some useful [tips]{"entity":"challengetips"} for excelling in the Challenge event?
+     - Can you give me assistance and advice [tips]{"entity":"challengetips"} for the Challenge competition?
+     - Share [tips]{"entity":"challengetips"} for success in the Challenge event.
+     - I'm looking for some guidance on how to approach the Challenge. Any [tips]{"entity":"challengetips"}?
+     - What should I keep in mind  [tips]{"entity":"challengetips"} while participating in the Challenge event?
+     - Can you offer practical [tips]{"entity":"challengetips"} for participants of the Challenge?
+     - Share insights and recommendations  [tips]{"entity":"challengetips"} for those taking part in the Challenge.
+
+- intent: challenge_bot
+  examples: |
+     - what are the bot [specification]{"entity":"challengespec"} of Challenge bot
+     - bot requirements and components [specification]{"entity":"challengespec"}  of Challenge
+     - Share details about the bot [specification]{"entity":"challengespec"} for Challenge.
+     - What are the specific requirements [specification]{"entity":"challengespec"} for the Challenge bot?
+     - Provide information on the components [specification]{"entity":"challengespec"} needed for the Challenge bot.
+     - Can you outline the technical [specification]{"entity":"challengespec"} for the Challenge bot?
+     - Explain the bot requirements and essential components [specification]{"entity":"challengespec"} for Challenge.
+     - Tell me about the hardware and software [specification]{"entity":"challengespec"} for the Challenge bot.
+     - What are the key features and components [specification]{"entity":"challengespec"} of the Challenge bot?
+     - Provide an overview of the bot [specification]{"entity":"challengespec"} and requirements for Challenge.
+     - Can you list the necessary components [specification]{"entity":"challengespec"} for building a bot for Challenge?
+     - Share insights into the technical [specification]{"entity":"challengespec"} and requirements of Challenge bots.
+- intent: forceinnovate_abt
+  examples: |
+     - Force Innovate?
+     - Innovate Force?
+     - What is the problem statement of Force Innovate event?
+     - Can you tell me the basic details of Force Innovate event?
+     - Can you tell me about the Force Innovate event?
+     - Describe the Force Innovate event
+     - What do you know about the Force Innovate event?
+     - Force Innovate event?
+     - Provide an overview of the Force Innovate event.
+     - Share some basic information about Force Innovate.
+     - I'd like to learn more about the Force Innovate event. What can you tell me?
+     - Tell me the key information about the Force Innovate competition.
+     - What's the Force Innovate event all about?
+     - What are the main details of the Force Innovate event?
+- intent: force_innovate_rules
+  examples: |
+     - Tell me about the [rules]{"entity":"SpecificDetail_FI"} of Force Innovate event
+     - Can you list me the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
+     - What are the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
+     - What [rules]{"entity":"SpecificDetail_FI"} should I follow for Force Innovate event?
+     - Tell me about the [rules]{"entity":"SpecificDetail_FI"} of the Force Innovate event.
+     - Can you list me the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
+     - What are the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
+     - What [rules]{"entity":"SpecificDetail_FI"} should I follow for Force Innovate event?
+     - Provide details about the [rules]{"entity":"SpecificDetail_FI"} for the Force Innovate event.
+- intent: force_innovate_regulations
+  examples: |
+     - what are the [regulations]{"entity":"firegulations"} of Force Innovate event?
+     - [regulations]{"entity":"firegulations"} of Innovate Force event.
+     - Tell me about the [regulations]{"entity":"firegulations"} for Force Innovate.
+     - List down the [regulations]{"entity":"firegulations"} of the Force Innovate event.
+     - Can you provide information on the [regulations]{"entity":"firegulations"} of the Force Innovate competition?
+     - What guidelines [regulations]{"entity":"firegulations"} should participants follow in Force Innovate?
+     - Explain the [regulations]{"entity":"firegulations"} governing the Force Innovate event.
+     - Share details about the Force Innovate event [regulations]{"entity":"firegulations"}.
+     - Describe the specific [regulations]{"entity":"firegulations"} participants need to adhere to in Force Innovate.
+     - What are the dos and don'ts in the [regulations]{"entity":"firegulations"} of Force Innovate competition?
+     - Provide an overview of the [regulations]{"entity":"firegulations"} framework for Force Innovate.
+     - Elaborate on the Force Innovate event [regulations]{"entity":"firegulations"} and requirements.
+     - Tell me about the [regulations]{"entity":"firegulations"} for Force Innovate.
+     - List down the rules and [regulations]{"entity":"firegulations"} of the Force Innovate event.
+     - Can you provide information on the [regulations]{"entity":"firegulations"} of the Force Innovate competition?
+     - What [regulations]{"entity":"firegulations"} should participants follow in Force Innovate?
+     - Explain the [regulations]{"entity":"firegulations"} governing the Force Innovate event.
+     - Share details about the Force Innovate event [regulations]{"entity":"firegulations"}.
+     - Describe the specific [regulations]{"entity":"firegulations"} participants need to adhere to in Force Innovate
+     - Provide an overview of the [regulations]{"entity":"firegulations"} framework for Force Innovate.
+     - Elaborate on the Force Innovate event [regulations]{"entity":"firegulations"} and requirements.
+- intent: innovate_force_tips
+  examples: |
+     - provide me the [tips]{"entity":"fitips"} on Force Innovate event
+     - provide [tips]{"entity":"fitips"} on Innovate Force event
+     - Can you offer some [tips]{"entity":"fitips"} for participating in the Force Innovate event?
+     - Share helpful advice and [tips]{"entity":"fitips"} for navigating the Force Innovate competition.
+     - Provide me with some guidance and [tips]{"entity":"fitips"} on preparing for Force Innovate.
+     - What are some useful [tips]{"entity":"fitips"} for excelling in the Force Innovate event?
+     - Can you give me [tips]{"entity":"fitips"} and advice for the Force Innovate competition?
+     - Share [tips]{"entity":"fitips"} and tricks for success in the Force Innovate event.
+     - I'm looking for some guidance and [tips]{"entity":"fitips"} on how to approach the Force Innovate. Any tips?
+     - What [tips]{"entity":"fitips"} should I keep in mind while participating in the Force Innovate event?
+     - Can you offer practical [tips]{"entity":"fitips"} for participants of the Force Innovate?
+     - Share insights, [tips]{"entity":"fitips"} and recommendations for those taking part in Force Innovate.

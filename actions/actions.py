@@ -23,6 +23,16 @@ from bson import ObjectId
 import openai
 from gtts import gTTS
 from playsound import playsound
+import pandas as pd
+class Professor_response(Action):
+    def name(self) -> Text:
+        return "action_Professor_name"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        data=pd.read_excel("data/Excels/faculty list 2k24.xlsx")
+        
 #Spell Checker
 
 

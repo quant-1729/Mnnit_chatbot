@@ -308,43 +308,43 @@ stories:
 
 # Hrithiman's Stories
 
-- story: gac path
-  steps:
-  - intent: ask_event_info_2023
-  - action: gac2023_basic_info
-  - action: restart_convo
-- story: gac path2
-  steps:
-  - intent: gac_event_info
-  - action: gac2023_basic_info
-  - action: restart_convo
-- story: gac path
-  steps:
-  - intent: gac_2023_donations
-  - action: utter_don
-  - action: restart_convo
-- story: gac org
-  steps:
-  - intent: gac_2023_organizing
-  - action: gac2023_orgcom
-  - action: restart_convo
-- story: gac spon
-  steps:
-  - intent: gac_2023_sponsorship
-  - action: utter_gacspon
-  - action: restart_convo
-- story: gac reg
-  steps:
-  - intent: gac_2023_registration
-  - action: gac_reg
-  - action: restart_convo
-- story: gac pay
-  steps:
-  - intent: gac_2023_payment
-  - action: utter_gac_pay
-  - action: restart_convo
-- story: mnnit location
-  steps:
+#- story: gac path
+#  steps:
+#  - intent: ask_event_info_2023
+#  - action: gac2023_basic_info
+#  - action: restart_convo
+#- story: gac path2
+#  steps:
+#  - intent: gac_event_info
+#  - action: gac2023_basic_info
+#  - action: restart_convo
+#- story: gac path
+#  steps:
+#  - intent: gac_2023_donations
+#  - action: utter_don
+#  - action: restart_convo
+#- story: gac org
+#  steps:
+#  - intent: gac_2023_organizing
+#  - action: gac2023_orgcom
+#  - action: restart_convo
+#- story: gac spon
+#  steps:
+#  - intent: gac_2023_sponsorship
+#  - action: utter_gacspon
+#  - action: restart_convo
+#- story: gac reg
+#  steps:
+#  - intent: gac_2023_registration
+#  - action: gac_reg
+#  - action: restart_convo
+#- story: gac pay
+#  steps:
+#  - intent: gac_2023_payment
+#  - action: utter_gac_pay
+#  - action: restart_convo
+#- story: mnnit location
+- steps:
   - intent: greet
   - action: utter_greet
   - intent: mnnit_location
@@ -649,4 +649,97 @@ stories:
     - image_requested: "dogs"
   - action: action_get_image
 
-#Here We will make stories
+#Disha stories merged bu priyanshu Agrawal
+- story: botrsh
+  steps:
+    - intent: Botrush
+    - action: utter_botrush
+    - action: restart_convo
+
+- story: botrushdate
+  steps:
+    - intent: botwhen
+    - action: utter_botrush
+    - action: restart_convo
+
+- story: botrushevents
+  steps:
+    - intent: botevents
+    - action: utter_botevents
+    - action: restart_convo
+
+- story: ody_abt
+  steps:
+    - intent: odyssey_abt
+    - action: utter_odyabt
+    - action: restart_convo
+
+- story: ody_rules
+  steps:
+    - intent: oddyssey_rules
+    - action: utter_odyrules
+    - action: restart_convo
+- story: ody_rugulations
+  steps:
+    - intent: odyssey_regulations
+    - action: utter_odyregulations
+    - action: restart_convo
+- story: ody_tips
+  steps:
+    - intent: odysssey_tips
+    - action: utter_odytips
+    - action: restart_convo
+
+- story: ody_spec
+  steps:
+    - intent: odyssey_bot
+    - action: utter_odyspec
+    - action: restart_convo
+- story: cha_abt
+  steps:
+    - intent: cell_abt
+    - action: utter_challengeabt
+    - action: restart_convo
+
+- story: cha_rules
+  steps:
+    - intent: challenge_rules
+    - action: utter_challengerles
+    - action: restart_convo
+- story: cha_rugulations
+  steps:
+    - intent: challengeregulations
+    - action: utter_challengeregulations
+    - action: restart_convo
+- story: cha_tips
+  steps:
+    - intent: challenge_tips
+    - action: utter_challengetips
+    - action: restart_convo
+
+- story: cha_spec
+  steps:
+    - intent: challenge_bot
+    - action: utter_challengespec
+    - action: restart_convo
+- story: inn_abt
+  steps:
+    - intent: forceinnovate_abt
+    - action: utter_innovateabt
+    - action: restart_convo
+
+- story: inn_rules
+  steps:
+    - intent: force_innovate_rules
+    - action: utter_innovaterules
+    - action: restart_convo
+- story: inn_rugulations
+  steps:
+    - intent: force_innovate_regulations
+    - action: utter_innovateregulations
+    - action: restart_convo
+- story: inn_tips
+  steps:
+    - intent: innovate_force_tips
+    - action: utter_innovatetips
+    - action: restart_convo
