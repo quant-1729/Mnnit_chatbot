@@ -532,7 +532,7 @@ nlu:
     - eating spot in the campus
 - intent: dwesis_canteen
   examples: |
-    - Tell me more about Dwesis .
+    - Tell me more about Dwesis.
     - What's on the menu at Dwesis ?
     - Can you share the operating hours of Dwesis ?
     - Are there any special dishes at dwesis ?
@@ -872,6 +872,9 @@ nlu:
     - Faculty who is HOD of ME or Mechanical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the ME or Mechanical Engineering Department department?
     - Head of Department of ME or Mechanical Engineering Department .
+    - Who is the HOD of the Mech department
+    - tell me about the HOD of mech
+    
 
 - intent: ChE_Dept
   examples: |

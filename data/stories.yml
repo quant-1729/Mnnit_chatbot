@@ -34,7 +34,6 @@ stories:
   steps:
   - intent: mnnit_website
   - action: utter_website
-  - action: action_open_link
 
 
 - story: courses information
