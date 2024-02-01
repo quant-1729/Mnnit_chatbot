@@ -382,6 +382,10 @@ stories:
   - action: utter_greet
   - intent: mnnit_clubs
   - action: utter_mnnit_clubs
+- story: Robotic_club
+  steps:
+  - intent: Robotics_Club
+  - action: utter_Robotics_Club
 
 - story:  what_is_academic_building
   steps:
@@ -463,6 +467,10 @@ stories:
   steps:
   - intent: boys_hostel_canteens
   - action: utter_boys_hostel_canteen
+- story: What is mnnit
+  steps:
+  - intent: What_is_Mnnit
+  - action: utter_What_is_Mnnit
 ###############################################################33
 ######### BOT RUSH EVENT START
 - story: project
@@ -733,11 +741,11 @@ stories:
     - intent: force_innovate_rules
     - action: utter_innovaterules
     - action: restart_convo
-- story: inn_rugulations
-  steps:
-    - intent: force_innovate_regulations
-    - action: utter_innovateregulations
-    - action: restart_convo
+#- story: inn_rugulations
+#  steps:
+#    - intent: force_innovate_regulations
+#    - action: utter_innovateregulations
+#    - action: restart_convo
 - story: inn_tips
   steps:
     - intent: innovate_force_tips

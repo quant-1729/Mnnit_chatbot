@@ -32,6 +32,9 @@ class Professor_response(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         data=pd.read_excel("data/Excels/faculty list 2k24.xlsx")
+        df=pd.DataFrame(data)
+
+
         
 #Spell Checker
 

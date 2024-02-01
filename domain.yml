@@ -76,6 +76,8 @@ intents:
   - library_mnnit
   - warden_office_mnnit
   - boys_hostel_canteens
+  - What_is_Mnnit
+  - Robotics_Club
 #Priyanshu Intente ends
   - affirm
   - bot_challenge
@@ -188,6 +190,7 @@ actions:
   - utter_greet
   - utter_ask_hostel
   - utter_mobile_number
+  - utter_challengeregulations
   - action_Set_Hostel_slot
   - restart_convo
   - gac2023_basic_info
@@ -201,6 +204,7 @@ actions:
   - decide_details
   - say_bbsee_details
   - show_arena_map
+  - utter_innovateregulations
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -602,9 +606,12 @@ responses:
     - text: "Here you can find the details about the sponsorship: https://vaave.s3.amazonaws.com/attachments/1685368221_bc91f35905affd992433b8df9e8c4f15.pdf"
   utter_project:
     - text: "The current projects of club include\n1. Self balancing bot\n2. Humanoid\n3. Spider Bot\n4. RL Super Mario\n5. Chatbot\n6. Line Follower\n7. Self Driving Cart"
-
+  utter_What_is_Mnnit:
+    - text: " Mnnit Stands for Motilal Nehru National Institute of Technoogy and holds a national importance in training Engineering Students"
+  utter_Robotics_Club:
+    - text: "Robotics Club is an official Club under the SAC which is a student organisation which focuses on Projects related to Robotics"
   utter_allrules_bbse:
-    - text: |
+    - text:
         1. Your bot must not damage the arena in any way. Doing so will result in immediate disqualification.
         2. There will be four checkpoints A, B, C, D.
         3. If your bot misses a turn according to the LSRB algorithm or goes out of the path, your bot will be restarted from the last reached checkpoint.
@@ -612,8 +619,8 @@ responses:
         5. There will be only 2 restarts allowed during the entire run.
         6. There will be a provision to skip a checkpoint only once if your bot goes out of the path at least once. No points will be awarded for that checkpoint.
   utter_MNGE_Coordis:
-    - text: |
-        **MATCH AND ENGAGE COORDINATORS**
+    - text:
+        MATCH AND ENGAGE COORDINATORS**
            *EVENT COORDINATOR*
            1.Shashank Singh
            9351648062
@@ -628,8 +635,8 @@ responses:
            8987381926
            gautam.20203059@mnnit.ac.in
   utter_BBSEE_Coordinator:
-    - text: |
-        **BumbleSee Event Coordinators:**
+    - text:
+        "BumbleSee Event Coordinators:**
 
         1. Aditya Jain
            - Contact: 9335780943
@@ -645,7 +652,7 @@ responses:
 
         4. Gautam Kumar
            - Contact: 8987381926
-           - Email: gautam.20203059@mnnit.ac.in
+           - Email: gautam.20203059@mnnit.ac.in"
 
   utter_balance:
     - text: "The Self-balancing bot is an automated vehicle that balances itself without any outside help or support. This project involves using PID Control and involuted programming. Self-balancing bot is based on the principle of Inverted pendulum, which is a two wheel vehicle balances itself up in the vertical position with reference to the ground."
@@ -669,8 +676,8 @@ responses:
       - text: "A self-driving car, also known as an autonomous car (AC), driverless car, or robotic car (robo-car), is a car that is capable of traveling without human input. Self-driving cars are responsible for perceiving the environment, monitoring important systems, and control, including navigation."
 
   utter_MNGE_Rules:
-      - text: |
-          Bot Review & Preliminary Round:
+      - text:
+          "Bot Review & Preliminary Round:
           The event coordinators will review the projects to assess progress. The Arduino code should be completed.
 
           Final Round:
@@ -679,20 +686,20 @@ responses:
           Judging Criteria:
           a. Compact Code [+200 points]
           b. Smooth Turns (Relative) [+300 points]
-          c. Time Factor: Max [600 points], allotted relative to the performance of all participants.
+          c. Time Factor: Max [600 points], allotted relative to the performance of all participants."
 
   utter_MNGE_REG:
-      - text: |
-          1. This is a team event with a maximum of 4 members and a minimum of 2. Team members can be from any branch.
+      - text:
+          "1. This is a team event with a maximum of 4 members and a minimum of 2. Team members can be from any branch.
           2. You are required to build a working robot for any one problem before the deadline. You can contact seniors for any discrepancies or doubts in the problem statement.
           3. You will need to submit an abstract before submitting a solution, in which you will describe your approach to the problem and list all the hardware used.
           4. The decision of the judges will be final and binding. Rules and Regulations.
           5. This is a cumulative scoring event, so you need to perform well in all rounds to win.
           6. ANY FORM OF CODE PLAGIARISM WILL NOT BE TOLERATED. If any part of the project is found to be copied, the team will be disqualified immediately.
-          7. Do not assume anything in the problem statement by yourself. Contact us to resolve any discrepancies.
+          7. Do not assume anything in the problem statement by yourself. Contact us to resolve any discrepancies."
 
   utter_MNGE_PS:
-      - text: |
+      - text:
           The war between the Autobots and the Decepticons has now reached its battlefield. The humans of Earth have decided to protect their homeland by taking the side of the Autobots. We have just received very sensitive information that the Decepticons can detect any Autobot technology in their vicinity but cannot detect human technology in the same way. Humans and Autobots want to use this information to their advantage and, as a result, win the war. However, they lack expertise in robotics. As a result, they have approached the Robotics Club at MNNIT to help them build special-purpose robots for specific tasks. Can you and your team help the humans and the Autobots win this war and reclaim our home? It's time to find out!
 
   utter_meeptimeline:
@@ -711,7 +718,7 @@ responses:
           "events": ["Let the game begin!"]
 
   utter_meepins:
-      - text: |
+      - text:
           1. The task performed by your bot must be automated, which means that after you start your bot once, you cannot make any changes in it, and it should complete the specified task on its own.
           2. Your bot must use a minimum of 2 sensors (motor as well), Arduino board, and should work on regular power supply.
 
@@ -727,15 +734,15 @@ responses:
             suggestedBotType: "Prefer creating a moving bot rather than a bot with no wheels"
 
   utter_dohtips:
-      - text: |
-          1. Focus on making the bot durably and your code well commented. Your bot should not stop working on slightly bad handling.
+      - text:
+          "1. Focus on making the bot durably and your code well commented. Your bot should not stop working on slightly bad handling.
           2. The main motive of Bot-Rush 2k23 is to help you develop an interest in robotics and introduce you to your first hardware project.
           3. The Basic/Advanced features are to guide you on your theme. You are free to add more features from your side which would enhance the quality of the bot. You would be judged on your creativity, the functionality of your bot. Any use of extra sensors/hardware should be informed beforehand.
           4. Participate in the team as it will make you a team player and will be helpful in the future.
-          5. Note for first-time developers/beginners: Your focus should be to complete the bot in the given time.
+          5. Note for first-time developers/beginners: Your focus should be to complete the bot in the given time."
 
   utter_dohprblm:
-      - text: |
+      - text:
           1. Automatic Door and a Secure Locking System-Smart locks leverage IoT-enabled sensors to operate keyless entry devices that allow users to access doors remotely.
               1.1 Opening and Closing of Lock system must be done by either mobile application or by some web based system. [+250 points]
               1.2 Password based protection should be implemented, Password can be entered using mobile, or by using keyboard. [+200 points]
@@ -753,7 +760,7 @@ responses:
               3.5 Measure the quantity of gas in percentage and send it over the internet using the Thingspeak server. [+100 Points]
 
   utter_dohbot:
-      - text: |
+      - text:
           1. IR Sensor - IR Infrared Sensor Module
           2. 16x2 LCD Module with I2C Adapter - Display
           3. Jumper Wires - Jumper Cables Breadboard friendly
@@ -768,7 +775,7 @@ responses:
       - text: For more information, you can ask me specific questions about the event or contact the event coordinators.
 
   utter_dohrules:
-      - text: |
+      - text:
           1. This is a team event with a maximum of 4 members and a minimum of 2. Team members can be from any branch.
           2. You have to build a working bot for any one problem before the deadline. You can contact seniors for any discrepancies or doubts in the problem statement.
           3. You’ll be required to submit an abstract before submitting a solution, in which you will describe the approach to the problem and list all the hardware used.
@@ -777,349 +784,349 @@ responses:
           6. ANY FORM OF CODE PLAGIARISM WILL NOT BE TOLERATED. If any part of the project is found copied the team will be disqualified immediately.
           7. Do not assume anything in the problem statement by yourself. Contact us to resolve any discrepancies.
   utter_botrush:
-  - text: |
+  - text:
       "Botrush is the annual Robotics Club event that will not only test your skills but also fuels your innovation and hard work. This is your golden opportunity to plunge 
       into the realms of robotics and become a part of a revolutionary experience that lies ahead."
-utter_botwhen:
-  - text: |
-      "Botrush is conducted between 2nd to 4th february."
-utter_botevents:
-  - text: |
-      "There are four events conducted under botrush
-      1.Galactic Odyssey (Line Follower Bot)/n
-      2.Galactic Challenge (Cell Phone controlled Bot)/n
-      3.Force Secure (Home Automation) /n
-      4.ForceInnovate (Open Theme)/n"
+  utter_botwhen:
+    - text:
+        "Botrush is conducted between 2nd to 4th february."
+  utter_botevents:
+    - text:
+        "There are four events conducted under botrush
+        1.Galactic Odyssey (Line Follower Bot)/n
+        2.Galactic Challenge (Cell Phone controlled Bot)/n
+        3.Force Secure (Home Automation) /n
+        4.ForceInnovate (Open Theme)/n"
 
-utter_odyabt:
-  - text: |
-      "A thrilling line follower bot competition testing precision and speed on a predefined track."
+  utter_odyabt:
+    - text:
+        "A thrilling line follower bot competition testing precision and speed on a predefined track."
 
-utter_odyrules:
-  - text: |
-      "1. Judges decisions will be final and binding to all.
+  utter_odyrules:
+    - text:
+        "1. Judges decisions will be final and binding to all.
+        
+        2. You will be provided with 220V 50 HZ AC power. Your Code should not be hard-coded.
+        
+        3. Organizers reserve the right to change any rules or
+        make new changes.
+        
+        4. Each team is allowed one trial run in both rounds to
+        calibrate their sensors. No team is allowed to make
+        changes in their code during or after the trial run.
+        
+        5. Stages-
+        
+        a. Preliminary round (Line Following)- The bot
+        should be able to follow the black lines at this
+        stage and complete first part of the arena.
+        
+        b.Final round (Wall Following)- The bot should be
+        able to follow the walls at this stage and
+        complete the whole arena.
+        STAGE 1:
+        
+        a. Clearing checkpoint 1 [+300 points]
+        b. Clearing checkpoint 2 [+500 points]
+        c. Clearing checkpoint 3 [+600 points]
+        d. Time Factor- Max [600 points],
+        allotted relatively to the performance of all the
+        participants.
+        
+        STAGE 2:
+        
+        a. Same as stage 1.
+        b. Reaching the end [+1000 points]"
+
+  utter_odytips:
+    - text:
+          "1. Focus on making the bot durably and your code well commented. Your bot should not stop working on slightly bad handling.
       
-      2. You will be provided with 220V 50 HZ AC power. Your Code should not be hard-coded.
+           2. The main motive of Bot-Rush 2k24 is to help you to develop an interest in robotics and introduce you to your first hardware project.
       
-      3. Organizers reserve the right to change any rules or
-      make new changes.
+           3. The Basic/Advanced features are to guide you on your theme. You are free to add more features from your side which would enhance the quality of the bot. You would be judged on your creativity, the
+             functionality of your bot, Any use of extra sensors/hardware should be informed beforehand.
       
-      4. Each team is allowed one trial run in both rounds to
-      calibrate their sensors. No team is allowed to make
-      changes in their code during or after the trial run.
+           4. Participate in the team as it will make you a team player and will be helpful in the future.
       
-      5. Stages-
-      
-      a. Preliminary round (Line Following)- The bot
-      should be able to follow the black lines at this
-      stage and complete first part of the arena.
-      
-      b.Final round (Wall Following)- The bot should be
-      able to follow the walls at this stage and
-      complete the whole arena.
-      STAGE 1:
-      
-      a. Clearing checkpoint 1 [+300 points]
-      b. Clearing checkpoint 2 [+500 points]
-      c. Clearing checkpoint 3 [+600 points]
-      d. Time Factor- Max [600 points],
-      allotted relatively to the performance of all the
-      participants.
-      
-      STAGE 2:
-      
-      a. Same as stage 1.
-      b. Reaching the end [+1000 points]"
+            5. Note for first-time developers/
+            beginners- Your focus should be to
+            complete the bot in the given time."
 
-utter_odytips:
-- text: |
-    "1. Focus on making the bot durably and your code well commented. Your bot should not stop working on slightly bad handling.
-
-     2. The main motive of Bot-Rush 2k24 is to help you to develop an interest in robotics and introduce you to your first hardware project.
-
-     3. The Basic/Advanced features are to guide you on your theme. You are free to add more features from your side which would enhance the quality of the bot. You would be judged on your creativity, the
-       functionality of your bot, Any use of extra sensors/hardware should be informed beforehand.
-
-     4. Participate in the team as it will make you a team player and will be helpful in the future.
-
-      5. Note for first-time developers/
-      beginners- Your focus should be to
-      complete the bot in the given time."
-
-utter_odyspec:
-- text: | 
-    " SPECIFICATIONS
-    1.The bot must contain sufficient sensors to
-    detect black lines and follow the wall.
-    
-    2.The bot must fit into a box of dimensions 25
-    cm x20 cm x20 cm.
-    
-    3. You are allowed to use readymade
-    sensors.
-    
-    4.You can’t supply more than 12V to your
-    robot.
-    
-    5.Each team is allowed to have
-    only one autonomous bot.
-    
-    6.The bot should not communicate with any
-    other devices. Data transfer violations will
-    lead to disqualification.
-    
-    7. During the run, the autonomous bot must
-    not damage the arena.
-    
-    8.The robots can use on-board or off-board
-    power supplies.
-    BOT
-    
-    COMPONENTS
-    
-    1.Arduino UNO with cable (Q1)
-    2.Motor driver (L298) (Q1)
-    3.IR sensor (Q5)
-    4.Breadboard (Q1)
-    5.Ultrasonic Sensor (Q2)
-    6.DC geared motor (Q2)
-    7.Wheels (Q2)
-    8.Castor wheel (Q1)
-    9.Robot Chassis (Q1)
-    10. DC Jack
-    11.Jumper wires M-M (Q40)
-    12.Jumper wires M-F (Q40)
-    13.Nut and Bolts
-    14.DST(Q1)
-    15.Screw Driver(Q1)
-    16.Power Adapter 12V - 1amp (Q1)"
+  utter_odyspec:
+    - text:
+        " SPECIFICATIONS
+        1.The bot must contain sufficient sensors to
+        detect black lines and follow the wall.
+        
+        2.The bot must fit into a box of dimensions 25
+        cm x20 cm x20 cm.
+        
+        3. You are allowed to use readymade
+        sensors.
+        
+        4.You can’t supply more than 12V to your
+        robot.
+        
+        5.Each team is allowed to have
+        only one autonomous bot.
+        
+        6.The bot should not communicate with any
+        other devices. Data transfer violations will
+        lead to disqualification.
+        
+        7. During the run, the autonomous bot must
+        not damage the arena.
+        
+        8.The robots can use on-board or off-board
+        power supplies.
+        BOT
+        
+        COMPONENTS
+        
+        1.Arduino UNO with cable (Q1)
+        2.Motor driver (L298) (Q1)
+        3.IR sensor (Q5)
+        4.Breadboard (Q1)
+        5.Ultrasonic Sensor (Q2)
+        6.DC geared motor (Q2)
+        7.Wheels (Q2)
+        8.Castor wheel (Q1)
+        9.Robot Chassis (Q1)
+        10. DC Jack
+        11.Jumper wires M-M (Q40)
+        12.Jumper wires M-F (Q40)
+        13.Nut and Bolts
+        14.DST(Q1)
+        15.Screw Driver(Q1)
+        16.Power Adapter 12V - 1amp (Q1)"
 
 
-utter_odyregulations:
-- text: |
-    "1. This is a team event with a maximum of 4
-    members and a minimum of 2 members. Team
-    members can be from any branch.
-    
-    2. You have to build a working bot for competitions
-    before the deadline. You can contact
-    seniors for any discrepancie or doubts
-    in the problem statement.
-    
-    3. The decision of the judges will be final and
-    binding.
-    
-    4. This is a cumulative score event. So you need to
-    perform well in all rounds to win.
-    
-    5. ANY FORM OF CODE PLAGIARISMWILL NOT
-    BE TOLERATED. If any part of the project is found
-    copied the team will be disqualified immediately.
-    
-    6. Do not assume anything in the PS by yourself. This"
+  utter_odyregulations:
+    - text:
+        "1. This is a team event with a maximum of 4
+        members and a minimum of 2 members. Team
+        members can be from any branch.
+        
+        2. You have to build a working bot for competitions
+        before the deadline. You can contact
+        seniors for any discrepancie or doubts
+        in the problem statement.
+        
+        3. The decision of the judges will be final and
+        binding.
+        
+        4. This is a cumulative score event. So you need to
+        perform well in all rounds to win.
+        
+        5. ANY FORM OF CODE PLAGIARISMWILL NOT
+        BE TOLERATED. If any part of the project is found
+        copied the team will be disqualified immediately.
+        
+        6. Do not assume anything in the PS by yourself. This"
 
-utter_challengeabt:
-- text: |
-    " Teams create Star Wars-inspired Cell Phone-controlled bots to navigate challenging arenas, evading blaster fire and showcasing agility, mirroring iconic landscapes in an engineering challenge.
-     The droids demonstrate resilience against simulated attacks, adding a dynamic twist to the trials."
-utter_challengerles:
-- text: |
-    "1. Bot Review & Preliminary Round:
-    The event coordinators would review the
-    
-    project to gauge the progress. The Arduino
-    Code should be completed.
-    
-    2. Final Round:
-    
-    Bots selected for the final round should
-    
-    have Arduino and ESP01 Code Completed.
-    The bot should be fully operated
-    through the cell phone(app).
-    
-    Judging Criteria
-    
-    a. Compact Code [+200 points]
-    b. Smooth Turn (Relative) [+300 points]
-    c. Time Factor: Max [600 points],
-    
-    allotted relatively to the performance of all
-    the participants."
-utter_challengeregulations:
-- text: |
-    " 1. This is a team event with a maximum of 4
-    members and a minimum of 2 members.
-    Team members can be from any branch.
-    
-    2. You have to build a working bot for competitions
-    before the deadline. You can contact seniors for
-    any discrepancie or doubts in the problem
-    statement.
-    
-    3. The decision of the judges will be final and
-    binding.
-    
-    4. This is a cumulative score event.
-    So you need to perform well in all
-    rounds to win.
-    
-    5. ANY FORM OF CODE PLAGIARISMWILL NOT BE
-    TOLERATED. If any part of the project is found
-    copied the team will be disqualified immediately."
-utter_challengetips:
-- text: |
-    " 1.Focus on making the bot durably and
-    your code well commented. Your bot should
-    not stop working on slightly bad handling.
-    
-    2.The main motive of Bot-Rush 2k24 is to help
-    you to develop an interest in robotics and
-    introduce you to your first hardware project.
-    
-    3.The Basic/Advanced features are to guide you
-    on your theme. You are free to add more
-    features from your side which would
-    enhance the quality of the bot. You
-    would be judged on your creativity,
-    the functionality of your bot, Any
-    use of extra sensors/hardware
-    should be informed beforehand
-    
-    4.Participate in the team as it
-    will make you a team player and
-    will be helpful in the future.
-    
-    5.Note for first-time developers/
-    beginners: Your focus should be
-    to complete the bot in the given
-    time."
-utter_challengespec:
-- text: |
-    " SPECIFICATIONS
-      1. It consists of two parts (i) Bot (car) (ii) Mobile
-    Application
-    
-    2. MIT app inventor can be used to make the
-    mobile application.
-    
-    3. The app should be able to take the
-    accelerometer data from the accelerometer
-    sensor of a mobile phone.
-    
-    4. You can’t supply more than 12V
-    to your robot.
-    
-    5. Each team is allowed to have only
-    one bot(car).
-    
-    6. The bot(car) should contain exactly three
-    wheels.
-    
-    7. ESP 01 module (A Wi-Fi module that allows
-    microcontrollers access to a Wi-Fi network)
-    should be used.
-    
-    8. During the run, the bot(car) should be able
-    to move in four directions and turning will
-    fetch extra points.
-    
-    COMPONENTS
-    1.Node MCU (Q1)
-    2.Regulator (Q1)
-    3.L298N (Q1)
-    4.Power Adaptor (Q1)
-    5.DC motors (Q4)
-    6.Wheels (Q4)
-    7.Castor Wheel (Q1)
-    8.Breadboard (Q1)
-    9.Jumper Wires (Q80)
-    10.Chassis (Q1)
-    11.Screw Driver(Q1)
-    12.DST(Q1)
-    13.DC female jack"
-utter_innovateabt:
-- text: |
-    " Force Innovate: Invent droids merging Jedi tech with the Force to surprise Sith. Join the rebellion, reshape Star Wars destiny"
-utter_innovaterules:
-- text: |
-    " 1. Your prototype must use a minimum of 2
-    sensors(motor as well),arduino
-    board/NodeMcu(esp32) and should work on
-    regular power supply.
-    
-    2. Your prototype must perform some task
-    that makes the job of humans easy.
-    
-    3. The task performed by your prototype must
-    be automated, which means that after you
-    start your prototype once you cannot
-    make any changes in it and it should
-    complete the specified task on its own.
-    
-    4. You will be provided a maximum
-    number of 3 attempts to complete the
-    predefined task.
-    5. Let your creativity run free and submit
-    your idea, then we will let you know if it is
-    worth creating or not."
-utter_innovateregulations:
-- text: |
-   " 1. This is a team event with a maximum of 4
-    members and a minimum of 2 members.
-    Team members can be from any branch.
-    
-    2. You have to build a working prototype for the
-    competition before the deadline. You can
-    contact seniors for any discrepancies or doubts
-    regarding the problem statement.
-    
-    3. You’ll be required to submit an
-    abstract before submitting a solution,
-    in which you will describe the approach
-    to the problem and list all the hardware
-    used.
-    
-    4. The decision of the judges will be final and
-    binding.
-    
-    5. This is a cumulative score event. So you need
-    to perform well in all rounds to win.
-    
-    6. ANY FORM OF CODE PLAGIARISMWILL
-    NOT BE TOLERATED. If any part of the project is
-    found copied the team will be disqualified
-    immediately.
-    
-    7. Do not assume anything in the PS by
-    yourself. Contact us to resolve any
-    discrepancies."
-utter_innovatetips:
-- text: |
-   " 1. Focus on making the bot durably and your
-    code well commented. Your bot should not
-    stop working on slightly bad handling.
-    
-    2. The main motive of Bot-Rush 2k24 is to help
-    you to develop an interest in robotics and
-    introduce you to your first hardware project.
-    
-    3. The Basic/Advanced features are to guide
-    you on your theme. You are free to add more
-    features from your side which would enhance
-    the quality of the bot. You
-    would be judged on your creativity, the
-    functionality of your bot, Any use of extra
-    sensors/hardware should be informed
-    beforehand
-    
-    4. Participate in the team as it will
-    make you a team player and will be
-    helpful in the future.
-    
-    5. Note for first-time developers/
-    beginners- Your focus should be to
-    complete the bot in the given time."
+  utter_challengeabt:
+    - text:
+        " Teams create Star Wars-inspired Cell Phone-controlled bots to navigate challenging arenas, evading blaster fire and showcasing agility, mirroring iconic landscapes in an engineering challenge.
+         The droids demonstrate resilience against simulated attacks, adding a dynamic twist to the trials."
+  utter_challengerles:
+    - text:
+        "1. Bot Review & Preliminary Round:
+        The event coordinators would review the
+        
+        project to gauge the progress. The Arduino
+        Code should be completed.
+        
+        2. Final Round:
+        
+        Bots selected for the final round should
+        
+        have Arduino and ESP01 Code Completed.
+        The bot should be fully operated
+        through the cell phone(app).
+        
+        Judging Criteria
+        
+        a. Compact Code [+200 points]
+        b. Smooth Turn (Relative) [+300 points]
+        c. Time Factor: Max [600 points],
+        
+        allotted relatively to the performance of all
+        the participants."
+  utter_challengeregulations:
+    - text:
+        " 1. This is a team event with a maximum of 4
+        members and a minimum of 2 members.
+        Team members can be from any branch.
+        
+        2. You have to build a working bot for competitions
+        before the deadline. You can contact seniors for
+        any discrepancie or doubts in the problem
+        statement.
+        
+        3. The decision of the judges will be final and
+        binding.
+        
+        4. This is a cumulative score event.
+        So you need to perform well in all
+        rounds to win.
+        
+        5. ANY FORM OF CODE PLAGIARISMWILL NOT BE
+        TOLERATED. If any part of the project is found
+        copied the team will be disqualified immediately."
+  utter_challengetips:
+    - text:
+        " 1.Focus on making the bot durably and
+        your code well commented. Your bot should
+        not stop working on slightly bad handling.
+        
+        2.The main motive of Bot-Rush 2k24 is to help
+        you to develop an interest in robotics and
+        introduce you to your first hardware project.
+        
+        3.The Basic/Advanced features are to guide you
+        on your theme. You are free to add more
+        features from your side which would
+        enhance the quality of the bot. You
+        would be judged on your creativity,
+        the functionality of your bot, Any
+        use of extra sensors/hardware
+        should be informed beforehand
+        
+        4.Participate in the team as it
+        will make you a team player and
+        will be helpful in the future.
+        
+        5.Note for first-time developers/
+        beginners: Your focus should be
+        to complete the bot in the given
+        time."
+  utter_challengespec:
+    - text:
+        " SPECIFICATIONS
+          1. It consists of two parts (i) Bot (car) (ii) Mobile
+        Application
+        
+        2. MIT app inventor can be used to make the
+        mobile application.
+        
+        3. The app should be able to take the
+        accelerometer data from the accelerometer
+        sensor of a mobile phone.
+        
+        4. You can’t supply more than 12V
+        to your robot.
+        
+        5. Each team is allowed to have only
+        one bot(car).
+        
+        6. The bot(car) should contain exactly three
+        wheels.
+        
+        7. ESP 01 module (A Wi-Fi module that allows
+        microcontrollers access to a Wi-Fi network)
+        should be used.
+        
+        8. During the run, the bot(car) should be able
+        to move in four directions and turning will
+        fetch extra points.
+        
+        COMPONENTS
+        1.Node MCU (Q1)
+        2.Regulator (Q1)
+        3.L298N (Q1)
+        4.Power Adaptor (Q1)
+        5.DC motors (Q4)
+        6.Wheels (Q4)
+        7.Castor Wheel (Q1)
+        8.Breadboard (Q1)
+        9.Jumper Wires (Q80)
+        10.Chassis (Q1)
+        11.Screw Driver(Q1)
+        12.DST(Q1)
+        13.DC female jack"
+  utter_innovateabt:
+    - text:
+        " Force Innovate: Invent droids merging Jedi tech with the Force to surprise Sith. Join the rebellion, reshape Star Wars destiny"
+  utter_innovaterules:
+    - text:
+        " 1. Your prototype must use a minimum of 2
+        sensors(motor as well),arduino
+        board/NodeMcu(esp32) and should work on
+        regular power supply.
+        
+        2. Your prototype must perform some task
+        that makes the job of humans easy.
+        
+        3. The task performed by your prototype must
+        be automated, which means that after you
+        start your prototype once you cannot
+        make any changes in it and it should
+        complete the specified task on its own.
+        
+        4. You will be provided a maximum
+        number of 3 attempts to complete the
+        predefined task.
+        5. Let your creativity run free and submit
+        your idea, then we will let you know if it is
+        worth creating or not."
+  utter_innovateregulations:
+    - text:
+        1. This is a team event with a maximum of 4
+        members and a minimum of 2 members.
+        Team members can be from any branch.
+
+        2. You have to build a working prototype for the
+        competition before the deadline. You can
+        contact seniors for any discrepancies or doubts
+        regarding the problem statement.
+
+        3. You’ll be required to submit an
+        abstract before submitting a solution,
+        in which you will describe the approach
+        to the problem and list all the hardware
+        used.
+
+        4. The decision of the judges will be final and
+        binding.
+
+        5. This is a cumulative score event. So you need
+        to perform well in all rounds to win.
+
+        6. ANY FORM OF CODE PLAGIARISMWILL
+        NOT BE TOLERATED. If any part of the project is
+        found copied the team will be disqualified
+        immediately.
+
+        7. Do not assume anything in the PS by
+        yourself. Contact us to resolve any
+        discrepancies.
+  utter_innovatetips:
+    - text:
+       " 1. Focus on making the bot durably and your
+        code well commented. Your bot should not
+        stop working on slightly bad handling.
+        
+        2. The main motive of Bot-Rush 2k24 is to help
+        you to develop an interest in robotics and
+        introduce you to your first hardware project.
+        
+        3. The Basic/Advanced features are to guide
+        you on your theme. You are free to add more
+        features from your side which would enhance
+        the quality of the bot. You
+        would be judged on your creativity, the
+        functionality of your bot, Any use of extra
+        sensors/hardware should be informed
+        beforehand
+        
+        4. Participate in the team as it will
+        make you a team player and will be
+        helpful in the future.
+        
+        5. Note for first-time developers/
+        beginners- Your focus should be to
+        complete the bot in the given time."
 
 session_config:
   session_expiration_time: 60

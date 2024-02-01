@@ -717,7 +717,12 @@ nlu:
     - What is the dean's vision for the college?
     - Are there any upcoming events or meetings with the college Dean?
     - Give me details about the dean's office and hours of availability.
-
+- intent: What_is_Mnnit
+  examples: | 
+    - What is mnnit? 
+    - Why is mnnit? 
+    - What is the significance of Mnnit ? 
+    - WHo chooses Mnnit
   #About departments and their HODs
 - intent: CSE_dept
   examples: |
@@ -745,6 +750,7 @@ nlu:
     - Who is the head of department of Computer Science and Engineering Department ?
     - HOD of Computer Science and Engineering Department .
     - Head of department of CS or CSE .
+    - CSE HOD? 
     - Faculty who is HOD of CSE Or Computer Science and Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the CSE department?
     - Head of Department of CSE or Computer Science and Engineering depatment
@@ -1729,6 +1735,13 @@ nlu:
     - What responsibilities do the Wardens have at MNNIT?
 ###########################################################################################
 ################### BOT Rush Start
+# Priyanshu "s code
+- intent: Robotics_Club
+  examples: |
+    - what is Robotics Club?
+    - Why is robotics club?
+    - Robotis Club ?
+    - Robotics in Mnnit?
 - intent: projects
   examples: |
     - What are the current projects of Robotics Club?
