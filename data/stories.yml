@@ -700,3 +700,9 @@ stories:
   steps:
   - intent: botrush_2.0_event_heads
   - action:  utter_botrush_2.0_event_heads
+
+
+- story:  Event_schedule_botrush_2.0
+  steps:
+  - intent:  Event_schedule_botrush_2.0
+  - action:  utter_ Event_schedule_botrush_2.0

@@ -2570,7 +2570,7 @@ nlu:
 - intent: final_year_coordinators_names
   examples: |
      - Who are the Final Year coordinators?
-      - Can you tell me the names of the Final Year coordinators?
+     - Can you tell me the names of the Final Year coordinators?
      - What are the names of the Final Year coordinators?
      - Who is in charge of coordinating Final Year activities?
      - I'd like to know the individuals serving as Final Year coordinators.
@@ -2635,6 +2635,42 @@ nlu:
     - Are there specific individuals designated as Botrush 2.0 event heads?
     - Who oversees Botrush 2.0?
     - Can you provide information on the Botrush 2.0 event heads' team members?
+
+- intent: Event_schedule_botrush_2.0
+  examples: |
+    - What is the event schedule for BotRush 2.0?
+    - Can you provide the schedule of events for BotRush 2.0?
+    - When do the events start during BotRush 2.0?
+    - What are the timings for BotRush 2.0 events?
+    - Give me the timetable for BotRush 2.0.
+    - When does BotRush 2.0 commence?
+    - Tell me about the events scheduled for BotRush 2.0.
+    - What time does BotRush 2.0 wrap up?
+    - Provide details about the schedule of BotRush 2.0.
+    - What's on the agenda for BotRush 2.0?
+    - When is the BotRush 2.0 kickoff?
+    - What's the itinerary for BotRush 2.0?
+    - Show me the event plan for BotRush 2.0.
+    - What's the lineup for BotRush 2.0?
+    - Share BotRush 2.0's event schedule with me.
+    - When are the main events happening at BotRush 2.0?
+    - List the activities for BotRush 2.0.
+    - What's the schedule for BotRush 2.0 like?
+    - I'm interested in knowing the schedule for BotRush 2.0.
+    - Can you tell me when the events for BotRush 2.0 start?
+    - What's happening at BotRush 2.0 and when?
+    - Show me the timetable for BotRush 2.0's events.
+    - Inform me about the events happening during BotRush 2.0.
+    - Please give me an overview of BotRush 2.0's event timeline.
+    - When can I expect the events to start during BotRush 2.0?
+    - Provide me with the program schedule for BotRush 2.0.
+    - Tell me the timings of the events at BotRush 2.0.
+    - What events should I look forward to at BotRush 2.0?
+    - Can you brief me about BotRush 2.0's event lineup?
+    - When is the last event scheduled for BotRush 2.0?
+    - What's the duration of BotRush 2.0's events?
+    - Share the start and end times of BotRush 2.0's events.
+    - Give me a rundown of the event timings for BotRush 2.0.
 
  
 

@@ -94,6 +94,7 @@ intents:
   - final_year_coordinators_names
   - third_year_coordinators_names
   - botrush_2.0_event_heads
+  - Event_schedule_botrush_2.0
 
 #  - ask_event_info_2023
 #  - gac_2023_donations
@@ -878,6 +879,36 @@ responses:
         1) Shashank Singh
         2) Bipul Karna
         3) Gautam
+
+  utter_Event_schedule_botrush_2.0:
+    - text: |
+        Here's the schedule for BotRush 2.0:
+        3rd February
+         Morning (9 AM onwards):
+          - CODEFORGE  
+          - GALACTIC CHALLENGE
+          - FALCON
+          
+         Afternoon
+           (2 PM) FORCE SECUR
+           (5 PM) STELLER HUNT  
+           (6 PM)COSMIC ENIGMA  
+          
+        4th February
+         Morning (9 AM onwards):
+           - STELLER HUNT
+           - GALACTIC ODYSSEY
+
+         Afternoon 
+           - (2 pm)DRONE Show
+           - (3 pm) FORCE innovative
+           - (3 pm) FORCE SECURE
+           - (3 pm) TECH EXPO
+           - (5 pm) Surprise Event (5 PM)
+           - (7 pm) Telescope event 
+           
+             link for the schedule 
+             https://drive.google.com/file/d/1boWtJsLXpoPaEqtxY_h9c2MHOW1eql5B/view?usp=drive_link
 
 session_config:
   session_expiration_time: 60
