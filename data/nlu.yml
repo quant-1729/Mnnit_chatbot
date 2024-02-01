@@ -5,6 +5,7 @@ nlu:
     - hey 
     - hey my name is
     - hello
+    - hellow
     - hi
     - hello there
     - good morning
@@ -131,13 +132,14 @@ nlu:
     - Where can I find information about majors?
 - intent: courses
   examples: |
+    - Courses 
+    - What are the avaible curses in Mnnit 
+    - Which courses are offered in our collage
+    - Give me the course detatils 
     - what different courses are offered
     - different courses provided by the college
     - list of different courses
     - list of different programs
-    - can you help me with the programs mnnit allahabad offers
-    - different programs offered by the college
-    - different training programs offered
     - branches in mnnit allahabad
     - branches under b.tech in our college
     - What are the available courses in the college?
@@ -363,6 +365,7 @@ nlu:
     - Can you provide a [template]{"entity": "entity", "value": "intro_format"} for a [college]{"entity": "entity", "value": "intro_type"} self-introduction?
     - How can I create a memorable [introduction]{"entity": "entity", "value": "intro_format"} in [college]{"entity": "entity", "value": "intro_type"}?
     - Share [tips]{"entity": "entity", "value": "intro_format"} on delivering an engaging self-introduction.
+# From here the direction portion starts
 - intent: ask_for_directions
   examples: |
     - Can you help me with directions to [destination](destination_given) from [user_location](user_location)?
@@ -401,8 +404,8 @@ nlu:
     - Tell me the directions from [SVBH](user_location) to [Admin Building](destination_given)
     - give me direction to [SVBH](user_location) to [Central Library](destination_given)
     - Tell me the directions from [SVBH](user_location) to [Central Library](destination_given)
-# I want to go to MP hall
-- intent: cion
+# Direct direction
+- intent: Direct_Direction
   examples: |
     - I want to [Central Library](destination_given)
     - Take me to [SVBH](destination_given)
@@ -410,6 +413,13 @@ nlu:
     - How can I go to [SVBH](destination_given)
     - How to go to [SVBH](destination_given)
     - What is the way to [Central Library](destination_given)
+    - Tell me the path to [SVBH](destination_given)
+    - What is the path to [SVBH](destination_given)
+    - How can I travel to [Athletic Ground](destination_given)
+    - Can you show me the path to [Administrative Building](destination_given)
+    - How can I reach to [Central Library](destination_given)
+    - Take me to the [SVBH](destination_given)
+    - Show me the way to [Athletic Ground ](destination_given)
     - I need directions to [Main Auditorium](destination_given)
     - How do I get to [Computer Center](destination_given)?
     - Tell me the way to [Chemistry Department](destination_given)
@@ -431,6 +441,17 @@ nlu:
     - Show me the route to [Music Room](destination_given)
     - How can I reach [Placement Office](destination_given)?
 # Show mw my current Location
+- intent: Current_Location
+  examples: |
+    - Where I am right now??
+    - What is my current Location 
+    - Tell me my current Location
+    - Which part of MNNIT is this ?? 
+    - Which is this place of Campus?
+    - Show me my current location? 
+    - Can you tell me where I am ? 
+    - What is this place 
+    - Which is this place 
 
 - intent: more_about_college
   examples: |
@@ -552,17 +573,6 @@ nlu:
     - How do I place an order or reserve a table at Dwesis ?
     - Can you provide information about the staff and chefs at Dwesis ?
     - Are there any special considerations for allergen information at Dwesis ?
-- intent: dwesis_location
-  examples: |
-    - Where is the college dwesis located?
-    - Can you tell me the address of the dwesis on campus?
-    - How do I find the Mr. Dwesis's location?
-    - Give me directions to the college Dwesis.
-    - Is there a map to the dwesis?
-    - What building or area is the dwesis situated in?
-    - I'm new here, where can I find the dwesis?
-    - Tell me how to get to the nearest dwesis.
-    - Can you guide me to the dwesis's location on campus?
 - intent: cafe_96
   examples: |
     - Tell me more about cafe 96 .
@@ -585,17 +595,6 @@ nlu:
     - How do I place an order or reserve a table at Cafe 96 ?
     - Can you provide information about the staff and chefs at Cafe 96 ?
     - Are there any special considerations for allergen information at Cafe 96 ?
-- intent: cafe_96_location
-  examples: |
-    - Where is the college cafe 96 located?
-    - Can you tell me the address of the Cafe 96 on campus?
-    - How do I find the Mr. Cafe 96's location?
-    - Give me directions to the college Cafe 96.
-    - Is there a map to the cafe 96?
-    - What building or area is the Cafe 96 situated in?
-    - I'm new here, where can I find the Cafe 96?
-    - Tell me how to get to the nearest Cafe 96.
-    - Can you guide me to the cafe 96's location on campus?
 - intent: yamuna_canteen
   examples: |
     - Tell me more about yamuna canteen .
@@ -619,19 +618,6 @@ nlu:
     - How do I place an order or reserve a table at yamuna canteen ?
     - Can you provide information about the staff and chefs at yamuna canteen ?
     - Are there any special considerations for allergen information at yamuna canteen ?
-- intent: yamuna_location
-  examples: |
-    - Where is the college yamuna canteen located?
-    - Can you tell me the address of the yamuna canteen on campus?
-    - How do I find the Mr. yamuna canteen's location?
-    - Give me directions to the college yamuna canteen.
-    - Give me directions to the college yamuna.
-    - Is there a map to the yamuna?
-    - What building or area is the yamuna canteen situated in?
-    - I'm new here, where can I find the yamuna canteen?
-    - Tell me how to get to the nearest yamuna canteen.
-    - Can you guide me to the yamuna canteen's location on campus?
-
 - intent: lit_club
   examples: |
     - What is Literary Cub?
@@ -693,7 +679,6 @@ nlu:
     - Tell me about any common areas and recreational facilities in the girls' hostel.
 
 #  department
-
 - intent: Department
   examples: |
     - department name
@@ -754,7 +739,6 @@ nlu:
     - Give me details about the dean's office and hours of availability.
 
   #About departments and their HODs
-
 - intent: CSE_dept
   examples: |
     - Computer Science and Engineering Department .
@@ -1020,288 +1004,289 @@ nlu:
 
 
 #Hrithiman's code starting
-- intent: gac_event_info
-  examples: |
-    - [What is the GAC 2023 event]{"entity": "general_info", "value": "DESC"} all about?
-    - [GAC 2023]{"entity": "general_info", "value": "DESC"}?
-    - Give me an [overview of the GAC]{"entity": "general_info", "value": "DESC"} event
-    - Give me an [overview of the GAC 2023]{"entity": "general_info", "value": "DESC"}
-    - [What is GAC]{"entity": "general_info", "value": "DESC"}?
-    - [what is GAC 2023]{"entity": "general_info", "value": "DESC"}?
-    - [GAC 2023 2023]{"entity": "general_info", "value": "DESC"}
-    - [Explain the GAC 2023 event]{"entity": "general_info", "value": "DESC"} to me in detail.
-    - [Can you tell me about GAC 2023]{"entity": "general_info", "value": "DESC"}?
-    - [What is the Global Alumni Convention event]{"entity": "general_info", "value": "DESC"}?
-    - [Tell me about the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
-    - Briefly [describe the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
-    - Share [information about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
-    - [Describe the Global Alumni Convention]{"entity": "general_info", "value": "DESC"} for me.
-    - Share [some insights about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
-    - Provide a comprehensive [overview of the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
-    - Tell me [all about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
-    - [What is the GAC event]{"entity": "general_info", "value": "DESC"} all about?
-    - [GAC]{"entity": "general_info", "value": "DESC"}?
-    - [GAC 2023]{"entity": "general_info", "value": "DESC"}
-    - [Explain the GAC event]{"entity": "general_info", "value": "DESC"} to me in detail.
-    - [Can you tell me about GAC]{"entity": "general_info", "value": "DESC"}?
-    - [Tell me about the GAC event]{"entity": "general_info", "value": "DESC"}.
-    - Briefly [describe the GAC event]{"entity": "general_info", "value": "DESC"}.
-    - [Describe the Global Alumni Convention 2023] for me.
-    - [Share some information about Global Alumni Convention](general_info:DESC)
-    - [Explain the GAC event](general_info:DESC) to me in detail.
-    - Share [some insights about the Global Alumni Convention](general_info:DESC).
-    - Provide a comprehensive [overview of the GAC event](general_info:DESC).
-    - Tell me [all about the Global Alumni Convention]{"entity":"general_info","value":"DESC"}.
-    - [G A C](general_info:DESC) 
-    - [G.A.C](general_info:DESC)
-    - [G.A.C 2023](general_info:DESC)
-    - [Global Alumni Convention 2023](general_info:DESC)
-- intent: ask_event_info_2023
-  examples: |
-    - [What's the date and location]{"entity":"general_info", "value":"DL"} of the event?
-    - [Where is GAC 2023](general_info:L) going to be held?
-    - What is the [venue](general_info:L) of GAC 2023?
-    - [Where is GAC](general_info:L) going to be held?
-    - [Where is GAC](general_info:L) going to be conducted?
-    - Can you let me know the [venue](general_info:L) of GAC 2023?
-    - [When and where]{"entity":"general_info", "value":"DL"} is the event happening?
-    - [Describe the event's date and location]{"entity":"general_info", "value":"DL"}.
-    - Give me the [date and location]{"entity":"general_info", "value":"DL"} of the event.
-    - Share the event [schedule]{"entity":"general_info", "value":"S"} with me.
-    - Can you tell me the [schedule]{"entity":"general_info", "value":"S"} for the convention?
-    - Where will the convention take [place]{"entity":"general_info", "value":"L"}? 
-    - [When and where]{"entity":"general_info","value":"DL"} can I attend the event?
-    - Tell me the [date and location]{"entity":"general_info","value":"DL"} for the convention.
-    - What's the [schedule]{"entity":"general_info", "value":"S"} for the event?
-    - Provide details about the event [location]{"entity":"general_info", "value":"L"}.    -
-    - [When and where]{"entity":"general_info", "value":"DL"} is the event scheduled for?
-    - Share information about the [date and location]{"entity":"general_info", "value":"DL"}.
-    - What is the event's [date and location]{"entity":"general_info", "value":"DL"}?
-    - Can you provide details on the convention's [schedule]{"entity":"general_info", "value":"S"}?
-    - Where is the event's [venue]{"entity":"general_info", "value":"L"}?
-    - What's the [date and location]{"entity":"general_info", "value":"DL"} of the convention?
-    - What's on the [schedule]{"entity":"general_info", "value":"S"} for the event?
-    - [When is the event, and where will it be?]{"entity":"general_info","value":"DL"}
-    - Provide the [date and location]{"entity":"general_info", "value":"DL"} details.
-    - What can you tell me about the convention's [schedule]{"entity":"general_info", "value":"S"}?
-    - [Where]{"entity":"general_info","value":"L"} can I find the event?
-    - What's the [date and location]{"entity":"general_info", "value":"DL"} information for the event?
-    - Can you outline the [schedule]{"entity":"general_info", "value":"S"} for the convention?
-    - [Where]{"entity":"general_info","value":"L"} should I go for the event?
-    - Can you tell me [when is GAC](general_info:DL) event?
-    - [When is the GAC](general_info:DL) 2023 event?
-    - Can you tell me [when is GAC](general_info:DL?
-    - [When is GAC](general_info:DL) 2023 going to be held?
-    - What is the [date and location](general_info:DL) for GAC 2023?
-- lookup: general_info
-  examples: |
-    - sehcudle
-    - Scheldue
-    - schedle
-- intent: gac_2023_donations
-  examples: |
-    - Who gave the donations from 1998 batch?
-    - List of those who gave the donations) from 1998 batch?
-    - List of all the Alumni who gave donationsfor 1998 batch?
-    - Names of those who gave donations to college from 1998 batch?
-    - Names of those who provided donations to college from 1998 batch?
-    - Who from the 1998 batch made a donations?
-    - Can you tell me the names of 1998 batch alumni who contributed to donations?
-    - Provide a list of donors from the 1998 batch.
-    - I'm interested in knowing which 1998 batch alumni donated.
-    - Tell me about the 1998 batch alumni who made contributions.
-    - Give me the names of those who gave donations from the 1998 batch.
-    - I want to find out who donated from the 1998 batch.
-    - Who are the 1998 batch alumni donors?
-    - Provide information about 1998 batch donations and donors.
-    - List the names of 1998 batch alumni who participated in donations.
-    - Can you provide the names of donors from the 1998 batch?
-    - I'm interested in learning about 1998 batch alumni who contributed to donations.
-    - Tell me about the 1998 batch alumni who made donations.
-    - Give me a list of donors from the 1998 batch.
-    - Who from the 1998 batch donated to the cause?
-    - I'd like to know which 1998 batch alumni gave donations.
-    - Share information about the 1998 batch alumni donors.
-    - Provide a list of names from the 1998 batch who participated in donations.
-    - Tell me who the donors are from the 1998 batch.
-    - List the 1998 batch alumni who donated to the organization.
-    - Who are the 1998 batch alumni donors?
-    - I'm curious about the 1998 batch donors. Can you help?
-    - Who contributed to donations from the 1998 batch?
-    - Give me information about the 1998 batch donors and their names.
-    - Share details about the 1998 batch alumni who supported the cause.
-    - Tell me about the 1998 batch alumni who generously donated.
-    - I'd like to learn about the 1998 batch and their donations.
-    - Can you provide the names of donors specifically from the 1998 batch?
-    - List the 1998 batch alumni who participated in [fundraising efforts](gacdon).
-    - Who in the 1998 batch made contributions to the organization?
-
-- intent: gac_2023_organizing
-  examples: |
-    - Who are the part of [organizing committee](gacorg) of GAC 2023?
-    - List all the members of [organizing team](gacorg) of GAC 2023?
-    - Provide me the names of [organizers](gacorg) of GAC 2023?
-    - Who is on the [organizing team](gacorg) for GAC 2023?
-    - Can you provide a list of members in the GAC 2023 [organizing team](gacorg)?
-    - Tell me about the team responsible for [organizing](gacorg) GAC 2023.
-    - I'd like to know the names of the [organizers](gacorg) for the GAC 2023 event.
-    - Share information about the GAC 2023 [organizing committee](gacorg).
-    - Give me details about the [people behind the scenes](gacorg) of GAC 2023.
-    - Who are the key [members](gacorg) of the GAC 2023 [organization](gacorg)?
-    - Provide a list of [individuals](gacorg) involved in planning GAC 2023.
-    - Tell me about the [team members](gacorg) responsible for GAC 2023.
-    - List the names of the [organizers](gacorg) for the GAC 2023 conference.
-    - Who are the [event planners](gacorg) for GAC 2023?
-    - I'm interested in learning about the [team behind GAC 2023](gacorg). Can you help?
-    - Share details about the [organizing team](gacorg) of GAC 2023.
-    - Who is responsible for [coordinating](gacorg) GAC 2023?
-    - Give me information about the GAC 2023 [organizing team](gacorg) and their roles.
-    - Tell me about the individuals who are [organizing](gacorg) GAC 2023.
-    - I'd like to learn about the GAC 2023 [organizing committee](gacorg) members.
-    - Can you provide the names of the [team members](gacorg) working on GAC 2023?
-    - List the key [people](gacorg) involved in planning GAC 2023.
-    - Who is part of the [organizing team](gacorg) for the GAC 2023 conference?
-    - Tell me about the team leading the [organization](gacorg) of GAC 2023.
-    - Provide information about the [individuals](gacorg) in charge of GAC 2023.
-    - Who is overseeing the [planning](gacorg) and execution of GAC 2023?
-    - I'd like to get to know the [people](gacorg) responsible for GAC 2023. Can you share their names?
-    - List the event [organizers](gacorg) for GAC 2023.
-    - Can you give me an overview of the [team](gacorg) behind GAC 2023?
-    - Share details about the roles and responsibilities of the GAC 2023 [organizing team](gacorg).
-    - Who are the key [players](gacorg) in the GAC 2023 [organization](gacorg)?
-    - Tell me about the committee [members](gacorg) of GAC 2023.
-    - Provide an introduction to the [organizing team](gacorg) of GAC 2023.
-    - Who is the [Patron](gacorg:Pat) of the event?
-    - Who serves as the [Advisor](gacorg:Ad) for the event?
-    - Who holds the position of [Chairman](gacorg:chair) in the event?
-    - Who is the [Co-Chairman](gacorg:CoChair) of the event?
-    - Who is the [Organizing Secretary](gacorg:oSec) for the event?
-    - Who is responsible for the treasury as the [Treasurer](gacorg:Tres)?
-    - Who are the [Joint Organizing Secretaries](gacorg:Jsec) for the event
-- intent: gac_2023_registration
-  examples: |
-    - What are the [registration details](gacreg:FR) for GAC 2023?
-    - What is the [registration process](gacreg:FR) for GAC 2023?
-    - Can you give me the [Registration link](gacreg:RL) for GAC?
-    - How much is the registration [fee for others](gacreg:FO) ?
-    - What is the registration [fee for felicitation](gacreg:FF) batch for GAC 2023?
-    - What is the registration [fee for others](gacreg:FO) for GAC 2023?
-    - What is the [link for registering](gacreg:RL) for GAC 2023?
-    - What is the [last date to register](gacreg:RD) for GAC 2023?
-    - [Can alumni register for GAC 2023?](gacreg:FR)
-    - How much is the [registration fee](gacreg:F) for GAC 2023?
-    - What are the [fees](gacreg:FR) associated with GAC 2023 registration?
-    - Tell me about the pricing structure for GAC 2023 registration.
-    - I'd like to know the registration [fee](gacreg:F) for students attending GAC 2023.
-    - [How can I register for GAC 2023](gacreg:FR)?
-    - What is the [process for GAC 2023 registration](gacreg:FR)?
-    - Can you guide me through the [GAC 2023 registration](gacreg:FR)?
-    - I'd like to [sign up for GAC 2023](gacreg:FR). What are the steps?
-    - Tell me about the [registration options](gacreg:FR) for GAC 2023.
-    - What is the cost of [registration](gacreg:FR) for GAC 2023?
-    - How can I register for the [event](gacreg:FR)?
-    - What is the registration [fee](gacreg:F)?
-    - Can you guide me through the [registration process](gacreg:FR)?
-    - Where do I [sign up for the event](gacreg:FR)?
-    - Tell me about the [registration procedure](gacreg:FR).
-    - Is there a [fee](gacreg:F) to attend the event?
-    - How do I get [registered](gacreg:FR) for 2023?
-    - What are the [steps](gacreg:FR) to complete the [registration](gacreg:FR)?
-    - [When does the registration](gacreg:RD) for start?
-    - What is the [deadline](gacreg:RD) for [event registration](gacreg:FR)?
-    - How can I pay for the [registration fee](gacreg:F)?
-    - Do I need to create an [account](gacreg:FR) to [register](gacreg:FR)?
-    - Can I [register](gacreg:FR) multiple [attendees](gacreg:FR) at once?
-    - What [payment methods](gacreg:FR) are accepted for [registration](gacreg:FR)?
-    - How do I confirm my [registration status](gacreg:FR)?
-    - What information is required for the [registration form](gacreg:FR)?
-    - Is there a group registration(gacreg:FR) option?
-    - Can I [register](gacreg:FR) on the [day](gacreg:FR) of the [event](gacreg:FR)?
-    - Are there any [prerequisites](gacreg:FR) for [registration](gacreg:FR)?
-    - Can I [cancel](gacreg:FR) or [modify](gacreg:FR) my [registration](gacreg:FR)?
-    - Tell me about the [registration schedule](gacreg:FR).
-    - What is the [registration process](gacreg:FR) like?
-    - Are there any [documents](gacreg:FR) needed for [registration](gacreg:FR)?
-    - How can I get a [copy](gacreg:FR) of my [registration receipt](gacreg:FR)?
-    - Can you provide details on [early bird registration](gacreg:FR)?
-    - What is [included](gacreg:FR) in the [registration package](gacreg:FR)?
-    - Tell me about the [registration support contact](gacreg:FR).
-    - Where can I find the [online registration portal](gacreg:FR)?
-    - How do I [register](gacreg:FR) as a [speaker](gacreg:FR) for the [event](gacreg:FR)?
-#HRITHIMAN GUHA
-#ISME DAAL DE gacpay krke
-- intent: gac_2023_payment
-  examples: |
-    - What are the [payment](gacpay) details for registering for GAC 2023?
-    - What are the different ways to [pay](gacpay) for GAC 2023?
-    - What are the different ways to make a donation as [payment](gacpay) for GAC 2023?
-    - How can I [pay](gacpay) for GAC 2023?
-    - Could you please share the bank details for [making a payment](gacpay) for GAC 2023?
-    - Provide me with the bank details for [making a payment](gacpay) for GAC 2023.
-    - How can I make a [payment](gacpay) for GAC 2023?
-    - Tell me about the various [payment](gacpay) options for GAC 2023 registration.
-    - What are the accepted methods of [payment](gacpay) for GAC 2023 registration?
-    - Provide information regarding the [payment](gacpay) process for GAC 2023.
-    - I'd like to know how to [make a payment](gacpay) for GAC 2023. Can you guide me?
-    - Could you explain the [details](gacpay) of payment for GAC 2023?
-    - Please give me an overview of the [payment](gacpay) procedures for GAC 2023.
-    - How much do I need to [pay](gacpay) for attending GAC 2023?
-    - Share information regarding the [payment](gacpay) deadlines for GAC 2023.
-    - Tell me about any discounts or promo codes available for [registration](gacpay) for GAC 2023.
-    - What is the [refund](gacpay) policy for [payments](gacpay) made for GAC 2023?
-    - Could you explain the steps required to complete the [payment](gacpay) for GAC 2023?
-    - How do I [make a payment](gacpay) for additional services or workshops at GAC 2023?
-    - What is the currency used for [payments](gacpay) related to GAC 2023?
-    - I'd like to know if [installment options](gacpay) are available for GAC 2023.
-    - Tell me about the [payment](gacpay) portal or platform for GAC 2023.
-    - Are there any group discounts for those [registering](gacpay) multiple attendees for GAC 2023?
-    - Can you provide information about scholarship opportunities or financial aid for [payment](gacpay) at GAC 2023?
-    - What is the [registration](gacpay) fee for students attending GAC 2023?
-    - Please explain the process for confirming my [payment](gacpay) for GAC 2023.
-    - Tell me about any additional costs associated with [payment](gacpay) for attending GAC 2023.
-    - I'd like to learn more about [payment](gacpay) confirmation and receipts for GAC 2023.
-    - What is the policy for late or on-site [payments](gacpay) for GAC 2023?
-    - Can you provide details for the [payment](gacpay) support contact for GAC 2023?
-    - Please explain the process for canceling or modifying my [payment](gacpay) for GAC 2023.
-
-
-#isme gacspon krke daal de
-- intent: gac_2023_sponsorship
-  examples: |
-    - What is the different [sponsorship amounts](gacspan) provided?
-    - Is there any detail of [sponsorship amount](gacspan)?
-    - Give me the detail of [sponsorship amount](gacspan)?
-    - What is the minimum [sponsorship amount](gacspan) available?
-    - What are the details of the less than [sponsorship amount](gacspan)?
-    - How can I become a [sponsor for GAC 2023](gacspan)?
-    - Tell me about the [sponsorship opportunities](gacspan) available for GAC 2023.
-    - What are the different [sponsorship packages](gacspan) for GAC 2023?
-    - Provide information on [sponsorship levels](gacspan) and benefits for GAC 2023.
-    - I'm interested in [sponsoring GAC 2023](gacspan). Can you guide me through the process?
-    - Explain the [sponsorship details](gacspan) and requirements for GAC 2023.
-    - Give me an overview of the [sponsorship packages](gacspan) and their costs for GAC 2023.
-    - What promotional opportunities are available for [sponsors](gacspan) at GAC 2023?
-    - How can I inquire about [custom sponsorship options](gacspan) for GAC 2023?
-    - Share information on the [sponsorship application](gacspan) deadline for GAC 2023.
-    - Can you provide a list of previous [sponsors](gacspan) for GAC  events?
-    - What is the process for submitting a [sponsorship proposal](gacspan) for GAC 2023?
-    - Explain the [benefits](gacspan) and [perks](gacspan) of being a [sponsor](gacspan) at GAC 2023.
-    - Are there specific industries or sectors that GAC  is looking for [sponsors](gacspan) from?
-    - I'd like to know if there are [exclusive sponsorship opportunities](gacspan) for certain events at GAC 2023.
-    - What are the [sponsorship payment](gacspan) and [invoicing procedures](gacspan) for GAC 2023?
-    - Can you provide information on [sponsorship contacts](gacspan) or representatives for GAC 2023?
-    - What is the [timeline](gacspan) for [sponsorship confirmation](gacspan) for GAC 2023?
-    - Are there any [partnership](gacspan) or [co-sponsorship opportunities](gacspan) for GAC 2023?
-    - Tell me about any [special perks](gacspan) or [recognition](gacspan) for [long-term sponsors](gacspan) of GAC .
-    - What is the process for signing a [sponsorship agreement](gacspan) for GAC 2023?
-    - How can I request a [sponsorship prospectus](gacspan) for GAC 2023?
-    - Explain the policy for [sponsorship exclusivity](gacspan) in specific categories at GAC 2023.
-    - Tell me about the [opportunities for sponsors](gacspan) to host workshops or sessions at GAC 2023.
-    - Can you provide examples of [successful sponsorships](gacspan) from past [GAC conferences](gacspan)?
-    - I'd like to learn more about [sponsorship marketing](gacspan) and promotion at GAC 2023.
-    - What is the procedure for [sponsor acknowledgment](gacspan) and [recognition](gacspan) at GAC 2023.
-    - Provide details on the [sponsorship support](gacspan) and [assistance](gacspan) available for [sponsors](gacspan) at GAC 2023.
-    - Explain the process for canceling or modifying a [sponsorship commitment](gacspan) for GAC 2023.
+#- intent: gac_event_info
+#  examples: |
+#    - [What is the GAC 2023 event]{"entity": "general_info", "value": "DESC"} all about?
+#    - [GAC 2023]{"entity": "general_info", "value": "DESC"}?
+#    - Give me an [overview of the GAC]{"entity": "general_info", "value": "DESC"} event
+#    - Give me an [overview of the GAC 2023]{"entity": "general_info", "value": "DESC"}
+#    - [What is GAC]{"entity": "general_info", "value": "DESC"}?
+#    - [what is GAC 2023]{"entity": "general_info", "value": "DESC"}?
+#    - [GAC 2023 2023]{"entity": "general_info", "value": "DESC"}
+#    - [Explain the GAC 2023 event]{"entity": "general_info", "value": "DESC"} to me in detail.
+#    - [Can you tell me about GAC 2023]{"entity": "general_info", "value": "DESC"}?
+#    - [What is the Global Alumni Convention event]{"entity": "general_info", "value": "DESC"}?
+#    - [Tell me about the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
+#    - Briefly [describe the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
+#    - Share [information about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
+#    - [Describe the Global Alumni Convention]{"entity": "general_info", "value": "DESC"} for me.
+#    - Share [some insights about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
+#    - Provide a comprehensive [overview of the GAC 2023 event]{"entity": "general_info", "value": "DESC"}.
+#    - Tell me [all about the Global Alumni Convention]{"entity": "general_info", "value": "DESC"}.
+#    - [What is the GAC event]{"entity": "general_info", "value": "DESC"} all about?
+#    - [GAC]{"entity": "general_info", "value": "DESC"}?
+#    - [GAC 2023]{"entity": "general_info", "value": "DESC"}
+#    - [Explain the GAC event]{"entity": "general_info", "value": "DESC"} to me in detail.
+#    - [Can you tell me about GAC]{"entity": "general_info", "value": "DESC"}?
+#    - [Tell me about the GAC event]{"entity": "general_info", "value": "DESC"}.
+#    - Briefly [describe the GAC event]{"entity": "general_info", "value": "DESC"}.
+#    - [Describe the Global Alumni Convention 2023] for me.
+#    - [Share some information about Global Alumni Convention](general_info:DESC)
+#    - [Explain the GAC event](general_info:DESC) to me in detail.
+#    - Share [some insights about the Global Alumni Convention](general_info:DESC).
+#    - Provide a comprehensive [overview of the GAC event](general_info:DESC).
+#    - Tell me [all about the Global Alumni Convention]{"entity":"general_info","value":"DESC"}.
+#    - [G A C](general_info:DESC)
+#    - [G.A.C](general_info:DESC)
+#    - [G.A.C 2023](general_info:DESC)
+#    - [Global Alumni Convention 2023](general_info:DESC)
+#- intent: ask_event_info_2023
+#  examples: |
+#    - [What's the date and location]{"entity":"general_info", "value":"DL"} of the event?
+#    - [Where is GAC 2023](general_info:L) going to be held?
+#    - What is the [venue](general_info:L) of GAC 2023?
+#    - [Where is GAC](general_info:L) going to be held?
+#    - [Where is GAC](general_info:L) going to be conducted?
+#    - Can you let me know the [venue](general_info:L) of GAC 2023?
+#    - [When and where]{"entity":"general_info", "value":"DL"} is the event happening?
+#    - [Describe the event's date and location]{"entity":"general_info", "value":"DL"}.
+#    - Give me the [date and location]{"entity":"general_info", "value":"DL"} of the event.
+#    - Share the event [schedule]{"entity":"general_info", "value":"S"} with me.
+#    - Can you tell me the [schedule]{"entity":"general_info", "value":"S"} for the convention?
+#    - Where will the convention take [place]{"entity":"general_info", "value":"L"}?
+#    - [When and where]{"entity":"general_info","value":"DL"} can I attend the event?
+#    - Tell me the [date and location]{"entity":"general_info","value":"DL"} for the convention.
+#    - What's the [schedule]{"entity":"general_info", "value":"S"} for the event?
+#    - Provide details about the event [location]{"entity":"general_info", "value":"L"}.    -
+#    - [When and where]{"entity":"general_info", "value":"DL"} is the event scheduled for?
+#    - Share information about the [date and location]{"entity":"general_info", "value":"DL"}.
+#    - What is the event's [date and location]{"entity":"general_info", "value":"DL"}?
+#    - Can you provide details on the convention's [schedule]{"entity":"general_info", "value":"S"}?
+#    - Where is the event's [venue]{"entity":"general_info", "value":"L"}?
+#    - What's the [date and location]{"entity":"general_info", "value":"DL"} of the convention?
+#    - What's on the [schedule]{"entity":"general_info", "value":"S"} for the event?
+#    - [When is the event, and where will it be?]{"entity":"general_info","value":"DL"}
+#    - Provide the [date and location]{"entity":"general_info", "value":"DL"} details.
+#    - What can you tell me about the convention's [schedule]{"entity":"general_info", "value":"S"}?
+#    - [Where]{"entity":"general_info","value":"L"} can I find the event?
+#    - What's the [date and location]{"entity":"general_info", "value":"DL"} information for the event?
+#    - Can you outline the [schedule]{"entity":"general_info", "value":"S"} for the convention?
+#    - [Where]{"entity":"general_info","value":"L"} should I go for the event?
+#    - Can you tell me [when is GAC](general_info:DL) event?
+#    - [When is the GAC](general_info:DL) 2023 event?
+#    - Can you tell me [when is GAC](general_info:DL?
+#    - [When is GAC](general_info:DL) 2023 going to be held?
+#    - What is the [date and location](general_info:DL) for GAC 2023?
+#- lookup: general_info
+#  examples: |
+#    - sehcudle
+#    - Scheldue
+#    - schedle
+#- intent: gac_2023_donations
+#  examples: |
+#    - Who gave the donations from 1998 batch?
+#    - List of those who gave the donations) from 1998 batch?
+#    - List of all the Alumni who gave donationsfor 1998 batch?
+#    - Names of those who gave donations to college from 1998 batch?
+#    - Names of those who provided donations to college from 1998 batch?
+#    - Who from the 1998 batch made a donations?
+#    - Can you tell me the names of 1998 batch alumni who contributed to donations?
+#    - Provide a list of donors from the 1998 batch.
+#    - I'm interested in knowing which 1998 batch alumni donated.
+#    - Tell me about the 1998 batch alumni who made contributions.
+#    - Give me the names of those who gave donations from the 1998 batch.
+#    - I want to find out who donated from the 1998 batch.
+#    - Who are the 1998 batch alumni donors?
+#    - Provide information about 1998 batch donations and donors.
+#    - List the names of 1998 batch alumni who participated in donations.
+#    - Can you provide the names of donors from the 1998 batch?
+#    - I'm interested in learning about 1998 batch alumni who contributed to donations.
+#    - Tell me about the 1998 batch alumni who made donations.
+#    - Give me a list of donors from the 1998 batch.
+#    - Who from the 1998 batch donated to the cause?
+#    - I'd like to know which 1998 batch alumni gave donations.
+#    - Share information about the 1998 batch alumni donors.
+#    - Provide a list of names from the 1998 batch who participated in donations.
+#    - Tell me who the donors are from the 1998 batch.
+#    - List the 1998 batch alumni who donated to the organization.
+#    - Who are the 1998 batch alumni donors?
+#    - I'm curious about the 1998 batch donors. Can you help?
+#    - Who contributed to donations from the 1998 batch?
+#    - Give me information about the 1998 batch donors and their names.
+#    - Share details about the 1998 batch alumni who supported the cause.
+#    - Tell me about the 1998 batch alumni who generously donated.
+#    - I'd like to learn about the 1998 batch and their donations.
+#    - Can you provide the names of donors specifically from the 1998 batch?
+#    - List the 1998 batch alumni who participated in [fundraising efforts](gacdon).
+#    - Who in the 1998 batch made contributions to the organization?
+#
+#- intent: gac_2023_organizing
+#  examples: |
+#    - Who are the part of [organizing committee](gacorg) of GAC 2023?
+#    - List all the members of [organizing team](gacorg) of GAC 2023?
+#    - Provide me the names of [organizers](gacorg) of GAC 2023?
+#    - Who is on the [organizing team](gacorg) for GAC 2023?
+#    - Can you provide a list of members in the GAC 2023 [organizing team](gacorg)?
+#    - Tell me about the team responsible for [organizing](gacorg) GAC 2023.
+#    - I'd like to know the names of the [organizers](gacorg) for the GAC 2023 event.
+#    - Share information about the GAC 2023 [organizing committee](gacorg).
+#    - Give me details about the [people behind the scenes](gacorg) of GAC 2023.
+#    - Who are the key [members](gacorg) of the GAC 2023 [organization](gacorg)?
+#    - Provide a list of [individuals](gacorg) involved in planning GAC 2023.
+#    - Tell me about the [team members](gacorg) responsible for GAC 2023.
+#    - List the names of the [organizers](gacorg) for the GAC 2023 conference.
+#    - Who are the [event planners](gacorg) for GAC 2023?
+#    - I'm interested in learning about the [team behind GAC 2023](gacorg). Can you help?
+#    - Share details about the [organizing team](gacorg) of GAC 2023.
+#    - Who is responsible for [coordinating](gacorg) GAC 2023?
+#    - Give me information about the GAC 2023 [organizing team](gacorg) and their roles.
+#    - Tell me about the individuals who are [organizing](gacorg) GAC 2023.
+#    - I'd like to learn about the GAC 2023 [organizing committee](gacorg) members.
+#    - Can you provide the names of the [team members](gacorg) working on GAC 2023?
+#    - List the key [people](gacorg) involved in planning GAC 2023.
+#    - Who is part of the [organizing team](gacorg) for the GAC 2023 conference?
+#    - Tell me about the team leading the [organization](gacorg) of GAC 2023.
+#    - Provide information about the [individuals](gacorg) in charge of GAC 2023.
+#    - Who is overseeing the [planning](gacorg) and execution of GAC 2023?
+#    - I'd like to get to know the [people](gacorg) responsible for GAC 2023. Can you share their names?
+#    - List the event [organizers](gacorg) for GAC 2023.
+#    - Can you give me an overview of the [team](gacorg) behind GAC 2023?
+#    - Share details about the roles and responsibilities of the GAC 2023 [organizing team](gacorg).
+#    - Who are the key [players](gacorg) in the GAC 2023 [organization](gacorg)?
+#    - Tell me about the committee [members](gacorg) of GAC 2023.
+#    - Provide an introduction to the [organizing team](gacorg) of GAC 2023.
+#    - Who is the [Patron](gacorg:Pat) of the event?
+#    - Who serves as the [Advisor](gacorg:Ad) for the event?
+#    - Who holds the position of [Chairman](gacorg:chair) in the event?
+#    - Who is the [Co-Chairman](gacorg:CoChair) of the event?
+#    - Who is the [Organizing Secretary](gacorg:oSec) for the event?
+#    - Who is responsible for the treasury as the [Treasurer](gacorg:Tres)?
+#    - Who are the [Joint Organizing Secretaries](gacorg:Jsec) for the event
+#- intent: gac_2023_registration
+#  examples: |
+#    - What are the [registration details](gacreg:FR) for GAC 2023?
+#    - What is the [registration process](gacreg:FR) for GAC 2023?
+#    - Can you give me the [Registration link](gacreg:RL) for GAC?
+#    - How much is the registration [fee for others](gacreg:FO) ?
+#    - What is the registration [fee for felicitation](gacreg:FF) batch for GAC 2023?
+#    - What is the registration [fee for others](gacreg:FO) for GAC 2023?
+#    - What is the [link for registering](gacreg:RL) for GAC 2023?
+#    - What is the [last date to register](gacreg:RD) for GAC 2023?
+#    - [Can alumni register for GAC 2023?](gacreg:FR)
+#    - How much is the [registration fee](gacreg:F) for GAC 2023?
+#    - What are the [fees](gacreg:FR) associated with GAC 2023 registration?
+#    - Tell me about the pricing structure for GAC 2023 registration.
+#    - I'd like to know the registration [fee](gacreg:F) for students attending GAC 2023.
+#    - [How can I register for GAC 2023](gacreg:FR)?
+#    - What is the [process for GAC 2023 registration](gacreg:FR)?
+#    - Can you guide me through the [GAC 2023 registration](gacreg:FR)?
+#    - I'd like to [sign up for GAC 2023](gacreg:FR). What are the steps?
+#    - Tell me about the [registration options](gacreg:FR) for GAC 2023.
+#    - What is the cost of [registration](gacreg:FR) for GAC 2023?
+#    - How can I register for the [event](gacreg:FR)?
+#    - What is the registration [fee](gacreg:F)?
+#    - Can you guide me through the [registration process](gacreg:FR)?
+#    - Where do I [sign up for the event](gacreg:FR)?
+#    - Tell me about the [registration procedure](gacreg:FR).
+#    - Is there a [fee](gacreg:F) to attend the event?
+#    - How do I get [registered](gacreg:FR) for 2023?
+#    - What are the [steps](gacreg:FR) to complete the [registration](gacreg:FR)?
+#    - [When does the registration](gacreg:RD) for start?
+#    - What is the [deadline](gacreg:RD) for [event registration](gacreg:FR)?
+#    - How can I pay for the [registration fee](gacreg:F)?
+#    - Do I need to create an [account](gacreg:FR) to [register](gacreg:FR)?
+#    - Can I [register](gacreg:FR) multiple [attendees](gacreg:FR) at once?
+#    - What [payment methods](gacreg:FR) are accepted for [registration](gacreg:FR)?
+#    - How do I confirm my [registration status](gacreg:FR)?
+#    - What information is required for the [registration form](gacreg:FR)?
+#    - Is there a group registration(gacreg:FR) option?
+#    - Can I [register](gacreg:FR) on the [day](gacreg:FR) of the [event](gacreg:FR)?
+#    - Are there any [prerequisites](gacreg:FR) for [registration](gacreg:FR)?
+#    - Can I [cancel](gacreg:FR) or [modify](gacreg:FR) my [registration](gacreg:FR)?
+#    - Tell me about the [registration schedule](gacreg:FR).
+#    - What is the [registration process](gacreg:FR) like?
+#    - Are there any [documents](gacreg:FR) needed for [registration](gacreg:FR)?
+#    - How can I get a [copy](gacreg:FR) of my [registration receipt](gacreg:FR)?
+#    - Can you provide details on [early bird registration](gacreg:FR)?
+#    - What is [included](gacreg:FR) in the [registration package](gacreg:FR)?
+#    - Tell me about the [registration support contact](gacreg:FR).
+#    - Where can I find the [online registration portal](gacreg:FR)?
+#    - How do I [register](gacreg:FR) as a [speaker](gacreg:FR) for the [event](gacreg:FR)?
+##HRITHIMAN GUHA
+##ISME DAAL DE gacpay krke
+#- intent: gac_2023_payment
+#  examples: |
+#    - What are the [payment](gacpay) details for registering for GAC 2023?
+#    - What are the different ways to [pay](gacpay) for GAC 2023?
+#    - What are the different ways to make a donation as [payment](gacpay) for GAC 2023?
+#    - How can I [pay](gacpay) for GAC 2023?
+#    - Could you please share the bank details for [making a payment](gacpay) for GAC 2023?
+#    - Provide me with the bank details for [making a payment](gacpay) for GAC 2023.
+#    - How can I make a [payment](gacpay) for GAC 2023?
+#    - Tell me about the various [payment](gacpay) options for GAC 2023 registration.
+#    - What are the accepted methods of [payment](gacpay) for GAC 2023 registration?
+#    - Provide information regarding the [payment](gacpay) process for GAC 2023.
+#    - I'd like to know how to [make a payment](gacpay) for GAC 2023. Can you guide me?
+#    - Could you explain the [details](gacpay) of payment for GAC 2023?
+#    - Please give me an overview of the [payment](gacpay) procedures for GAC 2023.
+#    - How much do I need to [pay](gacpay) for attending GAC 2023?
+#    - Share information regarding the [payment](gacpay) deadlines for GAC 2023.
+#    - Tell me about any discounts or promo codes available for [registration](gacpay) for GAC 2023.
+#    - What is the [refund](gacpay) policy for [payments](gacpay) made for GAC 2023?
+#    - Could you explain the steps required to complete the [payment](gacpay) for GAC 2023?
+#    - How do I [make a payment](gacpay) for additional services or workshops at GAC 2023?
+#    - What is the currency used for [payments](gacpay) related to GAC 2023?
+#    - I'd like to know if [installment options](gacpay) are available for GAC 2023.
+#    - Tell me about the [payment](gacpay) portal or platform for GAC 2023.
+#    - Are there any group discounts for those [registering](gacpay) multiple attendees for GAC 2023?
+#    - Can you provide information about scholarship opportunities or financial aid for [payment](gacpay) at GAC 2023?
+#    - What is the [registration](gacpay) fee for students attending GAC 2023?
+#    - Please explain the process for confirming my [payment](gacpay) for GAC 2023.
+#    - Tell me about any additional costs associated with [payment](gacpay) for attending GAC 2023.
+#    - I'd like to learn more about [payment](gacpay) confirmation and receipts for GAC 2023.
+#    - What is the policy for late or on-site [payments](gacpay) for GAC 2023?
+#    - Can you provide details for the [payment](gacpay) support contact for GAC 2023?
+#    - Please explain the process for canceling or modifying my [payment](gacpay) for GAC 2023.
+#
+#
+##isme gacspon krke daal de
+#- intent: gac_2023_sponsorship
+#  examples: |
+#    - What is the different [sponsorship amounts](gacspan) provided?
+#    - Is there any detail of [sponsorship amount](gacspan)?
+#    - Give me the detail of [sponsorship amount](gacspan)?
+#    - What is the minimum [sponsorship amount](gacspan) available?
+#    - What are the details of the less than [sponsorship amount](gacspan)?
+#    - How can I become a [sponsor for GAC 2023](gacspan)?
+#    - Tell me about the [sponsorship opportunities](gacspan) available for GAC 2023.
+#    - What are the different [sponsorship packages](gacspan) for GAC 2023?
+#    - Provide information on [sponsorship levels](gacspan) and benefits for GAC 2023.
+#    - I'm interested in [sponsoring GAC 2023](gacspan). Can you guide me through the process?
+#    - Explain the [sponsorship details](gacspan) and requirements for GAC 2023.
+#    - Give me an overview of the [sponsorship packages](gacspan) and their costs for GAC 2023.
+#    - What promotional opportunities are available for [sponsors](gacspan) at GAC 2023?
+#    - How can I inquire about [custom sponsorship options](gacspan) for GAC 2023?
+#    - Share information on the [sponsorship application](gacspan) deadline for GAC 2023.
+#    - Can you provide a list of previous [sponsors](gacspan) for GAC  events?
+#    - What is the process for submitting a [sponsorship proposal](gacspan) for GAC 2023?
+#    - Explain the [benefits](gacspan) and [perks](gacspan) of being a [sponsor](gacspan) at GAC 2023.
+#    - Are there specific industries or sectors that GAC  is looking for [sponsors](gacspan) from?
+#    - I'd like to know if there are [exclusive sponsorship opportunities](gacspan) for certain events at GAC 2023.
+#    - What are the [sponsorship payment](gacspan) and [invoicing procedures](gacspan) for GAC 2023?
+#    - Can you provide information on [sponsorship contacts](gacspan) or representatives for GAC 2023?
+#    - What is the [timeline](gacspan) for [sponsorship confirmation](gacspan) for GAC 2023?
+#    - Are there any [partnership](gacspan) or [co-sponsorship opportunities](gacspan) for GAC 2023?
+#    - Tell me about any [special perks](gacspan) or [recognition](gacspan) for [long-term sponsors](gacspan) of GAC .
+#    - What is the process for signing a [sponsorship agreement](gacspan) for GAC 2023?
+#    - How can I request a [sponsorship prospectus](gacspan) for GAC 2023?
+#    - Explain the policy for [sponsorship exclusivity](gacspan) in specific categories at GAC 2023.
+#    - Tell me about the [opportunities for sponsors](gacspan) to host workshops or sessions at GAC 2023.
+#    - Can you provide examples of [successful sponsorships](gacspan) from past [GAC conferences](gacspan)?
+#    - I'd like to learn more about [sponsorship marketing](gacspan) and promotion at GAC 2023.
+#    - What is the procedure for [sponsor acknowledgment](gacspan) and [recognition](gacspan) at GAC 2023.
+#    - Provide details on the [sponsorship support](gacspan) and [assistance](gacspan) available for [sponsors](gacspan) at GAC 2023.
+#    - Explain the process for canceling or modifying a [sponsorship commitment](gacspan) for GAC 2023.
+#Details of Mnnit Assoiation
 - intent: maa
   examples: |
     - Give me the details of MNNIT alumni association?
@@ -1369,69 +1354,6 @@ nlu:
     - What's the best way to share my feedback on the event?
     - Can I give my recommendations for enhancing the convention?
     - How can I give my feedback about the event's organization?
-- intent: mnnit_location
-  examples: |
-    - Where is MNNIT located?
-    - Can you tell me the address of MNNIT?
-    - What is the location of Motilal Nehru National Institute of Technology?
-    - Where can I find MNNIT?
-    - Please provide the campus address for MNNIT.
-    - What's the physical address of MNNIT?
-    - Tell me the geographical location of MNNIT.
-    - Where exactly is Motilal Nehru National Institute of Technology situated?
-    - I'm looking for information about MNNIT's location.
-    - Can you give me directions to MNNIT?
-    - What's the street address for MNNIT?
-    - Where is the MNNIT campus situated?
-    - Tell me about MNNIT's whereabouts.
-    - How do I get to MNNIT?
-    - Can you guide me to the MNNIT campus?
-    - What's the physical location of MNNIT?
-    - Where in India is MNNIT located?
-    - What's the full address of MNNIT?
-    - I need to know MNNIT's geographic coordinates.
-    - Tell me the precise location of MNNIT in Allahabad.
-    - Where can I visit MNNIT?
-    - What is the street name for MNNIT?
-    - Give me directions to MNNIT in Allahabad.
-    - What's the official address for MNNIT?
-    - Where can I physically go to MNNIT?
-    - Can you provide me with the location of MNNIT in Uttar Pradesh?
-    - I'm searching for the campus location of MNNIT.
-    - Tell me the specific address of MNNIT in Allahabad.
-    - How can I reach MNNIT in Allahabad?
-    - Please share the geographical details of MNNIT's campus.
-    - Where is the institute Motilal Nehru National Institute of Technology?
-    - I want to know the physical site of MNNIT in Allahabad.
-
-- intent: mnnit_full_form
-  examples: |
-    - What does MNNIT stand for?
-    - Can you tell me the full form of MNNIT?
-    - What is the meaning of MNNIT?
-    - Please explain the acronym MNNIT.
-    - What does the abbreviation MNNIT represent?
-    - I want to know the full name of MNNIT.
-    - What is the expanded form of MNNIT?
-    - Can you provide the complete name of MNNIT?
-    - Tell me the full form of MNNIT.
-    - What does MNNIT's initials mean?
-    - Give me the full name of MNNIT.
-    - Explain the full form of MNNIT.
-    - Tell me the complete expansion of MNNIT.
-    - What is the full name of MNNIT?
-    - I'm curious about the meaning of MNNIT.
-    - Share the extended form of MNNIT.
-    - Can you provide the full title of MNNIT?
-    - What does the acronym MNNIT denote?
-    - Please elaborate on MNNIT's full form.
-    - I'd like to know the complete name of MNNIT.
-    - What's the full name of MNNIT?
-    - Share the expanded form of MNNIT's initials.
-    - Can you explain MNNIT's abbreviation in full?
-    - I'm looking for the expanded form of MNNIT.
-    - What is the full name of the institute with the acronym MNNIT?
-
 - intent: girls_hostel_count
   examples: |
     - How many girls' hostels are there at MNNIT?
@@ -1683,7 +1605,6 @@ nlu:
     - Tell me about MP Hall at MNNIT.
     - Can you provide information about the MP Hall in MNNIT?
     - What's the purpose of MP Hall?
-    - Where is MP Hall located at MNNIT?
     - Give me details on the facilities in MP Hall.
     - Explain the features of MP Hall at MNNIT.
     - What events take place in MP Hall?
@@ -1693,7 +1614,6 @@ nlu:
     - Tell me everything you know about MP Hall.
     - Let's talk about MP Hall.
     - Can you describe the amenities in MP Hall?
-    - How can I access MP Hall?
     - Are there any restrictions to enter MP Hall?
     - What are the special features of MP Hall?
     - MP Hall at MNNIT, what's that?
@@ -1702,7 +1622,6 @@ nlu:
     - What goes on inside MP Hall at MNNIT?
     - Could you brief me on MP Hall?
     - I need information on MP Hall.
-    - Where can I find MP Hall at MNNIT?
     - What are the events or functions organized in MP Hall?
     - Is MP Hall available for student events?
     - Tell me about the history of MP Hall at MNNIT.
@@ -3243,7 +3162,6 @@ nlu:
     - get me the images of the [poet](images_requested).
     - get me the images of the [god](images_requested).
     - i wanna images of the [god](images_requested).
-    
 
 - lookup: image_requested
   examples: |
@@ -3252,3 +3170,271 @@ nlu:
     - cities
     - technology
     - data/image_lookup.yml
+# Disha code merged by Priyanshu
+
+- intent: Botrush
+  examples: |
+      - What is botrush?
+      - Botrush Event?
+      - Tell me about Botrush event?
+      - Give me details on how to participate in Botrush.
+      - Can you provide information about Botrush?
+      - Give me an overview of Botrush.
+      - Tell me more about the Botrush event.
+      - Provide details about botrush
+      - Give a brief description of botrush
+      - Give brief information about botrush
+      - Can you shed light on Botrush?
+      - Provide the details for joining Botrush.
+      - Give me the rundown on participating in Botrush
+      - Brief me about Botrush.
+      - Offer details about Botrush.
+      - Elaborate on the Botrush event. 
+
+- intent: botwhen
+  examples: |
+      - When botrush is conducted
+      - What is the date of botrush
+      - Date of botrush
+      - Botrush date
+      - During what month botrush is conducted
+      - When is Botrush conducted?
+      - When does Botrush take place?
+      - Can you provide the Botrush schedule?
+      - Share the Botrush event date.
+      - In which month is Botrush held?
+      - What's the specific date for Botrush?
+      - Tell me the timing of Botrush.
+      - When can I expect Botrush to happen?
+      - Provide details on the Botrush calendar.
+      - Mention the Botrush event date.
+      - Specify the date for the Botrush event.
+- intent: botevents
+  examples: |
+      - What are the events conducted in botrush?
+      - List of events conducted in botrush.
+      - What are the events conducted in botrush?
+      - Name of the events conducted in botrush?
+      - Botrush events?
+      - Tell me about the different events held during Botrush.
+      - What's the lineup of events for Botrush this year?
+      - Can you provide details on the specific activities in Botrush?
+      - List down the various competitions organized in Botrush.
+      - Give me information about the contests during the Botrush event.
+      - Mention some of the major activities taking place in Botrush.
+      - Provide details on the Botrush competition categories.
+      - What can I expect from the Botrush event in terms of activities?
+      - Tell me more about the diverse events held in Botrush.
+- intent: odyssey_abt
+  examples: |
+      - Galactic Odyssey?
+      - Odyssey?
+      - What is the problem statement of Galactic Odyssey event?
+      - Can you tell me the basic details of Galactic Odyssey event?
+      - Can you tell me about the Galactic Odyssey event?
+      - Describe the Galactic Odyssey event
+      - What do you know about the Galactic Odyssey event?
+      - Galactic Odyssey event?
+      - Provide an overview of the Galactic Odyssey event.
+      - Share some basic information about Galactic Odyssey.
+      - I'd like to learn more about the Galactic Odyssey event. What can you tell me?
+      - Tell me the key information about the Galactic Odyssey competition.
+      - What's the Galactic Odyssey event all about?
+      - What are the main details of the Galactic Odyssey event?
+- intent: oddyssey_rules
+  examples: |
+     - Tell me about the [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} of Galactic Odyssey event
+     - Can you list me the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
+     - What are the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
+     - What [rules]{"entity":"SpecificDetail_GOE","value":"AllRules"} should I follow for Galactic Odyssey event?
+     - Tell me about the [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} of the Galactic Odyssey event.
+     - Can you list me the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
+     - What are the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
+     - What [rules]{"entity":"SpecificDetail_GOE","value":"AllRules"} should I follow for Galactic Odyssey event?
+     - Provide details about the [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} for the Galactic Odyssey event.
+
+- intent: odyssey_regulations
+  examples: |
+    - what are the regulations of galactic odyssey event?
+    - regulations of odyssey event.
+    - Tell me about the regulations for Galactic Odyssey.
+    - List down the regulations of the Galactic Odyssey event.
+    - Can you provide information on the regulations of the Galactic Odyssey competition?
+    - What guidelines should participants follow in Galactic Odyssey?
+    - Explain the regulations governing the Galactic Odyssey event.
+    - Share details about the Galactic Odyssey event regulations.
+    - Describe the specific rules participants need to adhere to in Galactic Odyssey.
+    - What are the dos and don'ts in the Galactic Odyssey competition?
+    - Provide an overview of the regulatory framework for Galactic Odyssey.
+    - Elaborate on the Galactic Odyssey event regulations and requirements.
+    - Tell me about the regulations for Galactic Odyssey.
+    - List down the rules and regulations of the Galactic Odyssey event.
+    - Can you provide information on the regulations of the Galactic Odyssey competition?
+    - What guidelines should participants follow in Galactic Odyssey?
+    - Explain the regulations governing the Galactic Odyssey event.
+    - Share details about the Galactic Odyssey event regulations.
+    - Describe the specific rules participants need to adhere to in Galactic Odyssey.
+    - What are the dos and don'ts in the Galactic Odyssey competition?
+    - Provide an overview of the regulatory framework for Galactic Odyssey.
+    - Elaborate on the Galactic Odyssey event regulations and requirements.
+
+- intent: odysssey_tips
+  examples: |
+    - provide me the tips on galactic odyssey event
+    - provide help on galactic odyssey event
+    - Can you offer some tips for participating in the Galactic Odyssey event?
+    - Share helpful advice for navigating the Galactic Odyssey competition.
+    - Provide me with some guidance on preparing for Galactic Odyssey.
+    - What are some useful tips for excelling in the Galactic Odyssey event?
+    - Can you give me assistance and advice for the Galactic Odyssey competition?
+    - Share tips and tricks for success in the Galactic Odyssey event.
+    - I'm looking for some guidance on how to approach the Galactic Odyssey. Any tips?
+    - What should I keep in mind while participating in the Galactic Odyssey event?
+    - Can you offer practical tips for participants of the Galactic Odyssey?
+    - Share insights and recommendations for those taking part in Galactic Odyssey.
+- intent: odyssey_bot
+  examples: |
+    - what are the bot specification of galactic odyssey bot
+    - bot requirements and components of galactic odyssey
+    - Share details about the bot specifications for Galactic Odyssey.
+    - What are the specific requirements for the Galactic Odyssey bot?
+    - Provide information on the components needed for the Galactic Odyssey bot.
+    - Can you outline the technical specifications for the Galactic Odyssey bot?
+    - Explain the bot requirements and essential components for Galactic Odyssey.
+    - Tell me about the hardware and software specifications for the Galactic Odyssey bot.
+    - What are the key features and components of the Galactic Odyssey bot?
+    - Provide an overview of the bot specifications and requirements for Galactic Odyssey.
+    - Can you list the necessary components for building a bot for Galactic Odyssey?
+    - Share insights into the technical specifications and requirements of Galactic Odyssey bots.
+- intent: cell_abt
+  examples: |
+    - provide details of cell phone controlled bot
+    - give brief idea about galactic challenge
+    - tell me about galactic challenge
+    - what is galactic challenge
+    - what is cell phone controlled robot
+    - give brief description of cell phone controlled robot
+    - galactic challenge
+    - cell phone controled bot
+    - I want to know about galactic challenge 
+    - I want to know about cell phone controlled bot
+- intent: challenge_rules
+  examples: |
+     - Tell me about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} of Challenge event
+     - Can you list me the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
+     - What are the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
+     - What [rules]{"entity":"SpecificDetail_CHE","value":"AllRules"} should I follow for Challenge event?
+     - Tell me about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} of the Challenge event.
+     - Can you list me the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
+     - What are the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
+     - What [rules]{"entity":"SpecificDetail_CHE","value":"AllRules"} should I follow for Challenge event?
+     - Provide details about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} for the Challenge event.
+- intent: challengeregulations
+  examples: |
+     - what are the [regulations]{"entity":"challengeregu"} of Challenge event?
+     - [regulations]{"entity":"challengeregu"} of challenge event.
+     - Tell me about the [regulations]{"entity":"challengeregu"} for Challenge.
+     - List down the [regulations]{"entity":"challengeregu"} of the Challenge event.
+     - Can you provide information on the [regulations]{"entity":"challengeregu"} of the Challenge competition?
+     
+     - Explain the [regulations]{"entity":"challengeregu"} governing the Challenge event.
+     - Share details about the Challenge event [regulations]{"entity":"challengeregu"}.
+     - Describe the specific [regulations]{"entity":"challengeregu"} participants need to adhere to in Challenge.
+     
+     - Provide an overview of the [regulations]{"entity":"challengeregu"} framework for Challenge.
+     - Elaborate on the Challenge event [regulations]{"entity":"challengeregu"} .
+     - Tell me about the [regulations]{"entity":"challengeregu"} for Challenge.
+     - List down the [regulations]{"entity":"challengeregu"} of the Challenge event.
+- intent: challenge_tips
+  examples: |
+     - provide me the [tips]{"entity":"challengetips"} on Challenge event
+     - provide help [tips]{"entity":"challengetips"} on Challenge event
+     - Can you offer some [tips]{"entity":"challengetips"} for participating in the Challenge event?
+     - Share helpful advice [tips]{"entity":"challengetips"} for navigating the Challenge competition.
+     - Provide me with some guidance [tips]{"entity":"challengetips"} on preparing for Challenge.
+     - What are some useful [tips]{"entity":"challengetips"} for excelling in the Challenge event?
+     - Can you give me assistance and advice [tips]{"entity":"challengetips"} for the Challenge competition?
+     - Share [tips]{"entity":"challengetips"} for success in the Challenge event.
+     - I'm looking for some guidance on how to approach the Challenge. Any [tips]{"entity":"challengetips"}?
+     - What should I keep in mind  [tips]{"entity":"challengetips"} while participating in the Challenge event?
+     - Can you offer practical [tips]{"entity":"challengetips"} for participants of the Challenge?
+     - Share insights and recommendations  [tips]{"entity":"challengetips"} for those taking part in the Challenge.
+
+- intent: challenge_bot
+  examples: |
+     - what are the bot [specification]{"entity":"challengespec"} of Challenge bot
+     - bot requirements and components [specification]{"entity":"challengespec"}  of Challenge
+     - Share details about the bot [specification]{"entity":"challengespec"} for Challenge.
+     - What are the specific requirements [specification]{"entity":"challengespec"} for the Challenge bot?
+     - Provide information on the components [specification]{"entity":"challengespec"} needed for the Challenge bot.
+     - Can you outline the technical [specification]{"entity":"challengespec"} for the Challenge bot?
+     - Explain the bot requirements and essential components [specification]{"entity":"challengespec"} for Challenge.
+     - Tell me about the hardware and software [specification]{"entity":"challengespec"} for the Challenge bot.
+     - What are the key features and components [specification]{"entity":"challengespec"} of the Challenge bot?
+     - Provide an overview of the bot [specification]{"entity":"challengespec"} and requirements for Challenge.
+     - Can you list the necessary components [specification]{"entity":"challengespec"} for building a bot for Challenge?
+     - Share insights into the technical [specification]{"entity":"challengespec"} and requirements of Challenge bots.
+- intent: forceinnovate_abt
+  examples: |
+     - Force Innovate?
+     - Innovate Force?
+     - What is the problem statement of Force Innovate event?
+     - Can you tell me the basic details of Force Innovate event?
+     - Can you tell me about the Force Innovate event?
+     - Describe the Force Innovate event
+     - What do you know about the Force Innovate event?
+     - Force Innovate event?
+     - Provide an overview of the Force Innovate event.
+     - Share some basic information about Force Innovate.
+     - I'd like to learn more about the Force Innovate event. What can you tell me?
+     - Tell me the key information about the Force Innovate competition.
+     - What's the Force Innovate event all about?
+     - What are the main details of the Force Innovate event?
+- intent: force_innovate_rules
+  examples: |
+     - Tell me about the [rules]{"entity":"SpecificDetail_FI"} of Force Innovate event
+     - Can you list me the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
+     - What are the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
+     - What [rules]{"entity":"SpecificDetail_FI"} should I follow for Force Innovate event?
+     - Tell me about the [rules]{"entity":"SpecificDetail_FI"} of the Force Innovate event.
+     - Can you list me the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
+     - What are the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
+     - What [rules]{"entity":"SpecificDetail_FI"} should I follow for Force Innovate event?
+     - Provide details about the [rules]{"entity":"SpecificDetail_FI"} for the Force Innovate event.
+- intent: force_innovate_regulations
+  examples: |
+     - what are the [regulations]{"entity":"firegulations"} of Force Innovate event?
+     - [regulations]{"entity":"firegulations"} of Innovate Force event.
+     - Tell me about the [regulations]{"entity":"firegulations"} for Force Innovate.
+     - List down the [regulations]{"entity":"firegulations"} of the Force Innovate event.
+     - Can you provide information on the [regulations]{"entity":"firegulations"} of the Force Innovate competition?
+     - What guidelines [regulations]{"entity":"firegulations"} should participants follow in Force Innovate?
+     - Explain the [regulations]{"entity":"firegulations"} governing the Force Innovate event.
+     - Share details about the Force Innovate event [regulations]{"entity":"firegulations"}.
+     - Describe the specific [regulations]{"entity":"firegulations"} participants need to adhere to in Force Innovate.
+     - What are the dos and don'ts in the [regulations]{"entity":"firegulations"} of Force Innovate competition?
+     - Provide an overview of the [regulations]{"entity":"firegulations"} framework for Force Innovate.
+     - Elaborate on the Force Innovate event [regulations]{"entity":"firegulations"} and requirements.
+     - Tell me about the [regulations]{"entity":"firegulations"} for Force Innovate.
+     - List down the rules and [regulations]{"entity":"firegulations"} of the Force Innovate event.
+     - Can you provide information on the [regulations]{"entity":"firegulations"} of the Force Innovate competition?
+     - What [regulations]{"entity":"firegulations"} should participants follow in Force Innovate?
+     - Explain the [regulations]{"entity":"firegulations"} governing the Force Innovate event.
+     - Share details about the Force Innovate event [regulations]{"entity":"firegulations"}.
+     - Describe the specific [regulations]{"entity":"firegulations"} participants need to adhere to in Force Innovate
+     - Provide an overview of the [regulations]{"entity":"firegulations"} framework for Force Innovate.
+     - Elaborate on the Force Innovate event [regulations]{"entity":"firegulations"} and requirements.
+- intent: innovate_force_tips
+  examples: |
+     - provide me the [tips]{"entity":"fitips"} on Force Innovate event
+     - provide [tips]{"entity":"fitips"} on Innovate Force event
+     - Can you offer some [tips]{"entity":"fitips"} for participating in the Force Innovate event?
+     - Share helpful advice and [tips]{"entity":"fitips"} for navigating the Force Innovate competition.
+     - Provide me with some guidance and [tips]{"entity":"fitips"} on preparing for Force Innovate.
+     - What are some useful [tips]{"entity":"fitips"} for excelling in the Force Innovate event?
+     - Can you give me [tips]{"entity":"fitips"} and advice for the Force Innovate competition?
+     - Share [tips]{"entity":"fitips"} and tricks for success in the Force Innovate event.
+     - I'm looking for some guidance and [tips]{"entity":"fitips"} on how to approach the Force Innovate. Any tips?
+     - What [tips]{"entity":"fitips"} should I keep in mind while participating in the Force Innovate event?
+     - Can you offer practical [tips]{"entity":"fitips"} for participants of the Force Innovate?
+     - Share insights, [tips]{"entity":"fitips"} and recommendations for those taking part in Force Innovate.
