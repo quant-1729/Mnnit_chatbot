@@ -499,7 +499,7 @@ stories:
 - story: fallback
   steps:
   - intent: nlu_fallback
-  - action: action_custom_fallback
+  - action: say_fallback
 - story: self
   steps:
   - intent: selfdrivingcart_info
@@ -611,7 +611,7 @@ stories:
     - user_location: SVBH
   - action: action_provide_directions
 
-- story: interactive_story_1
+- story: interactive_story_2
   steps:
   - intent: nlu_fallback
     entities:
@@ -644,3 +644,60 @@ stories:
     entities:
     - image_requested: "dogs"
   - action: action_get_image
+
+## direction feature-
+- story: Direct_Direction Pathfinding
+  steps:
+  - intent: Direct_Direction
+    entities:
+    - destination_given: "Central Library"
+  - action: action_give_direction
+# devanshi code
+- story: force secure event information
+  steps:
+  - intent: force_secure_event_information
+  - action:  utter_force_secure_event
+
+
+- story: force secure event rules
+  steps:
+  - intent: force_secure_event_rules
+  - action:  utter_force_secure_event_rules
+
+- story: force secure bot specification
+  steps:
+  - intent: force_secure_bot_specification
+  - action:  utter_force_secure_bot_specification
+
+- story: force_secure_tips
+  steps:
+  - intent: force_secure_tips
+  - action:  utter_force_secure_tips
+
+- story: force_secure_event_contact_information
+  steps:
+  - intent: force_secure_event_contact_information
+  - action:  utter_force_secure_event_contact_information
+
+- story: force_secure_problem_statement
+  steps:
+  - intent: force_secure_problem_statement
+  - action:  utter_force_secure_problem_statement
+
+
+- story: final year coordinators names
+  steps:
+  - intent: final_year_coordinators_names
+  - action:  utter_final_year_coordinators_names
+
+
+- story: third year coordinators names
+  steps:
+  - intent: third_year_coordinators_names
+  - action:  utter_third_year_coordinators_names
+
+
+- story: botrush 2.0 event heads
+  steps:
+  - intent: botrush_2.0_event_heads
+  - action:  utter_botrush_2.0_event_heads

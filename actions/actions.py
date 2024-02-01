@@ -9,8 +9,8 @@
 # from anaconda_navigator.external.UniversalAnalytics.Tracker import Tracker
 # This is a simple example for a custom action which utters "Hello World!"
 
-from selenium import webdriver
-from spellchecker import SpellChecker
+# from selenium import webdriver
+# from spellchecker import SpellChecker
 import webbrowser
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
@@ -25,7 +25,7 @@ from bson import ObjectId
 import openai
 from gtts import gTTS
 from playsound import playsound
-#Spell Checker
+
 
 
 #Action for text to voice comversion
@@ -73,38 +73,38 @@ def run(
 # Get user message from Rasa tracker
     user_message = tracker.latest_message.get('text')
     print(user_message)
-def get_chatgpt_response(self, message):
-    url = ' '
-    headers = {
-        'Authorization': 'fNzyk5rxfzkEn922GEGCT3BlbkFJbtbnaO9w9vGn1HAxbzVZ',
-        'Content-Type': 'application/json'
-    }
-    data = {
-        'model': "gpt-3.5-turbo",
-        'messages': [   {'role': 'system', 'content': 'You are an AI assistant for the user. You help to solve user query'},
-                        {'role': 'user', 'content': 'You: ' + user_message}
-                        ],
-        'max_tokens': 100
-    }
-    response = requests.post(url, headers=headers, json=data)
-    # response = requests.post(api_url, headers=headers, json=data)
-
-    if response.status_code == 200:
-        chatgpt_response = response.json()
-        message = chatgpt_response['choices'][0]['message']['content']
-        dispatcher.utter_message(message)
-    else:
-        # Handle error
-        return "Sorry, I couldn't generate a response at the moment. Please try again later."
-
-        # Revert user message which led to fallback.
-    return [UserUtteranceReverted()]
-def open_google_maps_link(link):
-
-    driver = webdriver.Chrome()
-    driver.get(link)
-    input("Press any key to close the browser...")
-    driver.quit()
+# def get_chatgpt_response(self, message):
+#     url = ' '
+#     headers = {
+#         'Authorization': 'fNzyk5rxfzkEn922GEGCT3BlbkFJbtbnaO9w9vGn1HAxbzVZ',
+#         'Content-Type': 'application/json'
+#     }
+#     data = {
+#         'model': "gpt-3.5-turbo",
+#         'messages': [   {'role': 'system', 'content': 'You are an AI assistant for the user. You help to solve user query'},
+#                         {'role': 'user', 'content': 'You: ' + user_message}
+#                         ],
+#         'max_tokens': 100
+#     }
+#     response = requests.post(url, headers=headers, json=data)
+#     # response = requests.post(api_url, headers=headers, json=data)
+#
+#     if response.status_code == 200:
+#         chatgpt_response = response.json()
+#         message = chatgpt_response['choices'][0]['message']['content']
+#         dispatcher.utter_message(message)
+#     else:
+#         # Handle error
+#         return "Sorry, I couldn't generate a response at the moment. Please try again later."
+#
+#         # Revert user message which led to fallback.
+#     return [UserUtteranceReverted()]
+# def open_google_maps_link(link):
+#
+#     driver = webdriver.Chrome()
+#     driver.get(link)
+#     input("Press any key to close the browser...")
+#     driver.quit()
 class ActionHelloWorld(Action):
     def name(self) -> Text:
         return "action_hello_world"
@@ -116,52 +116,16 @@ class ActionHelloWorld(Action):
         return []
 
 class ActionProvideDirections(Action):
-    spell = SpellChecker()
-
-    def correct_spelling(user_input):
-        corrected_input = []
-        for word in user_input.split():
-            corrected_input.append(spell.correction(word))
-        return ' '.join(corrected_input)
     def name(self) -> Text:
         return "action_provide_directions"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        location_name = tracker.get_slot("user_location")
-        destination_name = tracker.get_slot("destination_given")
-        correct_spelling(location_name)
-        correct_spelling(destination_name)
+        location_name = "mnnit + "+tracker.get_slot("user_location")
+        destination_name = "mnnit + "+tracker.get_slot("destination_given")
 
-        # location_name = tracker.get_latest_entity_values(user_location)
-        # destination_name = tracker.get_latest_entity_values(destination_given)
-        location_coordinates = {
-            "Central Library": "25.49260751334134,81.86402110821898",
-            "Admin Building": "25.493425551166336,81.86273379235345",
-            "SVBH": "25.490837274599187,81.86274481076372",
-            "Athletic Ground": "25.494390812450987,81.86448942334405",
-            "Dean Academics": "25.492371007273704,81.86276909854777"
-        }
 
-        destination_coordinates = {
-            "Central Library": "25.49260751334134,81.86402110821898",
-            "Admin Building": "25.493425551166336,81.86273379235345",
-            "SVBH": "25.490837274599187,81.86274481076372",
-            "Athletic Ground": "25.494390812450987,81.86448942334405",
-            "Dean Academics": "25.492371007273704,81.86276909854777"
-        }
-
-        if location_name in location_coordinates and destination_name in destination_coordinates:
-            location_cords = location_coordinates[location_name]
-            destination_cords = destination_coordinates[destination_name]
-
-            map_url = f"https://www.google.com/maps/dir/?api=1&origin={location_cords}&destination={destination_cords}"
-
-            dispatcher.utter_message(
-                text=map_url
-            )
-            open_google_maps_link(map_url)
-        else:
-            dispatcher.utter_message("I couldn't find directions for the specified locations.")
+        link = f"https://www.google.com/maps/dir/?api=1&origin={location_name}&destination={destination_name}"
+        dispatcher.utter_message(f"click on this link pls .. {link}")
 
         return []
 
@@ -174,8 +138,6 @@ class ActionOpenLink(Action):
         # Replace the URL with the link you want to open
         url_to_open = "http://www.mnnit.ac.in/"
 
-        webbrowser.open(url_to_open)
-
         # You can customize the response sent back to the user
         dispatcher.utter_message(f"Opening the link: {url_to_open}")
 
@@ -184,20 +146,44 @@ class ActionOpenLink(Action):
 
 
 
-
+def contains_mnnit_nit_mnit(sentence):
+    target_words = ["mnnit", "nit", "mnit","nnit","nit mnnit"]
+    words = sentence.split()
+    for word in words:
+        if word.lower() in target_words:
+            return True
+    return False
 class ActionFallback(Action):
     def name(self) -> Text:
         return "say_fallback"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # user_input = tracker.latest_message.get("text")
+
+        user_input = tracker.latest_message.get("text")
         # response = openai.Completion.create(
         #     engine="text-davinci-003",  # GPT-3.5 engine
         #     prompt=user_input,
         #     max_tokens=50)
-        dispatcher.utter_message("Fallback Occur")
-        # fallback_response = response.choices[0].text.strip()
-        # dispatcher.utter_message(text=fallback_response)
+        inputLen=len(user_input.split());
+
+        if(inputLen<4):
+            dispatcher.utter_message("Please provide more data");
+        elif contains_mnnit_nit_mnit(user_input):
+            dispatcher.utter_message("Sorry this data is not currently in my data")
+        else:
+            dispatcher.utter_message("pls serach only for mnnnit college and bot rush i query i only meant for these. Sorry for inconvience")
+
+class ActionProvideDirection(Action):
+    def name(self) -> Text:
+        return "action_give_direction"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        user_input = tracker.latest_message.get("text")
+        destination= 'mnnit+'+ user_input.replace(" ","+");
+        google_maps_link = f"https://www.google.com/maps/dir/?api=1&destination={destination}"
+        dispatcher.utter_message(text=f"pls click on this {google_maps_link}")
+
 
 
 class ConvoRestart(Action):

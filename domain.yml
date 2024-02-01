@@ -1,140 +1,172 @@
 version: '3.1'
 intents:
-- Direct_Direction
-- request_names
-- ask_for_image
-- last_name
-- affirm
-- ask_about_exam_preparation_tips
-- ask_about_faculty
-- ask_about_fees
-- ask_about_grading_system
-- ask_about_healthcare_facilities
-- ask_about_hostel_facilities
-- ask_about_internship_opportunities
-- ask_about_lab_facilities
-- ask_about_library:
-    use_entities: library_resources
-- ask_about_mentorship_program
-- ask_admission_process
-- ask_for_directions
-#- ask_hostel_choice:
-#    use_entities: hostel
-- ask_intro_format
-- ask_placements
-- bot_challenge
-- courses
-- deny
-- goodbye
-- greet
-- mnnit_website
-- mobile_number:
-    use_entities: number
-- mood_great
-- mood_unhappy
-- my_name:
-    use_entities: name
-- common_question
-- more_about_college
-- club
-- benfit_of_the_club
-- explore_campus
-- cafetarea
-- dwesis_canteen
-- dwesis_location
-- cafe_96
-- cafe_96_location
-- yamuna_canteen
-- yamuna_location
-- lit_club
-- robotics_club
-- boys_hostel
-- girls_hostel
-- Department
-- college_playground
-- Director
-- dean
-- CSE_dept
-- CSE_dept_HOD
-- ECE_dept
-- ECE_dept_HOD
-- EE_dept
-- EE_dept_HOD
-- ME_dept
-- ME_dept_HOD
-- ChE_Dept
-- ChE_Dept_HOD
-- CE_dept
-- CE_dept_HOD
-- BE_dept
-- BE_dept_HOD
-- PIE_dept
-- PIE_dept_HOD
-- AM_dept
-- ask_event_info_2023
-- gac_2023_donations
-- gac_2023_organizing
-- gac_2023_registration
-- gac_2023_payment
-- gac_2023_sponsorship
-- gac_event_info
-- mnnit_location
-- mnnit_full_form
-- girls_hostel_count
-- girls_hostel_names
-- mnnit_clubs
-- what_is_academic_building
-- what_is_administrative_building
-- girls_gym_mnnit
-- canteens_girls_hostel_mnnit
-- seminar_hall_mnnit
-- mp_hall_mnnit
-- dean_office_mnnit
-- library_mnnit
-- warden_office_mnnit
-- boys_hostel_canteens
-- Boys_hostel
-- projects
-- ask_self_balancing_bot
-- humanoid_info
-- SpiderBot_info
-- rlsupermario_info
-- chatbot_info
-- linefollower_info
-- selfdrivingcart_info
-- out_of_scope
-- give_feedback
-- maa
-- ask_for_image
-- give_feedback
-- request_names
+  - Direct_Direction
+  - last_name
+  - affirm
+  - ask_about_exam_preparation_tips
+  - ask_about_faculty
+  - ask_about_fees
+  - ask_about_grading_system
+  - ask_about_healthcare_facilities
+  - ask_about_hostel_facilities
+  - ask_about_internship_opportunities
+  - ask_about_lab_facilities
+  - ask_about_library:
+      use_entities: library_resources
+  - ask_about_mentorship_program
+  - ask_admission_process
+  - ask_for_directions
+  # - ask_hostel_choice:
+  #     use_entities: hostel
+  - ask_intro_format
+  - ask_placements
+  - bot_challenge
+  - courses
+  - deny
+  - goodbye
+  - greet
+  - mnnit_website
+  - mobile_number:
+      use_entities: number
+  - mood_great
+  - mood_unhappy
+  - my_name:
+      use_entities: name
+  - common_question
+  - more_about_college
+  - club
+  - benfit_of_the_club
+  - explore_campus
+  - cafetarea
+  - dwesis_canteen
+  - dwesis_location
+  - cafe_96
+  - cafe_96_location
+  - yamuna_canteen
+  - yamuna_location
+  - lit_club
+  - robotics_club
+  - boys_hostel
+  - girls_hostel
+  - Department
+  - college_playground
+  - Director
+  - dean
+  - CSE_dept
+  - CSE_dept_HOD
+  - ECE_dept
+  - ECE_dept_HOD
+  - EE_dept
+  - EE_dept_HOD
+  - ME_dept
+  - ME_dept_HOD
+  - ChE_Dept
+  - ChE_Dept_HOD
+  - CE_dept
+  - CE_dept_HOD
+  - BE_dept
+  - BE_dept_HOD
+  - PIE_dept
+  - PIE_dept_HOD
+  - AM_dept
+  - ask_event_info_2023
+  - gac_2023_donations
+  - gac_2023_organizing
+  - gac_2023_registration
+  - gac_2023_payment
+  - gac_2023_sponsorship
+  - gac_event_info
+  - mnnit_location
+  - mnnit_full_form
+  - girls_hostel_count
+  - girls_hostel_names
+  - mnnit_clubs
+  - what_is_academic_building
+  - what_is_administrative_building
+  - girls_gym_mnnit
+  - canteens_girls_hostel_mnnit
+  - seminar_hall_mnnit
+  - mp_hall_mnnit
+  - dean_office_mnnit
+  - library_mnnit
+  - warden_office_mnnit
+  - boys_hostel_canteens
+  - Boys_hostel
+  - projects
+  - basic_details_bbsee
+  - user_asks_arena_desc
+  - specific_details_about_BBSEE
+  - Coordinator_BBSEE
+  - ask_self_balancing_bot
+  - humanoid_info
+  - SpiderBot_info
+  - rlsupermario_info
+  - chatbot_info
+  - linefollower_info
+  - selfdrivingcart_info
+  - out_of_scope
+  - Allrules_BBSE
+  - Match_n_engage_PS
+  - Match_n_engage_Reg
+  - Match_n_engage_Rules
+  - Match_n_engage_Coordis
+  - Timing_Place
+  - More_info
+  - meeptimeline
+  - meepmop_ins
+  - meepmop_basicthings
+  - doh_rules
+  - doh_bot
+  - doh_tips
+  - doh_prblmstmnt
+  - give_feedback
+  - ask_for_image
+  - request_names
+  - force_secure_event_information
+  - force_secure_event_rules
+  - force_secure_bot_specification
+  - force_secure_tips
+  - force_secure_event_contact_information
+  - force_secure_problem_statement
+  - final_year_coordinators_names
+  - third_year_coordinators_names
+  - botrush_2.0_event_heads
 entities:
-- user_location
-- destination_given
-- requested_hostel
-- number
-- name
-- lastname
-- facility_type
-- hostel_facilities
-- lab_facilities
-- faculty_information
-- grading_system
-- mentorship_program
-- exam_preparation_tips
-- library_resources
-- library_days
-- fees_type
-- hostel_choice
-- mode_of_transport
-- hostel
-- general_info
-- gacdon
-- gacorg
-- gacreg
-- gacspan
-- gacpay
-#- maa
+  - user_location
+  - destination_given
+  - requested_hostel
+  - number
+  - name
+  - lastname
+  - facility_type
+  - hostel_facilities
+  - lab_facilities
+  - faculty_information
+  - grading_system
+  - mentorship_program
+  - exam_preparation_tips
+  - library_resources
+  - library_days
+  - fees_type
+  - hostel_choice
+  - mode_of_transport
+  - hostel
+  - general_info
+  - gacdon
+  - gacorg
+  - gacreg
+  - gacspan
+  - gacpay
+  - maa
+  - force_secure_event_information
+  - force_secure_event_rules
+  - force_secure_bot_specification
+  - force_secure_tips
+  - force_secure_event_contact_information
+  - force_secure_problem_statement
+  - final_year_coordinators_names
+  - third_year_coordinators_names
+  - botrush_2.0_event_heads
 slots:
   name:
     type: text
@@ -164,6 +196,7 @@ slots:
       entity: user_location
 
 actions:
+- say_bbsee_details
 - action_provide_directions
 - utter_greet
 - utter_ask_hostel
@@ -178,6 +211,9 @@ actions:
 - action_text_to_speech
 - action_get_image
 - action_custom_fallback
+- action_give_direction
+- show_arena_map
+- decide_details
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -226,7 +262,7 @@ responses:
        ५.Do the assignment questions properly same type of questions come in exams. 
        ६.﻿Go through the previous years properly as exam pattern remains same for most of the subjects. 
        ७.﻿The subjects which have labs perform good in main viva exam and the regular practice vivas as well this will give you better marks in internal. 
-       ८.﻿For viva study the theory of the practicals properly and also try to study more about the topics if possible. 
+       ८.﻿For viva study the theory of the practicals properly and also try to study more about the topics if possible.
   utter_ask_about_mentorship_program:
   - text: |-
       Yes, MNNIT Allahabad has a mentorship program called SMP where students can receive academic guidance and support from their Seniors of their 
@@ -580,12 +616,12 @@ responses:
 
   utter_allrules_bbse:
     - text: |
-        1. Your bot must not damage the arena in any way. Doing so will result in immediate disqualification.
-        2. There will be four checkpoints A, B, C, D.
-        3. If your bot misses a turn according to the LSRB algorithm or goes out of the path, your bot will be restarted from the last reached checkpoint.
-        4. During the wall following, if your bot hits the wall or goes out of the dashed line, it has to restart from point D.
-        5. There will be only 2 restarts allowed during the entire run.
-        6. There will be a provision to skip a checkpoint only once if your bot goes out of the path at least once. No points will be awarded for that checkpoint.
+          1. Your bot must not damage the arena in any way. Doing so will result in immediate disqualification.
+          2. There will be four checkpoints A, B, C, D.
+          3. If your bot misses a turn according to the LSRB algorithm or goes out of the path, your bot will be restarted from the last reached checkpoint.
+          4. During the wall following, if your bot hits the wall or goes out of the dashed line, it has to restart from point D.
+          5. There will be only 2 restarts allowed during the entire run.
+          6. There will be a provision to skip a checkpoint only once if your bot goes out of the path at least once. No points will be awarded for that checkpoint.
   utter_MNGE_Coordis:
     - text: |
         **MATCH AND ENGAGE COORDINATORS**
@@ -752,6 +788,123 @@ responses:
           6. ANY FORM OF CODE PLAGIARISM WILL NOT BE TOLERATED. If any part of the project is found copied the team will be disqualified immediately.
           7. Do not assume anything in the problem statement by yourself. Contact us to resolve any discrepancies.
 
+  utter_force_secure_event:
+      - text: |
+          FORCE SECURE is an integral event in BotRush 2.0, designed to simulate a crucial mission within the galaxy's Rebel Alliance. Inspired by the clandestine battles between the Rebels and Imperial spies, participants are tasked with fortifying a secluded research facility to safeguard vital secrets. The event involves crafting an advanced home automation system, drawing inspiration from the Force, to ensure secure access and real-time monitoring. 
+
+          For example, participants may create a secure access system requiring a unique Jedi password, ensuring that only those with the correct Jedi incantation can enter. They may also implement a Force presence detection system to seamlessly monitor the number of personnel within the facility. Additionally, participants are challenged to design a holographic interface reminiscent of Jedi holocrons for secure access and surveillance.
+
+          In response to potential Sith infiltrations, participants must develop an alert system that triggers surveillance equipment, thus countering any threats effectively. FORCE SECURE event not only tests participants' technical skills but also their ability to strategize and protect Rebel secrets against Imperial threats in the vast reaches of the galaxy.
+
+          May the Force be with all participants as they embark on this crucial assignment!
+  utter_force_secure_event_rules:
+    - text: |
+        The rules for Force Secure event are as follows:
+        
+        1. Automatic Door and Secure Locking System:
+           - Implement a smart lock system with keyless entry devices operated remotely via IoT-enabled sensors. (+250 points)
+           - Opening and closing of the lock system must be done using a mobile application or web-based system.
+           - Password-based protection should be implemented, allowing entry via mobile or keyboard.
+           - Provision of an alarm for unauthorized access is mandatory. (+50 points)
+           - Bonus points will be awarded for any additional advanced security ideas.
+
+        2. Visitors Counter:
+           - Simple one-way visitor counter at the home entrance. (+150 points)
+           - Bidirectional visitor counter monitoring total number of visitors entering, exiting, and current visitors (BOTRUSH). (+250 points)
+           - Real-time data display in a mobile application. (+100 points)
+
+        3. Smart Home:
+           - SmartSwitching:
+             - Control light bulb switching and brightness using wireless communication through mobile or remote. (+100 points)
+             - Control light bulb switching using voice commands (Google Assistant). (+100 points)
+           - Temperature and Humidity:
+             - Display all parameters on the serial monitor (on PC). (+100 points)
+             - Upload and display parameters to the cloud (Thingspeak.com). (+100 points)
+           - Gas Level Monitor:
+             - Measure gas quantity in percentage and send data over the internet using the Thingspeak server. (+100 points)
+  utter_force_secure_bot_specification:
+    - text: |
+        The specifications for the Force Secure bot are as follows:
+        1. NodeMCU - ESP8266 12E Board (Quantity: 1)
+        2. USB cable (Quantity: 1)
+        3. IR Sensor - IR Infrared Sensor Module (Quantity: 3)
+        4. Jumper Wires - Jumper Cables Breadboard (Quantity: 120, assorted M2M, M2F, F2F)
+        5. Breadboard (Quantity: 1)
+        6. SG90 Micro-servo Motor (Quantity: 1)
+        7. Basic white LED - 5mm DIP Led white (Quantity: 10)
+        8. DHT11 - Digital temperature and humidity sensor module (Quantity: 1)
+        9. MQ4 - Digital methane sensor (Quantity: 1)
+        10. 5V Voltage Regulator (Quantity: 1)
+        11. 12V 1A Adapter (Quantity: 1)
+        12. RFID sensor (Quantity: 1)
+        13. DST (Quantity: 1)
+        14. DC Female Jack (Quantity: 1)
+        15. Screws and nuts
+        
+        Note: Additional components may be added by participants based on desired features. Any microcontroller, such as Arduino or NodeMCU, can be used for implementation, with no bonus marking for using a different type of controller.
+
+  utter_force_secure_tips:
+      - text: |
+          Here are some tips for participants of the Force Secure event:
+          1. Handle your hardware with care to avoid damage or malfunctioning. Even slight mishandling can impact performance.
+          2. The primary goal of Bot-Rush 2k24 is to spark your interest in robotics and provide an introduction to your first hardware project.
+          3. Use the Basic/Advanced features as guidance for your bot's theme, but feel free to add additional features to enhance its quality. Creativity and functionality are key, and any extra sensors or hardware should be communicated beforehand.
+          4. Consider participating in teams to develop teamwork skills, which will be beneficial in future endeavors.
+          5. For first-time developers or beginners, prioritize completing the bot within the given time frame.
+
+  utter_force_secure_event_contact_information:
+      - text: |
+          You can contact the organizers of the Force Secure event through the following channels:
+          - Event Secretary:
+            - Priyanshu Bharati: +91 7645997707
+            - Sarthak Kumar: +91 9582243710
+            - Devendra Saini: +91 9549164695
+
+          - Festival Secretary:
+            - Sudhanshu Ranjan: +91 7004010012
+            - Aayush Verma: +91 9807706707
+
+  utter_force_secure_problem_statement:
+      - text: "You can access the problem statement for Force Secure from the following link: [Force Secure Problem Statement](https://drive.google.com/file/d/1KSVQpvM0A9sSd0JT-O6hFYQ1Wb26Ne70/view)"
+
+  utter_final_year_coordinators_names:
+      - text: |
+          The Final Year coordinators for the current term are:
+          1) Shashank Singh
+          2) Gautam
+          3) Bipul Karna
+          4) Abhishek Hanotiya
+          5) Prakhar Agarwal
+          6) Shreya Gupta
+          7) Aditya Jain
+          8) Yaswanth Kandukuri
+          9) Ayush Singh Gour
+          10) Ankit Gupta
+
+
+  utter_third_year_coordinators_names:
+      - text: |
+          The coordinators for the third year are:
+          1) Sudhanshu Ranjan
+          2) Ayush Verma
+          3) Rishi Mishra
+          4) Sarthak Kumar
+          5) Devendra Saini
+          6) Bhanu Pratap Singh
+          7) Tushar Kesarwani
+          8) Akshay Jadav
+          9) Aditya Omar
+          10) Priyanshu Bharti
+          11) Anu Priya
+          12) Amisha
+
+
+  utter_botrush_2.0_event_heads:
+      - text: |
+          The event heads for Botrush 2.0 are:
+          1) Shashank Singh
+          2) Bipul Karna
+          3) Gautam
 
 session_config:
   session_expiration_time: 60
