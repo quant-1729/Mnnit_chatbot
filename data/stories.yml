@@ -160,28 +160,28 @@ stories:
     - intent: dwesis_canteen
     - action: utter_about_dwesis
 
-- story: location_of_dwesis
-  steps:
-    - intent: dwesis_location
-    - action: utter_location_dwesis
+#- story: location_of_dwesis
+#  steps:
+#    - intent: dwesis_location
+#    - action: utter_location_dwesis
 - story: about_cafe96
   steps:
     - intent: cafe_96
     - action: utter_about_cafe96
 
-- story: location_of_cafe96
-  steps:
-    - intent: cafe_96_location
+#- story: location_of_cafe96
+#  steps:
+#    - intent: cafe_96_location
     - action: utter_location_cafe96
 - story: about_yamuna_canteen
   steps:
     - intent: yamuna_canteen
     - action: utter_about_yamuna_canteen
 
-- story: location_of_yamuna
-  steps:
-    - intent: yamuna_location
-    - action: utter_yamuna_location
+#- story: location_of_yamuna
+#  steps:
+#    - intent: yamuna_location
+#    - action: utter_yamuna_location
 
     # ############################# CLUBS
 - story: lit_club
@@ -344,11 +344,11 @@ stories:
 #  - action: utter_gac_pay
 #  - action: restart_convo
 #- story: mnnit location
-- steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mnnit_location
-  - action: utter_mnnit_location
+#- steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mnnit_location
+#  - action: utter_mnnit_location
 
 - story: mnnit full  form
   steps:

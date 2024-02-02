@@ -82,7 +82,6 @@ intents:
   - greet
   - mood_great
   - mood_unhappy
-  - common_question
   - projects
   - ask_self_balancing_bot
   - humanoid_info
@@ -106,8 +105,6 @@ intents:
   - challenge_tips
   - challenge_bot
   - forceinnovate_abt
-  - force_innovate_rules
-  - force_innovate_regulations
   - innovate_force_tips
   - force_secure_event_information
   - force_secure_event_rules
@@ -118,14 +115,13 @@ intents:
   - final_year_coordinators_names
   - third_year_coordinators_names
   - botrush_2.0_event_heads
-  - ask_event_info_2023
-  - gac_2023_donations
-  - gac_2023_organizing
-  - gac_2023_registration
-  - gac_2023_payment
-  - gac_2023_sponsorship
-  - gac_event_info
-  - mnnit_location
+#  - ask_event_info_2023
+#  - gac_2023_donations
+#  - gac_2023_organizing
+#  - gac_2023_registration
+#  - gac_2023_payment
+#  - gac_2023_sponsorship
+#  - gac_event_info
   - mnnit_full_form
   - basic_details_bbsee
   - user_asks_arena_desc
@@ -145,16 +141,8 @@ intents:
   - doh_bot
   - doh_tips
   - doh_prblmstmnt
-  - give_feedback
-  - request_names
-  - SpecificDetail_GOE
-  - SpecificDetail_CHE
-  - challengeregu
-  - challengetips
-  - challengespec
-  - SpecificDetail_FI
-  - firegulations
-  - fitips
+  - force_innovate_rules
+  - force_innovate_regulations
 entities:
   - user_location
   - destination_given

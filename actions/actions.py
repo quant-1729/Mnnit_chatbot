@@ -25,6 +25,7 @@ from bson import ObjectId
 import openai
 from gtts import gTTS
 from playsound import playsound
+import requests
 #Spell Checker
 
 
@@ -153,25 +154,82 @@ def contains_mnnit_nit_mnit(sentence):
         if word.lower() in target_words:
             return True
     return False
+# class ActionFallback(Action):
+#     def name(self) -> Text:
+#         return "say_fallback"
+#
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         user_input = tracker.latest_message.get("text")
+#         # response = openai.Completion.create(
+#         #     engine="text-davinci-003",  # GPT-3.5 engine
+#         #     prompt=user_input,
+#         #     max_tokens=50)
+#         inputLen=len(user_input.split());
+#
+#         if(inputLen<4):
+#             dispatcher.utter_message("Please provide more data");
+#         elif contains_mnnit_nit_mnit(user_input):
+#             dispatcher.utter_message("Sorry this data is not currently in my data")
+#         else:
+#             dispatcher.utter_message("pls serach only for mnnnit college and bot rush i query i only meant for these. Sorry for inconvience")
+
 class ActionFallback(Action):
-    def name(self) -> Text:
+    def name(self) -> str:
         return "say_fallback"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict) -> list:
+        # Get user input
+        user_message = tracker.latest_message.get("text")
 
-        user_input = tracker.latest_message.get("text")
-        # response = openai.Completion.create(
-        #     engine="text-davinci-003",  # GPT-3.5 engine
-        #     prompt=user_input,
-        #     max_tokens=50)
-        inputLen=len(user_input.split());
+        # Make a request to ChatGPT API
+        chatgpt_response = self.get_chatgpt_response(user_message)
 
-        if(inputLen<4):
-            dispatcher.utter_message("Please provide more data");
-        elif contains_mnnit_nit_mnit(user_input):
-            dispatcher.utter_message("Sorry this data is not currently in my data")
-        else:
-            dispatcher.utter_message("pls serach only for mnnnit college and bot rush i query i only meant for these. Sorry for inconvience")
+        # Send the ChatGPT response to the user
+        dispatcher.utter_message(text=chatgpt_response)
+
+        return []
+
+    def get_chatgpt_response(self, user_message: str) -> str:
+        # Set up your ChatGPT API endpoint and headers
+        api_endpoint = "https://api.openai.com/v1/engines/davinci-codex/completions"
+        api_key = "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"
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+        }
+        print(headers)
+
+        # Prepare the request payload
+        data = {
+            "prompt": user_message,
+            "max_tokens": 150,
+        }
+
+        try:
+            # Make the API request to ChatGPT
+            response = requests.post(api_endpoint, json=data, headers=headers)
+            response.raise_for_status()  # Raise an HTTPError for bad responses
+
+            # Parse the response
+            chatgpt_response = response.json()["choices"][0]["text"]
+
+            return chatgpt_response
+
+        except requests.exceptions.RequestException as e:
+            # Handle request exceptions
+            print(f"Error making request to ChatGPT API: {e}")
+            return "Sorry, there was an error processing your request."
+
+        except KeyError as e:
+            # Handle missing key in JSON response
+            print(f"Error parsing ChatGPT response: {e}")
+            return "Sorry, there was an issue processing the response."
+
+        except Exception as e:
+            # Handle other exceptions
+            print(f"An error occurred: {e}")
+            return "Sorry, something went wrong."
 
 class ActionProvideDirection(Action):
     def name(self) -> Text:

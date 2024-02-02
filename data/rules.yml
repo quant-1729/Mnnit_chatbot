@@ -12,15 +12,15 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Giving Hostel information
-  steps:
-  - intent: ask_hostel_choice
-  - action: action_Set_Hostel_slot
+#- rule: Giving Hostel information
+#  steps:
+#  - intent: ask_hostel_choice
+#  - action: action_Set_Hostel_slot
 
-- rule: Giving the directions
-  steps:
-  - intent: ask_for_direction
-  - action: action_provide_directions
+#  rule: Giving the directions
+#  steps:
+#  - intent: ask_for_direction
+#  - action: action_provide_directions-
 
 #- rule: Activate form
 #  steps:

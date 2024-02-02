@@ -2512,7 +2512,7 @@ nlu:
      - I'd like to know more about the Force Secure bot's capabilities.
      - Provide information on the bot specifications for Force Secure event.
      - What functionalities does the Force Secure bot offer?
-      - Explain the technical specifications of the Force Secure bot.
+     - Explain the technical specifications of the Force Secure bot.
      - Share details about the Force Secure bot's design and functionality.
      - What is the architecture of the bot designed for Force Secure event?
      - Tell me about the components of the bot used in Force Secure event.
@@ -2592,26 +2592,26 @@ nlu:
 
 - intent: final_year_coordinators_names
   examples: |
-     - Who are the Final Year coordinators?
-      - Can you tell me the names of the Final Year coordinators?
-     - What are the names of the Final Year coordinators?
-     - Who is in charge of coordinating Final Year activities?
-     - I'd like to know the individuals serving as Final Year coordinators.
-     - Can you provide the names of the coordinators for the Final Year students?
-     - Who are the individuals responsible for overseeing the Final Year events?
-     - I'm interested in learning the names of the Final Year coordinators.
-     - Which individuals make up the Final Year coordinators team?
-     - Could you list the names of the Final Year coordinators?
-     - Who are the current coordinators for the Final Year students?
-     - I need to know who the Final Year coordinators are.
-     - Can you give me the names of the Final Year coordinators?
-     - Who should I contact from the Final Year coordinators' team?
-     - What are the names of the coordinators for the Final Year students?
-     - Who is responsible for organizing activities for the Final Year students?
-     - I'd like to get in touch with the Final Year coordinators. Who are they?
-     - Are there specific individuals designated as Final Year coordinators?
-     - Who oversees the Final Year events and activities?
-     - Can you provide information on the Final Year coordinators' team members?
+    - Who are the Final Year coordinators?
+    - Can you tell me the names of the Final Year coordinators?
+    - What are the names of the Final Year coordinators?
+    - Who is in charge of coordinating Final Year activities?
+    - I'd like to know the individuals serving as Final Year coordinators.
+    - Can you provide the names of the coordinators for the Final Year students?
+    - Who are the individuals responsible for overseeing the Final Year events?
+    - I'm interested in learning the names of the Final Year coordinators.
+    - Which individuals make up the Final Year coordinators team?
+    - Could you list the names of the Final Year coordinators?
+    - Who are the current coordinators for the Final Year students?
+    - I need to know who the Final Year coordinators are.
+    - Can you give me the names of the Final Year coordinators?
+    - Who should I contact from the Final Year coordinators' team?
+    - What are the names of the coordinators for the Final Year students?
+    - Who is responsible for organizing activities for the Final Year students?
+    - I'd like to get in touch with the Final Year coordinators. Who are they?
+    - Are there specific individuals designated as Final Year coordinators?
+    - Who oversees the Final Year events and activities?
+    - Can you provide information on the Final Year coordinators' team members?
 
 - intent: third_year_coordinators_names
   examples: |
@@ -3336,11 +3336,9 @@ nlu:
      - Tell me about the [regulations]{"entity":"challengeregu"} for Challenge.
      - List down the [regulations]{"entity":"challengeregu"} of the Challenge event.
      - Can you provide information on the [regulations]{"entity":"challengeregu"} of the Challenge competition?
-     
      - Explain the [regulations]{"entity":"challengeregu"} governing the Challenge event.
      - Share details about the Challenge event [regulations]{"entity":"challengeregu"}.
      - Describe the specific [regulations]{"entity":"challengeregu"} participants need to adhere to in Challenge.
-     
      - Provide an overview of the [regulations]{"entity":"challengeregu"} framework for Challenge.
      - Elaborate on the Challenge event [regulations]{"entity":"challengeregu"} .
      - Tell me about the [regulations]{"entity":"challengeregu"} for Challenge.
@@ -3438,3 +3436,27 @@ nlu:
      - What [tips]{"entity":"fitips"} should I keep in mind while participating in the Force Innovate event?
      - Can you offer practical [tips]{"entity":"fitips"} for participants of the Force Innovate?
      - Share insights, [tips]{"entity":"fitips"} and recommendations for those taking part in Force Innovate.
+- intent: mnnit_full_form
+  examples: |
+    - What is the full form of MNNIT? 
+    - What does MNNIT stands for ? 
+    - What is the meaning of MNNIT. 
+    - MNNIT 
+    - MNNIT meaning
+    - Mnnit stands for 
+    - What is Mnnit
+    - MNNIT acronym
+    - MNNIT expansion
+    - MNNIT abbreviation
+    - Full form for MNNIT
+    - full form for MNNIT
+    - MNNIT acronym meaning
+    - MNNIT full name
+    - MNNIT stands for what
+    - Meaning of MNNIT
+    - MNNIT full name
+    - MNNIT full abbreviation
+    - Decode MNNIT
+    - MNNIT full form in English
+    - MNNIT acronym explanation
+    - What MNNIT represents
