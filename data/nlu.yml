@@ -773,6 +773,8 @@ nlu:
   examples: |
     - Facilities does the ECE or Electronics and Communication Engineering Department have?
     - Electronics and Communication Engineering .
+    - ECE
+    - ECE department.
     - Research labs in the ECE or Electronics and Communication Engineering Department
     - Resources are available to students in the ECE Department
     - Professors in the ECE Department?
@@ -797,12 +799,17 @@ nlu:
     - Head of department of Electronics and Communication Engineering Department .
     - Faculty who is HOD of Electronics and Communication Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the ECE department?
+    - HOD of ECE department
+    - HOD of ECE
+    - ECE HOD
     - Head of Department of ECE or Electronics and Communication Engineering Department .
 
 - intent: EE_dept
   examples: |
     - Facilities does the EE or Electrical Engineering Department have?
     - Electrical Engineering .
+    - EE 
+    - EE department 
     - Research labs in the ECE or EE or Electrical Engineering Department
     - Resources are available to students in the EE or Electrical Engineering Department
     - Professors in the EE or Electrical Engineering Department?
@@ -823,6 +830,8 @@ nlu:
   examples: |
     - Who is the head of department of EE or Electrical Engineering Department ?
     - HOD of Electrical Engineering Department .
+    - HOD of EE
+    - HOD of  EE department
     - Head of department of EE or Electrical Engineering Department .
     - Faculty who is HOD of EE Electrical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the EE or Electrical Engineering Department department?
@@ -832,6 +841,8 @@ nlu:
   examples: |
     - Facilities does the ME or Mechanical Engineering Department have.
     - Mechanical Engineering .
+    - ME 
+    - ME department
     - Research labs in the ME or Mechanical Engineering Department
     - Resources are available to students in the ME or Mechanical Engineering Department
     - Professors in the ME or Mechanical Engineering Department .
@@ -852,6 +863,8 @@ nlu:
   examples: |
     - Who is the head of department of ME or Mechanical Engineering Department ?
     - HOD of Mechanical Engineering Department .
+    - HOD of ME
+    - ME HOD
     - Head of department of ME or Mechanical Engineering Department .
     - Faculty who is HOD of ME or Mechanical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the ME or Mechanical Engineering Department department?
@@ -864,6 +877,9 @@ nlu:
   examples: |
     - Facilities does the ChE or Chemical Engineering Department have.
     - Chemical Engineering .
+    - CHE 
+    - CHE department
+    - CE department
     - Research labs in the ChE or Chemical Engineering Department
     - Resources are available to students in the ChE or Chemical Engineering Department
     - Professors in the ChE or Chemical Engineering Department .
@@ -883,6 +899,8 @@ nlu:
   examples: |
     - Who is the head of department of ChE or Chemical Engineering Department ?
     - HOD of Chemical Engineering Department .
+    - HOD of CHE
+    - CHE HOD
     - Head of department of ChE or Chemical Engineering Department .
     - Faculty who is HOD of ChE or Chemical Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the ChE or Chemical Engineering Department department?
@@ -892,6 +910,8 @@ nlu:
   examples: |
     - Facilities does the CE or Civil Engineering Department have.
     - Civil Engineering .
+    - CE
+    - CE department
     - Research labs in the CE or Civil Engineering Department
     - Resources are available to students in the CE or Civil Engineering Department
     - Professors in the CE or Civil Engineering Department .
@@ -911,6 +931,8 @@ nlu:
   examples: |
     - Who is the head of department of CE or Civil Engineering Department ?
     - HOD of Civil Engineering Department .
+    - HOD CE
+    - CE HOD
     - Head of department of CE or Civil Engineering Department .
     - Faculty who is HOD of CE or Civil Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the CE or Civil Engineering Department department?
@@ -921,6 +943,8 @@ nlu:
     - Facilities does the Biotechnology Engineering Department have.
     - Biotech .
     - Biotechnology Engineering .
+    - BE 
+    - BE department
     - Research labs in the Biotechnology Engineering Department
     - Resources are available to students in the Biotechnology Engineering Department
     - Professors in the Biotechnology Engineering Department .
@@ -940,6 +964,8 @@ nlu:
   examples: |
     - Who is the head of department of Biotechnology Engineering Department ?
     - HOD of Biotechnology Engineering Department .
+    - BE HOD 
+    - HOD of BE
     - Head of department of Biotechnology Engineering Department .
     - Faculty who is HOD of Biotechnology Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the Biotechnology Engineering Department department?
@@ -950,6 +976,8 @@ nlu:
     - Facilities does the Production and Industrial Engineering Department have.
     - PIE or Production and Industrial Engineering Department
     - Production Engineering.
+    - PIE 
+    - PIE department
     - Production and Industrial Engineering.
     - Research labs in the Production and Industrial Engineering Department
     - Resources are available to students in the Production and Industrial Engineering or production Department
@@ -970,6 +998,8 @@ nlu:
   examples: |
     - Who is the head of department of PIE or Production and Industrial Engineering Department Department ?
     - HOD of Production and Industrial Engineering Department .
+    - PIE HOD
+    - HOD of PIE
     - Head of department of PIE or Production and Industrial Engineering Department Department .
     - Faculty who is HOD of PIE or Production and Industrial Engineering Department at MNNIT or Motilal Nehru National Institute of Technology .
     - What is the name of the head of the PIE or Production and Industrial Engineering Department department?
@@ -978,6 +1008,8 @@ nlu:
 - intent: AM_dept
   examples: |
     - Can you tell me more about the Applied Mathematics department at the college?
+    - AM department
+    - AM
     - What programs and courses are offered by the Applied Mathematics department?
     - Who are the faculty members in the Applied Mathematics department?
     - How can I apply for a program within the Applied Mathematics department?
@@ -2159,7 +2191,6 @@ nlu:
   examples: |
       - Where and when would the Bumblesee event be conducted?
       - Where and when would the Match and Engage event be conducted?
-      - Where will BotRush event be held?
       - When should I go to MP Hall for Bumblesee event?
       - When and where is the Bumblesee event scheduled?
       - Where and when can I find the Bumblesee event?
@@ -2378,6 +2409,7 @@ nlu:
 - intent: doh_rules
   examples: |
       - what are the rules for decept of home?
+      - what are the rules for home automation?
       - what are the instructions for decept of home?
       - what wiil be the intructions to be followed for decept of home?
       - need more details about operating decept of home.
@@ -2397,6 +2429,7 @@ nlu:
 - intent: doh_bot
   examples: |
       - what are the bot specifications of decept of home
+      - bot specification of home automation.
       - what the specifications of bot to be made in decept event?
       - what hardware can be used in decept event?
       - what hardware is allowed in decept event?
@@ -2413,6 +2446,7 @@ nlu:
       - what are the tips for decept event?
       - give me some tips for decept of home?
       - is ther any tips for decept ?
+      - tips for home automation
       - what are the helping statements for decept?
       - tips of decept
       - decept tips
@@ -2424,6 +2458,7 @@ nlu:
 - intent: doh_prblmstmnt
   examples: |
       - what are the problem statements of decept of home event?
+      - home automation?
       - provide me with the problem statements for decept event?
       - is there any problem statement available for decept event?
       - what the the basic features for decept event?
@@ -3175,8 +3210,10 @@ nlu:
 - intent: Botrush
   examples: |
       - What is botrush?
-      - Botrush Event?
-      - Tell me about Botrush event?
+      - what is bot rush?
+      - Bot Rush
+      - bot rush
+      - when is bot rush gonna happen ?
       - Give me details on how to participate in Botrush.
       - Can you provide information about Botrush?
       - Give me an overview of Botrush.
@@ -3190,9 +3227,6 @@ nlu:
       - Brief me about Botrush.
       - Offer details about Botrush.
       - Elaborate on the Botrush event. 
-
-- intent: botwhen
-  examples: |
       - When botrush is conducted
       - What is the date of botrush
       - Date of botrush
@@ -3209,8 +3243,16 @@ nlu:
       - Provide details on the Botrush calendar.
       - Mention the Botrush event date.
       - Specify the date for the Botrush event.
+      - schedule
+      - what is the timing of the event
+      - botrush schedule
+      - shedule
+
 - intent: botevents
   examples: |
+      - events under botrush
+      - events
+      - events under botrush
       - What are the events conducted in botrush?
       - List of events conducted in botrush.
       - What are the events conducted in botrush?
@@ -3229,6 +3271,8 @@ nlu:
   examples: |
       - Galactic Odyssey?
       - Odyssey?
+      - line follower bot
+      - line follower bot event
       - What is the problem statement of Galactic Odyssey event?
       - Can you tell me the basic details of Galactic Odyssey event?
       - Can you tell me about the Galactic Odyssey event?
@@ -3244,6 +3288,8 @@ nlu:
 - intent: oddyssey_rules
   examples: |
      - Tell me about the [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} of Galactic Odyssey event
+     - Tell me about the [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} of line follower bot
+     - [rules]{"entity":"SpecificDetail_GOE", "value":"AllRules"} of line follower bot
      - Can you list me the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
      - What are the [rules of the Galactic Odyssey event]{"entity":"SpecificDetail_GOE","value":"AllRules"}?
      - What [rules]{"entity":"SpecificDetail_GOE","value":"AllRules"} should I follow for Galactic Odyssey event?
@@ -3257,6 +3303,8 @@ nlu:
   examples: |
     - what are the regulations of galactic odyssey event?
     - regulations of odyssey event.
+    - regulations of line follower bot event
+    - what are the regulations of line follower bot.
     - Tell me about the regulations for Galactic Odyssey.
     - List down the regulations of the Galactic Odyssey event.
     - Can you provide information on the regulations of the Galactic Odyssey competition?
@@ -3281,6 +3329,7 @@ nlu:
 - intent: odysssey_tips
   examples: |
     - provide me the tips on galactic odyssey event
+    - provide me the tips on line follower bot 
     - provide help on galactic odyssey event
     - Can you offer some tips for participating in the Galactic Odyssey event?
     - Share helpful advice for navigating the Galactic Odyssey competition.
@@ -3295,7 +3344,9 @@ nlu:
 - intent: odyssey_bot
   examples: |
     - what are the bot specification of galactic odyssey bot
+    - what are the bot specification of line follower bot
     - bot requirements and components of galactic odyssey
+    - line follower bot specification.
     - Share details about the bot specifications for Galactic Odyssey.
     - What are the specific requirements for the Galactic Odyssey bot?
     - Provide information on the components needed for the Galactic Odyssey bot.
@@ -3321,6 +3372,7 @@ nlu:
 - intent: challenge_rules
   examples: |
      - Tell me about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} of Challenge event
+     - Tell me about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} of cell phone controlled bot.
      - Can you list me the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
      - What are the [rules of the Challenge event]{"entity":"SpecificDetail_CHE","value":"AllRules"}?
      - What [rules]{"entity":"SpecificDetail_CHE","value":"AllRules"} should I follow for Challenge event?
@@ -3331,8 +3383,10 @@ nlu:
      - Provide details about the [rules]{"entity":"SpecificDetail_CHE", "value":"AllRules"} for the Challenge event.
 - intent: challengeregulations
   examples: |
-     - what are the [regulations]{"entity":"challengeregu"} of Challenge event?
+     - what are the [regulations]{"entity":"challengeregu"} of Galactic Challenge event?
      - [regulations]{"entity":"challengeregu"} of challenge event.
+     - what are the [regulations]{"entity":"challengeregu"} of cell phone controlled bot.
+     - [regulations]{"entity":"challengeregu"} of cell phone controlled bot.
      - Tell me about the [regulations]{"entity":"challengeregu"} for Challenge.
      - List down the [regulations]{"entity":"challengeregu"} of the Challenge event.
      - Can you provide information on the [regulations]{"entity":"challengeregu"} of the Challenge competition?
@@ -3345,7 +3399,9 @@ nlu:
      - List down the [regulations]{"entity":"challengeregu"} of the Challenge event.
 - intent: challenge_tips
   examples: |
-     - provide me the [tips]{"entity":"challengetips"} on Challenge event
+     - provide me the [tips]{"entity":"challengetips"} on  Galactic Challenge event
+     - provide me the [tips]{"entity":"challengetips"} on cell phone contolled bot event
+     - [tips]{"entity":"challengetips"} on cell phone contolled bot event.
      - provide help [tips]{"entity":"challengetips"} on Challenge event
      - Can you offer some [tips]{"entity":"challengetips"} for participating in the Challenge event?
      - Share helpful advice [tips]{"entity":"challengetips"} for navigating the Challenge competition.
@@ -3355,12 +3411,14 @@ nlu:
      - Share [tips]{"entity":"challengetips"} for success in the Challenge event.
      - I'm looking for some guidance on how to approach the Challenge. Any [tips]{"entity":"challengetips"}?
      - What should I keep in mind  [tips]{"entity":"challengetips"} while participating in the Challenge event?
-     - Can you offer practical [tips]{"entity":"challengetips"} for participants of the Challenge?
+     - Can you offer practical [tips]{"entity":"challengetips"} for participants of the Galactic Challenge?
      - Share insights and recommendations  [tips]{"entity":"challengetips"} for those taking part in the Challenge.
 
 - intent: challenge_bot
   examples: |
      - what are the bot [specification]{"entity":"challengespec"} of Challenge bot
+     - cell phone controlled bot [specification]{"entity":"challengespec"}
+     - what are the bot [specification]{"entity":"challengespec"} of cell phone controlled bot
      - bot requirements and components [specification]{"entity":"challengespec"}  of Challenge
      - Share details about the bot [specification]{"entity":"challengespec"} for Challenge.
      - What are the specific requirements [specification]{"entity":"challengespec"} for the Challenge bot?
@@ -3376,6 +3434,7 @@ nlu:
   examples: |
      - Force Innovate?
      - Innovate Force?
+     - open theme
      - What is the problem statement of Force Innovate event?
      - Can you tell me the basic details of Force Innovate event?
      - Can you tell me about the Force Innovate event?
@@ -3391,6 +3450,7 @@ nlu:
 - intent: force_innovate_rules
   examples: |
      - Tell me about the [rules]{"entity":"SpecificDetail_FI"} of Force Innovate event
+     - open theme [rules]{"entity":"SpecificDetail_FI"}.
      - Can you list me the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
      - What are the [rules of the Force Innovate event]{"entity":"SpecificDetail_FI"}?
      - What [rules]{"entity":"SpecificDetail_FI"} should I follow for Force Innovate event?
@@ -3402,6 +3462,7 @@ nlu:
 - intent: force_innovate_regulations
   examples: |
      - what are the [regulations]{"entity":"firegulations"} of Force Innovate event?
+     - open theme [regulations]{"entity":"firegulations"}.
      - [regulations]{"entity":"firegulations"} of Innovate Force event.
      - Tell me about the [regulations]{"entity":"firegulations"} for Force Innovate.
      - List down the [regulations]{"entity":"firegulations"} of the Force Innovate event.
@@ -3425,6 +3486,7 @@ nlu:
 - intent: innovate_force_tips
   examples: |
      - provide me the [tips]{"entity":"fitips"} on Force Innovate event
+     - open theme [tips]{"entity":"fitips"}.
      - provide [tips]{"entity":"fitips"} on Innovate Force event
      - Can you offer some [tips]{"entity":"fitips"} for participating in the Force Innovate event?
      - Share helpful advice and [tips]{"entity":"fitips"} for navigating the Force Innovate competition.
@@ -3460,3 +3522,61 @@ nlu:
     - MNNIT full form in English
     - MNNIT acronym explanation
     - What MNNIT represents
+- intent: tech_expo
+  examples: |
+    - Code Forge
+    - what is code forge 
+    - give me a brief idea about code forge
+    - tell me about code forge
+    - i want to know about code forge
+    - give a brief description of code forge
+    - about code forge
+    - Hackathon 
+    - robotics hackathon 
+    - tell me about robotics hackathon
+    - give a brief description of robotics hackathon
+- intent: tech_ps
+  examples: |
+    - code forge problem statement
+    - problem statement of code forge
+    - PS of code forge
+    - code forge PS
+    - ps of a hackathon
+    - I want to know about code forge PS 
+    - I want to understand the code forge problem statement
+    - explain the problem statement for code forge
+    - details about the code forge challenge
+    - code forge project requirements
+    - what is expected in the code forge problem statement
+    - elaborate on the code forge PS
+    - code forge task description
+    - clarify the code forge challenge statement
+    - specifics of the problem statement for code forge
+    - provide information on code forge problem statement
+    - code forge coding challenge details
+    - breakdown of the code forge PS
+    - code forge competition problem statement
+    - code forge task objectives
+- intent: tech_rules
+  examples: |
+    - rules of tech expo
+    - rules of hackathon
+    - rules of code forge
+    - tell me guidelines of code forge
+    - what are the regulations for code forge
+    - guidelines for participating in a hackathon
+    - explain the code of conduct for tech expo
+    - details about code forge competition rules
+    - hackathon participation requirements
+    - code forge event guidelines
+    - tech expo dos and don'ts
+    - rules and regulations for hackathon participants
+    - code forge competition dos and don'ts
+    - specifics of tech expo code of conduct
+    - hackathon code submission guidelines
+    - code forge project submission rules
+    - tech expo presentation guidelines
+    - guidelines for participating in a code forge event
+    - hackathon judging criteria
+    - tech expo entry requirements
+

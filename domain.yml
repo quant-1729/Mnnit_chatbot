@@ -92,7 +92,6 @@ intents:
   - selfdrivingcart_info
   - out_of_scope
   - Botrush
-  - botwhen
   - botevents
   - odyssey_abt
   - oddyssey_rules
@@ -143,6 +142,9 @@ intents:
   - doh_prblmstmnt
   - force_innovate_rules
   - force_innovate_regulations
+  - tech_expo
+  - tech_ps
+  - tech_rules
 entities:
   - user_location
   - destination_given
@@ -929,17 +931,14 @@ responses:
           3) Gautam
   utter_botrush:
     - text:
-        "Botrush is the annual Robotics Club event that will not only test your skills but also fuels your innovation and hard work. This is your golden opportunity to plunge into the realms of robotics and become a part of a revolutionary experience that lies ahead."
-  utter_botwhen:
-      - text:
-          "Botrush is conducted between 2nd to 4th february."
+        "Botrush is the annual Robotics Club event that will not only test your skills but also fuels your innovation and hard work. Botrush is conducted between 2nd to 4th february."
   utter_botevents:
-    - text:
-        "There are four events conducted under botrush
-        1.Galactic Odyssey (Line Follower Bot)/n
-        2.Galactic Challenge (Cell Phone controlled Bot)/n
-        3.Force Secure (Home Automation) /n
-        4.ForceInnovate (Open Theme)/n"
+    - text: |
+        There are four events conducted under botrush
+        1.Galactic Odyssey (Line Follower Bot)
+        2.Galactic Challenge (Cell Phone controlled Bot)
+        3.Force Secure (Home Automation) 
+        4.ForceInnovate (Open Theme)
 
   utter_odyabt:
     - text:
@@ -1270,6 +1269,28 @@ responses:
         5. Note for first-time developers/
         beginners- Your focus should be to
         complete the bot in the given time."
+  utter_code:
+    - text:  An Hackathon event for all 2nd year students by  The Robotics Club of MNNIT. This is your chance to dive into the world of coding, innovation, and robotics.On pot problem statements will be  shard to test the skills of contestants.
+  utter_codeps:
+    - text:  |
+        TASK 1: TRAFFIC WISE: YOLO IN MOTION 
+        TASK 2: HEALTHCARE INFORMATION ASSISTANT 
+        TASK 3: AI PLANT RECOGNITION 
+        TASK 4: VIRTUAL PERSONAL ASSISTANT 
+        TASK 5: EXOPLANET DETECTION USING ML \n.
+  utter_coderules:
+    - text:  |
+        1. The hackathon will start at 10:00 am 2nd Februaryand will last till 9am 4th February. You have to submita GitHub link before the deadline. Any commits madeafter the deadline will result in disqualification.
+        2.The hackathon will also have an Mid evaluation round on 3rd February 7:00 PM.
+        3.ANY FORM OF CODE PLAGIARISM WILL NOT BE TOLERATED. If any part of the project is found copied the team will be disqualified immediately. 
+        4. You can take inspiration from documents and other resources but they have to clearly mentioned in your submissions.
+        5. Make sure your entire team is present for the mid-evaluation and final presentation rounds.
+        6 . Results of the Hackathon will be based on innovation, creativity of design, accuracy, and real life use-cases.
+        7. Judges’ decisions will be final and binding to all Teams are expected to adhere to ethical standards and demonstrate fair play throughout the event.
+        8. Ensure your code is uploaded to a GitHub repository, complete with a well-documented README file providing the instructions for running the program.
+        9. Any commit to the Github made after the deadline lead to direct elimination.
+
+
 
 session_config:
   session_expiration_time: 60

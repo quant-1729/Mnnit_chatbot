@@ -29,11 +29,13 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+  - action: restart_convo
 
 - story: mnnit website path
   steps:
   - intent: mnnit_website
   - action: utter_website
+  - action: restart_convo
 
 
 - story: courses information
@@ -41,63 +43,75 @@ stories:
   - intent: courses
   - action: utter_courses
   - action: action_text_to_speech
+  - action: restart_convo
 
 - story: placement information
   steps:
   - intent: ask_placements
   - action: utter_ask_placements
   - action: action_text_to_speech
+  - action: restart_convo
 
 - story: admission process
   steps:
   - intent: ask_admission_process
   - action: utter_ask_admission_process
   - action: action_text_to_speech
+  - action: restart_convo
 
 - story: Ask about Library
   steps:
   - intent: ask_about_library
   - action: utter_ask_about_library
+  - action: restart_convo
 
 - story: Ask About Internship Opportunities
   steps:
   - intent: ask_about_internship_opportunities
   - action: utter_ask_about_internship_opportunities
   - action: action_text_to_speech
+  - action: restart_convo
 - story: Ask About Healthcare Facilities
   steps:
   - intent: ask_about_healthcare_facilities
   - action: utter_ask_about_healthcare_facilities
+  - action: restart_convo
 
 - story: Ask About Exam Preparation Tips
   steps:
   - intent: ask_about_exam_preparation_tips
   - action: utter_ask_about_exam_preparation_tips
+  - action: restart_convo
 
 - story: Ask About Mentorship Program
   steps:
   - intent: ask_about_mentorship_program
   - action: utter_ask_about_mentorship_program
+  - action: restart_convo
 
 - story: Ask About Grading System
   steps:
   - intent: ask_about_grading_system
   - action: utter_ask_about_grading_system
+  - action: restart_convo
 
 - story: Ask About Faculty
   steps:
   - intent: ask_about_faculty
   - action: utter_ask_about_faculty
+  - action: restart_convo
 
 - story: Ask About Lab Facilities
   steps:
   - intent: ask_about_lab_facilities
   - action: utter_ask_about_lab_facilities
+  - action: restart_convo
 
 - story: Ask About Hostel Facility
   steps:
   - intent: ask_about_hostel_facilities
   - action: utter_ask_hostel
+  - action: restart_convo
 
 - story: Ask About Hostel Choice
   steps:
@@ -108,16 +122,19 @@ stories:
     - slot_was_set:
         - hostel: SVBH
     - action: utter_thanks_for_hostel
+    - action: restart_convo
 
 - story: Ask About Fees
   steps:
   - intent: ask_about_fees
   - action: utter_ask_about_fees
+  - action: restart_convo
 
 - story: Ask About introduction
   steps:
   - intent: ask_intro_format
   - action: utter_ask_intro_format
+  - action: restart_convo
 
 - story: Ask for directions
   steps:
@@ -127,6 +144,7 @@ stories:
   - slot_was_set:
       - user_location: user_location
   - action: action_provide_directions
+  - action: restart_convo
 
 #ujjawal stories
 
@@ -134,31 +152,38 @@ stories:
   steps:
     - intent: common_question
     - action: utter_anscommon
+    - action: restart_convo
 - story: asking_more_about_college
   steps:
     - intent: more_about_college
     - action: utter_about_college
+    - action: restart_convo
 - story: asking_about_club
   steps:
     - intent: club
     - action: utter_club
+    - action: restart_convo
 - story: asking_benefit_of_the_club
   steps:
     - intent: benfit_of_the_club
     - action: utter_benfit_club
+    - action: restart_convo
 - story: campus_life
   steps:
     - intent: explore_campus
     - action: utter_explore_campus
+    - action: restart_convo
 
 - story: cafetarea
   steps:
     - intent: cafetarea
     - action: utter_cafetarea
+    - action: restart_convo
 - story: about_dwesis
   steps:
     - intent: dwesis_canteen
     - action: utter_about_dwesis
+    - action: restart_convo
 
 #- story: location_of_dwesis
 #  steps:
@@ -168,15 +193,18 @@ stories:
   steps:
     - intent: cafe_96
     - action: utter_about_cafe96
+    - action: restart_convo
 
 #- story: location_of_cafe96
 #  steps:
 #    - intent: cafe_96_location
     - action: utter_location_cafe96
+    - action: restart_convo
 - story: about_yamuna_canteen
   steps:
     - intent: yamuna_canteen
     - action: utter_about_yamuna_canteen
+    - action: restart_convo
 
 #- story: location_of_yamuna
 #  steps:
@@ -188,123 +216,148 @@ stories:
   steps:
     - intent: lit_club
     - action: utter_lit_club
+    - action: restart_convo
 - story: robotics
   steps:
     - intent: robotics_club
     - action: utter_robotics
+    - action: restart_convo
   # ##### boys/girls hostel
 - story: boys_hostel
   steps:
     - intent: boys_hostel
     - action: utter_boys_hostel
+    - action: restart_convo
 
 - story: girls_hostel
   steps:
     - intent: girls_hostel
     - action: utter_girls_hostel
+    - action: restart_convo
   #  ###### department
 - story: department
   steps:
     - intent: Department
     - action: utter_department
+    - action: restart_convo
 - story: director
   steps:
     - intent: Director
     - action: utter_director
+    - action: restart_convo
 - story: dean
   steps:
     - intent: dean
     - action: utter_dean
+    - action: restart_convo
 
 - story: CSED
   steps:
     - intent: CSE_dept
     - action: utter_CSE_dept
+    - action: restart_convo
 
 - story: CSEDH
   steps:
     - intent: CSE_dept_HOD
     - action: utter_CSE_dept_HOD
+    - action: restart_convo
 
 - story: ECED
   steps:
     - intent: ECE_dept
     - action: utter_ECE_dept
+    - action: restart_convo
 
 - story: ECEDH
   steps:
     - intent: ECE_dept_HOD
     - action: utter_ECE_dept_HOD
+    - action: restart_convo
 
 - story: EED
   steps:
     - intent: EE_dept
     - action: utter_EE_dept
+    - action: restart_convo
 
 - story: EEDH
   steps:
     - intent: EE_dept_HOD
     - action: utter_EE_dept_HOD
+    - action: restart_convo
 
 - story: MED
   steps:
     - intent: ME_dept
     - action: utter_ME_dept
+    - action: restart_convo
 
 - story: MEDH
   steps:
     - intent: ME_dept_HOD
     - action: utter_ME_dept_HOD
+    - action: restart_convo
 - story: ChED
   steps:
     - intent: ChE_Dept
     - action: utter_ChE_Dept
+    - action: restart_convo
 
 - story: ChEDH
   steps:
     - intent: ChE_Dept_HOD
     - action: utter_ChE_Dept_HOD
+    - action: restart_convo
 
 - story: CED
   steps:
     - intent: CE_dept
     - action: utter_CE_dept
+    - action: restart_convo
 
 - story: CEDH
   steps:
     - intent: CE_dept_HOD
     - action: utter_CE_dept_HOD
+    - action: restart_convo
 
 - story: BED
   steps:
     - intent: BE_dept
     - action: utter_BE_dept
+    - action: restart_convo
 
 - story: BEDH
   steps:
     - intent: BE_dept_HOD
     - action: utter_BE_dept_HOD
+    - action: restart_convo
 
 - story: PIED
   steps:
     - intent: PIE_dept
     - action: utter_PIE_dept
+    - action: restart_convo
 
 - story: PIEDH
   steps:
     - intent: PIE_dept_HOD
     - action: utter_PIE_dept_HOD
+    - action: restart_convo
 
 - story: AM_dept
   steps:
     - intent: AM_dept
     - action: utter_AM_dept
+    - action: restart_convo
 
   # ####### sports
 - story: playground
   steps:
     - intent: college_playground
     - action: utter_playground
+    - action: restart_convo
 
 # Hrithiman's Stories
 
@@ -356,6 +409,7 @@ stories:
   - action: utter_greet
   - intent: mnnit_full_form
   - action: utter_mnnit_full_form
+  - action: restart_convo
 - story: boys_hostel
   steps:
   - intent: Boys_hostel
@@ -368,6 +422,7 @@ stories:
   - action: utter_greet
   - intent: girls_hostel_count
   - action: utter_girls_hostel_count
+  - action: restart_convo
 
 - story: girls hostel names
   steps:
@@ -375,6 +430,7 @@ stories:
   - action: utter_greet
   - intent: girls_hostel_names
   - action: utter_girls_hostel_names
+  - action: restart_convo
 
 - story: mnnit_clubs
   steps:
@@ -382,6 +438,7 @@ stories:
   - action: utter_greet
   - intent: mnnit_clubs
   - action: utter_mnnit_clubs
+  - action: restart_convo
 
 - story:  what_is_academic_building
   steps:
@@ -389,6 +446,7 @@ stories:
   - action: utter_greet
   - intent: what_is_academic_building
   - action: utter_what_is_academic_building
+  - action: restart_convo
 
 - story:  what_is_administrative_building
   steps:
@@ -396,6 +454,7 @@ stories:
   - action: utter_greet
   - intent: what_is_administrative_building
   - action: utter_what_is_administrative_building
+  - action: restart_convo
 
 - story:  what_is_administrative_building
   steps:
@@ -403,6 +462,7 @@ stories:
   - action: utter_greet
   - intent: girls_gym_mnnit
   - action: utter_girls_gym_mnnit
+  - action: restart_convo
 
 - story:  what_is_administrative_building
   steps:
@@ -410,6 +470,7 @@ stories:
   - action: utter_greet
   - intent: canteens_girls_hostel_mnnit
   - action: utter_canteens_girls_hostel_mnnit
+  - action: restart_convo
 
 - story: girls_gym_mnnit
   steps:
@@ -417,6 +478,7 @@ stories:
   - action: utter_greet
   - intent: girls_gym_mnnit
   - action: utter_girls_gym_mnnit
+  - action: restart_convo
 
 - story: canteens_girls_hostel_mnnit
   steps:
@@ -424,6 +486,7 @@ stories:
   - action: utter_greet
   - intent: canteens_girls_hostel_mnnit
   - action: utter_canteens_girls_hostel_mnnit
+  - action: restart_convo
 
 - story: seminar_hall_mnnit
   steps:
@@ -431,6 +494,7 @@ stories:
   - action: utter_greet
   - intent: seminar_hall_mnnit
   - action: utter_seminar_hall_mnnit
+  - action: restart_convo
 
 - story: mp_hall_mnnit
   steps:
@@ -438,6 +502,7 @@ stories:
   - action: utter_greet
   - intent: mp_hall_mnnit
   - action: utter_mp_hall_mnnit
+  - action: restart_convo
 
 - story: dean_office_mnnit
   steps:
@@ -445,6 +510,7 @@ stories:
   - action: utter_greet
   - intent: dean_office_mnnit
   - action: utter_dean_office_mnnit
+  - action: restart_convo
 
 - story: library_mnnit
   steps:
@@ -452,6 +518,7 @@ stories:
   - action: utter_greet
   - intent: library_mnnit
   - action: utter_library_mnnit
+  - action: restart_convo
 
 - story: warden_office_mnnit
   steps:
@@ -459,10 +526,12 @@ stories:
   - action: utter_greet
   - intent: warden_office_mnnit
   - action: utter_warden_office_mnnit
+  - action: restart_convo
 - story: boys hostel canteens
   steps:
   - intent: boys_hostel_canteens
   - action: utter_boys_hostel_canteen
+  - action: restart_convo
 ###############################################################33
 ######### BOT RUSH EVENT START
 - story: project
@@ -504,6 +573,7 @@ stories:
   steps:
   - intent: nlu_fallback
   - action: say_fallback
+  - action: restart_convo
 - story: self
   steps:
   - intent: selfdrivingcart_info
@@ -614,6 +684,7 @@ stories:
   - slot_was_set:
     - user_location: SVBH
   - action: action_provide_directions
+  - action: restart_convo
 
 - story: interactive_story_2
   steps:
@@ -640,6 +711,7 @@ stories:
   - slot_was_set:
     - destination_given: Cenral Library
   - action: action_provide_directions
+  - action: restart_convo
 
 ## image feature
 - story: User asks for an image
@@ -648,6 +720,7 @@ stories:
     entities:
     - image_requested: "dogs"
   - action: action_get_image
+  - action: restart_convo
 
 ## direction feature-
 - story: Direct_Direction Pathfinding
@@ -656,66 +729,70 @@ stories:
     entities:
     - destination_given: "Central Library"
   - action: action_give_direction
+  - action: restart_convo
 # devanshi code
 - story: force secure event information
   steps:
   - intent: force_secure_event_information
   - action:  utter_force_secure_event
+  - action: restart_convo
 
 
 - story: force secure event rules
   steps:
   - intent: force_secure_event_rules
   - action:  utter_force_secure_event_rules
+  - action: restart_convo
 
 - story: force secure bot specification
   steps:
   - intent: force_secure_bot_specification
   - action:  utter_force_secure_bot_specification
+  - action: restart_convo
 
 - story: force_secure_tips
   steps:
   - intent: force_secure_tips
   - action:  utter_force_secure_tips
+  - action: restart_convo
 
 - story: force_secure_event_contact_information
   steps:
   - intent: force_secure_event_contact_information
   - action:  utter_force_secure_event_contact_information
+  - action: restart_convo
 
 - story: force_secure_problem_statement
   steps:
   - intent: force_secure_problem_statement
   - action:  utter_force_secure_problem_statement
+  - action: restart_convo
 
 
 - story: final year coordinators names
   steps:
   - intent: final_year_coordinators_names
   - action:  utter_final_year_coordinators_names
+  - action: restart_convo
 
 
 - story: third year coordinators names
   steps:
   - intent: third_year_coordinators_names
   - action:  utter_third_year_coordinators_names
+  - action: restart_convo
 
 
 - story: botrush 2.0 event heads
   steps:
   - intent: botrush_2.0_event_heads
   - action:  utter_botrush_2.0_event_heads
+  - action: restart_convo
 
 #Disha stories merged bu priyanshu Agrawal
 - story: botrsh
   steps:
     - intent: Botrush
-    - action: utter_botrush
-    - action: restart_convo
-
-- story: botrushdate
-  steps:
-    - intent: botwhen
     - action: utter_botrush
     - action: restart_convo
 
@@ -799,4 +876,19 @@ stories:
   steps:
     - intent: innovate_force_tips
     - action: utter_innovatetips
+    - action: restart_convo
+- story: codee
+  steps:
+    - intent: tech_expo
+    - action: utter_code
+    - action: restart_convo
+- story: codeeeps
+  steps:
+    - intent: tech_ps
+    - action: utter_codeps
+    - action: restart_convo
+- story: inn_tips
+  steps:
+    - intent: tech_rules
+    - action: utter_coderules
     - action: restart_convo
