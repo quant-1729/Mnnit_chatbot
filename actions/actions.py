@@ -24,15 +24,26 @@ import openai
 from gtts import gTTS
 from playsound import playsound
 import pandas as pd
-class Professor_response(Action):
-    def name(self) -> Text:
-        return "action_Professor_name"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        data=pd.read_excel("data/Excels/faculty list 2k24.xlsx")
-        df=pd.DataFrame(data)
+
+class ProfessorResponse(Action):
+    def name(self) -> Text:
+        return "action_faculty_name"
+
+    def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        data = pd.read_excel("./data/Excels/faculty list 2k24.xlsx")
+
+        search_name = tracker.latest_message.get('text')
+        if search_name in data['Faculty Name'].values:
+            matched_row = data[data['Faculty Name'] == search_name]
+            message = f"{search_name} is {matched_row['Designation'].values[0]} in Moitlal Nehru National Institute OF Technology. He is {matched_row['Role'].values[0]}. To contact him, you can use his mail - \n{matched_row['Email id'].values[0]}"
+            dispatcher.utter_message(text=message)
+        else:
+            dispatcher.utter_message(text=f"No match found for {search_name} in the 'Faculty Name' column.")
+
+        return []
+
 
 
         

@@ -157,7 +157,6 @@ nlu:
     - student's placement offers
     - what are the placement stats of our college
     - which companies come to college
-    - who is in charge of our placements
     - where can i get information about placements
     - Does the college have a placement cell?
     - How does the college support students with job placements?
@@ -195,14 +194,11 @@ nlu:
     - How can I apply for internships through the college?
     - Can the college help me find internships?
     - Tell me about the process of securing an internship.
-    - Are internships available for specific majors or disciplines?
     - How are internship opportunities communicated to students?
     - Are there on-campus recruitment events for internships?
     - Can I get academic credit for internships?
     - What support does the college provide during internships?
     - Are there networking opportunities for students seeking internships?
-    - Can international students pursue internships during their studies?
-    - Are there virtual internship options for remote work experience?
 - intent: ask_about_healthcare_facilities
   examples: |
     - What healthcare facilities are available on campus?
@@ -211,20 +207,12 @@ nlu:
     - Tell me about the [facility_type](campus nurse).
     - Where is the nearest [facility_type](hospital) on campus?
     - Are there any doctors available in the [facility_type](campus area)?
-    - Can you provide information on the [facility_type](dental clinic)?
     - I need to find the [facility_type](pharmacy) on campus.
     - How do I contact the [facility_type](campus nurse)?
     - Where can I get first aid on campus?
-    - Are there any [facility_type](mental health services) available?
-    - Tell me more about the [facility_type](health and wellness center).
-    - What services does the [facility_type](student health center) offer?
-    - Do we have an on-campus [facility_type](optometrist)?
-    - Is there a [facility_type](gym with medical facilities)?
-    - I'm looking for the [facility_type](physical therapy center).
     - How do I schedule an appointment at the [facility_type](campus clinic)?
     - What are the hours of operation for the [facility_type](health center)?
-    - Can you recommend a good [facility_type](dermatologist) on campus?
-    - Where can I get information about [facility_type](COVID-19 testing)?
+
 - intent: ask_about_exam_preparation_tips
   examples: |
     - Can you provide tips for [final exam](exam_preparation_tips) preparation?
@@ -235,7 +223,6 @@ nlu:
     - Are there any recommended textbooks for [viva](exam_preparation_tips)?
     - I need advice on preparing for [viva](exam_preparation_tips).
     - Can you suggest ways to stay focused during [viva](exam_preparation_tips)?
-    - What's the best approach to [viva](exam_preparation_tips)?
     - How can I manage stress during [viva](exam_preparation_tips)?
     - What are the key topics to cover for [practical exam](exam_preparation_tips)?
     - What's the recommended study schedule for [practical exam](exam_preparation_tips)?
@@ -287,19 +274,16 @@ nlu:
     - What is the [faculty expertise]{"entity": "faculty_information", "value": ""} in various fields?
     - How do students [rate the faculty]{"entity": "faculty_information", "value": ""} at the college?
     - Tell me about [faculty publications]{"entity": "faculty_information", "value": ""} and research work.
-    - Are there [faculty resources]{"entity": "faculty_information", "value": ""} available for students?
     - Explain the role of [faculty committees]{"entity": "faculty_information", "value": ""} in the college.
     - Tell me about [faculty involvement]{"entity": "faculty_information", "value": ""} in student organizations.
 - intent: ask_about_lab_facilities
   examples: |
     - What [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"} are available in the college?
     - Can I access the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} outside of class hours?
-    - How do I [book lab equipment]{"entity": "entity", "value": "lab_facilities, value:book lab equipment"}?
     - Are there specific [safety guidelines]{"entity": "entity", "value": "lab_facilities, value:safety guidelines"} for using [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"}?
     - Can I bring my own [equipment]{"entity": "entity", "value": "lab_facilities, value:equipment"} to the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"}?
     - Are the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} equipped with the latest [technology and tools]{"entity": "entity", "value": "lab_facilities, value:technology and tools"}?
     - How often are the [lab facilities]{"entity": "entity", "value": "lab_facilities, value:lab facilities"} updated or improved?
-    - Can students [propose new lab equipment]{"entity": "entity", "value": "lab_facilities, value:propose new lab equipment"} or improvements?
     - Are there [lab assistants]{"entity": "entity", "value": "lab_facilities, value:lab assistants"} available to provide guidance?
     - Are the [labs]{"entity": "entity", "value": "lab_facilities, value:labs"} suitable for specific [academic programs or majors]{"entity": "entity", "value": "lab_facilities, value:academic programs or majors"}?
     - Tell me about the [research opportunities]{"entity": "entity", "value": "lab_facilities, value:research opportunities"} in the labs.
@@ -325,7 +309,7 @@ nlu:
     - Do the [hostels](hostel_facilities) have [Wi-Fi](hostel_facilities) and [laundry services](hostel_facilities)?
     - Is there a common room in the [hostels](hostel_facilities) for students to gather?
     - How do I [apply for hostel accommodation](hostel_facilities)?
-    - Tell me about SVBH [Hostel](requested_hostel)
+    - Tell me about [Hostel](requested_hostel)
     - tell me about [SVBH](requested_hostel)
     - Tell me about the [hostel facilities](hostel_facilities) at MNNIT
     - Which [hostel]{"entity": "hostel_choice", "value": "requested_hostel"} would you like to know about?
@@ -435,6 +419,7 @@ nlu:
 
 - intent: more_about_college
   examples: |
+    - mnnit
     - MNNIT
     - mnnit college
     - Inform about MNNIT college
@@ -464,8 +449,6 @@ nlu:
     - Which type of clubs are present in MNNIT college?
     - Tell me about the clubs in the college
     - Tell me about the clubs in the mnnit
-    - Tell me extra co-curricular activity of the college
-    - Tell me extra co-curricular activity of the MNNIT
 
 - intent: benfit_of_the_club
   examples: |
@@ -482,7 +465,6 @@ nlu:
     - Can you tell me why I should join a club on campus?
     - What advantages do college clubs offer to students?
     - How can joining a club enhance my corasllege experience?
-    - Share some reasons why I should consider joining a student organization.
     - What opportunities do clubs provide for personal development?
     - Tell me more about the positive impacts of participating in clubs.
     - How can joining a club help me make friends and connections?
@@ -491,90 +473,64 @@ nlu:
 
 - intent: explore_campus
   examples: |
-    - Tell me someting about campus of MNNIT college
-    - How the campus of MNNIT looks like?
-    - Is campus life of mnnit college good?
+    - Tell me something about [campus](explore_campus) of  college. 
+    - How does the [campus](explore_campus) of College? 
+    - Is [campus life](explore_campus) at MNNIT college good?
     - How was your life at MNNIT?
-    - Is campus of MNNIT colloge beautiful?
-    - What is the campus area of MNNIT college?
-    - How can I explore your college campus?
-    - Tell me about campus tours at your college.
+    - How was your life at College? 
+    - Is [campus](explore_campus) of MNNIT college beautiful?
+    - What is the [campus area](campus_info) of college?
+    - How can I explore your [college campus](explore_campus)?
+    - Tell me about [campus ](explore_campus) at your college.
     - What are the options for visiting your college?
-    - Can I schedule a campus visit?
-    - Share information about open house events at your college.
-    - How can I get a feel for the college before applying?
-    - What resources are available for prospective students to explore your college?
-    - Is there a virtual tour of your college available?
-    - Are there any upcoming college events for visitors?
-    - Tell me about the admissions office and how to contact them for a visit.
+    - Can I schedule a [campus visit](explore_campus)?
+    - Are there any upcoming [college events](events) for visitors?
+    - Tell me about the [admissions office](admissions) and how to contact them for a visit.
 
-- intent: cafetarea
-  examples: |
-    - Is there any good canteen present in campus area?
-    - Can you tell me about cafe.
-    - Which cafe are present near MNNIT Allahabad?
-    - Is food cafe shop are present in campus area?
-    - Can we order food from near by cafe in mnnit college ?
-    - Tell me about the college cafe.
-    - What cafeteria options are available on campus?
-    - Can you provide information about meal plans at the college?
-    - How does the cafeteria accommodate dietary restrictions?
-    - Are there vegetarian or vegan options in the cafe?
-    - What are the opening hours of the college cafeteria?
-    - Is there a food court on campus?
-    - Are there any special events or promotions in the cafeteria?
-    - Can you share the menu options and prices in the cafeteria?
-    - Tell me about the quality of food in the college cafeteria.
-    - Where can I grab a meal on campus?
-    - where are the canteen in campus
-    - what are the canteen in campus
-    - where are the cafe in campus
-    - what are the cafe in campus
-    - eating spot in the campus
+
 - intent: dwesis_canteen
   examples: |
-    - Tell me more about Dwesis .
-    - What's on the menu at Dwesis ?
-    - Can you share the operating hours of Dwesis ?
-    - Are there any special dishes at dwesis ?
-    - What's the pricing like at dwesis ?
-    - Tell me about the ambiance and seating at Dwesis .
-    - Is there a student discount available at Dwesis ?
-    - What are the popular food items at Dwesis ?
-    - Share some reviews or recommendations for Dwesis .
-    - How can I provide feedback about my experience at Dwesis ?
-    - What's the specialty of Dwesis ?
-    - What type of cuisine does dwesis  primarily serve?
-    - Can you share the price range of dishes at Dwesis ?
-    - Are there any cultural or themed nights at dwesis , like "Mexican Mondays" or "Asian Fusion Fridays"?
-    - Tell me about the dessert options at Dwesis .
-    - Is there outdoor seating available at dwesis ?
-    - Are there any loyalty programs or rewards for frequent visitors to Dwesis ?
-    - How do I place an order or reserve a table at Dwesis ?
-    - Can you provide information about the staff and chefs at Dwesis ?
-    - Are there any special considerations for allergen information at Dwesis ?
-- intent: cafe_96
+    - Tell me more about [Dwesis](explore_dwesis).
+    - What's on the menu at [Dwesis](explore_dwesis)?
+    - Can you share the operating hours of [Dwesis](explore_dwesis)?
+    - Are there any special dishes at [Dwesis](explore_dwesis)?
+    - What's the pricing like at [Dwesis](explore_dwesis)?
+    - Is there a student discount available at [Dwesis](explore_dwesis)?
+    - What are the popular food items at [Dwesis](explore_dwesis)?
+    - Share some reviews or recommendations for [Dwesis](explore_dwesis).
+    - What's the specialty of [Dwesis](explore_dwesis)?
+    - What type of cuisine does [Dwesis](explore_dwesis) primarily serve?
+    - Can you share the price range of dishes at [Dwesis](explore_dwesis)?
+    - Are there any cultural or themed nights at [Dwesis](explore_dwesis), like "Mexican Mondays" or "Asian Fusion Fridays"?
+    - Tell me about the dessert options at [Dwesis](explore_dwesis).
+    - Is there outdoor seating available at [Dwesis](explore_dwesis)?
+    - Are there any loyalty programs or rewards for frequent visitors to [Dwesis](explore_dwesis)?
+    - How do I place an order or reserve a table at [Dwesis](explore_dwesis)?
+    - Can you provide information about the staff and chefs at [Dwesis](explore_dwesis)?
+
+- intent: explore_cafe_96
   examples: |
-    - Tell me more about cafe 96 .
-    - What's on the menu at cafe 96 ?
-    - Can you share the operating hours of Cafe 96 ?
-    - Are there any special dishes at Cafe 96 ?
-    - What's the pricing like at cafe 96 ?
-    - Tell me about the ambiance and seating at Cafe 96 .
-    - Is there a student discount available at Cafe 96 ?
-    - What are the popular food items at Cafe 96 ?
-    - Share some reviews or recommendations for Cafe 96 .
-    - How can I provide feedback about my experience at Cafe 96 ?
-    - What's the specialty of cafe 96 ?
-    - What type of cuisine does Cafe 96  primarily serve?
-    - Can you share the price range of dishes at cafe 96 ?
-    - Are there any cultural or themed nights at Cafe 96 , like "Mexican Mondays" or "Asian Fusion Fridays"?
-    - Tell me about the dessert options at Cafe 96 .
-    - Is there outdoor seating available at cafe 96 ?
-    - Are there any loyalty programs or rewards for frequent visitors to Cafe 96 ?
-    - How do I place an order or reserve a table at Cafe 96 ?
-    - Can you provide information about the staff and chefs at Cafe 96 ?
-    - Are there any special considerations for allergen information at Cafe 96 ?
+    - Tell me more about [Cafe 96](explore_cafe_96).
+    - What's on the menu at [Cafe 96](explore_cafe_96)?
+    - Can you share the operating hours of [Cafe 96](explore_cafe_96)?
+    - Are there any special dishes at [Cafe 96](explore_cafe_96)?
+    - What's the pricing like at [Cafe 96](explore_cafe_96)?
+    - Tell me about the ambiance and seating at [Cafe 96](explore_cafe_96).
+    - Is there a student discount available at [Cafe 96](explore_cafe_96)?
+    - What are the popular food items at [Cafe 96](explore_cafe_96)?
+    - Share some reviews or recommendations for [Cafe 96](explore_cafe_96).
+    - How can I provide feedback about my experience at [Cafe 96](explore_cafe_96)?
+    - What's the specialty of [Cafe 96](explore_cafe_96)?
+    - What type of cuisine does [Cafe 96](explore_cafe_96) primarily serve?
+    - Can you share the price range of dishes at [Cafe 96](explore_cafe_96)?
+    - Are there any cultural or themed nights at [Cafe 96](explore_cafe_96), like "Mexican Mondays" or "Asian Fusion Fridays"?
+    - Tell me about the dessert options at [Cafe 96](explore_cafe_96).
+    - Is there outdoor seating available at [Cafe 96](explore_cafe_96)?
+    - Are there any loyalty programs or rewards for frequent visitors to [Cafe 96](explore_cafe_96)?
+    - How do I place an order or reserve a table at [Cafe 96](explore_cafe_96)?
+    - Can you provide information about the staff and chefs at [Cafe 96](explore_cafe_96)?
+    - Are there any special considerations for allergen information at [Cafe 96](explore_cafe_96)?
+
 - intent: yamuna_canteen
   examples: |
     - Tell me more about yamuna canteen .
@@ -657,7 +613,11 @@ nlu:
     - Are there any security measures in place at the girls' hostel?
     - Can you provide details about the dining options in the girls' hostel?
     - Tell me about any common areas and recreational facilities in the girls' hostel.
-
+- intent: Who_is_faculty
+  examples: | 
+    - Who is [Dr R. Tripathi](faculty_name)
+    - Tell me who [Mr. Asim Mukherjee](faculty_name) is? 
+    - Introduce [Dr V.K. Srivastava](faculty_name)
 #  department
 - intent: Department
   examples: |
@@ -2346,7 +2306,6 @@ nlu:
       - Give me instructions for Meep Mop.
       - What are the steps to use Meep Mop?
       - I need guidance on how to work with Meep Mop.
-      - Could you provide me with directions for using Meep Mop?
       - What's the user manual for Meep Mop?
 
 - intent: meepmop_basicthings
@@ -2382,7 +2341,6 @@ nlu:
       - Give me instructions for decept of home.
       - What are the steps to use decept of home?
       - I need guidance on how to work with deept of home.
-      - Could you provide me with directions for using decept of home?
       - What's the user manual for decept of home?
 - intent: doh_bot
   examples: |

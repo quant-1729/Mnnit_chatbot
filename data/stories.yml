@@ -129,6 +129,13 @@ stories:
       - user_location: user_location
   - action: action_provide_directions
 
+- story: Ask for destination
+  steps:
+  - intent: Direct_Direction
+  - slot_was_set:
+      - destination_given: destination_given
+  - action: action_provide_directions
+
 
 - story: askingcollege
   steps:
@@ -151,28 +158,18 @@ stories:
     - intent: explore_campus
     - action: utter_explore_campus
 
-- story: cafetarea
-  steps:
-    - intent: cafetarea
-    - action: utter_cafetarea
+
 - story: about_dwesis
   steps:
     - intent: dwesis_canteen
     - action: utter_about_dwesis
 
-- story: location_of_dwesis
-  steps:
-    - intent: dwesis_location
-    - action: utter_location_dwesis
 - story: about_cafe96
   steps:
-    - intent: cafe_96
+    - intent: explore_cafe_96
     - action: utter_about_cafe96
 
-- story: location_of_cafe96
-  steps:
-    - intent: cafe_96_location
-    - action: utter_location_cafe96
+
 - story: about_yamuna_canteen
   steps:
     - intent: yamuna_canteen
@@ -751,3 +748,7 @@ stories:
     - intent: innovate_force_tips
     - action: utter_innovatetips
     - action: restart_convo
+- story: faculty_name
+  steps:
+    - intent: Who_is_faculty
+    - action: action_faculty_name

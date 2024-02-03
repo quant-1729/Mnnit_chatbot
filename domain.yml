@@ -31,9 +31,7 @@ intents:
   - club
   - benfit_of_the_club
   - explore_campus
-  - cafetarea
   - dwesis_canteen
-  - cafe_96
   - yamuna_canteen
   - lit_club
   - robotics_club
@@ -122,6 +120,9 @@ intents:
   - force_innovate_rules
   - force_innovate_regulations
   - innovate_force_tips
+  - Who_is_faculty:
+      use_entities: faculty_name
+  - explore_cafe_96
 entities:
   - user_location
   - destination_given
@@ -156,6 +157,10 @@ entities:
   - SpecificDetail_FI
   - firegulations
   - fitips
+  - faculty_name
+  - explore_dwesis
+  - explore_campus
+  - explore_cafe_96
 #- maa
 slots:
   name:
@@ -205,6 +210,7 @@ actions:
   - say_bbsee_details
   - show_arena_map
   - utter_innovateregulations
+  - action_faculty_name
 responses:
   utter_greet:
   - text: Hey! How are you?

@@ -44,7 +44,7 @@ policies:
 #    use_regexes: True
 
   - name: RulePolicy
-    nlu_fallback_threshold: 0.3
+    nlu_fallback_threshold: 0.6
     core_fallback_threshold: 0.4
     core_fallback_action_name: "say_fallback"
   - name: MemoizationPolicy
