@@ -148,6 +148,7 @@ intents:
   - start_the_bot
   - sac_info
   - pitam_sir
+  - rama_sir
 entities:
   - user_location
   - destination_given
@@ -194,6 +195,7 @@ entities:
   - fitips
   - sc
   - p
+  - s
 slots:
   name:
     type: text
@@ -930,6 +932,7 @@ responses:
 
   utter_botrush_2.0_event_heads:
       - text: |
+          Botrush event is organised under Robotics club of MNNIT managed by student activity center (SAC).The president of SAC is Professor Pitam Singh and the Faculty of Robotics Club  is Prof. Asim Mukherjee .
           The event heads for Botrush 2.0 are:
           1) Shashank Singh
           2) Bipul Karna
@@ -1326,9 +1329,12 @@ responses:
         3 ) Student Mentorship Program
     utter_pitam:
     - text: |
-        Professor Pitam Singh holds the position of Professor in the Department of Mathematics at Motilal Nehru National Institute of Technology (MNNIT). With a comprehensive educational background, he has earned M.Sc., M.Phil., and Ph.D. qualifications. His expertise lies in Fuzzy Optimization and its Applications in GIS and Remote Sensing, as well as Mathematical Modeling in Seismology.He is also  You can reach him at +91-532-2271258 (Office), +91532-2271731 (Residence), or +9454018946 (Mobile).
+        Professor Pitam Singh holds the position of Professor in the Department of Mathematics at Motilal Nehru National Institute of Technology (MNNIT). With a comprehensive educational background, he has earned M.Sc., M.Phil., and Ph.D. qualifications. His expertise lies in Fuzzy Optimization and its Applications in GIS and Remote Sensing, as well as Mathematical Modeling in Seismology.He is also the prsident of student activity center(SAC). You can reach him at +91-532-2271258 (Office), +91532-2271731 (Residence), or +9454018946 (Mobile).
         For any inquiries, you can also contact him via email at pitams@mnnit.ac.in.
-
+    utter_rama:
+    - text: |
+        
+        
 
 
 session_config:

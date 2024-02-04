@@ -3666,4 +3666,30 @@ nlu:
     - I want to know about [Pitam]{"entity":"p"} Singh sir
     - Information about [Pitam]{"entity":"p"} Singh sir
     - [Pitam]{"entity":"p"} Singh sir information
+- intent : rama_sir
+  examples: |
+    - who is [Rama]{"entity":"s"} Shanker Verma sir
+    - who is [Rama]{"entity":"s"} Shanker Verma sir
+    - [Rama]{"entity":"s"} Shanker Verma sir
+    - Mr. [Rama]{"entity":"s"} Shanker Verma sir
+    - Mister [Rama]{"entity":"s"} Shanker Verma sir
+    - [Rama]{"entity":"s"} Shanker Verma sir
+    - [Rama]{"entity":"s"} Shanker Verma
+    - [Rama]{"entity":"s"} Shanker Verma
+    - Tell me about [Rama]{"entity":"s"} Shanker Verma sir
+    - Tell me about [Rama]{"entity":"s"} Shanker Verma sir
+    - [Rama]{"entity":"s"} Shanker Verma sir information
+    - Professor [Rama]{"entity":"s"} Shanker Verma 
+    - who is [Rama]{"entity":"s"} Shanker Verma  sir
+    - who is [rama]{"entity":"s"} shanker verma  sir
+    - [Rama]{"entity":"s"} Shanker Verma  sir
+    - [Rama]{"entity":"s"} Shanker Verma  sir
+    - [Rama]{"entity":"s"} Shanker Verma 
+    - [Rama]{"entity":"s"} Shanker Verma 
+    - Tell me about Professor [Rama]{"entity":"s"} Shanker Verma  sir
+    - Tell me about Professor [Pitam]  sir
+    - I want to know about Professor [Rama]{"entity":"s"} Shanker Verma  sir
+    - Information about Professor [Rama]{"entity":"s"} Shanker Verma  sir
+    - [RS]{"entity":"s"} Verma sir
+    - [rama]{"entity":"s"} shanker verma sir
     

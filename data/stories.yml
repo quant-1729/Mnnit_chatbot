@@ -903,3 +903,13 @@ stories:
     - intent: sac_info
     - action: utter_sac
     - action: restart_convo
+- story: pitammmm
+  steps:
+    - intent: pitam_sir
+    - action: utter_pitam
+    - action: restart_convo
+- story: ramaaaaa
+  steps:
+    - intent: rama_sir
+    - action: utter_director
+    - action: restart_convo
