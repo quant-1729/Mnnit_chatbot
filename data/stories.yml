@@ -892,3 +892,14 @@ stories:
     - intent: tech_rules
     - action: utter_coderules
     - action: restart_convo
+
+- story: start_the_bot
+  steps:
+    - intent: start_the_bot
+    - action: utter_mnnitBOT
+    - action: restart_convo
+- story: sac_Story
+  steps:
+    - intent: sac_info
+    - action: utter_sac
+    - action: restart_convo

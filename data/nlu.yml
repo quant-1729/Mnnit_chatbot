@@ -802,6 +802,7 @@ nlu:
     - HOD of ECE department
     - HOD of ECE
     - ECE HOD
+    - ece hod
     - Head of Department of ECE or Electronics and Communication Engineering Department .
 
 - intent: EE_dept
@@ -3212,6 +3213,8 @@ nlu:
       - What is botrush?
       - what is bot rush?
       - Bot Rush
+      - bot war
+      - Bot War
       - bot rush
       - when is bot rush gonna happen ?
       - Give me details on how to participate in Botrush.
@@ -3435,6 +3438,7 @@ nlu:
      - Force Innovate?
      - Innovate Force?
      - open theme
+     - opentheme
      - What is the problem statement of Force Innovate event?
      - Can you tell me the basic details of Force Innovate event?
      - Can you tell me about the Force Innovate event?
@@ -3525,12 +3529,16 @@ nlu:
 - intent: tech_expo
   examples: |
     - Code Forge
+    - codeforge
+    - what is codeforge 
     - what is code forge 
     - give me a brief idea about code forge
+    - give me a brief idea about codeforge
     - tell me about code forge
     - i want to know about code forge
     - give a brief description of code forge
     - about code forge
+    - about codeforge
     - Hackathon 
     - robotics hackathon 
     - tell me about robotics hackathon
@@ -3542,6 +3550,7 @@ nlu:
     - PS of code forge
     - code forge PS
     - ps of a hackathon
+    - ps of botrush
     - I want to know about code forge PS 
     - I want to understand the code forge problem statement
     - explain the problem statement for code forge
@@ -3580,3 +3589,81 @@ nlu:
     - hackathon judging criteria
     - tech expo entry requirements
 
+- intent: start_the_bot
+  examples: |
+    - /start
+    - start
+    - start the bot
+    - begin
+    - launch
+    - commence
+    - activate
+    - kick off
+    - open
+    - fire up the bot
+    - get started
+    - run the bot
+    - initialize
+- intent: sac_info
+  examples: |
+    - what is [SAC]{"entity":"sc"}
+    - [SAC]{"entity":"sc"}
+    - who is the incharge of the [SAC]{"entity":"sc"}
+    - clubs under [sac]{"entity":"sc"}
+    - Tell me about the Student Activity Center ([SAC]{"entity":"sc"})
+    - Explain the role and functions of [SAC]{"entity":"sc"}
+    - Who oversees the operations of [SAC]{"entity":"sc"}
+    - Can you provide details on the current [SAC]{"entity":"sc"} leadership
+    - List some of the clubs affiliated with [SAC]{"entity":"sc"}
+    - What types of events does [SAC]{"entity":"sc"} organize
+    - Give me information on [SAC]{"entity":"sc"} and its impact on campus life
+    - How can students get involved with [SAC]{"entity":"sc"}
+    - Share the names of the clubs under [SAC]{"entity":"sc"}
+    - Which student organizations fall under the umbrella of [SAC]{"entity":"sc"}
+    - Tell me more about the activities and initiatives coordinated by [SAC]{"entity":"sc"}
+    - Who is responsible for managing the clubs affiliated with [SAC]{"entity":"sc"}
+    - Explain the significance of [SAC]{"entity":"sc"} in the university community
+    - How does [SAC]{"entity":"sc"} contribute to the student experience on campus
+    - what are the achievements of [sac]{"entity":"sc"} club?
+    - what are the achievements of [sac]{"entity":"sc"}?
+    - Who is the president of [SAC]{"entity":"sc"}
+    - President of [SAC]{"entity":"sc"}
+- intent : pitam_sir
+  examples: |
+    - who is [pitam]{"entity":"p"} sir
+    - who is [Pitam]{"entity":"p"} sir
+    - [Pitam]{"entity":"p"} sir
+    - Mr. [Pitam]{"entity":"p"} sir
+    - Mister [Pitam]{"entity":"p"} sir
+    - [pitam]{"entity":"p"} sir
+    - [pitam]{"entity":"p"}
+    - [Pitam]{"entity":"p"}
+    - Tell me about [pitam]{"entity":"p"} sir
+    - Tell me about [Pitam]{"entity":"p"} sir
+    - I want to know about [Pitam] sir
+    - Information about [Pitam] sir
+    - [Pitam]{"entity":"p"} sir information
+    - Professor [Pitam]{"entity":"p"} Singh
+    - who is [pitam]{"entity":"p"} singh sir
+    - who is [Pitam]{"entity":"p"} Singh sir
+    - [Pitam]{"entity":"p"} Singh sir
+    - [pitam]{"entity":"p"} singh sir
+    - [pitam]{"entity":"p"} singh
+    - [Pitam]{"entity":"p"} Singh
+    - Tell me about Professor [pitam]{"entity":"p"} singh sir
+    - Tell me about Professor [Pitam] Singh sir
+    - I want to know about Professor [Pitam]{"entity":"p"} Singh sir
+    - Information about Professor [Pitam]{"entity":"p"} Singh sir
+    - Professor [Pitam]{"entity":"p"} Singh sir information
+    - who is  professor [pitam]{"entity":"p"} singh sir
+    - who is Professor [Pitam]{"entity":"p"} Singh sir
+    - Professor [Pitam]{"entity":"p"} Singh sir
+    - professor [pitam]{"entity":"p"} singh sir
+    - professor [pitam]{"entity":"p"} singh
+    - Professor [Pitam]{"entity":"p"} Singh
+    - Tell me about [pitam]{"entity":"p"} singh sir
+    - Tell me about [Pitam]{"entity":"p"} Singh sir
+    - I want to know about [Pitam]{"entity":"p"} Singh sir
+    - Information about [Pitam]{"entity":"p"} Singh sir
+    - [Pitam]{"entity":"p"} Singh sir information
+    

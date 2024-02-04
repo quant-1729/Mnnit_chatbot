@@ -145,6 +145,9 @@ intents:
   - tech_expo
   - tech_ps
   - tech_rules
+  - start_the_bot
+  - sac_info
+  - pitam_sir
 entities:
   - user_location
   - destination_given
@@ -189,6 +192,8 @@ entities:
   - SpecificDetail_FI
   - firegulations
   - fitips
+  - sc
+  - p
 slots:
   name:
     type: text
@@ -1289,6 +1294,40 @@ responses:
         7. Judges’ decisions will be final and binding to all Teams are expected to adhere to ethical standards and demonstrate fair play throughout the event.
         8. Ensure your code is uploaded to a GitHub repository, complete with a well-documented README file providing the instructions for running the program.
         9. Any commit to the Github made after the deadline lead to direct elimination.
+  utter_mnnitBOT:
+    - text: |
+        Hello, This is MNNITBOT , how may i assist you today ? 
+  utter_sac:
+    - text: |
+        The Student Activity Center (SAC) at Motilal Nehru National Institute of Technology Allahabad is a central hub overseeing diverse campus activities, including Students' Clubs, Boys' SAC, Girls' SAC, Multipurpose Hall, Athletics Ground, and Gymkhana. It is led by the President SAC and employs part-time coaches to nurture student talents, with around ten coaches currently providing daily services. \n
+        The President of SAC is Pritam Singh 
+        Technical club under SAC are 
+        1 ) Computer Coding Club (C.C)
+        2 ) Robotics Clun
+        3 ) Aero Club
+        4 ) Astro Club
+        Sports Club under SAC are
+        1 ) Cricket Club
+        2 ) Chess Club
+        3 ) Table Tennis Club
+        4 ) Lawn Tennis Club
+        5 ) Kabbadi Club
+        6 ) Skating Club
+        7 ) Basket Club
+        8 ) Football Club
+        Cultural Club under SAC are
+        1 ) Literary Club
+        2 ) Quintessence
+        3 ) Srijan
+        4 ) Alchemy - Dramatics Club MNNIT
+        Others Club under SAC are
+        1 ) Alumni Association
+        2 ) E-Cell
+        3 ) Student Mentorship Program
+    utter_pitam:
+    - text: |
+        Professor Pitam Singh holds the position of Professor in the Department of Mathematics at Motilal Nehru National Institute of Technology (MNNIT). With a comprehensive educational background, he has earned M.Sc., M.Phil., and Ph.D. qualifications. His expertise lies in Fuzzy Optimization and its Applications in GIS and Remote Sensing, as well as Mathematical Modeling in Seismology.He is also  You can reach him at +91-532-2271258 (Office), +91532-2271731 (Residence), or +9454018946 (Mobile).
+        For any inquiries, you can also contact him via email at pitams@mnnit.ac.in.
 
 
 
